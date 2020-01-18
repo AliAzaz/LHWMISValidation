@@ -38,23 +38,22 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                >
+                android:layout_marginTop="10dp">
+
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:src="@drawable/uncolor"
-                    />
+                    android:src="@drawable/uncolor" />
+
                 <TextView
                     style="@style/TextView"
                     android:text="@string/lhwf1header_e"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="7dp"
-                    android:textColor="#008E45"
-
-                    />
+                    android:textColor="#008E45" />
 
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -63,113 +62,73 @@
                 android:layout_marginBottom="10dp"
                 android:background="@color/hitnscolor" />
 
-
-
         <LinearLayout
             android:id="@+id/SectionE"
             style="@style/Q_Linerlayout_v">
 
 
             <!-- lhwf1e1 starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-
-                >
-
-
+            <android.support.v7.widget.CardView style="@style/Q_CardView">
 
                 <LinearLayout
                     android:id="@+id/Lv_lhwf1e1"
-                    style="@style/Q_Linerlayout_v"
-
-                    >
+                    style="@style/Q_Linerlayout_v">
 
                     <TextView
-
                         style="@style/TextView"
-                        android:text="@string/lhwf1e1"
-
-                        />
-
-
+                        android:text="@string/lhwf1e1" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/lhwf1e1"
                         style="@style/EditText_number"
                         android:inputType="number"
-
-                        android:maxLength="2"
+                        app:mask="##"
                         app:maxValue="50"
                         app:minValue="1"
-                        app:required="true"
                         app:type="range" />
 
-
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
             <!-- lhwf1e1 ends-->
 
 
             <!-- lhwf1e2 starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-
-                >
-
-
+            <android.support.v7.widget.CardView style="@style/Q_CardView">
 
                 <LinearLayout
                     android:id="@+id/Lv_lhwf1e2"
-                    style="@style/Q_Linerlayout_v"
-
-                    >
+                    style="@style/Q_Linerlayout_v">
 
                     <TextView
-
                         style="@style/TextView"
-                        android:text="@string/lhwf1e2"
-
-                        />
-
-
-
+                        android:text="@string/lhwf1e2" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/lhwf1e2"
                         style="@style/EditText_number"
                         android:inputType="number"
-                        android:maxLength="2"
-                        app:maxValue="10
-"
+                        app:mask="##"
+                        app:maxValue="10"
                         app:minValue="1"
-                        app:required="true"
                         app:type="range" />
 
-
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
             <!-- lhwf1e2 ends-->
 
+
             <!-- lhwf1e3 starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-
-                >
-
-
+            <android.support.v7.widget.CardView style="@style/Q_CardView">
 
                 <LinearLayout
                     android:id="@+id/Lv_lhwf1e3"
-                    style="@style/Q_Linerlayout_v"
-
-                    >
+                    style="@style/Q_Linerlayout_v">
 
                     <TextView
-
                         style="@style/TextView"
-                        android:text="@string/lhwf1e3"
-
-                        />
+                        android:text="@string/lhwf1e3" />
 
                     <EditText
                         style="@style/EditText_Name"
@@ -177,31 +136,22 @@
                         android:maxLength="50"
                         android:hint="@string/lhwf1e3"/>
 
-
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
             <!-- lhwf1e3 ends-->
 
+
             <!-- lhwf1e4 starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-
-                >
-
-
+            <android.support.v7.widget.CardView style="@style/Q_CardView">
 
                 <LinearLayout
                     android:id="@+id/Lv_lhwf1e4"
-                    style="@style/Q_Linerlayout_v"
-
-                    >
+                    style="@style/Q_Linerlayout_v">
 
                     <TextView
-
                         style="@style/TextView"
-                        android:text="@string/lhwf1e4"
-
-                        />
+                        android:text="@string/lhwf1e4" />
 
                     <EditText
                         style="@style/EditText_Name"
@@ -209,85 +159,59 @@
                         android:maxLength="50"
                         android:hint="@string/lhwf1e4"/>
 
-
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
             <!-- lhwf1e4 ends-->
 
 
-
-
             <!-- lhwf1e4A starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-
-
-                >
-
+            <android.support.v7.widget.CardView style="@style/Q_CardView">
 
                 <LinearLayout
                     android:id="@+id/Lv_lhwf1e4A"
-                    style="@style/Q_Linerlayout_v"
-
-                    >
+                    style="@style/Q_Linerlayout_v">
 
                     <TextView
-
                         style="@style/TextView"
-                        android:text="@string/lhwf1e4A"
-
-                        />
+                        android:text="@string/lhwf1e4A" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/lhwf1e4Aa"
                         style="@style/EditText_number"
                         android:inputType="number"
                         android:hint="month"
-                        android:maxLength="2"
-
+                        app:mask="##"
                         app:maxValue="12"
                         app:minValue="1"
-                        app:required="true"
                         app:type="range" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/lhwf1e4Ab"
                         style="@style/EditText_number"
                         android:inputType="number"
-                        android:hint="Year"
-                        android:maxLength="2"
+                        android:hint="Date"
+                        app:mask="##"
                         app:maxValue="31"
                         app:minValue="1"
-                        app:required="true"
                         app:type="range" />
 
-
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
             <!-- lhwf1e4A ends-->
 
 
-
             <!-- lhwf1e5 starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-
-                >
-
-
+            <android.support.v7.widget.CardView style="@style/Q_CardView">
 
                 <LinearLayout
                     android:id="@+id/Lv_lhwf1e5"
-                    style="@style/Q_Linerlayout_v"
-
-                    >
+                    style="@style/Q_Linerlayout_v">
 
                     <TextView
-
                         style="@style/TextView"
-                        android:text="@string/lhwf1e5"
-
-                        />
+                        android:text="@string/lhwf1e5" />
 
                     <RadioGroup
                         android:id="@+id/lhwf1e5"
@@ -308,34 +232,26 @@
                             style="@style/RadioButton"
                             android:text="Weight machine not working/available"/>
 
-
                     </RadioGroup>
 
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
             <!-- lhwf1e5 ends-->
 
 
             <!-- lhwf1e5b starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-                android:visibility='@{lhwf1e51.checked? View.GONE : View.VISIBLE}'
-                >
-
-
+            <android.support.v7.widget.CardView
+                style="@style/Q_CardView"
+                android:visibility='@{lhwf1e51.checked? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:id="@+id/Lv_lhwf1e5b"
-                    style="@style/Q_Linerlayout_v"
-
-                    >
+                    style="@style/Q_Linerlayout_v">
 
                     <TextView
-
                         style="@style/TextView"
-                        android:text="Why was birth weight not recorded?"
-
-                        />
+                        android:text="Why was birth weight not recorded?" />
 
                     <RadioGroup
                         android:id="@+id/lhwf1e5b"
@@ -361,34 +277,24 @@
                             style="@style/RadioButton"
                             android:text="Baby was delivered in some other area"/>
 
-
                     </RadioGroup>
 
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
             <!-- lhwf1e5b ends-->
 
 
             <!-- lhwf1e6 starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-
-                >
-
-
+            <android.support.v7.widget.CardView style="@style/Q_CardView">
 
                 <LinearLayout
                     android:id="@+id/Lv_lhwf1e6"
-                    style="@style/Q_Linerlayout_v"
-
-                    >
+                    style="@style/Q_Linerlayout_v">
 
                     <TextView
-
                         style="@style/TextView"
-                        android:text="@string/lhwf1e6"
-
-                        />
+                        android:text="@string/lhwf1e6" />
 
                     <RadioGroup
                         android:id="@+id/lhwf1e6"
@@ -410,35 +316,26 @@
                             style="@style/RadioButton"
                             android:text="@string/rb_na"/>
 
-
                     </RadioGroup>
 
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
             <!-- lhwf1e6 ends-->
 
 
-
             <!-- lhwf1e6b starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-                android:visibility='@{lhwf1e62.checked? View.GONE : View.VISIBLE}'
-
-                >
-
-
+            <android.support.v7.widget.CardView
+                style="@style/Q_CardView"
+                android:visibility='@{lhwf1e62.checked? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:id="@+id/Lv_lhwf1e6b"
-                    style="@style/Q_Linerlayout_v"
-
-                    >
+                    style="@style/Q_Linerlayout_v">
 
                     <TextView
-
                         style="@style/TextView"
-                        android:text="Mother initiated breastfeeding (within 24 hours)"
-
-                        />
+                        android:text="Mother initiated breastfeeding (within 24 hours)" />
 
                     <RadioGroup
                         android:id="@+id/lhwf1e6b"
@@ -454,35 +351,24 @@
                             style="@style/RadioButton"
                             android:text="@string/rb_no"/>
 
-
-
                     </RadioGroup>
 
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
             <!-- lhwf1e6b ends-->
 
 
             <!-- lhwf1e7 starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-
-                >
-
-
+            <android.support.v7.widget.CardView style="@style/Q_CardView">
 
                 <LinearLayout
                     android:id="@+id/Lv_lhwf1e7"
-                    style="@style/Q_Linerlayout_v"
-
-                    >
+                    style="@style/Q_Linerlayout_v">
 
                     <TextView
-
                         style="@style/TextView"
-                        android:text="@string/lhwf1e7"
-
-                        />
+                        android:text="@string/lhwf1e7" />
 
                     <RadioGroup
                         android:id="@+id/lhwf1e7"
@@ -498,34 +384,24 @@
                             style="@style/RadioButton"
                             android:text="@string/rb_no"/>
 
-
-
                     </RadioGroup>
 
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
             <!-- lhwf1e7 ends-->
 
+
             <!-- lhwf1e7b starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-
-                >
-
-
+            <android.support.v7.widget.CardView style="@style/Q_CardView">
 
                 <LinearLayout
                     android:id="@+id/Lv_lhwf1e7b"
-                    style="@style/Q_Linerlayout_v"
-
-                    >
+                    style="@style/Q_Linerlayout_v">
 
                     <TextView
-
                         style="@style/TextView"
-                        android:text="Record keeping for BCG vaccine  given after birth"
-
-                        />
+                        android:text="Record keeping for BCG vaccine  given after birth" />
 
                     <RadioGroup
                         android:id="@+id/lhwf1e7b"
@@ -541,34 +417,24 @@
                             style="@style/RadioButton"
                             android:text="@string/rb_no"/>
 
-
-
                     </RadioGroup>
 
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
             <!-- lhwf1e7b ends-->
 
+
             <!-- lhwf1e8 starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-
-                >
-
-
+            <android.support.v7.widget.CardView style="@style/Q_CardView">
 
                 <LinearLayout
                     android:id="@+id/Lv_lhwf1e8"
-                    style="@style/Q_Linerlayout_v"
-
-                    >
+                    style="@style/Q_Linerlayout_v">
 
                     <TextView
-
                         style="@style/TextView"
-                        android:text="@string/lhwf1e8"
-
-                        />
+                        android:text="@string/lhwf1e8" />
 
                     <RadioGroup
                         android:id="@+id/lhwf1e8"
@@ -584,28 +450,19 @@
                             style="@style/RadioButton"
                             android:text="@string/rb_no"/>
 
-
-
-
                     </RadioGroup>
 
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
             <!-- lhwf1e8 ends-->
 
 
+        </LinearLayout>
 
 
-</LinearLayout>
-
-            <!-- Button -->
-            <android.support.v7.widget.CardView
-                style="@style/Q_CardView"
-
-                >
-
-
-
+            <!-- Button Next Starts-->
+            <android.support.v7.widget.CardView style="@style/Q_CardView">
 
                 <Button
                     android:id="@+id/btn_Next"
@@ -614,16 +471,11 @@
                     android:layout_weight="50"
                     android:text="Submit " />
 
-
-
             </android.support.v7.widget.CardView>
-
             <!-- Button Next Ends-->
-
 
         </LinearLayout>
 
     </ScrollView>
-
 
 </layout>
