@@ -55,17 +55,15 @@ public  class Form1SectionF extends AppCompatActivity implements View.OnClickLis
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if(s.length() != 0)
-                {
+                if (bin.lhwf1f1.getText().toString().isEmpty()) return;
+                bin.lhwf1f3.setMaxvalue(Integer.valueOf(bin.lhwf1f1.getText().toString()) > 20 ? 20 : Integer.valueOf(bin.lhwf1f1.getText().toString()));
+
+                if (s.length() != 0) {
                     bin.lhwf1f2.setVisibility(View.GONE);
                  //   bin.lhwf1f2.setText("00");
-                }
-                else
-                {
+                } else {
                     bin.lhwf1f2.setVisibility(View.VISIBLE);
                   //  bin.lhwf1f2.setText("");
-                    if (bin.lhwf1f1.getText().toString().isEmpty()) return;
-                    bin.lhwf1f3.setMaxvalue(Integer.valueOf(bin.lhwf1f1.getText().toString()));
                 }
             }
         });
@@ -83,14 +81,15 @@ public  class Form1SectionF extends AppCompatActivity implements View.OnClickLis
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (bin.lhwf1f2.getText().toString().isEmpty()) return;
+                bin.lhwf1f3.setMaxvalue(Integer.valueOf(bin.lhwf1f2.getText().toString()) > 20 ? 20 : Integer.valueOf(bin.lhwf1f2.getText().toString()));
+
                 if (s.length() != 0) {
                     bin.lhwf1f1.setVisibility(View.GONE);
                   //  bin.lhwf1f1.setText("00");
                 } else {
                     bin.lhwf1f1.setVisibility(View.VISIBLE);
                    // bin.lhwf1f1.setText("");
-                    if (bin.lhwf1f2.getText().toString().isEmpty()) return;
-                    bin.lhwf1f3.setMaxvalue(Integer.valueOf(bin.lhwf1f2.getText().toString()));
                 }
             }
         });
@@ -109,51 +108,6 @@ public  class Form1SectionF extends AppCompatActivity implements View.OnClickLis
         if (!formValidation()) {
             return;
         }
-
-
-        if(bin.lhwf1f1.getText().length()>0) {
-            int a = Integer.parseInt(bin.lhwf1f1.getText().toString());
-            if (a > 100) {
-                bin.lhwf1f1.requestFocus();
-                bin.lhwf1f1.setError("Should be less then 100");
-
-                return;
-            }
-        }
-
-        if(bin.lhwf1f2.getText().length()>0) {
-        int b = Integer.parseInt(bin.lhwf1f2.getText().toString());
-        if (b > 100) {
-            bin.lhwf1f2.requestFocus();
-            bin.lhwf1f2.setError("Should be less then 100");
-
-            return;
-        }
-    }
-
-        if(bin.lhwf1f3.getText().length()>0) {
-            int b = Integer.parseInt(bin.lhwf1f3.getText().toString());
-            if (b > 20) {
-                bin.lhwf1f3.requestFocus();
-                bin.lhwf1f3.setError("Should be less then 20");
-
-                return;
-            }
-        }
-
-
-
-        if(bin.lhwf1f5.getText().length()>0) {
-            int b = Integer.parseInt(bin.lhwf1f5.getText().toString());
-            if (b > 59) {
-                bin.lhwf1f5.requestFocus();
-                bin.lhwf1f5.setError("age of child should be less then  60");
-
-                return;
-            }
-        }
-
-
 
 
         insert_data();

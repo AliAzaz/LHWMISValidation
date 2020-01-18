@@ -60,17 +60,19 @@ public  class Form1SectionG extends AppCompatActivity implements View.OnClickLis
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (bin.lhwf1g1.getText().toString().isEmpty()) return;
+                bin.lhwf1g3.setMaxvalue(Integer.valueOf(bin.lhwf1g1.getText().toString()) > 20 ? 20 : Integer.valueOf(bin.lhwf1g1.getText().toString()));
+
                 if (s.length() != 0) {
                     bin.lhwf1g2.setVisibility(View.GONE);
                     //   bin.lhwf1g2.setText("00");
                 } else {
                     bin.lhwf1g2.setVisibility(View.VISIBLE);
                     //  bin.lhwf1g2.setText("");
-                    if (bin.lhwf1g1.getText().toString().isEmpty()) return;
-                    bin.lhwf1g3.setMaxvalue(Integer.valueOf(bin.lhwf1g1.getText().toString()));
                 }
             }
         });
+
 
         bin.lhwf1g2.addTextChangedListener(new TextWatcher() {
 
@@ -83,20 +85,18 @@ public  class Form1SectionG extends AppCompatActivity implements View.OnClickLis
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (bin.lhwf1g2.getText().toString().isEmpty()) return;
+                bin.lhwf1g3.setMaxvalue(Integer.valueOf(bin.lhwf1g2.getText().toString()) > 20 ? 20 : Integer.valueOf(bin.lhwf1g2.getText().toString()));
+
                 if (s.length() != 0) {
                     bin.lhwf1g1.setVisibility(View.GONE);
                     //  bin.lhwf1g1.setText("00");
                 } else {
                     bin.lhwf1g1.setVisibility(View.VISIBLE);
                     // bin.lhwf1g1.setText("");
-                    if (bin.lhwf1g2.getText().toString().isEmpty()) return;
-                    bin.lhwf1g3.setMaxvalue(Integer.valueOf(bin.lhwf1g2.getText().toString()));
                 }
             }
         });
-
-
-
 
 
 }
@@ -114,7 +114,7 @@ public  class Form1SectionG extends AppCompatActivity implements View.OnClickLis
         }
 
 
-        if(bin.lhwf1g1.getText().length()>0) {
+        /*if(bin.lhwf1g1.getText().length()>0) {
             int a = Integer.parseInt(bin.lhwf1g1.getText().toString());
             if (a > 100) {
                 bin.lhwf1g1.requestFocus();
@@ -162,7 +162,7 @@ public  class Form1SectionG extends AppCompatActivity implements View.OnClickLis
 
                 return;
             }
-        }
+        }*/
 
 
 
