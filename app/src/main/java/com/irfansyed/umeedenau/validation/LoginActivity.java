@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -33,6 +32,7 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 
 import data.LocalDataManager;
@@ -51,25 +51,19 @@ public class LoginActivity extends AppCompatActivity implements View.OnTouchList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
-        CheckBox showpassowrd=(CheckBox)findViewById(R.id.showpassowrd);
-
-
-
-
-
+        CheckBox showpassowrd = findViewById(R.id.showpassowrd);
 
 
         MyPreferences pref=new MyPreferences(this);
                AppVersion= Double.parseDouble(pref.getAppVersion());
 
-        final EditText textUsername = (EditText) findViewById(R.id.login_username);
-        final EditText textPassword = (EditText) findViewById(R.id.login_password);
-        final TextView textlogout = (TextView) findViewById(R.id.txt_logut);
-        Button btnLogin = (Button) findViewById(R.id.login_btn);
+        final EditText textUsername = findViewById(R.id.login_username);
+        final EditText textPassword = findViewById(R.id.login_password);
+        final TextView textlogout = findViewById(R.id.txt_logut);
+        Button btnLogin = findViewById(R.id.login_btn);
         final MyPreferences preferences = new MyPreferences(this);
 
-        Button UpdateButton = (Button) findViewById(R.id.Updateapp);
+        Button UpdateButton = findViewById(R.id.Updateapp);
 
 
         showpassowrd.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -112,8 +106,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnTouchList
 
 
                             Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                            ((Activity) LoginActivity.this).startActivity(intent);
-                            ((Activity) LoginActivity.this).finish();
+                            LoginActivity.this.startActivity(intent);
+                            LoginActivity.this.finish();
 
                         } else {
                             textPassword.setError("Incorrect use Password");
@@ -326,7 +320,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnTouchList
                 connection.setRequestMethod("POST");
 
                 OutputStream os = connection.getOutputStream();
-                BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
+                BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(os, StandardCharsets.UTF_8));
 
                 // set pa
                 // rameter values for post-request
@@ -423,7 +417,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnTouchList
 
                     // redirect to another activity from here..
                     Intent intent = new Intent(mContext, HomeActivity.class);
-                    ((Activity) mContext).startActivity(intent);
+                    mContext.startActivity(intent);
                     ((Activity) mContext).finish();
                 }
 
@@ -457,8 +451,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnTouchList
             query = String.format(query);
 
 
-
-            LmManger.database.execSQL(query);
+            LocalDataManager.database.execSQL(query);
 
         }
 
@@ -471,7 +464,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnTouchList
 
             LocalDataManager validationactivity = new LocalDataManager(mContext);
 
-            validationactivity.database.execSQL(query);
+            LocalDataManager.database.execSQL(query);
 
         }
 
