@@ -12,7 +12,6 @@ import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import com.irfansyed.umeedenau.validation.databinding.Form1sectionfBinding;
 import com.irfansyed.umeedenau.validation.databinding.Form2sectionfBinding;
 
 import java.text.DateFormat;
@@ -48,14 +47,8 @@ public  class Form2SectionF extends AppCompatActivity implements View.OnClickLis
         {
             FK_id =(String) b.get("pk_id");
 
-
             this.ininfo();
-
         }
-
-
-
-
 
 
         bin.btnNext.setOnClickListener(this);
@@ -89,7 +82,6 @@ public  class Form2SectionF extends AppCompatActivity implements View.OnClickLis
                 if(bin.lhwf2f3.getText().toString().equals("999"))
                 {
 
-
                   //  bin.LvLhwf2f4.setVisibility(View.GONE);
                   //  bin.LvLhwf2f5.setVisibility(View.GONE);
                   //  bin.LvLhwf2f6.setVisibility(View.GONE);
@@ -100,9 +92,6 @@ public  class Form2SectionF extends AppCompatActivity implements View.OnClickLis
                   //  bin.LvLhwf2f11.setVisibility(View.GONE);
                   //  bin.LvLhwf2f12.setVisibility(View.GONE);
                   //  bin.LvLhwf2f13.setVisibility(View.GONE);
-
-
-
 
                 }
                 else
@@ -123,12 +112,7 @@ public  class Form2SectionF extends AppCompatActivity implements View.OnClickLis
             }
         });
 
-
     }
-
-
-
-
 
 
     @Override
@@ -138,7 +122,6 @@ public  class Form2SectionF extends AppCompatActivity implements View.OnClickLis
         if (!formValidation() && !bin.lhwf2f3.getText().toString().equals("999")) {
             return;
         }
-
 
         if(bin.lhwf2f3.getText().toString().length()>0)
         {
@@ -162,10 +145,7 @@ public  class Form2SectionF extends AppCompatActivity implements View.OnClickLis
             }
         }
 
-
-
         insert_data();
-
 
         Toast.makeText(this,"Data Inserted",Toast.LENGTH_SHORT).show();
         Intent intt = new Intent(getBaseContext(), PendingInterviewsHH.class);
@@ -180,16 +160,13 @@ public  class Form2SectionF extends AppCompatActivity implements View.OnClickLis
     }
 
 
-
     void insert_data()
     {
         HashMap<String, String> Has_Map = new HashMap<>();
         GeneratorClass.Has_Map.clear();
 
-
         Has_Map.put("FK_id",FK_id+"");
         Has_Map.put("LhwSectionPKId",Global.LhwSection_id+"");
-
 
         String start_time = DateFormat.getDateTimeInstance().format(new Date());
 
@@ -197,18 +174,14 @@ public  class Form2SectionF extends AppCompatActivity implements View.OnClickLis
         Has_Map.put(Global.GPSLong,Long);
         Has_Map.put(Global.InterviewTime,start_time);
 
-
         GeneratorClass.Insert_table(bin.SectionF,true);
         GeneratorClass.inert_db("TableF2SectionF",this,Has_Map);
         GeneratorClass.HH_update_Form1("TableF1SectionF",FK_id,this);
         GeneratorClass.LHWSectionUpdateCOunt("LHWCommunityHHCount",Global.LhwSection_id,this);
 
-
-
     }
 
-
-    public    void ininfo() {
+    public void ininfo() {
 
         String query2 = "select lhwf1f4  from TableF1SectionF  where id=" + FK_id;
 
@@ -220,26 +193,18 @@ public  class Form2SectionF extends AppCompatActivity implements View.OnClickLis
             if (c.moveToFirst()) {
                 do {
 
-
                     bin.lhwf2f4.setText(c.getString(0));
-
 
                 } while (c.moveToNext());
             }
-
         }
-
-
     }
-
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         if (buttonView.getId() == R.id.rlhwf2f1_1 || buttonView.getId() == R.id.rlhwf2f1_2) {
 
             if(lhwf2f1_2.isChecked()==true) {
-
-
 
                // bin.LvLhwf2f3.setVisibility(View.GONE);
                // bin.LvLhwf2f4.setVisibility(View.GONE);
@@ -255,7 +220,6 @@ public  class Form2SectionF extends AppCompatActivity implements View.OnClickLis
                // bin.LvLhwf2f13.setVisibility(View.GONE);
 
 
-
                 ClearAllcontrol.ClearAll(bin.LvLhwf2f3);
                 ClearAllcontrol.ClearAll(bin.LvLhwf2f4);
                 ClearAllcontrol.ClearAll(bin.LvLhwf2f5);
@@ -269,16 +233,9 @@ public  class Form2SectionF extends AppCompatActivity implements View.OnClickLis
                 ClearAllcontrol.ClearAll(bin.LvLhwf2f12);
                 ClearAllcontrol.ClearAll(bin.LvLhwf2f13);
 
-
-
-
-
-
             }
             else
             {
-
-
 
                // bin.LvLhwf2f3.setVisibility(View.VISIBLE);
                // bin.LvLhwf2f4.setVisibility(View.VISIBLE);
@@ -293,19 +250,12 @@ public  class Form2SectionF extends AppCompatActivity implements View.OnClickLis
                // bin.LvLhwf2f12.setVisibility(View.VISIBLE);
                // bin.LvLhwf2f13.setVisibility(View.VISIBLE);
 
-
-
             }
-
         }
-
-
 
         if (buttonView.getId() == R.id.lhwf2f5a_1 || buttonView.getId() == R.id.lhwf2f5a_2) {
 
             if(bin.lhwf2f5a2.isChecked()==true) {
-
-
 
               //  bin.LvLhwf2f6.setVisibility(View.GONE);
               //  bin.LvLhwf2f7.setVisibility(View.GONE);
@@ -316,7 +266,6 @@ public  class Form2SectionF extends AppCompatActivity implements View.OnClickLis
               //  bin.LvLhwf2f12.setVisibility(View.GONE);
               //  bin.LvLhwf2f13.setVisibility(View.GONE);
 
-
                 ClearAllcontrol.ClearAll(bin.LvLhwf2f6);
                 ClearAllcontrol.ClearAll(bin.LvLhwf2f7);
                 ClearAllcontrol.ClearAll(bin.LvLhwf2f8);
@@ -326,16 +275,9 @@ public  class Form2SectionF extends AppCompatActivity implements View.OnClickLis
                 ClearAllcontrol.ClearAll(bin.LvLhwf2f12);
                 ClearAllcontrol.ClearAll(bin.LvLhwf2f13);
 
-
-
-
-
-
             }
             else
             {
-
-
 
                // bin.LvLhwf2f6.setVisibility(View.VISIBLE);
                // bin.LvLhwf2f7.setVisibility(View.VISIBLE);
@@ -346,10 +288,7 @@ public  class Form2SectionF extends AppCompatActivity implements View.OnClickLis
                // bin.LvLhwf2f12.setVisibility(View.VISIBLE);
                // bin.LvLhwf2f13.setVisibility(View.VISIBLE);
 
-
-
             }
-
         }
     }
 }

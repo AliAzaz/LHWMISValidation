@@ -58,6 +58,7 @@
     <string name="rb_yes"> Yes </string>
     <string name="rb_no"> No </string>
     <string name="rb_na"> NA </string>
+    <string name="other"> Other </string>
 
     <string name="lhw_stockout"> Stock Out </string>
 

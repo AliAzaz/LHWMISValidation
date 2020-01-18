@@ -1,7 +1,5 @@
 package com.irfansyed.umeedenau.validation;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.databinding.DataBindingUtil;
@@ -14,7 +12,6 @@ import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import com.irfansyed.umeedenau.validation.databinding.Form1sectioncBinding;
 import com.irfansyed.umeedenau.validation.databinding.Form2sectioncBinding;
 
 import java.text.DateFormat;
@@ -25,7 +22,6 @@ import data.LocalDataManager;
 import utils.ClearAllcontrol;
 import utils.GeneratorClass;
 import utils.GetGpsHideForm;
-import utils.MyPreferences;
 import utils.ValidatorClass;
 
 import static data.LocalDataManager.database;
@@ -136,15 +132,16 @@ public  class Form2SectionC extends AppCompatActivity implements View.OnClickLis
 
         if(bin.lhwf2c2.getText().length()>0)
         {
-           // int a=Integer.parseInt(bin.lhwf2c2.getText().toString());
-           // if(a>5)
-           // {
-           //     bin.lhwf2c2.setError("Should be less then 6");
-           //     bin.lhwf2c2.requestFocus();
-           //     return;
-           // }
+            int a = Integer.parseInt(bin.lhwf2c2.getText().toString());
+            if (a > 5) {
+                bin.lhwf2c2.setError("Should be less then 5");
+                bin.lhwf2c2.requestFocus();
+                return;
+            }
 
         }
+        insert_data();
+
         Toast.makeText(this,"Data Inserted",Toast.LENGTH_SHORT).show();
         Intent intt = new Intent(getBaseContext(), PendingInterviewsHH.class);
         startActivity(intt);
@@ -152,6 +149,7 @@ public  class Form2SectionC extends AppCompatActivity implements View.OnClickLis
         finish();
 
     }
+
     private boolean formValidation() {
         return ValidatorClass.EmptyCheckingContainer(this, bin.SectionC);
     }

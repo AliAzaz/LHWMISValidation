@@ -5,17 +5,13 @@
     android:layout_height="match_parent" android:orientation="vertical"
     tools:context="com.irfansyed.umeedenau.validation.LoginActivity"
     android:weightSum="5"
-    android:background="@color/U_main"
+    android:background="@color/U_main">
 
-    >
-
-               <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="fill_parent"
-
-                android:orientation="vertical"
-                   android:layout_weight="3"
-                   >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="3"
+        android:orientation="vertical">
 
                    <ImageView
                        android:layout_width="165dp"
@@ -23,12 +19,7 @@
                        android:src="@drawable/unwhite"
                        android:layout_centerHorizontal="true"
                        android:layout_alignParentBottom="true"
-                       android:layout_marginBottom="0dp"
-
-                       />
-
-
-
+                       android:layout_marginBottom="0dp" />
 
             </RelativeLayout>
 
@@ -38,51 +29,36 @@
         android:layout_height="fill_parent"
         android:padding="50dp"
         android:layout_weight="2"
-
         android:orientation="vertical">
-
-
 
             <EditText
                 android:id="@+id/login_username"
                 style="@style/EditText_varchar2"
                 android:hint="Username"
-
                 android:textColorHint="@color/hitnscolor"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/hitnscolor"
                 android:textSize="16sp"
-                android:layout_marginTop="40dp"
-
-                  />
-
-
-
+                android:layout_marginTop="40dp" />
 
             <EditText
                 android:id="@+id/login_password"
                 style="@style/EditText_varchar2"
                 android:hint="Password"
                 android:inputType="textPassword"
-
                 android:textColorHint="@color/hitnscolor"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/hitnscolor"
-                android:textSize="16sp"
-               />
+                android:textSize="16sp" />
 
         <CheckBox
             android:id="@+id/showpassowrd"
             style="@style/EditText_varchar2"
             android:text="Show Password"
-
-
             android:textColorHint="@color/hitnscolor"
             android:textColor="@color/white"
             android:backgroundTint="@color/hitnscolor"
-            android:textSize="16sp"
-            />
-
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/login_btn"
@@ -93,12 +69,7 @@
             android:textSize="16sp"
             android:background="@drawable/cricl_lb"
             android:textColor="@color/hitnscolor"
-           android:stateListAnimator="@null"
-
-
-
-
-       />
+            android:stateListAnimator="@null" />
 
 
 </LinearLayout>
@@ -106,44 +77,30 @@
 <RelativeLayout
   android:layout_width="fill_parent"
   android:layout_height="wrap_content"
-  android:orientation="horizontal"
+    android:orientation="horizontal">
 
-  >
 <Button
   style="@style/TextView"
-
   android:text="APP Update"
   android:layout_width="wrap_content"
-   android:id="@+id/Updateapp"
+    android:id="@+id/Updateapp"
   android:textColor="@color/hitnscolor"
   android:textSize="16sp"
   android:layout_marginLeft="40dp"
-  android:layout_marginBottom="3dp"
+    android:layout_marginBottom="3dp" />
 
-
-
-
-  />
   <TextView
       style="@style/TextView"
       android:id="@+id/txt_logut"
-
-
       android:layout_width="wrap_content"
       android:text=" logout"
-
       android:textColor="@color/hitnscolor"
       android:textSize="16sp"
       android:layout_marginRight="10dp"
       android:layout_marginBottom="3dp"
       android:layout_gravity="right"
       android:clickable="true"
-      android:layout_alignParentRight="true"
-
-
-
-
-      />
+      android:layout_alignParentRight="true" />
 
 </RelativeLayout>
 

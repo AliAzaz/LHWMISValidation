@@ -668,6 +668,8 @@ public class Global {
     public static String lhwf5b7_6="lhwf5b7_6";
     public static String lhwf5b7_7="lhwf5b7_7";
     public static String lhwf5b7_8="lhwf5b7_8";
+    public static String lhwf5b796 = "lhwf5b796";
+    public static String lhwf5b796x = "lhwf5b796x";
 
     public static String lhwf6b0="lhwf6b0";
     public static String lhwf6b1="lhwf6b1";
@@ -683,6 +685,8 @@ public class Global {
     public static String lhwf6b6_6="lhwf6b6_6";
     public static String lhwf6b6_7="lhwf6b6_7";
     public static String lhwf6b6_8="lhwf6b6_8";
+    public static String lhwf6b696 = "lhwf6b696";
+    public static String lhwf6b696x = "lhwf6b696x";
 
 
 

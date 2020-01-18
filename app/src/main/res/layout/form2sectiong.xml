@@ -4,14 +4,12 @@
     tools:context=".LHWDashbord">
 
     <data>
-
         <import type="android.view.View" />
 
         <variable
             name="callback"
             type="com.irfansyed.umeedenau.validation.Form2SectionG" />
     </data>
-
 
 
     <ScrollView
@@ -25,6 +23,7 @@
         android:paddingRight="5dp"
         android:paddingTop="5dp"
         android:scrollbarSize="50dip">
+
         <!-- Parent layout starts -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,27 +31,25 @@
             android:background="#F1F1F1"
             android:orientation="vertical">
 
-
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                >
+                android:layout_marginTop="10dp">
+
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:src="@drawable/uncolor"
-                    />
+                    android:src="@drawable/uncolor" />
+
                 <TextView
                     style="@style/TextView"
                     android:text="@string/lhwf2header_g"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="7dp"
-                    android:textColor="#008E45"
-
-                    />
+                    android:textColor="#008E45" />
 
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -62,17 +59,9 @@
                 android:background="@color/hitnscolor" />
 
 
-
-
-
-
         <LinearLayout
             android:id="@+id/SectionG"
-            style="@style/Q_Linerlayout_v"
-
-            >
-
-
+            style="@style/Q_Linerlayout_v">
 
 
             <!-- lhwf2g1 starts -->
@@ -121,49 +110,32 @@
             </android.support.v7.widget.CardView>
             <!-- lhwf2g1 ends-->
 
-
-
-
             <!-- lhwf2g3 starts -->
             <android.support.v7.widget.CardView style="@style/Q_CardView"
-                android:visibility='@{rlhwf2g12.checked? View.GONE : View.VISIBLE}'
-
-
-                >
-
-
+                android:visibility='@{rlhwf2g12.checked? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:id="@+id/Lv_lhwf2g3"
-                    style="@style/Q_Linerlayout_v"
-
-                    >
+                    style="@style/Q_Linerlayout_v">
 
                     <TextView
-
                         style="@style/TextView"
-                        android:text="@string/lhwf2g3"
-
-                        />
-
-
-
+                        android:text="@string/lhwf2g3" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/lhwf2g3"
                         style="@style/EditText_number"
                         android:inputType="number"
-
+                        android:maxLength="2"
                         app:maxValue="20"
                         app:minValue="1"
                         app:required="true"
                         app:type="range" />
 
-
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
             <!-- lhwf2g3 ends-->
-
 
             <!-- lhwf2g3a starts -->
             <android.support.v7.widget.CardView style="@style/Q_CardView"
@@ -212,8 +184,6 @@
             </android.support.v7.widget.CardView>
             <!-- lhwf2g3a ends-->
 
-
-
             <!-- lhwf2g4 starts -->
             <android.support.v7.widget.CardView style="@style/Q_CardView"
                 android:visibility='@{rlhwf2g12.checked? View.GONE : View.VISIBLE}'
@@ -249,51 +219,30 @@
 
             <!-- lhwf2g5 starts -->
             <android.support.v7.widget.CardView style="@style/Q_CardView"
-                android:visibility='@{rlhwf2g12.checked? View.GONE : View.VISIBLE}'
-
-
-                >
-
-
+                android:visibility='@{rlhwf2g12.checked? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:id="@+id/Lv_lhwf2g5"
-                    style="@style/Q_Linerlayout_v"
-
-                    >
+                    style="@style/Q_Linerlayout_v">
 
                     <TextView
-
                         style="@style/TextView"
-                        android:text="@string/lhwf2g5"
-
-                        />
-
-
-
-
-
+                        android:text="@string/lhwf2g5" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/lhwf2g5"
                         style="@style/EditText_number"
                         android:inputType="number"
-
+                        android:maxLength="2"
                         app:maxValue="59"
                         app:minValue="0"
                         app:required="true"
                         app:type="range" />
 
-
-
-
-
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
             <!-- lhwf2g5 ends-->
-
-
-
 
             <!-- lhwf2g5a starts -->
             <android.support.v7.widget.CardView style="@style/Q_CardView"
@@ -341,8 +290,6 @@
             </android.support.v7.widget.CardView>
             <!-- lhwf2g5a ends-->
 
-
-
             <!-- lhwf2g6 starts -->
             <android.support.v7.widget.CardView style="@style/Q_CardView"
                 android:visibility='@{rlhwf2g12.checked || lhwf2g5a2.checked? View.GONE : View.VISIBLE}'
@@ -389,8 +336,6 @@
             </android.support.v7.widget.CardView>
             <!-- lhwf2g6 ends-->
 
-
-
             <!-- lhwf2g7 starts -->
             <android.support.v7.widget.CardView style="@style/Q_CardView"
                 android:visibility='@{rlhwf2g12.checked || lhwf2g5a2.checked? View.GONE : View.VISIBLE}'
@@ -434,8 +379,6 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
             <!-- lhwf2g7 ends-->
-
-
 
             <!-- lhwf2g7a starts -->
             <android.support.v7.widget.CardView style="@style/Q_CardView"
@@ -484,8 +427,6 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
             <!-- lhwf2g7a ends-->
-
-
 
             <!-- lhwf2g8 starts -->
             <android.support.v7.widget.CardView style="@style/Q_CardView"
@@ -576,8 +517,6 @@
             </android.support.v7.widget.CardView>
             <!-- lhwf2g9 ends-->
 
-
-
             <!-- Quality Indicators starts -->
             <android.support.v7.widget.CardView style="@style/Q_CardView"
                 android:visibility='@{rlhwf2g12.checked || lhwf2g5a2.checked?  View.GONE : View.VISIBLE}'
@@ -606,8 +545,6 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
             <!-- Quality Indicators ends-->
-
-
 
             <!-- lhwf2g10 starts -->
             <android.support.v7.widget.CardView style="@style/Q_CardView"
@@ -652,10 +589,6 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
             <!-- lhwf2g10 ends-->
-
-
-
-
 
             <!-- lhwf2g11 starts -->
             <android.support.v7.widget.CardView style="@style/Q_CardView"
@@ -704,8 +637,6 @@
             </android.support.v7.widget.CardView>
             <!-- lhwf2g11 ends-->
 
-
-
             <!-- lhwf2g11a starts -->
             <android.support.v7.widget.CardView style="@style/Q_CardView"
                 android:visibility='@{rlhwf2g12.checked || lhwf2g5a2.checked? View.GONE : View.VISIBLE}'
@@ -752,16 +683,10 @@
             <!-- lhwf2g11a ends-->
 
 
-
         </LinearLayout>
+
             <!-- Button -->
-            <android.support.v7.widget.CardView
-                style="@style/Q_CardView"
-
-                >
-
-
-
+            <android.support.v7.widget.CardView style="@style/Q_CardView">
 
                 <Button
                     android:id="@+id/btn_next"
@@ -770,16 +695,11 @@
                     android:layout_weight="50"
                     android:text="Next " />
 
-
-
             </android.support.v7.widget.CardView>
-
             <!-- Button Next Ends-->
-
 
         </LinearLayout>
 
     </ScrollView>
-
 
 </layout>

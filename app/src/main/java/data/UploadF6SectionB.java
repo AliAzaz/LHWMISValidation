@@ -3,14 +3,11 @@ package data;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
 import com.irfansyed.umeedenau.validation.Global;
-import com.irfansyed.umeedenau.validation.PendingInterviewsHH;
-import com.irfansyed.umeedenau.validation.PendingUploads;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -96,6 +93,8 @@ public class UploadF6SectionB extends AsyncTask {
                         param.put("lhwf6b6_6", c.getString(c.getColumnIndex("lhwf6b6_6")));
                         param.put("lhwf6b6_7", c.getString(c.getColumnIndex("lhwf6b6_7")));
                         param.put("lhwf6b6_8", c.getString(c.getColumnIndex("lhwf6b6_8")));
+                        param.put("lhwf6b696", c.getString(c.getColumnIndex("lhwf6b696")));
+                        param.put("lhwf6b696x", c.getString(c.getColumnIndex("lhwf6b696x")));
 
                         param.put("GPSLat", c.getString(c.getColumnIndex("GPSLat")));
                         param.put("GPSLong", c.getString(c.getColumnIndex("GPSLong")));
@@ -129,6 +128,8 @@ public class UploadF6SectionB extends AsyncTask {
             param.put("lhwf6b6_6", "00");
             param.put("lhwf6b6_7", "00");
             param.put("lhwf6b6_8", "00");
+            param.put("lhwf6b696", "00");
+            param.put("lhwf6b696x", "00");
 
 
 

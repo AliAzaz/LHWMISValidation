@@ -27,6 +27,8 @@ public class TableF6SectionB {
                 Global.lhwf6b6_6+"  Text, "+
                 Global.lhwf6b6_7+"  Text, "+
                 Global.lhwf6b6_8+"  Text ,"+
+                Global.lhwf6b696 + "  Text ," +
+                Global.lhwf6b696x + "  Text ," +
                 Global.GPSLat+"  Text,"+
                 Global.GPSLong+"  Text,"+
                 Global.InterviewTime+"  Text"+

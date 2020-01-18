@@ -29,6 +29,8 @@ public class TableF5SectionB {
                 Global.lhwf5b7_6+"  Text, "+
                 Global.lhwf5b7_7+"  Text, "+
                 Global.lhwf5b7_8+"  Text "+
+                Global.lhwf5b796 + "  Text " +
+                Global.lhwf5b796x + "  Text " +
 
 
 
