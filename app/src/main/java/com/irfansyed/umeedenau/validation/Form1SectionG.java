@@ -55,22 +55,19 @@ public  class Form1SectionG extends AppCompatActivity implements View.OnClickLis
             public void afterTextChanged(Editable s) {}
 
             @Override
-            public void beforeTextChanged(CharSequence s, int start,
-                                          int count, int after) {
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
 
             @Override
-            public void onTextChanged(CharSequence s, int start,
-                                      int before, int count) {
-                if(s.length() != 0)
-                {
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.length() != 0) {
                     bin.lhwf1g2.setVisibility(View.GONE);
                     //   bin.lhwf1g2.setText("00");
-                }
-                else
-                {
+                } else {
                     bin.lhwf1g2.setVisibility(View.VISIBLE);
                     //  bin.lhwf1g2.setText("");
+                    if (bin.lhwf1g1.getText().toString().isEmpty()) return;
+                    bin.lhwf1g3.setMaxvalue(Integer.valueOf(bin.lhwf1g1.getText().toString()));
                 }
             }
         });
@@ -81,22 +78,19 @@ public  class Form1SectionG extends AppCompatActivity implements View.OnClickLis
             public void afterTextChanged(Editable s) {}
 
             @Override
-            public void beforeTextChanged(CharSequence s, int start,
-                                          int count, int after) {
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
 
             @Override
-            public void onTextChanged(CharSequence s, int start,
-                                      int before, int count) {
-                if(s.length() != 0)
-                {
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.length() != 0) {
                     bin.lhwf1g1.setVisibility(View.GONE);
                     //  bin.lhwf1g1.setText("00");
-                }
-                else
-                {
+                } else {
                     bin.lhwf1g1.setVisibility(View.VISIBLE);
                     // bin.lhwf1g1.setText("");
+                    if (bin.lhwf1g2.getText().toString().isEmpty()) return;
+                    bin.lhwf1g3.setMaxvalue(Integer.valueOf(bin.lhwf1g2.getText().toString()));
                 }
             }
         });

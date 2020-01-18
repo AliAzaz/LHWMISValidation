@@ -26,14 +26,13 @@
         android:paddingTop="5dp"
         android:scrollbarSize="50dip">
         <!-- Parent layout starts -->
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#F1F1F1"
             android:orientation="vertical">
-
-
-
 
             <LinearLayout
                 android:layout_width="fill_parent"

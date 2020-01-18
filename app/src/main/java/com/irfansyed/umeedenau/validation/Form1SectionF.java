@@ -29,21 +29,17 @@ public  class Form1SectionF extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bin= DataBindingUtil.setContentView(this, R.layout.form1sectionf);
-
         bin.btnNext.setOnClickListener(this);
 
 
-
-        if(GeneratorClass.LHWsectionStatus("TableF1SectionF")==false)
-        {
+        if (GeneratorClass.LHWsectionStatus("TableF1SectionF") == false) {
 
             bin.lhwf1f1.setText("000");
             bin.lhwf1f1.setVisibility(View.GONE);
 
-
-
             bin.lhwf1f2.setText("000");
             bin.lhwf1f2.setVisibility(View.GONE);
+
         }
 
 
@@ -54,13 +50,11 @@ public  class Form1SectionF extends AppCompatActivity implements View.OnClickLis
             public void afterTextChanged(Editable s) {}
 
             @Override
-            public void beforeTextChanged(CharSequence s, int start,
-                                          int count, int after) {
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
 
             @Override
-            public void onTextChanged(CharSequence s, int start,
-                                      int before, int count) {
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if(s.length() != 0)
                 {
                     bin.lhwf1f2.setVisibility(View.GONE);
@@ -70,9 +64,12 @@ public  class Form1SectionF extends AppCompatActivity implements View.OnClickLis
                 {
                     bin.lhwf1f2.setVisibility(View.VISIBLE);
                   //  bin.lhwf1f2.setText("");
+                    if (bin.lhwf1f1.getText().toString().isEmpty()) return;
+                    bin.lhwf1f3.setMaxvalue(Integer.valueOf(bin.lhwf1f1.getText().toString()));
                 }
             }
         });
+
 
         bin.lhwf1f2.addTextChangedListener(new TextWatcher() {
 
@@ -80,22 +77,20 @@ public  class Form1SectionF extends AppCompatActivity implements View.OnClickLis
             public void afterTextChanged(Editable s) {}
 
             @Override
-            public void beforeTextChanged(CharSequence s, int start,
-                                          int count, int after) {
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
             }
 
             @Override
-            public void onTextChanged(CharSequence s, int start,
-                                      int before, int count) {
-                if(s.length() != 0)
-                {
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.length() != 0) {
                     bin.lhwf1f1.setVisibility(View.GONE);
                   //  bin.lhwf1f1.setText("00");
-                }
-                else
-                {
+                } else {
                     bin.lhwf1f1.setVisibility(View.VISIBLE);
                    // bin.lhwf1f1.setText("");
+                    if (bin.lhwf1f2.getText().toString().isEmpty()) return;
+                    bin.lhwf1f3.setMaxvalue(Integer.valueOf(bin.lhwf1f2.getText().toString()));
                 }
             }
         });
@@ -110,8 +105,7 @@ public  class Form1SectionF extends AppCompatActivity implements View.OnClickLis
 // update
 
     @Override
-    public void onClick(View view)
-    {
+    public void onClick(View view) {
         if (!formValidation()) {
             return;
         }
@@ -181,9 +175,7 @@ public  class Form1SectionF extends AppCompatActivity implements View.OnClickLis
     }
 
 
-
-    void insert_data()
-    {
+    void insert_data() {
         HashMap<String, String> Has_Map = new HashMap<>();
         GeneratorClass.Has_Map.clear();
 
@@ -195,9 +187,6 @@ public  class Form1SectionF extends AppCompatActivity implements View.OnClickLis
         GeneratorClass.Insert_table(bin.SectionF,true);
         GeneratorClass.inert_db("TableF1SectionF",this,Has_Map);
         GeneratorClass.LHWSectionUpdateCOunt("LHWOfficeHHCount",Global.LhwSection_id,this);
-
-
-
 
     }
 
