@@ -25,6 +25,8 @@
         android:paddingRight="5dp"
         android:paddingTop="5dp"
         android:scrollbarSize="50dip">
+
+
         <!-- Parent layout starts -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,29 +34,25 @@
             android:background="#F1F1F1"
             android:orientation="vertical">
 
-
-
-
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                >
+                android:layout_marginTop="10dp">
+
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:src="@drawable/uncolor"
-                    />
+                    android:src="@drawable/uncolor" />
+
                 <TextView
                     style="@style/TextView"
                     android:text="@string/lhwf2header_h"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="7dp"
-                    android:textColor="#008E45"
-
-                    />
+                    android:textColor="#008E45" />
 
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -65,9 +63,7 @@
 
         <LinearLayout
             android:id="@+id/SectionH"
-            style="@style/Q_Linerlayout_v"
-
-            >
+            style="@style/Q_Linerlayout_v">
 
 
             <!-- lhwf2h1 starts -->
@@ -113,6 +109,41 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
             <!-- lhwf2h1 ends-->
+
+
+            <!-- lhwf2h2a starts -->
+            <android.support.v7.widget.CardView
+                style="@style/Q_CardView"
+                android:visibility='@{rlhwf2h12? View.VISIBLE : View.GONE}'>
+
+                <LinearLayout
+                    android:id="@+id/Lv_lhwf2h2a"
+                    style="@style/Q_Linerlayout_v">
+
+                    <TextView
+                        style="@style/TextView"
+                        android:text="Reason" />
+
+                    <RadioGroup
+                        android:id="@+id/lhwf2h2a"
+                        style="@style/RadioGroup">
+
+                        <RadioButton
+                            android:id="@+id/rlhwf2h2a_1"
+                            style="@style/RadioButton"
+                            android:text="HouseHold Not Found" />
+
+                        <RadioButton
+                            android:id="@+id/rlhwf2h2a_2"
+                            style="@style/RadioButton"
+                            android:text="Fake Record" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <!-- lhwf2h2a ends-->
 
 
 

@@ -12,7 +12,6 @@ import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import com.irfansyed.umeedenau.validation.databinding.Form1sectionhBinding;
 import com.irfansyed.umeedenau.validation.databinding.Form2sectionhBinding;
 
 import java.text.DateFormat;
@@ -81,8 +80,7 @@ public  class Form2SectionH extends AppCompatActivity implements View.OnClickLis
             public void onTextChanged(CharSequence s, int start,
                                       int before, int count) {
 
-                if(bin.lhwf2h2.getText().toString().equals("999"))
-                {
+                if (bin.lhwf2h2.getText().toString().equals("999")) {
 
                   //  bin.LvLhwf2h3.setVisibility(View.GONE);
                   //  bin.LvLhwf2h4.setVisibility(View.GONE);
@@ -93,14 +91,7 @@ public  class Form2SectionH extends AppCompatActivity implements View.OnClickLis
                   //  bin.LvLhwf2h9.setVisibility(View.GONE);
                   //  bin.LvLhwf2h10.setVisibility(View.GONE);
                   //  bin.LvLhwf2h11.setVisibility(View.GONE);
-
-
-
-
-
-                }
-                else
-                {
+                } else {
                    // bin.LvLhwf2h3.setVisibility(View.VISIBLE);
                    // bin.LvLhwf2h4.setVisibility(View.VISIBLE);
                    // bin.LvLhwf2h5.setVisibility(View.VISIBLE);
@@ -110,7 +101,6 @@ public  class Form2SectionH extends AppCompatActivity implements View.OnClickLis
                    // bin.LvLhwf2h9.setVisibility(View.VISIBLE);
                    // bin.LvLhwf2h10.setVisibility(View.VISIBLE);
                    // bin.LvLhwf2h11.setVisibility(View.VISIBLE);
-
 
                 }
             }
@@ -189,12 +179,10 @@ public  class Form2SectionH extends AppCompatActivity implements View.OnClickLis
                 ClearAllcontrol.ClearAll(bin.LvLhwf2h9);
                 ClearAllcontrol.ClearAll(bin.LvLhwf2h10);
                 ClearAllcontrol.ClearAll(bin.LvLhwf2h11);
-            }
-            else
+            } else {
 
-            {
-
-              //  bin.LvLhwf2h2.setVisibility(View.VISIBLE);
+                ClearAllcontrol.ClearAll(bin.LvLhwf2h2a);
+                //  bin.Lvlhwf2h2a.setVisibility(View.VISIBLE);
               //  bin.LvLhwf2h3.setVisibility(View.VISIBLE);
               //  bin.LvLhwf2h4.setVisibility(View.VISIBLE);
               //  bin.LvLhwf2h5.setVisibility(View.VISIBLE);
