@@ -43,23 +43,16 @@ public  class Form2SectionH extends AppCompatActivity implements View.OnClickLis
 
         Intent iin= getIntent();
         Bundle b = iin.getExtras();
-        if(b!=null)
-        {
+        if (b != null) {
             FK_id =(String) b.get("pk_id");
-
-
             this.ininfo();
 
         }
-
-
-
 
         bin.lhwf2h61.setOnCheckedChangeListener(this);
         bin.lhwf2h62.setOnCheckedChangeListener(this);
         bin.rlhwf2h11.setOnCheckedChangeListener(this);
         bin.rlhwf2h12.setOnCheckedChangeListener(this);
-
 
         bin.btnNext.setOnClickListener(this);
 
