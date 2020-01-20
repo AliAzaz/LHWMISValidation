@@ -14,9 +14,8 @@ import com.irfansyed.umeedenau.validation.databinding.Form1sectioncBinding;
 
 import java.util.HashMap;
 
-import utils.GeneratorClass;
-
 import utils.ClearAllcontrol;
+import utils.GeneratorClass;
 import utils.ValidatorClass;
 
 
@@ -71,7 +70,7 @@ public  class Form1SectionC extends AppCompatActivity implements View.OnClickLis
             return;
         }
 
-        if(bin.lhwf1c1.getText().length()>0) {
+        /*if(bin.lhwf1c1.getText().length()>0) {
             int a = Integer.parseInt(bin.lhwf1c1.getText().toString());
             if (a > 30 ) {
                 bin.lhwf1c1.requestFocus();
@@ -79,16 +78,16 @@ public  class Form1SectionC extends AppCompatActivity implements View.OnClickLis
 
                 return;
             }
-        }
+        }*/
 
-        int b=Integer.parseInt(bin.lhwf1c2.getText().toString());
+        /*int b=Integer.parseInt(bin.lhwf1c2.getText().toString());
         if(b>5)
         {
             bin.lhwf1c2.requestFocus();
             bin.lhwf1c2.setError("Should be less then 5");
 
             return;
-        }
+        }*/
 
 
 

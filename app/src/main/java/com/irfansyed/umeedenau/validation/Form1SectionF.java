@@ -55,15 +55,14 @@ public  class Form1SectionF extends AppCompatActivity implements View.OnClickLis
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (bin.lhwf1f1.getText().toString().isEmpty()) return;
-                bin.lhwf1f3.setMaxvalue(Integer.valueOf(bin.lhwf1f1.getText().toString()) > 20 ? 20 : Integer.valueOf(bin.lhwf1f1.getText().toString()));
-
                 if (s.length() != 0) {
                     bin.lhwf1f2.setVisibility(View.GONE);
                  //   bin.lhwf1f2.setText("00");
                 } else {
                     bin.lhwf1f2.setVisibility(View.VISIBLE);
                   //  bin.lhwf1f2.setText("");
+                    if (bin.lhwf1f1.getText().toString().isEmpty()) return;
+                    bin.lhwf1f3.setMaxvalue(Integer.valueOf(bin.lhwf1f1.getText().toString()) > 20 ? 20 : Integer.valueOf(bin.lhwf1f1.getText().toString()));
                 }
             }
         });
@@ -81,8 +80,6 @@ public  class Form1SectionF extends AppCompatActivity implements View.OnClickLis
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (bin.lhwf1f2.getText().toString().isEmpty()) return;
-                bin.lhwf1f3.setMaxvalue(Integer.valueOf(bin.lhwf1f2.getText().toString()) > 20 ? 20 : Integer.valueOf(bin.lhwf1f2.getText().toString()));
 
                 if (s.length() != 0) {
                     bin.lhwf1f1.setVisibility(View.GONE);
@@ -90,6 +87,8 @@ public  class Form1SectionF extends AppCompatActivity implements View.OnClickLis
                 } else {
                     bin.lhwf1f1.setVisibility(View.VISIBLE);
                    // bin.lhwf1f1.setText("");
+                    if (bin.lhwf1f2.getText().toString().isEmpty()) return;
+                    bin.lhwf1f3.setMaxvalue(Integer.valueOf(bin.lhwf1f2.getText().toString()) > 20 ? 20 : Integer.valueOf(bin.lhwf1f2.getText().toString()));
                 }
             }
         });

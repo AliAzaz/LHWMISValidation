@@ -84,7 +84,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">16sp</item>
         <item name="android:inputType">textEmailAddress</item>
-        <item name="android:digits">[a-zA-Z ]+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz</item>
+        <item name="android:digits">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz</item>
         <item name="android:imeOptions">actionDone</item>
         <item name="android:singleLine">true</item>
 
