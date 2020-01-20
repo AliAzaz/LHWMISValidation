@@ -55,7 +55,7 @@ public  class Form1SectionH extends AppCompatActivity implements View.OnClickLis
 
 
 
-        if(bin.lhwf1h1.getText().length()>0) {
+        /*if(bin.lhwf1h1.getText().length()>0) {
             int a = Integer.parseInt(bin.lhwf1h1.getText().toString());
             if (a > 20) {
                 bin.lhwf1h1.requestFocus();
@@ -64,7 +64,7 @@ public  class Form1SectionH extends AppCompatActivity implements View.OnClickLis
                 return;
             }
 
-        }
+        }*/
 
 
         if(bin.lhwf1h1.getText().length()>0) {

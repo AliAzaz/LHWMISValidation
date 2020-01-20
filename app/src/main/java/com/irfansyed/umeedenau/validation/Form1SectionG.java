@@ -52,7 +52,10 @@ public  class Form1SectionG extends AppCompatActivity implements View.OnClickLis
         bin.lhwf1g1.addTextChangedListener(new TextWatcher() {
 
             @Override
-            public void afterTextChanged(Editable s) {}
+            public void afterTextChanged(Editable s) {
+                if (bin.lhwf1g1.getText().toString().isEmpty()) return;
+                bin.lhwf1g3.setMaxvalue(Integer.valueOf(bin.lhwf1g1.getText().toString()) > 20 ? 20 : Integer.valueOf(bin.lhwf1g1.getText().toString()));
+            }
 
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -60,8 +63,6 @@ public  class Form1SectionG extends AppCompatActivity implements View.OnClickLis
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (bin.lhwf1g1.getText().toString().isEmpty()) return;
-                bin.lhwf1g3.setMaxvalue(Integer.valueOf(bin.lhwf1g1.getText().toString()) > 20 ? 20 : Integer.valueOf(bin.lhwf1g1.getText().toString()));
 
                 if (s.length() != 0) {
                     bin.lhwf1g2.setVisibility(View.GONE);
@@ -77,7 +78,10 @@ public  class Form1SectionG extends AppCompatActivity implements View.OnClickLis
         bin.lhwf1g2.addTextChangedListener(new TextWatcher() {
 
             @Override
-            public void afterTextChanged(Editable s) {}
+            public void afterTextChanged(Editable s) {
+                if (bin.lhwf1g2.getText().toString().isEmpty()) return;
+                bin.lhwf1g3.setMaxvalue(Integer.valueOf(bin.lhwf1g2.getText().toString()) > 20 ? 20 : Integer.valueOf(bin.lhwf1g2.getText().toString()));
+            }
 
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -85,8 +89,6 @@ public  class Form1SectionG extends AppCompatActivity implements View.OnClickLis
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (bin.lhwf1g2.getText().toString().isEmpty()) return;
-                bin.lhwf1g3.setMaxvalue(Integer.valueOf(bin.lhwf1g2.getText().toString()) > 20 ? 20 : Integer.valueOf(bin.lhwf1g2.getText().toString()));
 
                 if (s.length() != 0) {
                     bin.lhwf1g1.setVisibility(View.GONE);
