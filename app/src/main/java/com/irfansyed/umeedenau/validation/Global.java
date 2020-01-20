@@ -625,6 +625,7 @@ public class Global {
 
     public static String lhwf2h1="lhwf2h1";
     public static String lhwf2h2="lhwf2h2";
+    public static String lhwf2h2a = "lhwf2h2a";
     public static String lhwf2h3="lhwf2h3";
     public static String lhwf2h4="lhwf2h4";
     public static String lhwf2h5="lhwf2h5";

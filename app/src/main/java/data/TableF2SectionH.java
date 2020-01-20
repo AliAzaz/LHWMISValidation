@@ -14,6 +14,7 @@ public class TableF2SectionH {
                 Global.LhwSectionPKId+"  Text, "+
                 Global.lhwf2h1+"  Text, "+
                 Global.lhwf2h2+"  Text, "+
+                Global.lhwf2h2a + "  Text, " +
                 Global.lhwf2h3+"  Text, "+
                 Global.lhwf2h4+"  Text, "+
                 Global.lhwf2h5+"  Text, "+
