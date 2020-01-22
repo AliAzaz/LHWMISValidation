@@ -289,10 +289,9 @@
                         android:id="@+id/lhwf2c4b"
                         style="@style/EditText_number"
                         android:inputType="number"
-                        android:maxLength="1"
+                        app:mask="#"
                         app:maxValue="9"
                         app:minValue="1"
-                        app:required="true"
                         app:type="range" />
 
                 </LinearLayout>
@@ -363,10 +362,9 @@
                         android:id="@+id/lhwf2c5"
                         style="@style/EditText_number"
                         android:inputType="number"
-
+                        app:mask="#"
                         app:maxValue="9"
                         app:minValue="0"
-                        app:required="true"
                         app:type="range" />
 
 
