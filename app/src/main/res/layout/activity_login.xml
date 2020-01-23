@@ -2,10 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" android:orientation="vertical"
-    tools:context="com.irfansyed.umeedenau.validation.LoginActivity"
+    android:layout_height="match_parent"
+    android:background="@color/U_main"
+    android:orientation="vertical"
     android:weightSum="5"
-    android:background="@color/U_main">
+    tools:context="com.irfansyed.umeedenau.validation.LoginActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -13,51 +14,51 @@
         android:layout_weight="3"
         android:orientation="vertical">
 
-                   <ImageView
-                       android:layout_width="165dp"
-                       android:layout_height="140dp"
-                       android:src="@drawable/unwhite"
-                       android:layout_centerHorizontal="true"
-                       android:layout_alignParentBottom="true"
-                       android:layout_marginBottom="0dp" />
+        <ImageView
+            android:layout_width="165dp"
+            android:layout_height="140dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="0dp"
+            android:src="@drawable/unwhite" />
 
-            </RelativeLayout>
+    </RelativeLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:padding="50dp"
         android:layout_weight="2"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="50dp">
 
-            <EditText
-                android:id="@+id/login_username"
-                style="@style/EditText_varchar2"
-                android:hint="Username"
-                android:textColorHint="@color/hitnscolor"
-                android:textColor="@color/white"
-                android:backgroundTint="@color/hitnscolor"
-                android:textSize="16sp"
-                android:layout_marginTop="40dp" />
+        <EditText
+            android:id="@+id/login_username"
+            style="@style/EditText_varchar2"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/hitnscolor"
+            android:hint="Username"
+            android:textColor="@color/white"
+            android:textColorHint="@color/hitnscolor"
+            android:textSize="16sp" />
 
-            <EditText
-                android:id="@+id/login_password"
-                style="@style/EditText_varchar2"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:textColorHint="@color/hitnscolor"
-                android:textColor="@color/white"
-                android:backgroundTint="@color/hitnscolor"
-                android:textSize="16sp" />
+        <EditText
+            android:id="@+id/login_password"
+            style="@style/EditText_varchar2"
+            android:backgroundTint="@color/hitnscolor"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/hitnscolor"
+            android:textSize="16sp" />
 
         <CheckBox
             android:id="@+id/showpassowrd"
             style="@style/EditText_varchar2"
-            android:text="Show Password"
-            android:textColorHint="@color/hitnscolor"
-            android:textColor="@color/white"
             android:backgroundTint="@color/hitnscolor"
+            android:text="Show Password"
+            android:textColor="@color/white"
+            android:textColorHint="@color/hitnscolor"
             android:textSize="16sp" />
 
         <Button
@@ -65,43 +66,43 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:text="Login"
-            android:textSize="16sp"
             android:background="@drawable/cricl_lb"
+            android:stateListAnimator="@null"
+            android:text="Login"
             android:textColor="@color/hitnscolor"
-            android:stateListAnimator="@null" />
+            android:textSize="16sp" />
 
 
-</LinearLayout>
+    </LinearLayout>
 
-<RelativeLayout
-  android:layout_width="fill_parent"
-  android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-<Button
-  style="@style/TextView"
-  android:text="APP Update"
-  android:layout_width="wrap_content"
-    android:id="@+id/Updateapp"
-  android:textColor="@color/hitnscolor"
-  android:textSize="16sp"
-  android:layout_marginLeft="40dp"
-    android:layout_marginBottom="3dp" />
+        <Button
+            android:id="@+id/Updateapp"
+            style="@style/TextView"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="3dp"
+            android:text="APP Update"
+            android:textColor="@color/hitnscolor"
+            android:textSize="16sp" />
 
-  <TextView
-      style="@style/TextView"
-      android:id="@+id/txt_logut"
-      android:layout_width="wrap_content"
-      android:text=" logout"
-      android:textColor="@color/hitnscolor"
-      android:textSize="16sp"
-      android:layout_marginRight="10dp"
-      android:layout_marginBottom="3dp"
-      android:layout_gravity="right"
-      android:clickable="true"
-      android:layout_alignParentRight="true" />
+        <TextView
+            android:id="@+id/txt_logut"
+            style="@style/TextView"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="3dp"
+            android:clickable="true"
+            android:text=" logout"
+            android:textColor="@color/hitnscolor"
+            android:textSize="16sp" />
 
-</RelativeLayout>
+    </RelativeLayout>
 
 </LinearLayout>
