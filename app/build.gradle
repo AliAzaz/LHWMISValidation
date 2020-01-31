@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 28
-    buildToolsVersion '28.0.2'
 
     def versionPropsFile = file('version.properties')
 
@@ -20,7 +19,7 @@ android {
             applicationId "com.irfansyed.umeedenau.validation"
             minSdkVersion 21
             targetSdkVersion 28
-            versionCode 1
+            versionCode code
             versionName "1.1"
             testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         }
