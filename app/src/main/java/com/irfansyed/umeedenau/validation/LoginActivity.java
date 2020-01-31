@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -33,6 +34,8 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 
 import data.LocalDataManager;
@@ -44,6 +47,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnTouchList
 
     double AppVersion;
     ProgressDialog bar;
+    String version;
 
 
     @Override
@@ -54,8 +58,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnTouchList
         CheckBox showpassowrd = findViewById(R.id.showpassowrd);
 
 
-        MyPreferences pref=new MyPreferences(this);
-               AppVersion= Double.parseDouble(pref.getAppVersion());
+        MyPreferences pref = new MyPreferences(this);
+        AppVersion = Double.parseDouble(pref.getAppVersion());
 
         final EditText textUsername = findViewById(R.id.login_username);
         final EditText textPassword = findViewById(R.id.login_password);
@@ -69,12 +73,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnTouchList
         showpassowrd.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked)
-                {
+                if (isChecked) {
                     textPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                }
-                else
-                {
+                } else {
                     textPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
                 }
             }
@@ -122,7 +123,29 @@ public class LoginActivity extends AppCompatActivity implements View.OnTouchList
         });
 
 
-        UpdateButton.setText("Current Version: " + AppVersion);
+        try {
+
+            String packageName = getApplicationContext().getPackageName();
+
+            long installedOn = this
+                    .getPackageManager()
+                    .getPackageInfo(packageName, 0)
+                    .lastUpdateTime;
+            long versionCode = this
+                    .getPackageManager()
+                    .getPackageInfo(packageName, 0)
+                    .versionCode;
+            String versionName = this
+                    .getPackageManager()
+                    .getPackageInfo(packageName, 0)
+                    .versionName;
+            version = "Ver. " + versionName + "." + versionCode + " \r\n( Last Updated: " + new SimpleDateFormat("dd MMM. yyyy").format(new Date(installedOn)) + " )";
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
+        UpdateButton.setText(version);
 
         UpdateButton.setEnabled(false);
 
@@ -153,8 +176,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnTouchList
         Toast.makeText(this, "Logout Succefully", Toast.LENGTH_LONG).show();
         return false;
     }
-
-
 
 
     // Update Appp
@@ -258,12 +279,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnTouchList
                 fos.close();
                 is.close();
 
-               // newverions(PATH);
+                // newverions(PATH);
 
-                    Intent intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setDataAndType(Uri.fromFile(new File(PATH + "app-debug.apk")), "application/vnd.android.package-archive");
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    startActivity(intent);
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setDataAndType(Uri.fromFile(new File(PATH + "app-debug.apk")), "application/vnd.android.package-archive");
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
 
 
                 flag = true;
@@ -277,197 +298,192 @@ public class LoginActivity extends AppCompatActivity implements View.OnTouchList
         }
 
 
-
     }
 
 
 }
 
 
+class LoginAsync extends AsyncTask {
+    Context mContext;
+    ProgressDialog mDialog;
+    String mUserMsg, mUsername, mPassword;
+    LocalDataManager LmManger;
 
-    class LoginAsync extends AsyncTask {
-        Context mContext;
-        ProgressDialog mDialog;
-        String mUserMsg, mUsername, mPassword;
+    public LoginAsync(Context context, String username, String password) {
+        this.mContext = context;
+        this.mUsername = username;
+        this.mPassword = password;
+        mDialog = new ProgressDialog(context);
+    }
 
-        public LoginAsync(Context context, String username, String password) {
-            this.mContext = context;
-            this.mUsername = username;
-            this.mPassword = password;
-            mDialog = new ProgressDialog(context);
-        }
+    @Override
+    protected void onPreExecute() {
+        mDialog.setMessage("Logging in..");
+        mDialog.setCancelable(false);
+        mDialog.show();
 
-        @Override
-        protected void onPreExecute() {
-            mDialog.setMessage("Logging in..");
-            mDialog.setCancelable(false);
-            mDialog.show();
+        super.onPreExecute();
+    }
 
-            super.onPreExecute();
-        }
+    @Override
+    protected Object doInBackground(Object[] params) {
+        URL url;
+        HttpURLConnection connection;
+        String urlString = new MyPreferences(mContext).getReqLogin();
 
-        @Override
-        protected Object doInBackground(Object[] params) {
-            URL url;
-            HttpURLConnection connection;
-            String urlString = new MyPreferences(mContext).getReqLogin();
+        //"http://umeed.bsoftproducts.com//Testing/check_user_id";
 
-            //"http://umeed.bsoftproducts.com//Testing/check_user_id";
+        try {
+            url = new URL(urlString);
+            connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("POST");
 
-            try {
-                url = new URL(urlString);
-                connection = (HttpURLConnection) url.openConnection();
-                connection.setRequestMethod("POST");
+            OutputStream os = connection.getOutputStream();
+            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(os, StandardCharsets.UTF_8));
 
-                OutputStream os = connection.getOutputStream();
-                BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(os, StandardCharsets.UTF_8));
+            // set pa
+            // rameter values for post-request
+            HashMap<String, String> param = new HashMap<String, String>();
+            param.put("username", mUsername);
+            param.put("password", mPassword);
 
-                // set pa
-                // rameter values for post-request
-                HashMap<String, String> param = new HashMap<String, String>();
-                param.put("username", mUsername);
-                param.put("password", mPassword);
+            bw.write(PostRequestData.getData(param));
+            bw.flush();
 
-                bw.write(PostRequestData.getData(param));
-                bw.flush();
-
-                int responseCode = connection.getResponseCode();
-                if (responseCode == HttpURLConnection.HTTP_OK) {
-                    BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-                    String data = "", line;
-                    while ((line = br.readLine()) != null) {
-                        data += line;
-                    }
-
-                    return data;
-                } else {
-                    mUserMsg = "Server Couldn't process the request";
-                }
-            } catch (IOException e) {
-                mUserMsg = "Please make sure that Internet connection is available," +
-                        " and server IP is inserted in settings";
-                e.printStackTrace();
-            }
-            return null;
-        }
-
-        LocalDataManager LmManger ;
-        @Override
-        protected void onPostExecute(Object o) {
-            try {
-
-                //connection isn't available or something is wrong with server address
-                if(mUserMsg != null)
-                    throw  new IOException();
-
-                String resp = (String)o;
-
-                if ( resp == null || resp.equals(""))
-                    throw new NullPointerException("Server response is empty");
-                else if(resp.equals("-1")){
-                    mUserMsg = "Incorrect username or password";
-                } else {
-                    mUserMsg = null;
-                    MyPreferences prefs = new MyPreferences(mContext);
-
-                    // for login id and data collectore Name irfan
-
-                    //   Toast.makeText(mContext, resp, Toast.LENGTH_SHORT).show();
-                    String[] resp_arry=resp.split("!");
-
-                    String Distric=resp_arry[0];
-                    String tehsil=resp_arry[1];
-                    String Reporting_LHS=resp_arry[2];
-                    String Reporting_HF=resp_arry[3];
-                    String LHW_name=resp_arry[4];
-                    String lhw_ids=resp_arry[5];
-
-
-                    String[] lst_Distric=Distric.split("%");
-                    String[] lst_tehsil=tehsil.split("%");
-                    String[] lst_Reporting_LHS=Reporting_LHS.split("%");
-                    String[] lst_DReporting_HF=Reporting_HF.split("%");
-                    String[] lst_LHW_name=LHW_name.split("%");
-                    String[] lst_lhw_ids=lhw_ids.split("%");
-
-                    LmManger = new LocalDataManager(mContext);
-
-                    for(int i=0;i<lst_Distric.length;i++)
-                    {
-                        if(i==0)
-                        {
-                            Delelte_date();
-                        }
-
-                        insert_data(lst_Distric[i],lst_tehsil[i],lst_Reporting_LHS[i],
-
-                                lst_DReporting_HF[i],lst_LHW_name[i],lst_lhw_ids[i]
-                        );
-
-                    }
-
-
-                    prefs.setUsername(mUsername);
-                    prefs.setPassword(mPassword);
-                    prefs.setName(mUsername);
-                    prefs.setUserId(1);
-
-
-                    //   prefs.setLHWIDS(resp);
-
-                    // redirect to another activity from here..
-                    Intent intent = new Intent(mContext, HomeActivity.class);
-                    mContext.startActivity(intent);
-                    ((Activity) mContext).finish();
+            int responseCode = connection.getResponseCode();
+            if (responseCode == HttpURLConnection.HTTP_OK) {
+                BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                String data = "", line;
+                while ((line = br.readLine()) != null) {
+                    data += line;
                 }
 
-            }  catch (IOException e) {
-                //if connection was available via connecting but
-                //we can't get data from server..
-                if(mUserMsg == null)
-                    mUserMsg = "Please check connection";
-                e.printStackTrace();
-            } catch (NullPointerException e) {
-                e.printStackTrace();
-                mUserMsg = e.getMessage();
-            } finally {
-                if (mUserMsg != null)
-                    Toast.makeText(mContext, mUserMsg, Toast.LENGTH_SHORT).show();
+                return data;
+            } else {
+                mUserMsg = "Server Couldn't process the request";
             }
-            // hide the progressDialog
-            mDialog.hide();
-
-            super.onPostExecute(o);
+        } catch (IOException e) {
+            mUserMsg = "Please make sure that Internet connection is available," +
+                    " and server IP is inserted in settings";
+            e.printStackTrace();
         }
+        return null;
+    }
+
+    @Override
+    protected void onPostExecute(Object o) {
+        try {
+
+            //connection isn't available or something is wrong with server address
+            if (mUserMsg != null)
+                throw new IOException();
+
+            String resp = (String) o;
+
+            if (resp == null || resp.equals(""))
+                throw new NullPointerException("Server response is empty");
+            else if (resp.equals("-1")) {
+                mUserMsg = "Incorrect username or password";
+            } else {
+                mUserMsg = null;
+                MyPreferences prefs = new MyPreferences(mContext);
+
+                // for login id and data collectore Name irfan
+
+                //   Toast.makeText(mContext, resp, Toast.LENGTH_SHORT).show();
+                String[] resp_arry = resp.split("!");
+
+                String Distric = resp_arry[0];
+                String tehsil = resp_arry[1];
+                String Reporting_LHS = resp_arry[2];
+                String Reporting_HF = resp_arry[3];
+                String LHW_name = resp_arry[4];
+                String lhw_ids = resp_arry[5];
 
 
-        public void insert_data(String district,String Tehsil,String Reporting_LHS,String Reporting_HF,String LHW_Name,String LHW_Ids) {
+                String[] lst_Distric = Distric.split("%");
+                String[] lst_tehsil = tehsil.split("%");
+                String[] lst_Reporting_LHS = Reporting_LHS.split("%");
+                String[] lst_DReporting_HF = Reporting_HF.split("%");
+                String[] lst_LHW_name = LHW_name.split("%");
+                String[] lst_lhw_ids = lhw_ids.split("%");
+
+                LmManger = new LocalDataManager(mContext);
+
+                for (int i = 0; i < lst_Distric.length; i++) {
+                    if (i == 0) {
+                        Delelte_date();
+                    }
+
+                    insert_data(lst_Distric[i], lst_tehsil[i], lst_Reporting_LHS[i],
+
+                            lst_DReporting_HF[i], lst_LHW_name[i], lst_lhw_ids[i]
+                    );
+
+                }
 
 
-            String query = "insert into  TableLoginData (District,Tehsil,Reporting_LHS,Reporting_HF,LHW_Name,LHW_Ids) values('"+
+                prefs.setUsername(mUsername);
+                prefs.setPassword(mPassword);
+                prefs.setName(mUsername);
+                prefs.setUserId(1);
 
-                    district+"','"+Tehsil+"','"+Reporting_LHS+"','"+Reporting_HF+"','"+LHW_Name+"','"+LHW_Ids+"')";
 
-            query = String.format(query);
+                //   prefs.setLHWIDS(resp);
 
+                // redirect to another activity from here..
+                Intent intent = new Intent(mContext, HomeActivity.class);
+                mContext.startActivity(intent);
+                ((Activity) mContext).finish();
+            }
 
-            LocalDataManager.database.execSQL(query);
-
+        } catch (IOException e) {
+            //if connection was available via connecting but
+            //we can't get data from server..
+            if (mUserMsg == null)
+                mUserMsg = "Please check connection";
+            e.printStackTrace();
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+            mUserMsg = e.getMessage();
+        } finally {
+            if (mUserMsg != null)
+                Toast.makeText(mContext, mUserMsg, Toast.LENGTH_SHORT).show();
         }
+        // hide the progressDialog
+        mDialog.hide();
 
-        public void Delelte_date() {
+        super.onPostExecute(o);
+    }
 
 
-            String query = " Delete from   TableLoginData ";
+    public void insert_data(String district, String Tehsil, String Reporting_LHS, String Reporting_HF, String LHW_Name, String LHW_Ids) {
 
-            query = String.format(query);
 
-            LocalDataManager validationactivity = new LocalDataManager(mContext);
+        String query = "insert into  TableLoginData (District,Tehsil,Reporting_LHS,Reporting_HF,LHW_Name,LHW_Ids) values('" +
 
-            LocalDataManager.database.execSQL(query);
+                district + "','" + Tehsil + "','" + Reporting_LHS + "','" + Reporting_HF + "','" + LHW_Name + "','" + LHW_Ids + "')";
 
-        }
+        query = String.format(query);
 
+
+        LocalDataManager.database.execSQL(query);
+
+    }
+
+    public void Delelte_date() {
+
+
+        String query = " Delete from   TableLoginData ";
+
+        query = String.format(query);
+
+        LocalDataManager validationactivity = new LocalDataManager(mContext);
+
+        LocalDataManager.database.execSQL(query);
+
+    }
 
 
 }

@@ -87,7 +87,7 @@
             android:layout_marginLeft="40dp"
             android:layout_marginBottom="3dp"
             android:text="APP Update"
-            android:textColor="@color/hitnscolor"
+            android:textColor="@color/black_overlay"
             android:textSize="16sp" />
 
         <TextView
