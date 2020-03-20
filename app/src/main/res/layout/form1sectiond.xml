@@ -130,7 +130,7 @@
                         <EditText
                             android:id="@+id/lhwf1d3"
                             style="@style/EditText_Name"
-                            android:hint="@string/lhwf1d3"
+                            android:hint="@string/name"
                             android:maxLength="50" />
 
                     </LinearLayout>
@@ -153,7 +153,7 @@
                         <EditText
                             android:id="@+id/lhwf1d4"
                             style="@style/EditText_Name"
-                            android:hint="@string/lhwf1d4"
+                            android:hint="@string/name"
                             android:maxLength="50" />
 
                     </LinearLayout>

@@ -322,6 +322,11 @@
     <string name="lhwf2f8a_3">Card available and shown</string>
     <string name="num">Number</string>
     <string name="address">Address</string>
+    <string name="lhwf1c9">If ‘no’ please give reason</string>
+    <string name="lhwf1c9_1">Stock Out</string>
+    <string name="lhwf1c9_2">Limited Stock</string>
+    <string name="lhwf1c9_3">Purchased Privately by PW</string>
+    <string name="lhwf1c10">Any maternal death (during pregnancy) in last three months registered for this HH ?</string>
 
 
 </resources>

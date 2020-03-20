@@ -76,7 +76,7 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/lhwf1c1"
                             style="@style/EditText_number"
-                            android:inputType="number"
+                            android:hint="@string/num"
                             app:mask="##"
                             app:maxValue="50"
                             app:minValue="1"
@@ -102,7 +102,7 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/lhwf1c2"
                             style="@style/EditText_number"
-                            android:inputType="number"
+                            android:hint="@string/num"
                             app:mask="#"
                             app:maxValue="5"
                             app:minValue="1"
@@ -128,7 +128,7 @@
                         <EditText
                             android:id="@+id/lhwf1c3"
                             style="@style/EditText_Name"
-                            android:hint="@string/lhwf1c3"
+                            android:hint="@string/name"
                             android:maxLength="50" />
 
                     </LinearLayout>
@@ -221,7 +221,6 @@
                             android:id="@+id/lhwf1c4A"
                             style="@style/EditText_number"
                             android:hint="month"
-                            android:inputType="number"
                             app:mask="#"
                             app:maxValue="9"
                             app:minValue="1"
@@ -247,7 +246,7 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/lhwf1c5"
                             style="@style/EditText_number"
-                            android:inputType="number"
+                            android:hint="@string/num"
                             app:mask="#"
                             app:maxValue="9"
                             app:minValue="0"
@@ -272,21 +271,28 @@
 
                         <RadioGroup
                             android:id="@+id/lhwf1c6"
-                            style="@style/RadioGroup">
+                            style="@style/RadioGroup"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/lhwf1c6_1"
                                 style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:text="@string/rb_yes" />
 
                             <RadioButton
                                 android:id="@+id/lhwf1c6_2"
                                 style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:text="@string/rb_no" />
 
                             <RadioButton
                                 android:id="@+id/lhwf1c6_3"
                                 style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:text="Not Authorized"
                                 android:visibility="gone" />
 
@@ -313,16 +319,21 @@
 
                         <RadioGroup
                             android:id="@+id/lhwf1c7"
-                            style="@style/RadioGroup">
+                            style="@style/RadioGroup"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/lhwf1c7_1"
                                 style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:text="@string/rb_yes" />
 
                             <RadioButton
                                 android:id="@+id/lhwf1c7_2"
                                 style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:text="@string/rb_no" />
 
                         </RadioGroup>
@@ -348,16 +359,21 @@
 
                         <RadioGroup
                             android:id="@+id/lhwf1c7A"
-                            style="@style/RadioGroup">
+                            style="@style/RadioGroup"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/lhwf1c7A_1"
                                 style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:text="@string/lhwf1c7Aa" />
 
                             <RadioButton
                                 android:id="@+id/lhwf1c7A_2"
                                 style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:text="@string/lhwf1c7Ab" />
 
                         </RadioGroup>
@@ -381,21 +397,28 @@
 
                         <RadioGroup
                             android:id="@+id/lhwf1c8"
-                            style="@style/RadioGroup">
+                            style="@style/RadioGroup"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/lhwf1c8_1"
                                 style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:text="@string/rb_yes" />
 
                             <RadioButton
                                 android:id="@+id/lhwf1c8_2"
                                 style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:text="@string/rb_no" />
 
                             <RadioButton
                                 android:id="@+id/lhwf1c8_3"
                                 style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:text="@string/lhw_stockout"
                                 android:visibility="gone" />
 
@@ -418,7 +441,7 @@
 
                         <TextView
                             style="@style/TextView"
-                            android:text="If ‘no’ please give reason" />
+                            android:text="@string/lhwf1c9" />
 
                         <RadioGroup
                             android:id="@+id/lhwf1c9"
@@ -427,18 +450,18 @@
                             <RadioButton
                                 android:id="@+id/lhwf1c9_1"
                                 style="@style/RadioButton"
-                                android:text="Stock Out" />
+                                android:text="@string/lhwf1c9_1" />
 
                             <RadioButton
                                 android:id="@+id/lhwf1c9_2"
                                 style="@style/RadioButton"
-                                android:text="Limited Stock" />
+                                android:text="@string/lhwf1c9_2" />
 
 
                             <RadioButton
                                 android:id="@+id/lhwf1c9_3"
                                 style="@style/RadioButton"
-                                android:text="Purchased Privately by PW" />
+                                android:text="@string/lhwf1c9_3" />
 
                         </RadioGroup>
 
@@ -457,21 +480,26 @@
 
                         <TextView
                             style="@style/TextView"
-                            android:text="Any maternal death (during pregnancy) in last three months registered for this HH?" />
+                            android:text="@string/lhwf1c10" />
 
                         <RadioGroup
                             android:id="@+id/lhwf1c10"
-                            style="@style/RadioGroup">
+                            style="@style/RadioGroup"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/lhwf1c10_1"
                                 style="@style/RadioButton"
-                                android:text="Yes" />
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rb_yes" />
 
                             <RadioButton
                                 android:id="@+id/lhwf1c10_2"
                                 style="@style/RadioButton"
-                                android:text="No" />
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rb_no" />
 
                         </RadioGroup>
 
