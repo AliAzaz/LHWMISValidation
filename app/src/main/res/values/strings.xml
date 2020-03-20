@@ -11,14 +11,15 @@
     <string name="title_home">Home</string>
 
 
-    <string name="rb_dk">Donot Know</string>
-    <string name="rb_ra">Rafused to answer</string>
+    <string name="rb_dk"> Don\'t Know </string>
+    <string name="rb_ra"> Refused to Answer </string>
 
 
     <!--NEW FROM IRFAN-->
 
     <string name="action_settings">Settings</string>
     <string name="hint_name">Full Name</string>
+    <string name="name"> Name </string>
     <string name="hint_email">Email</string>
     <string name="hint_password">Password</string>
     <string name="err_msg_name">Enter your full name</string>
@@ -245,7 +246,8 @@
     <string name="lhwf2e12"> LHW referred in case of any newborn danger sign </string>
     <string name="lhwf2e13"> Provided support to mother and newborn for initiation of breastfeeding </string>
     <string name="lhwf2header_f"> Section F: Diarrhea Section </string>
-    <string name="lhwf2f3"> # of children from 0-59 months of age who had Diarhea in last 3 months? </string>
+    <string name="lhwf2f1"> Is there any 0 &#8211; 59 months child who had diarrhea in last three months ? </string>
+    <string name="lhwf2f3"> # of children from 0 &#8211; 59 months of age who had Diarhea in last 3 months ? </string>
     <string name="lhwf2f4"> Name of child in HH who had diarrhea  </string>
     <string name="lhwf2f5"> Age of child (in months) in HH who had diarrhea  </string>
     <string name="lhwf2f6"> LHW provided ORS/LoORS for diarrhea </string>
@@ -312,7 +314,13 @@
     <string name="lhwf6b6_6"> WASH </string>
     <string name="lhwf6b6_7"> Family Planning </string>
     <string name="lhwf6b6_8"> Immunization </string>
-
+    <string name="months">Months</string>
+    <string name="lhwf2f5a">Did LHW visit the child during diarrhea ?</string>
+    <string name="lhwf2f8a">Do you have EPI Card for (name of new born) ? Can you please show it to me</string>
+    <string name="lhwf2f8a_1">Card available but not shown</string>
+    <string name="lhwf2f8a_2">Card not available</string>
+    <string name="lhwf2f8a_3">Card available and shown</string>
+    <string name="num">Number</string>
 
 
 </resources>

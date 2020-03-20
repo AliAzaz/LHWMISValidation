@@ -54,7 +54,10 @@
     <style name="EditText_varchar">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/et_style</item>
         <item name="android:textSize">16sp</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:padding">10dp</item>
         <item name="android:inputType">textEmailAddress</item>
         <item name="android:imeOptions">actionDone</item>
         <item name="android:singleLine">true</item>
@@ -69,30 +72,30 @@
     <style name="EditText_varchar2">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/et_style</item>
         <item name="android:textSize">16sp</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:padding">10dp</item>
         <item name="android:inputType">textEmailAddress</item>
         <item name="android:imeOptions">actionDone</item>
         <item name="android:singleLine">true</item>
         <!--  <item name="android:digits">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789</item> -->
-
-
-
     </style>
 
     <style name="EditText_Name">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/et_style</item>
         <item name="android:textSize">16sp</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:padding">10dp</item>
         <item name="android:inputType">textEmailAddress</item>
         <item name="android:digits">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz</item>
         <item name="android:imeOptions">actionDone</item>
         <item name="android:singleLine">true</item>
-
         <item name="android:focusable">true</item>
-
         <item name="android:clickable">true</item>
         <item name="android:focusableInTouchMode">true</item>
-
     </style>
 
     <!-- EditText Acept Varchar  Ends. -->
@@ -103,15 +106,14 @@
     <style name="EditText_number">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/et_style</item>
         <item name="android:textSize">16sp</item>
-        <!--     <item name="android:digits">0123456789</item>  -->
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:padding">10dp</item>
         <item name="android:inputType">number</item>
-
         <item name="android:imeOptions">actionDone</item>
         <item name="android:singleLine">true</item>
-
         <item name="android:focusable">true</item>
-
         <item name="android:clickable">true</item>
         <item name="android:focusableInTouchMode">true</item>
 
@@ -198,11 +200,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">16sp</item>
-        <item name="android:textColor">@color/colorPrimaryDark</item>
-        <!-- CheckBox    <item name="android:gravity">right</item>
-<item name="android:layoutDirection">rtl</item>  -->
-
-
+        <item name="android:textColor">@color/black_overlay</item>
     </style>
 
     <!-- CheckBox   Ends. -->
@@ -212,15 +210,10 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">16sp</item>
-        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@color/black_overlay</item>
         <item name="android:gravity">left</item>
         <item name="android:layout_margin">2dp</item>
-
-
-
-
     </style>
-
     <!-- RadioButton   Ends. -->
 
 

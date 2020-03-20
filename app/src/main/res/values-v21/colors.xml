@@ -16,9 +16,9 @@
     <color name="U_main">#14AA51</color>
     <color name="U_Heavy">#007a38</color>
     <color name="btn_color">#17c15c</color>
-    <color name="colorPrimaryDark">#929292</color>
+    <color name="colorPrimaryDark">#92929294</color>
     <color name="hitnscolor">#e1e1e1</color>
-    <color name="black_overlay">#66000000</color>
+    <color name="black_overlay">#96000000</color>
 
 </resources>
 
