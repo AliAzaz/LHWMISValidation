@@ -1,21 +1,17 @@
 package com.irfansyed.umeedenau.validation;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import utils.MyPreferences;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
-
      setContentView(R.layout.activity_splash_screen);
 
 // Clear Old Data Irfan
@@ -26,11 +22,7 @@ public class SplashScreenActivity extends AppCompatActivity {
     //    if (preferences.getReq1() == null) {
 
 
-
-
-
-
-        //    preferences.setReq1("http://43.245.131.159/umeed/Testing/Monitoring");
+        // preferences.setReq1("http://43.245.131.159/umeed/Testing/Monitoring");
            // preferences.setReqLogin("http://10.199.5.216:61259///Testing/check_user_id");
 
            //preferences.setReqLogin("https://vcoe1.aku.edu/LHWMIS/Testing/check_user_id");
@@ -43,7 +35,6 @@ public class SplashScreenActivity extends AppCompatActivity {
            // preferences.setReq1("http://10.199.5.216:61259///Testing/InsertLHWSection");
            // preferences.setReq2("http://10.199.5.216:61259///Testing/InsertF1F2SectionC");
            // preferences.setReq3("http://10.199.5.216:61259///Testing/");
-
 
 
         preferences.setAppVersion("11");

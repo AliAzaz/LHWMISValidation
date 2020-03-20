@@ -103,7 +103,7 @@
     <string name="lhwf1d4Aa"> Month </string>
     <string name="lhwf1d4Ab"> Year </string>
 
-    <string name="lhwf1d5"> Where was delivery conducted? </string>
+    <string name="lhwf1d5"> Where was delivery conducted ? </string>
     <string name="lhwf1d5_1"> Public HF </string>
     <string name="lhwf1d5_2"> Private HF </string>
     <string name="lhwf1d5_3"> CMW Station </string>
@@ -251,15 +251,13 @@
     <string name="lhwf2f6"> LHW provided ORS/LoORS for diarrhea </string>
     <string name="lhwf2f7"> LHW provided Zinc DT/syrup for diarrhea </string>
     <string name="lhwf2f8"> LHW referred child to the HF </string>
-    <string name="lhwf2f9"> Is the child immunized?
-(immunization is complete as per EPI schedule)
- </string>
+    <string name="lhwf2f9"> Is the child immunized ?  (immunization is complete as per EPI schedule) </string>
     <string name="lhwf2f10"> Any under-five death due to diarrhea in last three months? </string>
     <string name="lhwf2f11"> LHW educated mother about hand washing and sanitation. </string>
     <string name="lhwf2f12"> LHW informed mother about danger signs of diarrhea. </string>
     <string name="lhwf2f13"> LHW informed mother about home preparation of ORS. </string>
     <string name="lhwf2header_g"> Section G: Cough or Difficult breathing </string>
-    <string name="lhwf2g3"> # of children 0-59 months of age who had  Pneumonia in last three monthe </string>
+    <string name="lhwf2g3"> # of children 0 &#8211; 59 months of age who had  Pneumonia in last three month </string>
     <string name="lhwf2g4"> Name of child in HH who had Pneumonia </string>
     <string name="lhwf2g5"> Age of child (in months) in HH who had Pneumonia </string>
     <string name="lhwf2g6"> LHW provided Amoxicillin DT/syrup </string>
