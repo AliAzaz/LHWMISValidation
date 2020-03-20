@@ -321,6 +321,7 @@
     <string name="lhwf2f8a_2">Card not available</string>
     <string name="lhwf2f8a_3">Card available and shown</string>
     <string name="num">Number</string>
+    <string name="address">Address</string>
 
 
 </resources>

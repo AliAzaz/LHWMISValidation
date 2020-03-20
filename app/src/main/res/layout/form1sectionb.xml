@@ -2,8 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:app="http://schemas.android.com/tools"
     android:layout_marginTop="10dp"
     android:background="#EEEEEE"
     android:orientation="vertical">
@@ -11,23 +9,23 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        >
+        android:layout_marginTop="10dp">
+
         <ImageView
             android:layout_width="64dp"
             android:layout_height="64dp"
-            android:src="@drawable/uncolor"
-            />
+            android:src="@drawable/uncolor" />
+
         <TextView
             style="@style/TextView"
-            android:text="@string/lhwf1header_b"
-            android:layout_marginTop="20dp"
             android:layout_marginLeft="7dp"
-            android:textColor="#008E45"
-
-            />
+            android:layout_marginTop="20dp"
+            android:text="@string/lhwf1header_b"
+            android:textColor="#008E45" />
 
     </LinearLayout>
+
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -42,11 +40,13 @@
         android:layout_marginBottom="5dp"
         android:fadeScrollbars="false"
         android:fillViewport="true"
-        android:paddingBottom="5dp"
         android:paddingLeft="5dp"
-        android:paddingRight="5dp"
         android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
         android:scrollbarSize="50dip">
+
+
         <!-- Parent layout starts -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -55,138 +55,95 @@
             android:orientation="vertical">
 
 
-
-
-
-
-
-
-
-
             <!-- lhwf1b1 starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-
-                >
-
-
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvlhwf1b1"
+                style="@style/Q_CardView">
 
                 <LinearLayout
                     android:id="@+id/lv_lhwf1b1"
-                    style="@style/Q_Linerlayout_v"
-
-                    >
+                    style="@style/Q_Linerlayout_v">
 
                     <TextView
-
                         style="@style/TextView"
-                        android:text="@string/lhwf1b1"
-
-                        />
+                        android:text="@string/lhwf1b1" />
 
                     <EditText
-                        style="@style/EditText_number"
                         android:id="@+id/lhwf1b1"
-                        android:maxLength="8"
-                        android:digits="0123456789"
-                        android:hint="@string/lhwf1b1"/>
-
-
-
-
-
+                        style="@style/EditText_number"
+                        android:hint="@string/num"
+                        android:maxLength="8" />
 
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
             <!-- lhwf1b1 ends-->
 
+
             <!-- lhwf1b2 starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-
-                >
-
-
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvlhwf1b2"
+                style="@style/Q_CardView">
 
                 <LinearLayout
                     android:id="@+id/lv_lhwf1b2"
-                    style="@style/Q_Linerlayout_v"
-
-                    >
+                    style="@style/Q_Linerlayout_v">
 
                     <TextView
-
                         style="@style/TextView"
-                        android:text="@string/lhwf1b2"
-
-                        />
+                        android:text="@string/lhwf1b2" />
 
                     <EditText
-                        style="@style/EditText_varchar"
                         android:id="@+id/lhwf1b2"
-
-                        android:hint="@string/lhwf1b2"/>
-
+                        style="@style/EditText_varchar"
+                        android:hint="@string/address" />
 
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
             <!-- lhwf1b2 ends-->
 
+
             <!-- lhwf1b3 starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-
-                >
-
-
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvlhwf1b3"
+                style="@style/Q_CardView">
 
                 <LinearLayout
                     android:id="@+id/lv_lhwf1b3"
-                    style="@style/Q_Linerlayout_v"
-
-                    >
+                    style="@style/Q_Linerlayout_v">
 
                     <TextView
-
                         style="@style/TextView"
-                        android:text="@string/lhwf1b3"
-
-                        />
+                        android:text="@string/lhwf1b3" />
 
                     <EditText
-                        style="@style/EditText_number"
                         android:id="@+id/lhwf1b3"
-                        android:maxLength="11"
-                        android:hint="@string/lhwf1b3"/>
-
+                        style="@style/EditText_number"
+                        android:hint="@string/num"
+                        android:maxLength="11" />
 
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
             <!-- lhwf1b3 ends-->
-
-
 
 
             <!-- Button -->
             <android.support.v7.widget.CardView
                 style="@style/Q_CardView"
-                android:layout_margin="10dp"
-
-                >
-
-
+                android:layout_margin="10dp">
 
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent">
 
-
-                <Button
-                    android:id="@+id/btn_cancel"
-                    style="@style/Button_collder"
-                    android:layout_margin="10dp"
-                    android:layout_weight="50"
-                    android:text="Cancel " />
+                    <Button
+                        android:id="@+id/btn_cancel"
+                        style="@style/Button_collder"
+                        android:layout_margin="10dp"
+                        android:layout_weight="50"
+                        android:text="Cancel " />
 
                     <Button
                         android:id="@+id/btn_ok"
@@ -194,17 +151,14 @@
                         android:layout_margin="10dp"
                         android:layout_weight="50"
                         android:text="OK" />
+
                 </LinearLayout>
 
-
             </android.support.v7.widget.CardView>
-
             <!-- Button Next Ends-->
-
 
         </LinearLayout>
 
     </ScrollView>
-
 
 </LinearLayout>

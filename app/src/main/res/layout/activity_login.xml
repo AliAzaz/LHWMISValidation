@@ -36,25 +36,23 @@
             android:id="@+id/login_username"
             style="@style/EditText_varchar2"
             android:layout_marginTop="40dp"
-            android:backgroundTint="@color/hitnscolor"
             android:hint="Username"
-            android:textColor="@color/white"
+            android:textColor="@color/colorPrimary"
             android:textColorHint="@color/hitnscolor"
             android:textSize="16sp" />
 
         <EditText
             android:id="@+id/login_password"
             style="@style/EditText_varchar2"
-            android:backgroundTint="@color/hitnscolor"
             android:hint="Password"
             android:inputType="textPassword"
-            android:textColor="@color/white"
+            android:textColor="@color/colorPrimary"
             android:textColorHint="@color/hitnscolor"
             android:textSize="16sp" />
 
         <CheckBox
             android:id="@+id/showpassowrd"
-            style="@style/EditText_varchar2"
+            style="@style/CheckBox"
             android:backgroundTint="@color/hitnscolor"
             android:text="Show Password"
             android:textColor="@color/white"
@@ -69,7 +67,7 @@
             android:background="@drawable/cricl_lb"
             android:stateListAnimator="@null"
             android:text="Login"
-            android:textColor="@color/hitnscolor"
+            android:textColor="@color/white"
             android:textSize="16sp" />
 
 

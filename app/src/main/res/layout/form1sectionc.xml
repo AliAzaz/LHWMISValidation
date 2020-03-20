@@ -148,25 +148,34 @@
                             style="@style/TextView"
                             android:text="@string/lhwf1c3A" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/lhwf1c3Aa"
-                            style="@style/EditText_number"
-                            android:hint="Month"
-                            android:inputType="number"
-                            app:mask="##"
-                            app:maxValue="12"
-                            app:minValue="1"
-                            app:type="range" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/lhwf1c3Ab"
-                            style="@style/EditText_number"
-                            android:hint="Date"
-                            android:inputType="number"
-                            app:mask="##"
-                            app:maxValue="31"
-                            app:minValue="1"
-                            app:type="range" />
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/lhwf1c3Aa"
+                                style="@style/EditText_number"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:hint="Month"
+                                app:mask="##"
+                                app:maxValue="12"
+                                app:minValue="1"
+                                app:type="range" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/lhwf1c3Ab"
+                                style="@style/EditText_number"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:hint="Date"
+                                app:mask="##"
+                                app:maxValue="31"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
