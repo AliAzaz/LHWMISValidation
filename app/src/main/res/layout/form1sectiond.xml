@@ -1,6 +1,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".LHWDashbord">
 
     <data>
@@ -78,7 +78,7 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/lhwf1d1"
                             style="@style/EditText_number"
-                            android:inputType="number"
+                            android:hint="@string/num"
                             app:mask="##"
                             app:maxValue="50"
                             app:minValue="1"
@@ -104,7 +104,7 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/lhwf1d2"
                             style="@style/EditText_number"
-                            android:inputType="number"
+                            android:hint="@string/num"
                             app:mask="#"
                             app:maxValue="5"
                             app:minValue="1"
@@ -173,25 +173,34 @@
                             style="@style/TextView"
                             android:text="@string/lhwf1d4A" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/lhwf1d4Aa"
-                            style="@style/EditText_number"
-                            android:inputType="number"
-                            android:hint="month"
-                            app:mask="##"
-                            app:maxValue="12"
-                            app:minValue="1"
-                            app:type="range" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/lhwf1d4Ab"
-                            style="@style/EditText_number"
-                            android:inputType="number"
-                            android:hint="Date"
-                            app:mask="##"
-                            app:maxValue="31"
-                            app:minValue="1"
-                            app:type="range" />
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/lhwf1d4Aa"
+                                style="@style/EditText_number"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:hint="month"
+                                app:mask="##"
+                                app:maxValue="12"
+                                app:minValue="1"
+                                app:type="range" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/lhwf1d4Ab"
+                                style="@style/EditText_number"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:hint="Date"
+                                app:mask="##"
+                                app:maxValue="31"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
