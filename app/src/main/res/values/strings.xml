@@ -352,6 +352,17 @@
     <string name="lhwf2d2b_2"> Fake Record </string>
     <string name="lhwf2d6a"> Any maternal death (during/after delivery) occurred in last three months ? </string>
     <string name="lhwf2d9_3"> Delivery conducted in some other area </string>
+    <string name="lhwf2e1"> Is there any newborn in HH ? </string>
+    <string name="lhwf2e1a"> Reason </string>
+    <string name="lhwf2e1a_1"> Mother / Newborn not available at home </string>
+    <string name="lhwf2e1a_2"> Fake Record </string>
+    <string name="lhwf2e6a"> Do you have EPI card for (name of newborn) ? \nCan you please show it to me </string>
+    <string name="lhwf2e6a_1"> Card available but not shown </string>
+    <string name="lhwf2e6a_2"> Card not available </string>
+    <string name="lhwf2e6a_3"> Card available and shown </string>
+    <string name="lhwf2e7a">Did newborn receive BCG vaccine after birth</string>
+    <string name="lhwf2e9_3">Devlivery conducted in some other area</string>
+    <string name="lhwf2e12a">Was there any danger sign identified by LHW</string>
 
 
 </resources>
