@@ -328,6 +328,11 @@
     <string name="lhwf1c9_3">Purchased Privately by PW</string>
     <string name="lhwf1c10">Any maternal death (during pregnancy) in last three months registered for this HH ?</string>
     <string name="date">Date</string>
+    <string name="years">Years</string>
+    <string name="lhwf1h6">Is there any PW in HH ?</string>
+    <string name="lhwf1h7">Is there any women whose delivery was conducted in last three months ?</string>
+    <string name="lhwf1h8">Is there any newborn ?</string>
+    <string name="lhwf1h9">Is there any child under five years of age ?</string>
 
 
 </resources>
