@@ -344,7 +344,14 @@
     <string name="lhwf2c6a">Who vacinated PW for TT vaccine</string>
     <string name="lhwf2c6a_1">LHW</string>
     <string name="lhwf2c6a_2">Vaccinator</string>
-    <string name="lhwf2c8a">Any maternal death (during pregnancy) occurred in last three months ?</string>
+    <string name="lhwf2c8a"> Any maternal death (during pregnancy) occurred in last three months ? </string>
+    <string name="lhwf2d1"> Is there any mother whose delivery was conducted within last three months ? </string>
+    <string name="lhwf2d2a"> Is Mother Available at home </string>
+    <string name="lhwf2d2b"> Reason </string>
+    <string name="lhwf2d2b_1"> Delivered Women not available at Home </string>
+    <string name="lhwf2d2b_2"> Fake Record </string>
+    <string name="lhwf2d6a"> Any maternal death (during/after delivery) occurred in last three months ? </string>
+    <string name="lhwf2d9_3"> Delivery conducted in some other area </string>
 
 
 </resources>
