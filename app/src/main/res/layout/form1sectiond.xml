@@ -65,7 +65,9 @@
 
 
                 <!-- lhwf1d1 starts -->
-                <android.support.v7.widget.CardView style="@style/Q_CardView">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf1d1"
+                    style="@style/Q_CardView">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf1d1"
@@ -91,7 +93,9 @@
 
 
                 <!-- lhwf1d2 starts -->
-                <android.support.v7.widget.CardView style="@style/Q_CardView">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf1d2"
+                    style="@style/Q_CardView">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf1d2"
@@ -117,7 +121,9 @@
 
 
                 <!-- lhwf1d3 starts -->
-                <android.support.v7.widget.CardView style="@style/Q_CardView">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf1d3"
+                    style="@style/Q_CardView">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf1d3"
@@ -140,7 +146,9 @@
 
 
                 <!-- lhwf1d4 starts -->
-                <android.support.v7.widget.CardView style="@style/Q_CardView">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf1d4"
+                    style="@style/Q_CardView">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf1d4"
@@ -163,7 +171,9 @@
 
 
                 <!-- lhwf1d4A starts -->
-                <android.support.v7.widget.CardView style="@style/Q_CardView">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf1d4A"
+                    style="@style/Q_CardView">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf1d4A"
@@ -209,7 +219,9 @@
 
 
                 <!-- lhwf1d5 starts -->
-                <android.support.v7.widget.CardView style="@style/Q_CardView">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf1d5"
+                    style="@style/Q_CardView">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf1d5"
@@ -252,7 +264,9 @@
 
 
                 <!-- lhwf1d6 starts -->
-                <android.support.v7.widget.CardView style="@style/Q_CardView">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf1d6"
+                    style="@style/Q_CardView">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf1d6"
@@ -264,16 +278,21 @@
 
                         <RadioGroup
                             android:id="@+id/lhwf1d6"
-                            style="@style/RadioGroup">
+                            style="@style/RadioGroup"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/lhwf1d6_1"
                                 style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:text="@string/lhwf1d6_1" />
 
                             <RadioButton
                                 android:id="@+id/lhwf1d6_2"
                                 style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:text="@string/lhwf1d6_2" />
 
                         </RadioGroup>
@@ -285,7 +304,9 @@
 
 
                 <!-- lhwf1d5 starts -->
-                <android.support.v7.widget.CardView style="@style/Q_CardView">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf1d7"
+                    style="@style/Q_CardView">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf1d7"
@@ -297,16 +318,21 @@
 
                         <RadioGroup
                             android:id="@+id/lhwf1d7"
-                            style="@style/RadioGroup">
+                            style="@style/RadioGroup"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/lhwf1d7_1"
                                 style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:text="Yes" />
 
                             <RadioButton
                                 android:id="@+id/lhwf1d7_2"
                                 style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:text="No" />
 
                         </RadioGroup>
