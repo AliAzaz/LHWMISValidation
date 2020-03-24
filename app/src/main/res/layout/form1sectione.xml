@@ -183,7 +183,8 @@
                             android:text="@string/lhwf1e4A" />
 
                         <LinearLayout
-                            style="@style/Q_Linerlayout_v"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
                             <com.edittextpicker.aliazaz.EditTextPicker

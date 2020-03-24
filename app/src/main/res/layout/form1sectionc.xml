@@ -62,8 +62,11 @@
                 android:id="@+id/pp"
                 style="@style/Q_Linerlayout_v">
 
+
                 <!-- lhwf1c1 starts -->
-                <android.support.v7.widget.CardView style="@style/Q_CardView">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf1c1"
+                    style="@style/Q_CardView">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf1c1"
@@ -77,7 +80,7 @@
                             android:id="@+id/lhwf1c1"
                             style="@style/EditText_number"
                             android:hint="@string/num"
-                            app:mask="##"
+                            android:maxLength="2"
                             app:maxValue="50"
                             app:minValue="1"
                             app:type="range" />
@@ -89,7 +92,9 @@
 
 
                 <!-- lhwf1c2 starts -->
-                <android.support.v7.widget.CardView style="@style/Q_CardView">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf1c2"
+                    style="@style/Q_CardView">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf1c2"
@@ -103,7 +108,7 @@
                             android:id="@+id/lhwf1c2"
                             style="@style/EditText_number"
                             android:hint="@string/num"
-                            app:mask="#"
+                            android:maxLength="1"
                             app:maxValue="5"
                             app:minValue="1"
                             app:type="range" />
@@ -115,7 +120,9 @@
 
 
                 <!-- lhwf1c3 starts -->
-                <android.support.v7.widget.CardView style="@style/Q_CardView">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf1c3"
+                    style="@style/Q_CardView">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf1c3"
@@ -138,7 +145,9 @@
 
 
                 <!-- lhwf1c3a starts -->
-                <android.support.v7.widget.CardView style="@style/Q_CardView">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf1c3A"
+                    style="@style/Q_CardView">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf1c3A"
@@ -184,7 +193,9 @@
 
 
                 <!-- lhwf1c4 starts -->
-                <android.support.v7.widget.CardView style="@style/Q_CardView">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf1c4"
+                    style="@style/Q_CardView">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf1c4"
@@ -197,7 +208,7 @@
                         <EditText
                             android:id="@+id/lhwf1c4"
                             style="@style/EditText_Name"
-                            android:hint="@string/lhwf1c4"
+                            android:hint="@string/name"
                             android:maxLength="50" />
 
                     </LinearLayout>
@@ -207,7 +218,9 @@
 
 
                 <!-- lhwf1c4a starts -->
-                <android.support.v7.widget.CardView style="@style/Q_CardView">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf1c4a"
+                    style="@style/Q_CardView">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf1c4a"
@@ -220,8 +233,8 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/lhwf1c4A"
                             style="@style/EditText_number"
-                            android:hint="month"
-                            app:mask="#"
+                            android:hint="@string/months"
+                            android:maxLength="1"
                             app:maxValue="9"
                             app:minValue="1"
                             app:type="range" />
@@ -233,7 +246,9 @@
 
 
                 <!-- lhwf1c5 starts -->
-                <android.support.v7.widget.CardView style="@style/Q_CardView">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf1c5"
+                    style="@style/Q_CardView">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf1c5"
@@ -247,7 +262,7 @@
                             android:id="@+id/lhwf1c5"
                             style="@style/EditText_number"
                             android:hint="@string/num"
-                            app:mask="#"
+                            android:maxLength="1"
                             app:maxValue="9"
                             app:minValue="0"
                             app:type="range" />
@@ -259,7 +274,9 @@
 
 
                 <!-- lhwf1c6 starts -->
-                <android.support.v7.widget.CardView style="@style/Q_CardView">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf1c6"
+                    style="@style/Q_CardView">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf1c6"
@@ -306,6 +323,7 @@
 
                 <!-- lhwf1c7 starts -->
                 <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf1c7"
                     style="@style/Q_CardView"
                     android:visibility='@{lhwf1c61.checked? View.GONE : View.VISIBLE}'>
 
@@ -346,6 +364,7 @@
 
                 <!-- lhwf1c7A starts -->
                 <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf1c7A"
                     style="@style/Q_CardView"
                     android:visibility='@{lhwf1c61.checked? View.GONE : View.VISIBLE}'>
 
@@ -385,7 +404,9 @@
 
 
                 <!-- lhwf1c8 starts -->
-                <android.support.v7.widget.CardView style="@style/Q_CardView">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf1c8"
+                    style="@style/Q_CardView">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf1c8"
@@ -432,6 +453,7 @@
 
                 <!-- lhwf1c9 starts -->
                 <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf1c9"
                     style="@style/Q_CardView"
                     android:visibility='@{lhwf1c81.checked? View.GONE : View.VISIBLE}'>
 
@@ -472,7 +494,9 @@
 
 
                 <!-- lhwf1c10 starts -->
-                <android.support.v7.widget.CardView style="@style/Q_CardView">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf1c10"
+                    style="@style/Q_CardView">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf1c10"

@@ -81,7 +81,7 @@
                             android:id="@+id/lhwf1d1"
                             style="@style/EditText_number"
                             android:hint="@string/num"
-                            app:mask="##"
+                            android:maxLength="2"
                             app:maxValue="50"
                             app:minValue="1"
                             app:type="range" />
@@ -109,7 +109,7 @@
                             android:id="@+id/lhwf1d2"
                             style="@style/EditText_number"
                             android:hint="@string/num"
-                            app:mask="#"
+                            android:maxLength="1"
                             app:maxValue="5"
                             app:minValue="1"
                             app:type="range" />
@@ -194,7 +194,7 @@
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:hint="month"
-                                app:mask="##"
+                                android:maxLength="2"
                                 app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
@@ -205,7 +205,7 @@
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:hint="Date"
-                                app:mask="##"
+                                android:maxLength="2"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
