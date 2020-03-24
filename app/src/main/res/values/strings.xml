@@ -333,6 +333,18 @@
     <string name="lhwf1h7">Is there any women whose delivery was conducted in last three months ?</string>
     <string name="lhwf1h8">Is there any newborn ?</string>
     <string name="lhwf1h9">Is there any child under five years of age ?</string>
+    <string name="lhwf2c1">Is there any PW whose pregnancy was identified in last three months ?</string>
+    <string name="lhwf2c2a">Is PW available at home</string>
+    <string name="lhwf2c2b">Reason</string>
+    <string name="rlhwf2c2b_1">Pregnancy Terminated</string>
+    <string name="rlhwf2c2b_2">PW Not Present at Home</string>
+    <string name="rlhwf2c2b_3">Fake Record</string>
+    <string name="lhwf2c4b">Gestational age of pregnancy</string>
+    <string name="lhwf2c4a">Did LHW visited you during pregnancy ?</string>
+    <string name="lhwf2c6a">Who vacinated PW for TT vaccine</string>
+    <string name="lhwf2c6a_1">LHW</string>
+    <string name="lhwf2c6a_2">Vaccinator</string>
+    <string name="lhwf2c8a">Any maternal death (during pregnancy) occurred in last three months ?</string>
 
 
 </resources>
