@@ -366,6 +366,17 @@
     <string name="lhwf2f3a">Reason</string>
     <string name="lhwf2f3a_1">Household Not Found</string>
     <string name="lhwf2f3a_2">Fake Record</string>
+    <string name="lhwf2g1">is ther any 0-59 month child who had pneumonia in last three months ?</string>
+    <string name="lhwf2g3a">Reason</string>
+    <string name="rlhwf2g3a_1">HouseHold Not Found</string>
+    <string name="rlhwf2g3a_2">Fake Record</string>
+    <string name="lhwf2g5a">Did LHW visit the child during pneumonia ?</string>
+    <string name="lhwf2g7a">Do you have EPI card for (name of newborn)? can you please show it to me</string>
+    <string name="lhwf2g7a_1">Card available but not shown</string>
+    <string name="lhwf2g7a_2">Card not available</string>
+    <string name="lhwf2g7a_3">Card available and shown</string>
+    <string name="lhwf2g11">LHW informed mother about hazards of indoor air pollution ?</string>
+    <string name="lhwf2g11a">Did LHW use ARI timer to check the breathing rate</string>
 
 
 </resources>
