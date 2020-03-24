@@ -363,6 +363,9 @@
     <string name="lhwf2e7a">Did newborn receive BCG vaccine after birth</string>
     <string name="lhwf2e9_3">Devlivery conducted in some other area</string>
     <string name="lhwf2e12a">Was there any danger sign identified by LHW</string>
+    <string name="lhwf2f3a">Reason</string>
+    <string name="lhwf2f3a_1">Household Not Found</string>
+    <string name="lhwf2f3a_2">Fake Record</string>
 
 
 </resources>

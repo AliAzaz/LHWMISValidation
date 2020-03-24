@@ -64,6 +64,7 @@
                 android:id="@+id/SectionF"
                 style="@style/Q_Linerlayout_v">
 
+
                 <!-- lhwf2f1 starts -->
                 <android.support.v7.widget.CardView
                     android:id="@+id/cvlhwf2f1"
@@ -125,7 +126,6 @@
                             android:maxLength="2"
                             app:maxValue="20"
                             app:minValue="1"
-                            app:required="true"
                             app:type="range" />
 
                     </LinearLayout>
@@ -146,7 +146,7 @@
 
                         <TextView
                             style="@style/TextView"
-                            android:text="Reason" />
+                            android:text="@string/lhwf2f3a" />
 
                         <RadioGroup
                             android:id="@+id/lhwf2f3a"
@@ -158,14 +158,14 @@
                                 style="@style/RadioButton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:text="Household Not Found" />
+                                android:text="@string/lhwf2f3a_1" />
 
                             <RadioButton
                                 android:id="@+id/lhwf2f3a_2"
                                 style="@style/RadioButton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:text="Fake Record" />
+                                android:text="@string/lhwf2f3a_2" />
 
                         </RadioGroup>
 
@@ -222,7 +222,6 @@
                             android:maxLength="2"
                             app:maxValue="59"
                             app:minValue="0"
-                            app:required="true"
                             app:type="range" />
 
                     </LinearLayout>
@@ -661,7 +660,9 @@
             </LinearLayout>
 
             <!-- Button -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView">
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvbtn_next"
+                style="@style/Q_CardView">
 
                 <Button
                     android:id="@+id/btn_next"
