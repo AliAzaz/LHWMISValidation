@@ -192,17 +192,36 @@
         <item name="android:layout_margin">4dp</item>
         <item name="android:padding">4dp</item>
     </style>
-    <!-- RadioButton   Ends. -->
+
+    <style name="hradiobutton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:gravity">left</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:padding">4dp</item>
+    </style>
 
 
-    <!-- RadioGroup   Starts. -->
+    <!-- RADIOGROUP   Starts. -->
     <style name="RadioGroup">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 
+    <style name="vradiogroup">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
 
-    <!-- RadioGroup   Ends. -->
+    <style name="hradiogroup">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
 
     <!-- Combox   Starts. -->
 

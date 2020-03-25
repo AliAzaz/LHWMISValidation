@@ -11,10 +11,6 @@
     <string name="title_home">Home</string>
 
 
-    <string name="rb_dk"> Don\'t Know </string>
-    <string name="rb_ra"> Refused to Answer </string>
-
-
     <!--NEW FROM IRFAN-->
 
     <string name="action_settings">Settings</string>
@@ -59,7 +55,10 @@
     <string name="rb_yes"> Yes </string>
     <string name="rb_no"> No </string>
     <string name="rb_na"> NA </string>
+    <string name="rb_dk"> Don\'t Know </string>
+    <string name="rb_ra"> Refused to Answer </string>
     <string name="other"> Other </string>
+    <string name="specify"> Specify </string>
 
     <string name="lhw_stockout"> Stock Out </string>
 
@@ -377,6 +376,13 @@
     <string name="lhwf2g7a_3">Card available and shown</string>
     <string name="lhwf2g11">LHW informed mother about hazards of indoor air pollution ?</string>
     <string name="lhwf2g11a">Did LHW use ARI timer to check the breathing rate</string>
+    <string name="lhwf2h1">Is there any MWRA in HH</string>
+    <string name="lhwf2h2a">Reason</string>
+    <string name="rlhwf2h2a_1">HouseHold Not Found</string>
+    <string name="rlhwf2h2a_2">Fake Record</string>
+    <string name="lhwf2h7_1">Routine Visit</string>
+    <string name="lhwf2h7_2">Immunization</string>
+    <string name="lhwf2h7_3">Family planning</string>
 
 
 </resources>

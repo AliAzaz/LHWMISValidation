@@ -28,10 +28,8 @@
 
         <!-- Parent layout starts -->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#F1F1F1"
-            android:orientation="vertical">
+            style="@style/vlinearlayout"
+            android:background="#F1F1F1">
 
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -60,14 +58,16 @@
                 android:layout_marginBottom="10dp"
                 android:background="@color/hitnscolor" />
 
+
             <LinearLayout
                 android:id="@+id/SectionH"
                 style="@style/Q_Linerlayout_v">
 
 
                 <!-- lhwf2h1 starts -->
-                <android.support.v7.widget.CardView style="@style/Q_CardView">
-
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf2h1"
+                    style="@style/Q_CardView">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf2h1"
@@ -75,20 +75,20 @@
 
                         <TextView
                             style="@style/TextView"
-                            android:text="is there any MWRA in HH" />
+                            android:text="@string/lhwf2h1" />
 
                         <RadioGroup
                             android:id="@+id/lhwf2h1"
-                            style="@style/RadioGroup">
+                            style="@style/hradiogroup">
 
                             <RadioButton
                                 android:id="@+id/rlhwf2h1_1"
-                                style="@style/RadioButton"
+                                style="@style/hradiobutton"
                                 android:text="@string/rb_yes" />
 
                             <RadioButton
                                 android:id="@+id/rlhwf2h1_2"
-                                style="@style/RadioButton"
+                                style="@style/hradiobutton"
                                 android:text="@string/rb_no" />
 
                         </RadioGroup>
@@ -101,6 +101,7 @@
 
                 <!-- lhwf2h2a starts -->
                 <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf2h2a"
                     style="@style/Q_CardView"
                     android:visibility='@{rlhwf2h12.checked? View.VISIBLE : View.GONE}'>
 
@@ -110,21 +111,21 @@
 
                         <TextView
                             style="@style/TextView"
-                            android:text="Reason" />
+                            android:text="@string/lhwf2h2a" />
 
                         <RadioGroup
                             android:id="@+id/lhwf2h2a"
-                            style="@style/RadioGroup">
+                            style="@style/hradiogroup">
 
                             <RadioButton
                                 android:id="@+id/rlhwf2h2a_1"
-                                style="@style/RadioButton"
-                                android:text="HouseHold Not Found" />
+                                style="@style/hradiobutton"
+                                android:text="@string/rlhwf2h2a_1" />
 
                             <RadioButton
                                 android:id="@+id/rlhwf2h2a_2"
-                                style="@style/RadioButton"
-                                android:text="Fake Record" />
+                                style="@style/hradiobutton"
+                                android:text="@string/rlhwf2h2a_2" />
 
                         </RadioGroup>
 
@@ -136,6 +137,7 @@
 
                 <!-- lhwf2h2 starts -->
                 <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf2h2"
                     style="@style/Q_CardView"
                     android:visibility='@{rlhwf2h12.checked? View.GONE : View.VISIBLE}'>
 
@@ -150,8 +152,8 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/lhwf2h2"
                             style="@style/EditText_number"
-                            android:inputType="number"
-                            app:mask="##"
+                            android:hint="@string/num"
+                            android:maxLength="2"
                             app:maxValue="10"
                             app:minValue="1"
                             app:type="range" />
@@ -164,6 +166,7 @@
 
                 <!-- lhwf2h3 starts -->
                 <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf2h3"
                     style="@style/Q_CardView"
                     android:visibility='@{rlhwf2h12.checked? View.GONE : View.VISIBLE}'>
 
@@ -178,7 +181,7 @@
                         <EditText
                             android:id="@+id/lhwf2h3"
                             style="@style/EditText_Name"
-                            android:hint="@string/lhwf2h3"
+                            android:hint="@string/name"
                             android:maxLength="50" />
 
                     </LinearLayout>
@@ -189,6 +192,7 @@
 
                 <!-- lhwf2h4 starts -->
                 <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf2h4"
                     style="@style/Q_CardView"
                     android:visibility='@{rlhwf2h12.checked? View.GONE : View.VISIBLE}'>
 
@@ -203,7 +207,7 @@
                         <EditText
                             android:id="@+id/lhwf2h4"
                             style="@style/EditText_Name"
-                            android:hint="@string/lhwf2h4"
+                            android:hint="@string/name"
                             android:maxLength="50" />
 
                     </LinearLayout>
@@ -228,8 +232,8 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/lhwf2h5"
                             style="@style/EditText_number"
-                            android:inputType="number"
-                            app:mask="##"
+                            android:hint="@string/years"
+                            android:maxLength="2"
                             app:maxValue="49"
                             app:minValue="15"
                             app:type="range" />
@@ -242,6 +246,7 @@
 
                 <!-- lhwf2h6 starts -->
                 <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf2h6"
                     style="@style/Q_CardView"
                     android:visibility='@{rlhwf2h12.checked? View.GONE : View.VISIBLE}'>
 
@@ -255,16 +260,16 @@
 
                         <RadioGroup
                             android:id="@+id/lhwf2h6"
-                            style="@style/RadioGroup">
+                            style="@style/hradiogroup">
 
                             <RadioButton
                                 android:id="@+id/lhwf2h6_1"
-                                style="@style/RadioButton"
+                                style="@style/hradiobutton"
                                 android:text="@string/rb_yes" />
 
                             <RadioButton
                                 android:id="@+id/lhwf2h6_2"
-                                style="@style/RadioButton"
+                                style="@style/hradiobutton"
                                 android:text="@string/rb_no" />
 
                         </RadioGroup>
@@ -277,6 +282,7 @@
 
                 <!-- lhwf2h7 starts -->
                 <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf2h7"
                     style="@style/Q_CardView"
                     android:visibility='@{lhwf2h62.checked || rlhwf2h12.checked ? View.GONE : View.VISIBLE}'>
 
@@ -296,29 +302,28 @@
                             <RadioButton
                                 android:id="@+id/lhwf2h7_1"
                                 style="@style/RadioButton"
-                                android:text="Routine Visit" />
+                                android:text="@string/lhwf2h7_1" />
 
                             <RadioButton
                                 android:id="@+id/lhwf2h7_2"
                                 style="@style/RadioButton"
-                                android:text="Immunization" />
+                                android:text="@string/lhwf2h7_2" />
 
                             <RadioButton
                                 android:id="@+id/lhwf2h7_3"
                                 style="@style/RadioButton"
-                                android:text="Family planning" />
+                                android:text="@string/lhwf2h7_3" />
 
                             <RadioButton
                                 android:id="@+id/lhwf2h7_4"
                                 style="@style/RadioButton"
-                                android:text="Other" />
+                                android:text="@string/other" />
 
                             <EditText
                                 android:id="@+id/lhwf2h7_5"
                                 style="@style/EditText_Name"
-                                android:hint="@string/lhwf2h3"
+                                android:hint="@string/specify"
                                 android:maxLength="50"
-                                android:tag="lhwf2h7_5"
                                 android:text='@{lhwf2h74.checked ? lhwf2h75.getText().toString() : ""}'
                                 android:visibility='@{lhwf2h74.checked ? View.VISIBLE : View.GONE}' />
 
@@ -332,6 +337,7 @@
 
                 <!-- lhwf2h8 starts -->
                 <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf2h8"
                     style="@style/Q_CardView"
                     android:visibility='@{rlhwf2h12.checked? View.GONE : View.VISIBLE}'>
 
@@ -345,16 +351,16 @@
 
                         <RadioGroup
                             android:id="@+id/lhwf2h8"
-                            style="@style/RadioGroup">
+                            style="@style/hradiogroup">
 
                             <RadioButton
                                 android:id="@+id/lhwf2h8_1"
-                                style="@style/RadioButton"
+                                style="@style/hradiobutton"
                                 android:text="@string/rb_yes" />
 
                             <RadioButton
                                 android:id="@+id/lhwf2h8_2"
-                                style="@style/RadioButton"
+                                style="@style/hradiobutton"
                                 android:text="@string/rb_no" />
 
                         </RadioGroup>
@@ -367,6 +373,7 @@
 
                 <!-- lhwf2h9 starts -->
                 <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf2h9"
                     style="@style/Q_CardView"
                     android:visibility='@{rlhwf2h12.checked? View.GONE : View.VISIBLE}'>
 
@@ -380,16 +387,16 @@
 
                         <RadioGroup
                             android:id="@+id/lhwf2h9"
-                            style="@style/RadioGroup">
+                            style="@style/hradiogroup">
 
                             <RadioButton
                                 android:id="@+id/lhwf2h9_1"
-                                style="@style/RadioButton"
+                                style="@style/hradiobutton"
                                 android:text="@string/rb_yes" />
 
                             <RadioButton
                                 android:id="@+id/lhwf2h9_2"
-                                style="@style/RadioButton"
+                                style="@style/hradiobutton"
                                 android:text="@string/rb_no" />
 
                         </RadioGroup>
@@ -402,6 +409,7 @@
 
                 <!-- lhwf2h10 starts -->
                 <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf2h10"
                     style="@style/Q_CardView"
                     android:visibility='@{rlhwf2h12.checked? View.GONE : View.VISIBLE}'>
 
@@ -415,16 +423,16 @@
 
                         <RadioGroup
                             android:id="@+id/lhwf2h10"
-                            style="@style/RadioGroup">
+                            style="@style/hradiogroup">
 
                             <RadioButton
                                 android:id="@+id/lhwf2h10_1"
-                                style="@style/RadioButton"
+                                style="@style/hradiobutton"
                                 android:text="@string/rb_yes" />
 
                             <RadioButton
                                 android:id="@+id/lhwf2h10_2"
-                                style="@style/RadioButton"
+                                style="@style/hradiobutton"
                                 android:text="@string/rb_no" />
 
                         </RadioGroup>
@@ -437,6 +445,7 @@
 
                 <!-- lhwf2h11 starts -->
                 <android.support.v7.widget.CardView
+                    android:id="@+id/cvlhwf2h11"
                     style="@style/Q_CardView"
                     android:visibility='@{rlhwf2h12.checked? View.GONE : View.VISIBLE}'>
 
@@ -450,16 +459,16 @@
 
                         <RadioGroup
                             android:id="@+id/lhwf2h11"
-                            style="@style/RadioGroup">
+                            style="@style/hradiogroup">
 
                             <RadioButton
                                 android:id="@+id/lhwf2h11_1"
-                                style="@style/RadioButton"
+                                style="@style/hradiobutton"
                                 android:text="@string/rb_yes" />
 
                             <RadioButton
                                 android:id="@+id/lhwf2h11_2"
-                                style="@style/RadioButton"
+                                style="@style/hradiobutton"
                                 android:text="@string/rb_no" />
 
                         </RadioGroup>
@@ -472,7 +481,9 @@
             </LinearLayout>
 
             <!-- Button -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView">
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvbtn_Next"
+                style="@style/Q_CardView">
 
                 <Button
                     android:id="@+id/btn_Next"
