@@ -177,9 +177,17 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@color/black_overlay</item>
+        <item name="android:textColor">@color/text</item>
     </style>
-    <!-- CheckBox   Ends. -->
+
+    <style name="checkbox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:padding">3dp</item>
+    </style>
 
 
     <!-- RadioButton   Starts. -->
@@ -187,38 +195,49 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">16sp</item>
-        <item name="android:textColor">@color/black_overlay</item>
+        <item name="android:textColor">@color/text</item>
         <item name="android:gravity">left</item>
         <item name="android:layout_margin">4dp</item>
         <item name="android:padding">4dp</item>
     </style>
-    <!-- RadioButton   Ends. -->
+
+    <style name="hradiobutton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:gravity">left</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:padding">4dp</item>
+    </style>
 
 
-    <!-- RadioGroup   Starts. -->
+    <!-- RADIOGROUP   Starts. -->
     <style name="RadioGroup">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 
+    <style name="vradiogroup">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
 
-    <!-- RadioGroup   Ends. -->
+    <style name="hradiogroup">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
 
     <!-- Combox   Starts. -->
-
     <style name="Combox">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-
         <item name="android:fadeScrollbars">false</item>
-
-
-
-
-
     </style>
-
-    <!-- Combox   Ends. -->
 
     <!-- RangeBar   Starts. -->
     <style name="Rangbar">
@@ -286,13 +305,22 @@
         <item name="android:layout_marginBottom">10dp</item>
         <item name="android:orientation">vertical</item>
         <item name="android:padding">10dp</item>
+    </style>
+    <!-- Q_cardview   Ends. -->
 
-
-
-
+    <!-- vLinearLayout -->
+    <style name="vlinearlayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
     </style>
 
-    <!-- Q_cardview   Ends. -->
+    <!-- hLinearLayout -->
+    <style name="hlinearlayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
 
 
     <style name="Q_Linerlayout_new">

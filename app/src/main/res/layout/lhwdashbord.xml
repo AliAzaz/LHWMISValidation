@@ -14,59 +14,49 @@
     </data>
 
 
-
-
-
     <ScrollView
-
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:layout_marginTop="10dp"
-        android:background="#EEEEEE"
-        android:orientation="vertical"
-
-
-
         android:layout_marginBottom="5dp"
+        android:background="#EEEEEE"
         android:fadeScrollbars="false"
         android:fillViewport="true"
-        android:paddingBottom="5dp"
+        android:orientation="vertical"
         android:paddingLeft="5dp"
-        android:paddingRight="5dp"
         android:paddingTop="25dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
         android:scrollbarSize="50dip">
+
+
         <!-- Parent layout starts -->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#F1F1F1"
+            style="@style/vlinearlayout"
             android:layout_marginTop="25dp"
-
-            android:orientation="vertical">
-
+            android:background="#F1F1F1">
 
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                >
+                android:layout_marginTop="10dp">
+
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:src="@drawable/uncolor"
-                    />
+                    android:src="@drawable/uncolor" />
+
                 <TextView
                     style="@style/TextView"
-                    android:text="Select LHW Information"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="7dp"
-                    android:textColor="#008E45"
-
-                    />
+                    android:layout_marginTop="20dp"
+                    android:text="Select LHW Information"
+                    android:textColor="#008E45" />
 
             </LinearLayout>
+
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -76,211 +66,147 @@
                 android:background="@color/hitnscolor" />
 
 
-
-
-
-
-
-
-
-
             <!-- GS1 starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-
-                >
-
-
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvlhwf1a1"
+                style="@style/Q_CardView">
 
                 <LinearLayout
                     android:id="@+id/Lv_lhwf1a1"
-                    style="@style/Q_Linerlayout_v"
-
-                    >
+                    style="@style/Q_Linerlayout_v">
 
                     <TextView
-
                         style="@style/TextView"
-                        android:text="@string/lhwf1a1"
-
-                        />
+                        android:text="@string/lhwf1a1" />
 
                     <LinearLayout style="@style/Q_Linerlayout_v">
 
                         <Spinner
-                            style="@style/Combox"
                             android:id="@+id/lhwf1a1"
-                            >
-
-
-                        </Spinner>
-
+                            style="@style/Combox" />
 
                     </LinearLayout>
+
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
             <!-- GS1 ends-->
 
 
             <!-- GS2 starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-
-                >
-
-
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvlhwf1a2"
+                style="@style/Q_CardView">
 
                 <LinearLayout
                     android:id="@+id/Lv_lhwf1a2"
-                    style="@style/Q_Linerlayout_v"
-
-                    >
+                    style="@style/Q_Linerlayout_v">
 
                     <TextView
-
                         style="@style/TextView"
-                        android:text="@string/lhwf1a2"
-
-                        />
+                        android:text="@string/lhwf1a2" />
 
                     <LinearLayout style="@style/Q_Linerlayout_v">
 
                         <Spinner
-                            style="@style/Combox"
                             android:id="@+id/lhwf1a2"
-                            >
-
-
-                        </Spinner>
-
+                            style="@style/Combox" />
 
                     </LinearLayout>
+
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
             <!-- GS2 ends-->
 
 
             <!-- GS4 starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-
-                >
-
-
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvlhwf1a3"
+                style="@style/Q_CardView">
 
                 <LinearLayout
                     android:id="@+id/Lv_lhwf1a3"
-                    style="@style/Q_Linerlayout_v"
-
-                    >
+                    style="@style/Q_Linerlayout_v">
 
                     <TextView
-
                         style="@style/TextView"
-                        android:text="@string/lhwf1a3"
-
-                        />
+                        android:text="@string/lhwf1a3" />
 
                     <LinearLayout style="@style/Q_Linerlayout_v">
 
                         <Spinner
-                            style="@style/Combox"
                             android:id="@+id/lhwf1a3"
-                            >
-
-
-                        </Spinner>
-
+                            style="@style/Combox" />
 
                     </LinearLayout>
+
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
             <!-- GS3 ends-->
 
 
             <!-- GS4 starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-
-                >
-
-
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvlhwf1a4"
+                style="@style/Q_CardView">
 
                 <LinearLayout
                     android:id="@+id/Lv_lhwf1a4"
-                    style="@style/Q_Linerlayout_v"
-
-                    >
+                    style="@style/Q_Linerlayout_v">
 
                     <TextView
-
                         style="@style/TextView"
-                        android:text="@string/lhwf1a4"
-
-                        />
+                        android:text="@string/lhwf1a4" />
 
                     <LinearLayout style="@style/Q_Linerlayout_v">
 
                         <TextView
-                            style="@style/TextView"
                             android:id="@+id/lhwf1a4"
-                            >
-
-
-                        </TextView>
-
+                            style="@style/TextView" />
 
                     </LinearLayout>
+
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
             <!-- GS4 ends-->
-
 
 
             <!-- Button -->
             <android.support.v7.widget.CardView
                 style="@style/Q_CardView"
-                android:layout_marginTop="15dp"
-
-                >
+                android:layout_marginTop="15dp">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/hlinearlayout"
+                    android:layout_margin="3dp"
                     android:background="#F1F1F1"
-                    android:orientation="horizontal"
-              android:layout_margin="3dp"
+                    android:weightSum="100">
 
+                    <Button
+                        android:id="@+id/btnSourceRegister"
+                        style="@style/Button_Next"
+                        android:layout_margin="10dp"
+                        android:layout_weight="50"
+                        android:text="Source Register " />
 
-                    android:weightSum="100"
-                    >
-
-
-                <Button
-                    android:id="@+id/btnSourceRegister"
-                    style="@style/Button_Next"
-                    android:layout_margin="10dp"
-                    android:layout_weight="50"
-                    android:text="Source Register " />
-
-                <Button
-                    android:id="@+id/btn_Community"
-                    style="@style/Button_Next"
-                    android:layout_margin="10dp"
-                    android:layout_weight="50"
-                    android:text="Community" />
+                    <Button
+                        android:id="@+id/btn_Community"
+                        style="@style/Button_Next"
+                        android:layout_margin="10dp"
+                        android:layout_weight="50"
+                        android:text="Community" />
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
-            <!-- Button Next Ends-->
-
 
         </LinearLayout>
 
     </ScrollView>
-
 
 
 </layout>

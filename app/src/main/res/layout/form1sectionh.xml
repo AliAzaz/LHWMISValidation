@@ -70,7 +70,9 @@
 
 
             <!-- lhwf1h1 starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView">
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvlhwf1h1"
+                style="@style/Q_CardView">
 
                 <LinearLayout
                     android:id="@+id/Lv_lhwf1h1"
@@ -83,8 +85,8 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/lhwf1h1"
                         style="@style/EditText_number"
-                        android:inputType="number"
-                        app:mask="##"
+                        android:hint="@string/num"
+                        android:maxLength="2"
                         app:maxValue="50"
                         app:minValue="1"
                         app:type="range" />
@@ -96,7 +98,9 @@
 
 
             <!-- lhwf1h2 starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView">
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvlhwf1h2"
+                style="@style/Q_CardView">
 
                 <LinearLayout
                     android:id="@+id/Lv_lhwf1h2"
@@ -109,8 +113,8 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/lhwf1h2"
                         style="@style/EditText_number"
-                        android:inputType="number"
-                        app:mask="##"
+                        android:hint="@string/num"
+                        android:maxLength="2"
                         app:maxValue="10"
                         app:minValue="1"
                         app:type="range" />
@@ -122,7 +126,9 @@
 
 
             <!-- lhwf1h3 starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView">
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvlhwf1h3"
+                style="@style/Q_CardView">
 
                 <LinearLayout
                     android:id="@+id/Lv_lhwf1h3"
@@ -136,7 +142,7 @@
                         style="@style/EditText_Name"
                         android:id="@+id/lhwf1h3"
                         android:maxLength="50"
-                        android:hint="@string/lhwf1h3"/>
+                        android:hint="@string/name" />
 
                 </LinearLayout>
 
@@ -145,7 +151,9 @@
 
 
             <!-- lhwf1h4 starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView">
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvlhwf1h4"
+                style="@style/Q_CardView">
 
                 <LinearLayout
                     android:id="@+id/Lv_lhwf1h4"
@@ -156,10 +164,10 @@
                         android:text="@string/lhwf1h4" />
 
                     <EditText
-                        style="@style/EditText_Name"
                         android:id="@+id/lhwf1h4"
+                        style="@style/EditText_Name"
                         android:maxLength="50"
-                        android:hint="@string/lhwf1h4"/>
+                        android:hint="@string/name" />
 
                 </LinearLayout>
 
@@ -168,7 +176,9 @@
 
 
             <!-- lhwf1h5 starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView">
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvlhwf1h5"
+                style="@style/Q_CardView">
 
                 <LinearLayout
                     android:id="@+id/Lv_lhwf1h5"
@@ -181,8 +191,8 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/lhwf1h5"
                         style="@style/EditText_number"
-                        android:inputType="number"
-                        app:mask="##"
+                        android:hint="@string/years"
+                        android:maxLength="2"
                         app:maxValue="49"
                         app:minValue="14"
                         app:type="range" />
@@ -194,7 +204,9 @@
 
 
             <!-- lhwf1h6 starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView">
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvlhwf1h6"
+                style="@style/Q_CardView">
 
                 <LinearLayout
                     android:id="@+id/Lv_lhwf1h6"
@@ -202,20 +214,25 @@
 
                     <TextView
                         style="@style/TextView"
-                        android:text="Is there any PW in HH?" />
+                        android:text="@string/lhwf1h6" />
 
                     <RadioGroup
                         android:id="@+id/lhwf1h6"
-                        style="@style/RadioGroup">
+                        style="@style/RadioGroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/lhwf1h6_1"
                             style="@style/RadioButton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:text="@string/rb_yes" />
 
                         <RadioButton
                             android:id="@+id/lhwf1h6_2"
                             style="@style/RadioButton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:text="@string/rb_no" />
 
 
@@ -228,7 +245,9 @@
 
 
             <!-- lhwf1h7 starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView">
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvlhwf1h7"
+                style="@style/Q_CardView">
 
                 <LinearLayout
                     android:id="@+id/Lv_lhwf1h7"
@@ -236,20 +255,25 @@
 
                     <TextView
                         style="@style/TextView"
-                        android:text="Is there any women whose delivery was conducted in last three months?" />
+                        android:text="@string/lhwf1h7" />
 
                     <RadioGroup
                         android:id="@+id/lhwf1h7"
-                        style="@style/RadioGroup">
+                        style="@style/RadioGroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/lhwf1h7_1"
                             style="@style/RadioButton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:text="@string/rb_yes" />
 
                         <RadioButton
                             android:id="@+id/lhwf1h7_2"
                             style="@style/RadioButton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:text="@string/rb_no" />
 
                     </RadioGroup>
@@ -261,7 +285,9 @@
 
 
             <!-- lhwf1h8 starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView">
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvlhwf1h8"
+                style="@style/Q_CardView">
 
                 <LinearLayout
                     android:id="@+id/Lv_lhwf1h8"
@@ -269,20 +295,25 @@
 
                     <TextView
                         style="@style/TextView"
-                        android:text="Is there any newborn?" />
+                        android:text="@string/lhwf1h8" />
 
                     <RadioGroup
                         android:id="@+id/lhwf1h8"
-                        style="@style/RadioGroup">
+                        style="@style/RadioGroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/lhwf1h8_1"
                             style="@style/RadioButton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:text="@string/rb_yes" />
 
                         <RadioButton
                             android:id="@+id/lhwf1h8_2"
                             style="@style/RadioButton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:text="@string/rb_no" />
 
                     </RadioGroup>
@@ -294,7 +325,9 @@
 
 
             <!-- lhwf1h9 starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView">
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvlhwf1h9"
+                style="@style/Q_CardView">
 
                 <LinearLayout
                     android:id="@+id/Lv_lhwf1h9"
@@ -302,20 +335,25 @@
 
                     <TextView
                         style="@style/TextView"
-                        android:text="Is there any child under five years of age?" />
+                        android:text="@string/lhwf1h9" />
 
                     <RadioGroup
                         android:id="@+id/lhwf1h9"
-                        style="@style/RadioGroup">
+                        style="@style/RadioGroup"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/lhwf1h9_1"
                             style="@style/RadioButton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:text="@string/rb_yes" />
 
                         <RadioButton
                             android:id="@+id/lhwf1h9_2"
                             style="@style/RadioButton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:text="@string/rb_no" />
 
                     </RadioGroup>

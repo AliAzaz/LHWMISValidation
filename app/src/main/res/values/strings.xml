@@ -11,10 +11,6 @@
     <string name="title_home">Home</string>
 
 
-    <string name="rb_dk"> Don\'t Know </string>
-    <string name="rb_ra"> Refused to Answer </string>
-
-
     <!--NEW FROM IRFAN-->
 
     <string name="action_settings">Settings</string>
@@ -59,7 +55,10 @@
     <string name="rb_yes"> Yes </string>
     <string name="rb_no"> No </string>
     <string name="rb_na"> NA </string>
+    <string name="rb_dk"> Don\'t Know </string>
+    <string name="rb_ra"> Refused to Answer </string>
     <string name="other"> Other </string>
+    <string name="specify"> Specify </string>
 
     <string name="lhw_stockout"> Stock Out </string>
 
@@ -327,6 +326,64 @@
     <string name="lhwf1c9_2">Limited Stock</string>
     <string name="lhwf1c9_3">Purchased Privately by PW</string>
     <string name="lhwf1c10">Any maternal death (during pregnancy) in last three months registered for this HH ?</string>
+    <string name="date">Date</string>
+    <string name="years">Years</string>
+    <string name="lhwf1h6">Is there any PW in HH ?</string>
+    <string name="lhwf1h7">Is there any women whose delivery was conducted in last three months ?</string>
+    <string name="lhwf1h8">Is there any newborn ?</string>
+    <string name="lhwf1h9">Is there any child under five years of age ?</string>
+    <string name="lhwf2c1">Is there any PW whose pregnancy was identified in last three months ?</string>
+    <string name="lhwf2c2a">Is PW available at home</string>
+    <string name="lhwf2c2b">Reason</string>
+    <string name="rlhwf2c2b_1">Pregnancy Terminated</string>
+    <string name="rlhwf2c2b_2">PW Not Present at Home</string>
+    <string name="rlhwf2c2b_3">Fake Record</string>
+    <string name="lhwf2c4b">Gestational age of pregnancy</string>
+    <string name="lhwf2c4a">Did LHW visited you during pregnancy ?</string>
+    <string name="lhwf2c6a">Who vacinated PW for TT vaccine</string>
+    <string name="lhwf2c6a_1">LHW</string>
+    <string name="lhwf2c6a_2">Vaccinator</string>
+    <string name="lhwf2c8a"> Any maternal death (during pregnancy) occurred in last three months ? </string>
+    <string name="lhwf2d1"> Is there any mother whose delivery was conducted within last three months ? </string>
+    <string name="lhwf2d2a"> Is Mother Available at home </string>
+    <string name="lhwf2d2b"> Reason </string>
+    <string name="lhwf2d2b_1"> Delivered Women not available at Home </string>
+    <string name="lhwf2d2b_2"> Fake Record </string>
+    <string name="lhwf2d6a"> Any maternal death (during/after delivery) occurred in last three months ? </string>
+    <string name="lhwf2d9_3"> Delivery conducted in some other area </string>
+    <string name="lhwf2e1"> Is there any newborn in HH ? </string>
+    <string name="lhwf2e1a"> Reason </string>
+    <string name="lhwf2e1a_1"> Mother / Newborn not available at home </string>
+    <string name="lhwf2e1a_2"> Fake Record </string>
+    <string name="lhwf2e6a"> Do you have EPI card for (name of newborn) ? \nCan you please show it to me </string>
+    <string name="lhwf2e6a_1"> Card available but not shown </string>
+    <string name="lhwf2e6a_2"> Card not available </string>
+    <string name="lhwf2e6a_3"> Card available and shown </string>
+    <string name="lhwf2e7a">Did newborn receive BCG vaccine after birth</string>
+    <string name="lhwf2e9_3">Devlivery conducted in some other area</string>
+    <string name="lhwf2e12a">Was there any danger sign identified by LHW</string>
+    <string name="lhwf2f3a">Reason</string>
+    <string name="lhwf2f3a_1">Household Not Found</string>
+    <string name="lhwf2f3a_2">Fake Record</string>
+    <string name="lhwf2g1">is ther any 0-59 month child who had pneumonia in last three months ?</string>
+    <string name="lhwf2g3a">Reason</string>
+    <string name="rlhwf2g3a_1">HouseHold Not Found</string>
+    <string name="rlhwf2g3a_2">Fake Record</string>
+    <string name="lhwf2g5a">Did LHW visit the child during pneumonia ?</string>
+    <string name="lhwf2g7a">Do you have EPI card for (name of newborn)? can you please show it to me</string>
+    <string name="lhwf2g7a_1">Card available but not shown</string>
+    <string name="lhwf2g7a_2">Card not available</string>
+    <string name="lhwf2g7a_3">Card available and shown</string>
+    <string name="lhwf2g11">LHW informed mother about hazards of indoor air pollution ?</string>
+    <string name="lhwf2g11a">Did LHW use ARI timer to check the breathing rate</string>
+    <string name="lhwf2h1">Is there any MWRA in HH</string>
+    <string name="lhwf2h2a">Reason</string>
+    <string name="rlhwf2h2a_1">HouseHold Not Found</string>
+    <string name="rlhwf2h2a_2">Fake Record</string>
+    <string name="lhwf2h7_1">Routine Visit</string>
+    <string name="lhwf2h7_2">Immunization</string>
+    <string name="lhwf2h7_3">Family planning</string>
+    <string name="lhwf4b000">Select VHC Member</string>
 
 
 </resources>
