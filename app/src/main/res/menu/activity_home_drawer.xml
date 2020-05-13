@@ -23,6 +23,10 @@
                 android:id="@+id/upload_date"
                 android:icon="@drawable/upload_interview"
                 android:title="Upload Data" />
+            <item
+                android:id="@+id/upload_photo"
+                android:icon="@drawable/upload_interview"
+                android:title="Upload Photos" />
 
 
         </menu>

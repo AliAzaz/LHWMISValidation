@@ -38,6 +38,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name=".PhotoUploads"
+            android:label="@string/title_home"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".Form1SectionC"
             android:label="@string/title_home"
             android:screenOrientation="portrait"

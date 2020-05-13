@@ -151,7 +151,9 @@ public class HomeActivity extends AppCompatActivity
              intent = new Intent(this, PendingUploads.class);
         }
 
-
+        if (id == R.id.upload_photo) {
+            intent = new Intent(this, PhotoUploads.class);
+        }
 
         if (id == R.id.stage_2) {
             intent = new Intent(this, LHWDashbord.class);

@@ -27,6 +27,8 @@ import java.util.List;
 
 import id.zelory.compressor.Compressor;
 
+import static com.irfansyed.umeedenau.validation.Global.PROJECT_NAME;
+
 public class TakePhoto extends Activity implements SurfaceHolder.Callback, Camera.PictureCallback {
 
     /*
@@ -304,7 +306,7 @@ public class TakePhoto extends Activity implements SurfaceHolder.Callback, Camer
     }
 
     private File getDir(int i) {
-        String appFolder = "LHWMIS";
+        String appFolder = PROJECT_NAME;
 
         if (i == 1) {
             File sdDir = Environment
