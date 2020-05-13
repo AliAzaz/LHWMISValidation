@@ -19,7 +19,7 @@ import utils.GeneratorClass;
 import utils.ValidatorClass;
 
 
-public  class Form1SectionC extends AppCompatActivity implements View.OnClickListener,RadioButton.OnCheckedChangeListener {
+public class Form1SectionC extends AppCompatActivity implements View.OnClickListener, RadioButton.OnCheckedChangeListener {
 
 
     //region Initialization
@@ -29,46 +29,43 @@ public  class Form1SectionC extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bin= DataBindingUtil.setContentView(this, R.layout.form1sectionc);
+        bin = DataBindingUtil.setContentView(this, R.layout.form1sectionc);
 
         bin.btnNext.setOnClickListener(this);
 
 
-      bin.lhwf1c61.setOnCheckedChangeListener(this);
-      bin.lhwf1c62.setOnCheckedChangeListener(this);
-      bin.lhwf1c63.setOnCheckedChangeListener(this);
-      bin.lhwf1c81.setOnCheckedChangeListener(this);
+        bin.lhwf1c61.setOnCheckedChangeListener(this);
+        bin.lhwf1c62.setOnCheckedChangeListener(this);
+        bin.lhwf1c63.setOnCheckedChangeListener(this);
+        bin.lhwf1c81.setOnCheckedChangeListener(this);
         bin.lhwf1c82.setOnCheckedChangeListener(this);
         bin.lhwf1c83.setOnCheckedChangeListener(this);
 
-      if(GeneratorClass.LHWsectionStatus("TableF1SectionC")==false)
-      {
-
-          bin.lhwf1c1.setText("000");
-          bin.lhwf1c1.setVisibility(View.GONE);
-      }
+        if (!GeneratorClass.LHWsectionStatus("TableF1SectionC")) {
+            bin.lhwf1c1.setText("000");
+            bin.lhwf1c1.setVisibility(View.GONE);
+        }
 
 
     }
 
 
-
-
-
-
     @Override
-    public void onClick(View view)
-    {
-        if (!formValidation()) {
-             return;
+    public void onClick(View view) {
+
+        if (view.getId() == R.id.btn_snap) {
+            //
         }
 
+        if (view.getId() == R.id.btn_next) {
+            if (!formValidation()) {
+                return;
+            }
 
 
-        if(!GeneratorClass.checktextbox(bin.lhwf1c1,bin.lhwf1c2))
-        {
-            return;
-        }
+            if (!GeneratorClass.checktextbox(bin.lhwf1c1, bin.lhwf1c2)) {
+                return;
+            }
 
         /*if(bin.lhwf1c1.getText().length()>0) {
             int a = Integer.parseInt(bin.lhwf1c1.getText().toString());
@@ -89,18 +86,17 @@ public  class Form1SectionC extends AppCompatActivity implements View.OnClickLis
             return;
         }*/
 
+            insert_data();
+            int count = GeneratorClass.hh_section_count("TableF1SectionC", this);
+
+            Toast.makeText(this, "Data Inserted", Toast.LENGTH_SHORT).show();
 
 
-        insert_data();
-        int count= GeneratorClass.hh_section_count("TableF1SectionC",this);
-
-        Toast.makeText(this,"Data Inserted",Toast.LENGTH_SHORT).show();
-
-
-        Intent returnIntent = new Intent();
-        returnIntent.putExtra("count",count+"");
-        setResult(Activity.RESULT_OK,returnIntent);
-        finish();
+            Intent returnIntent = new Intent();
+            returnIntent.putExtra("count", count + "");
+            setResult(Activity.RESULT_OK, returnIntent);
+            finish();
+        }
 
 
     }
@@ -110,48 +106,59 @@ public  class Form1SectionC extends AppCompatActivity implements View.OnClickLis
     }
 
 
-
-    void insert_data()
-    {
+    void insert_data() {
         HashMap<String, String> Has_Map = new HashMap<>();
         GeneratorClass.Has_Map.clear();
+        Has_Map.put("FK_id", Global.LhwHH_id + "");
+        Has_Map.put("LhwSectionPKId", Global.LhwSection_id + "");
+        Has_Map.put("Status", "0");
+
+        GeneratorClass.Insert_table(bin.pp, true);
+        GeneratorClass.inert_db("TableF1SectionC", this, Has_Map);
+        GeneratorClass.LHWSectionUpdateCOunt("LHWOfficeHHCount", Global.LhwSection_id, this);
 
 
-        Has_Map.put("FK_id",Global.LhwHH_id+"");
-        Has_Map.put("LhwSectionPKId",Global.LhwSection_id+"");
-        Has_Map.put("Status","0");
+    }
 
-        GeneratorClass.Insert_table(bin.pp,true);
-        GeneratorClass.inert_db("TableF1SectionC",this,Has_Map);
-        GeneratorClass.LHWSectionUpdateCOunt("LHWOfficeHHCount",Global.LhwSection_id,this);
+   /* onActivityResult(resultCode) 0= Photo Cancel, 1=Photo Taken
+        if resultCode = 1 than also returns -> Intent Extra (FileName)*/
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        // check if the request code is same as what is passed  here it is 2
+        Toast.makeText(this, requestCode + "_" + resultCode, Toast.LENGTH_SHORT).show();
+        if (resultCode == 1) {
+            Toast.makeText(this, "Photo Taken", Toast.LENGTH_SHORT).show();
 
+            String fileName = data.getStringExtra("FileName");
+            bin.tv1.setText(fileName);
+        } else {
+            Toast.makeText(this, "Photo Cancelled", Toast.LENGTH_SHORT).show();
 
+            //TODO: Implement functionality below when photo was not taken
+            // ...
+            bin.tv1.setText("Photo not taken.");
 
+        }
     }
 
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-
-      if(buttonView.getId()==R.id.lhwf1c6_1 || buttonView.getId()==R.id.lhwf1c6_2 || buttonView.getId()==R.id.lhwf1c6_3)
-      {
-
-                  ClearAllcontrol.ClearAll(bin.LvLhwf1c7);
-                  ClearAllcontrol.ClearAll(bin.LvLhwf1c7A);
-
-      }
-
-        if(buttonView.getId()==R.id.lhwf1c8_1 || buttonView.getId()==R.id.lhwf1c8_2 || buttonView.getId()==R.id.lhwf1c8_3)
-        {
-
-
-
-                ClearAllcontrol.ClearAll(bin.LvLhwf1c9);
-
-
+        if (buttonView.getId() == R.id.lhwf1c6_1
+                || buttonView.getId() == R.id.lhwf1c6_2
+                || buttonView.getId() == R.id.lhwf1c6_3) {
+            ClearAllcontrol.ClearAll(bin.LvLhwf1c7);
+            ClearAllcontrol.ClearAll(bin.LvLhwf1c7A);
+        }
+        if (buttonView.getId() == R.id.lhwf1c8_1
+                || buttonView.getId() == R.id.lhwf1c8_2
+                || buttonView.getId() == R.id.lhwf1c8_3) {
+            ClearAllcontrol.ClearAll(bin.LvLhwf1c9);
         }
 
     }
+
 }

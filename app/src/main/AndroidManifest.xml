@@ -7,7 +7,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
@@ -16,6 +15,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".TakePhoto"></activity>
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_home"
@@ -26,14 +26,11 @@
             android:label="@string/title_home"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-
-
         <activity
             android:name=".Form1SectionC"
             android:label="@string/title_home"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".Form2SectionC"
             android:label="@string/title_home"
@@ -44,7 +41,6 @@
             android:label="@string/title_home"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".Form2SectionE"
             android:label="@string/title_home"
@@ -55,34 +51,26 @@
             android:label="@string/title_home"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".Form2SectionG"
             android:label="@string/title_home"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".Form2SectionH"
             android:label="@string/title_home"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-
-
-
-
         <activity
             android:name=".Form1SectionD"
             android:label="@string/title_home"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".Form1SectionE"
             android:label="@string/title_home"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".Form1SectionF"
             android:label="@string/title_home"
@@ -98,25 +86,21 @@
             android:label="@string/title_home"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".Form1SectionG"
             android:label="@string/title_home"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".Form4SectionB"
             android:label="@string/title_home"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".Form6SectionB"
             android:label="@string/title_home"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".PendingInterviewsHH"
             android:label="@string/title_home"
@@ -132,9 +116,6 @@
             android:label="@string/title_home"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-
-
-
         <activity
             android:name=".Form1SectionH"
             android:label="@string/title_home"
@@ -149,13 +130,10 @@
             android:name=".LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".LHWHHSections"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-
-
         <activity
             android:name=".pendinginterviews"
             android:screenOrientation="portrait"
@@ -169,7 +147,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

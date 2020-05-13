@@ -532,6 +532,32 @@
                 </android.support.v7.widget.CardView>
                 <!-- lhwf1c10 ends-->
 
+                <!-- Button -->
+                <android.support.v7.widget.CardView style="@style/Q_CardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_snap"
+                            style="@style/Button_Next"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="Snap Shot" />
+
+                        <TextView
+                            android:id="@+id/tv1"
+                            style="@style/TextView_Header"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="Count" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
 
             </LinearLayout>
 

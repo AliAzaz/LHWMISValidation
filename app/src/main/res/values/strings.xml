@@ -32,9 +32,6 @@
     <string name="title_activity_main2">Main2Activity</string>
 
 
-
-
-
     <!-- Genral Info File starts  -->
 
 
@@ -44,12 +41,7 @@
     <!-- Validation Tool LHW & HH Text Starts   -->
 
 
-
-
-
-
     <!--  LHW New Form1 -->
-
 
 
     <string name="rb_yes"> Yes </string>
@@ -156,7 +148,7 @@
     <string name="lhwf1h5"> Age (in years) of MWRA </string>
 
 
-<!-- Form 3-->
+    <!-- Form 3-->
 
     <string name="lhwf3header_b"> Section B: Village Health Committee (VHC) </string>
     <string name="lhwf3b1"> Did LHW form VHC? </string>
@@ -193,7 +185,7 @@
     <string name="lhwf5b7_8"> Immunization </string>
 
 
-<!-- Form 2 starts-->
+    <!-- Form 2 starts-->
 
     <string name="lhwf2header_b"> Section B: House Hold Information </string>
     <string name="lhwf2b1"> Khandan # of selected HH </string>
@@ -291,7 +283,6 @@
     <string name="lhwf4b4"> Members name </string>
     <string name="lhwf4b5"> Meeting conducted last month. </string>
     <string name="lhwf4b6"> The decisions (if any) made in meeting were recorded by LHW? </string>
-
 
 
     <!-- Form 6 -->

@@ -14,227 +14,139 @@
     </data>
 
 
-
-
-
     <ScrollView
-
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:layout_marginTop="10dp"
-        android:background="#EEEEEE"
-        android:orientation="vertical"
-
-
-
         android:layout_marginBottom="5dp"
+        android:background="#EEEEEE"
         android:fadeScrollbars="false"
         android:fillViewport="true"
-        android:paddingBottom="5dp"
+        android:orientation="vertical"
         android:paddingLeft="5dp"
-        android:paddingRight="5dp"
         android:paddingTop="25dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
         android:scrollbarSize="50dip">
         <!-- Parent layout starts -->
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#F1F1F1"
             android:layout_marginTop="25dp"
-
+            android:background="#F1F1F1"
             android:orientation="vertical">
 
 
-
-
-
-
-
-
-
             <!-- SecitonC starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
-
-
-                >
-
-
+            <android.support.v7.widget.CardView style="@style/Q_CardView">
 
                 <LinearLayout
                     android:id="@+id/Lv_GS1"
-                    style="@style/Q_Linerlayout_v"
-
-                    >
+                    style="@style/Q_Linerlayout_v">
 
                     <Button
                         android:id="@+id/btnSectionC"
                         style="@style/Button_collder"
                         android:layout_margin="10dp"
                         android:padding="5dp"
-
                         android:text="@string/lhwf1header_c" />
 
-
-
-
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
             <!-- SectionC ends-->
 
-
             <!-- SecitonD starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
+            <android.support.v7.widget.CardView style="@style/Q_CardView">
 
-
-                >
-
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    >
+                <LinearLayout style="@style/Q_Linerlayout_v">
 
                     <Button
                         android:id="@+id/btnSectionD"
                         style="@style/Button_collder"
                         android:layout_margin="10dp"
                         android:padding="5dp"
-
                         android:text="@string/lhwf1header_d" />
 
-
-
-
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
             <!-- SectionD ends-->
 
             <!-- SecitonE starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
+            <android.support.v7.widget.CardView style="@style/Q_CardView">
 
-
-                >
-
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    >
+                <LinearLayout style="@style/Q_Linerlayout_v">
 
                     <Button
                         android:id="@+id/btnSectionE"
                         style="@style/Button_collder"
                         android:layout_margin="10dp"
                         android:padding="5dp"
-
                         android:text="@string/lhwf1header_e" />
 
-
-
-
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
             <!-- SectionE ends-->
 
             <!-- SecitonF starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
+            <android.support.v7.widget.CardView style="@style/Q_CardView">
 
-
-                >
-
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    >
+                <LinearLayout style="@style/Q_Linerlayout_v">
 
                     <Button
                         android:id="@+id/btnSectionF"
                         style="@style/Button_collder"
                         android:layout_margin="10dp"
                         android:padding="5dp"
-
                         android:text="@string/lhwf1header_f" />
 
-
-
-
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
             <!-- SectionF ends-->
 
             <!-- SecitonG starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
+            <android.support.v7.widget.CardView style="@style/Q_CardView">
 
-
-                >
-
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    >
+                <LinearLayout style="@style/Q_Linerlayout_v">
 
                     <Button
                         android:id="@+id/btnSectionG"
                         style="@style/Button_collder"
                         android:layout_margin="10dp"
                         android:padding="5dp"
-
                         android:text="@string/lhwf1header_g" />
 
-
-
-
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
             <!-- SectionG ends-->
 
             <!-- SecitonH starts -->
-            <android.support.v7.widget.CardView style="@style/Q_CardView"
+            <android.support.v7.widget.CardView style="@style/Q_CardView">
 
-
-                >
-
-
-
-                <LinearLayout
-
-                    style="@style/Q_Linerlayout_v"
-
-                    >
+                <LinearLayout style="@style/Q_Linerlayout_v">
 
                     <Button
                         android:id="@+id/btnSectionH"
                         style="@style/Button_collder"
                         android:layout_margin="10dp"
                         android:padding="5dp"
-
                         android:text="@string/lhwf1header_h" />
 
-
-
-
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
             <!-- SectionH ends-->
-
-
 
 
         </LinearLayout>
 
     </ScrollView>
-
 
 
 </layout>
