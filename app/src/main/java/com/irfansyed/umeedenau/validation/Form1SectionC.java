@@ -25,6 +25,7 @@ public class Form1SectionC extends AppCompatActivity implements View.OnClickList
 
     //region Initialization
     Form1sectioncBinding bin;
+    private int PhotoSerial;
 
 
     @Override
@@ -34,7 +35,7 @@ public class Form1SectionC extends AppCompatActivity implements View.OnClickList
 
         bin.btnNext.setOnClickListener(this);
 
-
+        PhotoSerial = 0;
         bin.lhwf1c61.setOnCheckedChangeListener(this);
         bin.lhwf1c62.setOnCheckedChangeListener(this);
         bin.lhwf1c63.setOnCheckedChangeListener(this);
@@ -53,9 +54,22 @@ public class Form1SectionC extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View view) {
-
+        PhotoSerial++;
         if (view.getId() == R.id.btn_snap) {
-            //
+            Intent intent = new Intent(this, TakePhoto.class);
+
+            intent.putExtra("picID", "901001" + "_" + "A-0001-001" + "_" + PhotoSerial + "_");
+            intent.putExtra("childName", "Hassan");
+
+// TODO: add identification information
+/*            intent.putExtra("picID", MainApp.fc.getClusterCode() + "_" + MainApp.fc.getHhno() + "_" + MainApp.child.getChildSerial() + "_");
+            intent.putExtra("childName", MainApp.child.getChildName());
+*/
+
+
+            intent.putExtra("picView", "Sect_C".toUpperCase());
+            startActivityForResult(intent, 1); // Activity is started with requestCode 1 = Front
+
         }
 
         if (view.getId() == R.id.btn_next) {
@@ -129,19 +143,12 @@ public class Form1SectionC extends AppCompatActivity implements View.OnClickList
         super.onActivityResult(requestCode, resultCode, data);
         // check if the request code is same as what is passed  here it is 2
         Toast.makeText(this, requestCode + "_" + resultCode, Toast.LENGTH_SHORT).show();
-        if (resultCode == 1) {
+
             Toast.makeText(this, "Photo Taken", Toast.LENGTH_SHORT).show();
 
             String fileName = data.getStringExtra("FileName");
-            bin.tv1.setText(fileName);
-        } else {
-            Toast.makeText(this, "Photo Cancelled", Toast.LENGTH_SHORT).show();
+        bin.tv1.setText(bin.tv1.getText() + String.valueOf(PhotoSerial) + " - " + fileName + "\r\n");
 
-            //TODO: Implement functionality below when photo was not taken
-            // ...
-            bin.tv1.setText("Photo not taken.");
-
-        }
     }
 
 

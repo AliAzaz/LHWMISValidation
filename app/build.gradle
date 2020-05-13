@@ -35,6 +35,10 @@ android {
     dataBinding {
         enabled = true
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -42,10 +46,10 @@ dependencies {
 
     implementation group: 'com.google.guava', name: 'guava', version: '24.1-jre'
 
-    implementation 'androidx.appcompat:appcompat:1.0.0'
-    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.media:media:1.0.0'
+    implementation 'androidx.media:media:1.1.0'
     implementation 'androidx.cardview:cardview:1.0.0'
     //Edittext library
     implementation 'com.github.AliAzaz:Edittext-Library:2.0.0'
