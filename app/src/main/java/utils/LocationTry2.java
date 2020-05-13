@@ -1,7 +1,6 @@
 package utils;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.Criteria;
@@ -9,8 +8,9 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
 import android.widget.Toast;
+
+import androidx.core.app.ActivityCompat;
 
 /**
  * Created by Umeed-e-Nau on 12/21/2016.
@@ -20,11 +20,7 @@ public class LocationTry2 {
 
     static Context mContext;
     public LocationTry2(Context context){
-        this.mContext = context;
-    }
-
-    public static interface LocationCallback {
-        public void onNewLocationAvailable(GPSCoordinates location);
+        mContext = context;
     }
 
     // calls back to calling thread, note this is for low grain: if you want higher precision, swap the
@@ -36,7 +32,7 @@ public class LocationTry2 {
         if (isNetworkEnabled) {
             Criteria criteria = new Criteria();
             criteria.setAccuracy(Criteria.ACCURACY_COARSE);
-            if (ActivityCompat.checkSelfPermission(((Activity)mContext), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(((Activity)mContext), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 // TODO: Consider calling
                 //    ActivityCompat#requestPermissions
                 // here to request the missing permissions, and then overriding
@@ -83,6 +79,10 @@ public class LocationTry2 {
                 }, null);
             }
         }
+    }
+
+    public interface LocationCallback {
+        void onNewLocationAvailable(GPSCoordinates location);
     }
 
 

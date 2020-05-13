@@ -2,7 +2,6 @@ package utils;
 
 import android.content.Context;
 import android.database.Cursor;
-import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -10,8 +9,8 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
-import android.widget.TextClock;
-import android.widget.Toast;
+
+import androidx.cardview.widget.CardView;
 
 import com.irfansyed.umeedenau.validation.Global;
 
@@ -167,7 +166,7 @@ public abstract class GeneratorClass {
 
         LocalDataManager validationactivity = new LocalDataManager(mContext);
 
-        validationactivity.database.execSQL(query);
+        database.execSQL(query);
 
         int i=0;
     }
@@ -209,7 +208,7 @@ public abstract class GeneratorClass {
 
         LocalDataManager validationactivity = new LocalDataManager(mContext);
 
-        validationactivity.database.execSQL(query);
+        database.execSQL(query);
     }
 
     public  static  void LHWSectionUpdateCOunt(String COlumn_name,int pk_id, Context mContext)
@@ -234,7 +233,7 @@ public abstract class GeneratorClass {
 
         LocalDataManager validationactivity = new LocalDataManager(mContext);
 
-        validationactivity.database.execSQL(query);
+        database.execSQL(query);
     }
 
     public static boolean LHWsectionStatus(String table_name)

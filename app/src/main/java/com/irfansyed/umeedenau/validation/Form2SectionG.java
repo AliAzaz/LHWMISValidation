@@ -2,9 +2,7 @@ package com.irfansyed.umeedenau.validation;
 
 import android.content.Intent;
 import android.database.Cursor;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -12,7 +10,9 @@ import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import com.irfansyed.umeedenau.validation.databinding.Form1sectiongBinding;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+
 import com.irfansyed.umeedenau.validation.databinding.Form2sectiongBinding;
 
 import java.text.DateFormat;

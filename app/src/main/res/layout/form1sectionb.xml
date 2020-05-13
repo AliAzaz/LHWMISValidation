@@ -56,7 +56,7 @@
 
 
             <!-- lhwf1b1 starts -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/cvlhwf1b1"
                 style="@style/Q_CardView">
 
@@ -76,12 +76,12 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
             <!-- lhwf1b1 ends-->
 
 
             <!-- lhwf1b2 starts -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/cvlhwf1b2"
                 style="@style/Q_CardView">
 
@@ -100,12 +100,12 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
             <!-- lhwf1b2 ends-->
 
 
             <!-- lhwf1b3 starts -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/cvlhwf1b3"
                 style="@style/Q_CardView">
 
@@ -125,12 +125,12 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
             <!-- lhwf1b3 ends-->
 
 
             <!-- Button -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 style="@style/Q_CardView"
                 android:layout_margin="10dp">
 
@@ -154,7 +154,7 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
             <!-- Button Next Ends-->
 
         </LinearLayout>

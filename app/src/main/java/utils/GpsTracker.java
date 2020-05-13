@@ -1,7 +1,6 @@
 package utils;
 
 import android.Manifest;
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -13,9 +12,10 @@ import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AlertDialog;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.core.app.ActivityCompat;
 
 /**
  * Created by Umeed-e-Nau on 12/22/2016.
@@ -33,16 +33,6 @@ public class GpsTracker implements ProgressDialog.OnDismissListener {
 
     public GpsTracker(Context context) {
         this.mContext = context;
-    }
-
-    public interface LocationCallback {
-        public void onNewLocation(String gpsData);
-    }
-
-    @Override
-    public void onDismiss(DialogInterface dialogInterface) {
-        if (gpsData.length() == 0)
-            showGPSAlert();
     }
 
     public void requestLocationUpdate(final LocationCallback callback) {
@@ -68,7 +58,7 @@ public class GpsTracker implements ProgressDialog.OnDismissListener {
         });
         progressBar.show();
 
-        locationManager = (LocationManager) mContext.getSystemService(mContext.LOCATION_SERVICE);
+        locationManager = (LocationManager) mContext.getSystemService(Context.LOCATION_SERVICE);
 
         if (ActivityCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
@@ -94,7 +84,7 @@ public class GpsTracker implements ProgressDialog.OnDismissListener {
 
                                 Toast.makeText(mContext, "GPS coordinates : " + gpsData, Toast.LENGTH_SHORT).show();
 
-                                if (ActivityCompat.checkSelfPermission(((Activity) mContext), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(((Activity) mContext), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                                if (ActivityCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                                     // TODO: Consider calling
                                     //    ActivityCompat#requestPermissions
                                     // here to request the missing permissions, and then overriding
@@ -141,7 +131,7 @@ public class GpsTracker implements ProgressDialog.OnDismissListener {
 
                                 Toast.makeText(mContext, "GPS coordinates : " + gpsData, Toast.LENGTH_SHORT).show();
 
-                                if (ActivityCompat.checkSelfPermission(((Activity) mContext), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(((Activity) mContext), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                                if (ActivityCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                                     // TODO: Consider calling
                                     //    ActivityCompat#requestPermissions
                                     // here to request the missing permissions, and then overriding
@@ -177,6 +167,16 @@ public class GpsTracker implements ProgressDialog.OnDismissListener {
                     });
         }
         startThread();
+    }
+
+    @Override
+    public void onDismiss(DialogInterface dialogInterface) {
+        if (gpsData.length() == 0)
+            showGPSAlert();
+    }
+
+    public interface LocationCallback {
+        void onNewLocation(String gpsData);
     }
 
     public void startThread() {

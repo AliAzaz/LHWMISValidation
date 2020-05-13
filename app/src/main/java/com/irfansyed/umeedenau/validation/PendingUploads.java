@@ -1,19 +1,19 @@
 package com.irfansyed.umeedenau.validation;
 
-import android.app.Activity;
 import android.content.Context;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -33,72 +33,9 @@ public class PendingUploads extends AppCompatActivity {
     RecyclerView.LayoutManager mLayoutManager;
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_survey_completed);
-
-          List<String> list =get_list();
-
-
-        if(list == null)
-            return;
-
-        Collections.sort(list);
-
-        mRecyclerView = (RecyclerView) findViewById(R.id.list_survey_completed);
-        mLayoutManager = new LinearLayoutManager(this);
-        mRecyclerView.setLayoutManager(mLayoutManager);
-
-
-        mAdapter = new PendingUploadsCustomAdapter(this, list);
-        mRecyclerView.setAdapter(mAdapter);
-
-
-    }
-
-
-   public static HashMap<String,String> map_add=new HashMap<>();
-   public static HashMap<String,String> map_contac=new HashMap<>();
-
-    ;
-    public   List<String> get_list()
-    {
-
-
-        List<String> lst=new ArrayList<>();
-        String query2 = "select id,lhwf1a2,lhwf1a3,lhwf1a4 from  TableLHWSection  where status='0'" ;
-
-        LocalDataManager Lm = new LocalDataManager(this);
-        Cursor c = database.rawQuery(query2, null);
-
-
-        if (c != null) {
-            if (c.moveToFirst()) {
-                do {
-
-
-
-
-                    lst.add(c.getString(0)+"-"+c.getString(1)+"-"+c.getString(2)+"-"+c.getString(3));
-
-
-
-                } while (c.moveToNext());
-            }
-        }
-
-        return lst;
-
-
-    }
-
-
-
-
     public static   void show_alert(String LHWName, String LHWid, String HF, String LHWHHCount, String LHWVHCCount, String LHWWSGCount, String LHWFieldHHCount, String LHWFieldVHCCount, String LHWFieldWSGCount, final Context context, final String Pkid)
     {
-        final android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(context);
+        final androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(context);
         LayoutInflater inflater =(LayoutInflater) context.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
         final View dialogLayout = inflater.inflate(R.layout.dialogupload, null);
         builder.setView(dialogLayout);
@@ -139,7 +76,7 @@ public class PendingUploads extends AppCompatActivity {
         final Button btn_cancel,btn_ok;
         btn_cancel=dialogLayout.findViewById(R.id.btn_cancel);
         btn_ok=dialogLayout.findViewById(R.id.btn_ok);
-        final android.support.v7.app.AlertDialog dialog = builder.create();
+        final androidx.appcompat.app.AlertDialog dialog = builder.create();
 
 
 
@@ -178,6 +115,61 @@ public class PendingUploads extends AppCompatActivity {
             }
         });
 
+
+
+    }
+
+
+    public static HashMap<String, String> map_add = new HashMap<>();
+    public static HashMap<String, String> map_contac = new HashMap<>();
+
+    public List<String> get_list() {
+
+
+        List<String> lst = new ArrayList<>();
+        String query2 = "select id,lhwf1a2,lhwf1a3,lhwf1a4 from  TableLHWSection  where status='0'";
+
+        LocalDataManager Lm = new LocalDataManager(this);
+        Cursor c = database.rawQuery(query2, null);
+
+
+        if (c != null) {
+            if (c.moveToFirst()) {
+                do {
+
+
+                    lst.add(c.getString(0) + "-" + c.getString(1) + "-" + c.getString(2) + "-" + c.getString(3));
+
+
+                } while (c.moveToNext());
+            }
+        }
+
+        return lst;
+
+
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_survey_completed);
+
+        List<String> list = get_list();
+
+
+        if (list == null)
+            return;
+
+        Collections.sort(list);
+
+        mRecyclerView = findViewById(R.id.list_survey_completed);
+        mLayoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+
+
+        mAdapter = new PendingUploadsCustomAdapter(this, list);
+        mRecyclerView.setAdapter(mAdapter);
 
 
     }
@@ -234,7 +226,6 @@ public class PendingUploads extends AppCompatActivity {
 
 
 }
-
 
 class  PendingUploadsCustomAdapter extends RecyclerView.Adapter {
 
@@ -305,8 +296,8 @@ class  PendingUploadsCustomAdapter extends RecyclerView.Adapter {
 
         public ViewHolder(View v) {
             super(v);
-            textName = (TextView) v.findViewById(R.id.text_item_survey_pending_name);
-            textId = (TextView) v.findViewById(R.id.text_item_survey_pending_id);
+            textName = v.findViewById(R.id.text_item_survey_pending_name);
+            textId = v.findViewById(R.id.text_item_survey_pending_id);
         }
     }
 

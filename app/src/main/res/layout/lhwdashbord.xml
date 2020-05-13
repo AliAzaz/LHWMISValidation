@@ -67,7 +67,7 @@
 
 
             <!-- GS1 starts -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/cvlhwf1a1"
                 style="@style/Q_CardView">
 
@@ -89,12 +89,12 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
             <!-- GS1 ends-->
 
 
             <!-- GS2 starts -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/cvlhwf1a2"
                 style="@style/Q_CardView">
 
@@ -116,12 +116,12 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
             <!-- GS2 ends-->
 
 
             <!-- GS4 starts -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/cvlhwf1a3"
                 style="@style/Q_CardView">
 
@@ -143,12 +143,12 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
             <!-- GS3 ends-->
 
 
             <!-- GS4 starts -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/cvlhwf1a4"
                 style="@style/Q_CardView">
 
@@ -170,12 +170,12 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
             <!-- GS4 ends-->
 
 
             <!-- Button -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 style="@style/Q_CardView"
                 android:layout_marginTop="15dp">
 
@@ -201,7 +201,7 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
         </LinearLayout>

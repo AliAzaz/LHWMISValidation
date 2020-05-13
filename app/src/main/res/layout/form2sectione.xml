@@ -65,7 +65,7 @@
 
 
                 <!-- lhwf2E1 starts -->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf2e1"
                     style="@style/Q_CardView">
 
@@ -100,12 +100,12 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
                 <!-- lhwf2E1 ends-->
 
 
                 <!-- lhwf2e1a starts -->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf2e1a"
                     style="@style/Q_CardView"
                     android:visibility='@{rlhwf2e11.checked? View.GONE : View.VISIBLE}'>
@@ -136,12 +136,12 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
                 <!-- lhwf2e1a ends-->
 
 
                 <!-- lhwf2e2 starts -->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf2e2"
                     style="@style/Q_CardView"
                     android:visibility='@{rlhwf2e12.checked? View.GONE : View.VISIBLE}'>
@@ -165,12 +165,12 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
                 <!-- lhwf2e2 ends-->
 
 
                 <!-- lhwf2e3 starts -->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf2e3"
                     style="@style/Q_CardView"
                     android:visibility='@{rlhwf2e12.checked? View.GONE : View.VISIBLE}'>
@@ -191,12 +191,12 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
                 <!-- lhwf2e3 ends-->
 
 
                 <!-- lhwf2e4 starts -->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf2e4"
                     style="@style/Q_CardView"
                     android:visibility='@{rlhwf2e12.checked? View.GONE : View.VISIBLE}'>
@@ -217,12 +217,12 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
                 <!-- lhwf2e4 ends-->
 
 
                 <!-- lhwf2e5 starts -->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf2e5"
                     style="@style/Q_CardView"
                     android:visibility='@{rlhwf2e12.checked? View.GONE : View.VISIBLE}'>
@@ -258,12 +258,12 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
                 <!-- lhwf2e5 ends-->
 
 
                 <!-- lhwf2e5a starts -->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf2e5a"
                     style="@style/Q_CardView"
                     android:visibility='@{lhwf2e52.checked || rlhwf2e12.checked ? View.GONE : View.VISIBLE}'>
@@ -306,12 +306,12 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
                 <!-- lhwf2e5a ends-->
 
 
                 <!-- lhwf2e6 starts -->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf2e6"
                     style="@style/Q_CardView"
                     android:visibility='@{rlhwf2e12.checked? View.GONE : View.VISIBLE}'>
@@ -347,12 +347,12 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
                 <!-- lhwf2e6 ends-->
 
 
                 <!-- lhwf2e6a starts -->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf2e6a"
                     style="@style/Q_CardView"
                     android:visibility='@{rlhwf2e12.checked? View.GONE : View.VISIBLE}'>
@@ -388,12 +388,12 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
                 <!-- lhwf2e6a ends-->
 
 
                 <!-- lhwf2e7 starts -->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf2e7"
                     style="@style/Q_CardView"
                     android:visibility='@{lhwf2e6a1.checked || lhwf2e6a2.checked || rlhwf2e12.checked ? View.GONE : View.VISIBLE}'>
@@ -438,12 +438,12 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
                 <!-- lhwf2e7 ends-->
 
 
                 <!-- lhwf2e7a starts -->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf2e7a"
                     style="@style/Q_CardView"
                     android:visibility='@{lhwf2e6a1.checked || lhwf2e6a2.checked || rlhwf2e12.checked? View.GONE : View.VISIBLE}'>
@@ -479,12 +479,12 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
                 <!-- lhwf2e7a ends-->
 
 
                 <!-- lhwf2e8 starts -->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf2e8"
                     style="@style/Q_CardView"
                     android:visibility='@{rlhwf2e12.checked? View.GONE : View.VISIBLE}'>
@@ -520,12 +520,12 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
                 <!-- lhwf2e8 ends-->
 
 
                 <!-- Quality Indicators starts -->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     style="@style/Q_CardView"
                     android:visibility='@{rlhwf2e12.checked? View.GONE : View.VISIBLE}'>
 
@@ -540,12 +540,12 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
                 <!-- Quality Indicators ends-->
 
 
                 <!-- lhwf2e9 starts -->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf2e9"
                     style="@style/Q_CardView"
                     android:visibility='@{rlhwf2e12.checked? View.GONE : View.VISIBLE}'>
@@ -581,12 +581,12 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
                 <!-- lhwf2e9 ends-->
 
 
                 <!-- lhwf2e10 starts -->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf2e10"
                     style="@style/Q_CardView"
                     android:visibility="gone"
@@ -623,12 +623,12 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
                 <!-- lhwf2e10 ends-->
 
 
                 <!-- lhwf2e11 starts -->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf2e11"
                     style="@style/Q_CardView"
                     android:visibility='@{lhwf2e92.checked || lhwf2e93.checked || rlhwf2e12.checked? View.GONE : View.VISIBLE}'>
@@ -664,12 +664,12 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
                 <!-- lhwf2e11 ends-->
 
 
                 <!-- lhwf2e12a starts -->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf2e12a"
                     style="@style/Q_CardView"
                     android:visibility='@{lhwf2e92.checked || lhwf2e93.checked || rlhwf2e12.checked? View.GONE : View.VISIBLE}'>
@@ -705,12 +705,12 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
                 <!-- lhwf2e12a ends-->
 
 
                 <!-- lhwf2e12 starts -->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf2e12"
                     style="@style/Q_CardView"
                     android:visibility='@{lhwf2e92.checked || lhwf2e12a2.checked || lhwf2e93.checked || rlhwf2e12.checked? View.GONE : View.VISIBLE}'>
@@ -755,12 +755,12 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
                 <!-- lhwf2e12 ends-->
 
 
                 <!-- lhwf2e13 starts -->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf2e13"
                     style="@style/Q_CardView"
                     android:visibility='@{lhwf2e92.checked || lhwf2e93.checked || rlhwf2e12.checked? View.GONE : View.VISIBLE}'>
@@ -796,7 +796,7 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
                 <!-- lhwf2e13 ends-->
 
 
@@ -804,7 +804,7 @@
 
 
             <!-- Button -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/cvbtn_Next"
                 style="@style/Q_CardView">
 
@@ -815,7 +815,7 @@
                     android:layout_weight="50"
                     android:text="Next " />
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
             <!-- Button Next Ends-->
 
         </LinearLayout>

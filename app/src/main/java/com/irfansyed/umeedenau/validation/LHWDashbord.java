@@ -1,14 +1,9 @@
 package com.irfansyed.umeedenau.validation;
 
-import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -16,8 +11,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.RatingBar;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.irfansyed.umeedenau.validation.databinding.LhwdashbordBinding;
 
@@ -27,7 +25,6 @@ import java.util.Date;
 
 import data.LocalDataManager;
 import utils.GetGpsHideForm;
-import utils.LocationHelper;
 import utils.MyPreferences;
 
 import static data.LocalDataManager.database;
@@ -61,7 +58,7 @@ public class LHWDashbord extends AppCompatActivity implements View.OnClickListen
         TelephonyManager telephonyManager = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
 
         try {
-         IMEi = telephonyManager.getDeviceId().toString();
+            IMEi = telephonyManager.getDeviceId();
     }
     catch (SecurityException e)
     {
@@ -471,7 +468,7 @@ public class LHWDashbord extends AppCompatActivity implements View.OnClickListen
 
         LocalDataManager validationactivity = new LocalDataManager(this);
 
-        validationactivity.database.execSQL(query);
+        database.execSQL(query);
 
 
 
@@ -500,7 +497,7 @@ public class LHWDashbord extends AppCompatActivity implements View.OnClickListen
 
         LocalDataManager validationactivity = new LocalDataManager(this);
 
-        validationactivity.database.execSQL(query);
+        database.execSQL(query);
 
 
 

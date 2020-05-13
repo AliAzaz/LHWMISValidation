@@ -2,6 +2,7 @@ package com.irfansyed.umeedenau.validation;
 
 public class Global {
 
+    public static final String PROJECT_NAME = "UEN-LHW-Validation";
 
 
 

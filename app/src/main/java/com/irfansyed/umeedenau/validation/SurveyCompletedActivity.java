@@ -6,13 +6,14 @@ import android.content.DialogInterface;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -44,7 +45,7 @@ public class SurveyCompletedActivity extends AppCompatActivity {
 
         Collections.sort(list);
 
-        mRecyclerView = (RecyclerView) findViewById(R.id.list_survey_completed);
+        mRecyclerView = findViewById(R.id.list_survey_completed);
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
@@ -165,8 +166,8 @@ class  SurveyCompletedCustomAdapter extends RecyclerView.Adapter{
 
         public ViewHolder(View v) {
             super(v);
-            textName = (TextView) v.findViewById(R.id.text_item_survey_pending_name);
-            textId = (TextView) v.findViewById(R.id.text_item_survey_pending_id);
+            textName = v.findViewById(R.id.text_item_survey_pending_name);
+            textId = v.findViewById(R.id.text_item_survey_pending_id);
         }
     }
 }

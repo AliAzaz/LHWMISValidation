@@ -1,24 +1,21 @@
 package com.irfansyed.umeedenau.validation;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
-
+import com.irfansyed.umeedenau.validation.databinding.Form3sectionbBinding;
 
 import java.util.HashMap;
 
 import utils.ClearAllcontrol;
 import utils.GeneratorClass;
 import utils.ValidatorClass;
-import com.irfansyed.umeedenau.validation.databinding.Form3sectionbBinding;
 
 
 public  class Form3SectionB extends AppCompatActivity implements View.OnClickListener,RadioButton.OnCheckedChangeListener {
