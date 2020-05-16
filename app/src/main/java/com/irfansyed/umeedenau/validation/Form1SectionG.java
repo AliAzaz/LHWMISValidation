@@ -19,27 +19,25 @@ import utils.GeneratorClass;
 import utils.ValidatorClass;
 
 
-public  class Form1SectionG extends AppCompatActivity implements View.OnClickListener {
+public class Form1SectionG extends AppCompatActivity implements View.OnClickListener {
 
 
     //region Initialization
     Form1sectiongBinding bin;
+    private int PhotoSerial;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bin= DataBindingUtil.setContentView(this, R.layout.form1sectiong);
+        bin = DataBindingUtil.setContentView(this, R.layout.form1sectiong);
 
 
         bin.btnNext.setOnClickListener(this);
+        PhotoSerial = 0;
 
 
-
-
-
-        if(GeneratorClass.LHWsectionStatus("TableF1SectionG")==false)
-        {
+        if (GeneratorClass.LHWsectionStatus("TableF1SectionG") == false) {
 
             bin.lhwf1g1.setText("000");
             bin.lhwf1g1.setVisibility(View.GONE);
@@ -47,7 +45,6 @@ public  class Form1SectionG extends AppCompatActivity implements View.OnClickLis
             bin.lhwf1g2.setText("000");
             bin.lhwf1g2.setVisibility(View.GONE);
         }
-
 
 
         bin.lhwf1g1.addTextChangedListener(new TextWatcher() {
@@ -102,16 +99,26 @@ public  class Form1SectionG extends AppCompatActivity implements View.OnClickLis
         });
 
 
-}
-
-
-
-
+    }
 
 
     @Override
-    public void onClick(View view)
-    {
+    public void onClick(View view) {
+        if (view.getId() == R.id.btn_snap) {
+            Intent intent = new Intent(this, TakePhoto.class);
+
+            // intent.putExtra("picID", "901001" + "_" + "A-0001-001" + "_" + PhotoSerial + "_");
+            //  intent.putExtra("childName", "Hassan");
+
+// TODO: add identification information
+            intent.putExtra("picID", Global.LhwSection_id + "_" + PhotoSerial);
+            intent.putExtra("childName", "Cough or Difficult Breathing");
+
+
+            intent.putExtra("picView", "Sect_G".toUpperCase());
+            startActivityForResult(intent, 1); // Activity is started with requestCode 1 = Front
+
+        }
         if (!formValidation()) {
             return;
         }
@@ -168,18 +175,15 @@ public  class Form1SectionG extends AppCompatActivity implements View.OnClickLis
         }*/
 
 
-
-
-
         insert_data();
-        int count= GeneratorClass.hh_section_count("TableF1SectionG",this);
+        int count = GeneratorClass.hh_section_count("TableF1SectionG", this);
 
-        Toast.makeText(this,"Data Inserted",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Data Inserted", Toast.LENGTH_SHORT).show();
 
 
         Intent returnIntent = new Intent();
-        returnIntent.putExtra("count",count+"");
-        setResult(Activity.RESULT_OK,returnIntent);
+        returnIntent.putExtra("count", count + "");
+        setResult(Activity.RESULT_OK, returnIntent);
         finish();
 
     }
@@ -189,26 +193,37 @@ public  class Form1SectionG extends AppCompatActivity implements View.OnClickLis
     }
 
 
-
-    void insert_data()
-    {
+    void insert_data() {
         HashMap<String, String> Has_Map = new HashMap<>();
         GeneratorClass.Has_Map.clear();
 
 
-        Has_Map.put("FK_id",Global.LhwHH_id+"");
-        Has_Map.put("LhwSectionPKId",Global.LhwSection_id+"");
-        Has_Map.put("Status","0");
+        Has_Map.put("FK_id", Global.LhwHH_id + "");
+        Has_Map.put("LhwSectionPKId", Global.LhwSection_id + "");
+        Has_Map.put("Status", "0");
 
-        GeneratorClass.Insert_table(bin.SectionG,true);
-        GeneratorClass.inert_db("TableF1SectionG",this,Has_Map);
-        GeneratorClass.LHWSectionUpdateCOunt("LHWOfficeHHCount",Global.LhwSection_id,this);
-
-
+        GeneratorClass.Insert_table(bin.SectionG, true);
+        GeneratorClass.inert_db("TableF1SectionG", this, Has_Map);
+        GeneratorClass.LHWSectionUpdateCOunt("LHWOfficeHHCount", Global.LhwSection_id, this);
 
 
     }
 
+    /* onActivityResult(resultCode) 0= Photo Cancel, 1=Photo Taken
+            if resultCode = 1 than also returns -> Intent Extra (FileName)*/
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        // check if the request code is same as what is passed  here it is 2
+        // Toast.makeText(this, requestCode + "_" + resultCode, Toast.LENGTH_SHORT).show();
+        if (resultCode == 1) {
+            Toast.makeText(this, "Photo Taken", Toast.LENGTH_SHORT).show();
+            PhotoSerial++;
 
-
+            String fileName = data.getStringExtra("FileName");
+            bin.lhwf1gphoto.setText(bin.lhwf1gphoto.getText() + String.valueOf(PhotoSerial) + " - " + fileName + ";\r\n");
+        } else {
+            Toast.makeText(this, "Photo Cancelled", Toast.LENGTH_SHORT).show();
+        }
+    }
 }

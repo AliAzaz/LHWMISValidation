@@ -25,7 +25,8 @@ public class TableF1SectionE {
                 Global.lhwf1e6b+"  Text, "+
                 Global.lhwf1e7+"  Text, "+
                 Global.lhwf1e7b+"  Text, "+
-                Global.lhwf1e8+"  Text "+
+                Global.lhwf1e8 + "  Text, " +
+                Global.lhwf1ephoto + "  Text " +
 
 
 

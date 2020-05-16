@@ -23,6 +23,7 @@ public class TableF1SectionG {
                 Global.lhwf1g6+"  Text, "+
                 Global.lhwf1g7+"  Text, "+
                 Global.lhwf1g8+"  Text, "+
+                Global.lhwf1gphoto + "  Text, " +
                 Global.lhwf1g9+"  Text"+
 
 

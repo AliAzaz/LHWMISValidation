@@ -537,8 +537,9 @@
 
                     <LinearLayout style="@style/Q_Linerlayout_v">
 
-                        <TextView
-                            android:id="@+id/tv1"
+                        <EditText
+                            android:id="@+id/lhwf1cphoto"
+
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
                         <Button

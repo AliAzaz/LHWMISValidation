@@ -54,19 +54,14 @@ public class Form1SectionC extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View view) {
-        PhotoSerial++;
         if (view.getId() == R.id.btn_snap) {
             Intent intent = new Intent(this, TakePhoto.class);
 
-            intent.putExtra("picID", "901001" + "_" + "A-0001-001" + "_" + PhotoSerial + "_");
-            intent.putExtra("childName", "Hassan");
-
+            //   intent.putExtra("picID", "901001" + "_" + "A-0001-001" + "_" + PhotoSerial + "_");
+            //   intent.putExtra("childName", "Hassan");
 // TODO: add identification information
-/*            intent.putExtra("picID", MainApp.fc.getClusterCode() + "_" + MainApp.fc.getHhno() + "_" + MainApp.child.getChildSerial() + "_");
-            intent.putExtra("childName", MainApp.child.getChildName());
-*/
-
-
+            intent.putExtra("picID", Global.LhwSection_id + "_" + PhotoSerial);
+            intent.putExtra("childName", "Maternal Care During Pregnancy");
             intent.putExtra("picView", "Sect_C".toUpperCase());
             startActivityForResult(intent, 1); // Activity is started with requestCode 1 = Front
 
@@ -120,7 +115,6 @@ public class Form1SectionC extends AppCompatActivity implements View.OnClickList
         return ValidatorClass.EmptyCheckingContainer(this, bin.pp);
     }
 
-
     void insert_data() {
         HashMap<String, String> Has_Map = new HashMap<>();
         GeneratorClass.Has_Map.clear();
@@ -132,7 +126,6 @@ public class Form1SectionC extends AppCompatActivity implements View.OnClickList
         GeneratorClass.inert_db("TableF1SectionC", this, Has_Map);
         GeneratorClass.LHWSectionUpdateCOunt("LHWOfficeHHCount", Global.LhwSection_id, this);
 
-
     }
 
    /* onActivityResult(resultCode) 0= Photo Cancel, 1=Photo Taken
@@ -140,15 +133,21 @@ public class Form1SectionC extends AppCompatActivity implements View.OnClickList
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+
         super.onActivityResult(requestCode, resultCode, data);
         // check if the request code is same as what is passed  here it is 2
-        Toast.makeText(this, requestCode + "_" + resultCode, Toast.LENGTH_SHORT).show();
-
+        // Toast.makeText(this, requestCode + "_" + resultCode, Toast.LENGTH_SHORT).show();
+        if (resultCode == 1) {
             Toast.makeText(this, "Photo Taken", Toast.LENGTH_SHORT).show();
 
             String fileName = data.getStringExtra("FileName");
-        bin.tv1.setText(bin.tv1.getText() + String.valueOf(PhotoSerial) + " - " + fileName + "\r\n");
+            PhotoSerial++;
 
+            bin.lhwf1cphoto.setText(bin.lhwf1cphoto.getText() + String.valueOf(PhotoSerial) + " - " + fileName + ";\r\n");
+        } else {
+            Toast.makeText(this, "Photo Cancelled", Toast.LENGTH_SHORT).show();
+        }
     }
 
 

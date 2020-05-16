@@ -92,17 +92,11 @@ public class LHWDashbord extends AppCompatActivity implements View.OnClickListen
 
             if (boolSourceRegister == true) {
 
-
-
-
-
-
                 if (status.equals("1")) {
                     insert_db(bin.lhwf1a1.getSelectedItem().toString(), bin.lhwf1a2.getSelectedItem().toString(),
 
                             LHid, bin.lhwf1a4.getText().toString()
                     );
-
 
                     get_status_interview(bin.lhwf1a1.getSelectedItem().toString(), bin.lhwf1a2.getSelectedItem().toString(),
 

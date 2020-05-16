@@ -17,6 +17,7 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -63,7 +64,7 @@ public class UploadF1F2SectionC extends AsyncTask {
 
 
         LocalDataManager Lm = new LocalDataManager(mContext);
-        Cursor c = Lm.database.rawQuery(query, null);
+        Cursor c = LocalDataManager.database.rawQuery(query, null);
 
 
         int a=c.getCount();
@@ -107,7 +108,6 @@ public class UploadF1F2SectionC extends AsyncTask {
             param.put("lhwf1c6", "00");
             param.put("lhwf1c7", "00");
             param.put("lhwf1c8", "00");
-
             param.put("lhwf1b1", "00");
             param.put("lhwf1b2", "00");
             param.put("lhwf1b3", "00");
@@ -120,7 +120,7 @@ public class UploadF1F2SectionC extends AsyncTask {
 
 
         LocalDataManager Lm2 = new LocalDataManager(mContext);
-        Cursor c2 = Lm2.database.rawQuery(query2, null);
+        Cursor c2 = LocalDataManager.database.rawQuery(query2, null);
 
 
         if (c2 != null && c2.getCount() != 0) {
@@ -138,14 +138,12 @@ public class UploadF1F2SectionC extends AsyncTask {
                         c2.getString(c2.getColumnIndex("lhwf2c4"))
                         +"-"+c2.getString(c2.getColumnIndex("lhwf2c4b"))
 
-
                 );
                 param.put("lhwf2c5", c2.getString(c2.getColumnIndex("lhwf2c5")));
                 param.put("lhwf2c6",
                         c2.getString(c2.getColumnIndex("lhwf2c6"))+
 
                         "-"+ c2.getString(c2.getColumnIndex("lhwf2c6a"))
-
 
                 );
                 param.put("lhwf2c7", c2.getString(c2.getColumnIndex("lhwf2c7")));
@@ -162,8 +160,6 @@ public class UploadF1F2SectionC extends AsyncTask {
                                 c2.getString(c2.getColumnIndex("lhwf2c1"))+"-"+
                                 c2.getString(c2.getColumnIndex("lhwf2c4a"))+"-"+
                                 c2.getString(c2.getColumnIndex("lhwf2c8a"))
-
-
 
                 );
 
@@ -230,7 +226,7 @@ public class UploadF1F2SectionC extends AsyncTask {
             connection.setConnectTimeout(1000);
 
             OutputStream os = connection.getOutputStream();
-            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
+            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(os, StandardCharsets.UTF_8));
 
 
             bw.write(PostRequestData.getData(param));
