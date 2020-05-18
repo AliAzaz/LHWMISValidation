@@ -30,6 +30,7 @@ public class Form1SectionD extends AppCompatActivity implements View.OnClickList
         bin = DataBindingUtil.setContentView(this, R.layout.form1sectiond);
 
         bin.btnNext.setOnClickListener(this);
+        bin.btnSnap.setOnClickListener(this);
         PhotoSerial = 0;
 
 

@@ -17,6 +17,7 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -63,7 +64,7 @@ public class UploadF1F2SectionD extends AsyncTask {
 
 
         LocalDataManager Lm = new LocalDataManager(mContext);
-        Cursor c = Lm.database.rawQuery(query, null);
+        Cursor c = LocalDataManager.database.rawQuery(query, null);
 
 
         if (c != null && c.getCount()!=0) {
@@ -122,7 +123,7 @@ public class UploadF1F2SectionD extends AsyncTask {
 
 
         LocalDataManager Lm2 = new LocalDataManager(mContext);
-        Cursor c2 = Lm2.database.rawQuery(query2, null);
+        Cursor c2 = LocalDataManager.database.rawQuery(query2, null);
 
 
         int a = c2.getCount();
@@ -145,6 +146,7 @@ public class UploadF1F2SectionD extends AsyncTask {
                 param.put("lhwf2d9", c2.getString(c2.getColumnIndex("lhwf2d9")));
                 param.put("lhwf2d10", c2.getString(c2.getColumnIndex("lhwf2d10")));
                 param.put("lhwf2d11", c2.getString(c2.getColumnIndex("lhwf2d11")));
+                param.put("lhwf1dphoto", c.getString(c.getColumnIndex("lhwf1dphoto")));
 
 
                 param.put("lhwf2d12",
@@ -224,7 +226,7 @@ public class UploadF1F2SectionD extends AsyncTask {
             connection.setConnectTimeout(1000);
 
             OutputStream os = connection.getOutputStream();
-            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
+            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(os, StandardCharsets.UTF_8));
 
 
             bw.write(PostRequestData.getData(param));

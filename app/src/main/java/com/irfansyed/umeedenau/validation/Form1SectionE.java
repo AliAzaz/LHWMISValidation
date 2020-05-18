@@ -35,6 +35,7 @@ public class Form1SectionE extends AppCompatActivity implements View.OnClickList
 
 
         bin.btnNext.setOnClickListener(this);
+        bin.btnSnap.setOnClickListener(this);
         PhotoSerial = 0;
 
 
@@ -72,7 +73,8 @@ public class Form1SectionE extends AppCompatActivity implements View.OnClickList
             startActivityForResult(intent, 1); // Activity is started with requestCode 1 = Front
 
         }
-        if (view.getId() == R.id.btn_next) {
+
+        if (view.getId() == R.id.btn_Next) {
 
             if (!formValidation()) {
                 return;

@@ -34,6 +34,8 @@ public class Form1SectionG extends AppCompatActivity implements View.OnClickList
 
 
         bin.btnNext.setOnClickListener(this);
+        bin.btnSnap.setOnClickListener(this);
+
         PhotoSerial = 0;
 
 
@@ -119,9 +121,12 @@ public class Form1SectionG extends AppCompatActivity implements View.OnClickList
             startActivityForResult(intent, 1); // Activity is started with requestCode 1 = Front
 
         }
-        if (!formValidation()) {
-            return;
-        }
+
+        if (view.getId() == R.id.btn_next) {
+
+            if (!formValidation()) {
+                return;
+            }
 
 
         /*if(bin.lhwf1g1.getText().length()>0) {
@@ -175,17 +180,17 @@ public class Form1SectionG extends AppCompatActivity implements View.OnClickList
         }*/
 
 
-        insert_data();
-        int count = GeneratorClass.hh_section_count("TableF1SectionG", this);
+            insert_data();
+            int count = GeneratorClass.hh_section_count("TableF1SectionG", this);
 
-        Toast.makeText(this, "Data Inserted", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Data Inserted", Toast.LENGTH_SHORT).show();
 
 
-        Intent returnIntent = new Intent();
-        returnIntent.putExtra("count", count + "");
-        setResult(Activity.RESULT_OK, returnIntent);
-        finish();
-
+            Intent returnIntent = new Intent();
+            returnIntent.putExtra("count", count + "");
+            setResult(Activity.RESULT_OK, returnIntent);
+            finish();
+        }
     }
 
     private boolean formValidation() {

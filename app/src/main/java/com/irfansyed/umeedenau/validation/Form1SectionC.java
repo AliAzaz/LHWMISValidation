@@ -34,6 +34,7 @@ public class Form1SectionC extends AppCompatActivity implements View.OnClickList
         bin = DataBindingUtil.setContentView(this, R.layout.form1sectionc);
 
         bin.btnNext.setOnClickListener(this);
+        bin.btnSnap.setOnClickListener(this);
 
         PhotoSerial = 0;
         bin.lhwf1c61.setOnCheckedChangeListener(this);
@@ -55,6 +56,7 @@ public class Form1SectionC extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.btn_snap) {
+
             Intent intent = new Intent(this, TakePhoto.class);
 
             //   intent.putExtra("picID", "901001" + "_" + "A-0001-001" + "_" + PhotoSerial + "_");
@@ -68,6 +70,7 @@ public class Form1SectionC extends AppCompatActivity implements View.OnClickList
         }
 
         if (view.getId() == R.id.btn_next) {
+
             if (!formValidation()) {
                 return;
             }

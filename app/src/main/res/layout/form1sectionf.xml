@@ -478,6 +478,7 @@
 
                         <EditText
                             android:id="@+id/lhwf1fphoto"
+                            android:enabled="false"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 
@@ -485,7 +486,6 @@
                             android:id="@+id/btn_snap"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:onClick="onClick"
                             android:text="Snap Shot" />
 
 

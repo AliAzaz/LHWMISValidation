@@ -31,6 +31,8 @@ public class Form1SectionH extends AppCompatActivity implements View.OnClickList
         bin = DataBindingUtil.setContentView(this, R.layout.form1sectionh);
 
         bin.btnNext.setOnClickListener(this);
+        bin.btnSnap.setOnClickListener(this);
+
         PhotoSerial = 0;
 
 
@@ -61,9 +63,11 @@ public class Form1SectionH extends AppCompatActivity implements View.OnClickList
             startActivityForResult(intent, 1); // Activity is started with requestCode 1 = Front
 
         }
-        if (!formValidation()) {
-            return;
-        }
+        if (view.getId() == R.id.btn_Next) {
+
+            if (!formValidation()) {
+                return;
+            }
 
 
 
@@ -79,42 +83,42 @@ public class Form1SectionH extends AppCompatActivity implements View.OnClickList
         }*/
 
 
-        if (bin.lhwf1h1.getText().length() > 0) {
-            int a = Integer.parseInt(bin.lhwf1h2.getText().toString());
-            if (a > 10) {
-                bin.lhwf1h2.requestFocus();
-                bin.lhwf1h2.setError("Should be less then 10");
+            if (bin.lhwf1h1.getText().length() > 0) {
+                int a = Integer.parseInt(bin.lhwf1h2.getText().toString());
+                if (a > 10) {
+                    bin.lhwf1h2.requestFocus();
+                    bin.lhwf1h2.setError("Should be less then 10");
 
+                    return;
+                }
+
+            }
+
+
+            if (!GeneratorClass.checktextbox(bin.lhwf1h1, bin.lhwf1h2)) {
                 return;
             }
 
-        }
+            if (bin.lhwf1h5.getText().length() > 0) {
+                int age = Integer.parseInt(bin.lhwf1h5.getText().toString());
 
-
-        if (!GeneratorClass.checktextbox(bin.lhwf1h1, bin.lhwf1h2)) {
-            return;
-        }
-
-        if (bin.lhwf1h5.getText().length() > 0) {
-            int age = Integer.parseInt(bin.lhwf1h5.getText().toString());
-
-            if (age < 15 || age > 49) {
-                Toast.makeText(this, "MARWA Age Must be Between 15 to 49", Toast.LENGTH_SHORT).show();
-                return;
+                if (age < 15 || age > 49) {
+                    Toast.makeText(this, "MARWA Age Must be Between 15 to 49", Toast.LENGTH_SHORT).show();
+                    return;
+                }
             }
+
+            insert_data();
+            int count = GeneratorClass.hh_section_count("TableF1SectionH", this);
+
+            Toast.makeText(this, "Data Inserted", Toast.LENGTH_SHORT).show();
+
+
+            Intent returnIntent = new Intent();
+            returnIntent.putExtra("count", count + "");
+            setResult(Activity.RESULT_OK, returnIntent);
+            finish();
         }
-
-        insert_data();
-        int count = GeneratorClass.hh_section_count("TableF1SectionH", this);
-
-        Toast.makeText(this, "Data Inserted", Toast.LENGTH_SHORT).show();
-
-
-        Intent returnIntent = new Intent();
-        returnIntent.putExtra("count", count + "");
-        setResult(Activity.RESULT_OK, returnIntent);
-        finish();
-
     }
 
 
