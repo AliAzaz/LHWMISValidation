@@ -72,46 +72,48 @@ public class Form1SectionE extends AppCompatActivity implements View.OnClickList
             startActivityForResult(intent, 1); // Activity is started with requestCode 1 = Front
 
         }
+        if (view.getId() == R.id.btn_next) {
 
-        if (!formValidation()) {
-            return;
-        }
-
-
-        if (!GeneratorClass.checktextbox(bin.lhwf1e1, bin.lhwf1e2)) {
-            return;
-        }
-
-
-        if (bin.lhwf1e1.getText().length() > 0) {
-            int a = Integer.parseInt(bin.lhwf1e1.getText().toString());
-            if (a > 60) {
-                bin.lhwf1e1.requestFocus();
-                bin.lhwf1e1.setError("Should be less then 60 and greater then 0 ");
-
+            if (!formValidation()) {
                 return;
             }
 
+
+            if (!GeneratorClass.checktextbox(bin.lhwf1e1, bin.lhwf1e2)) {
+                return;
+            }
+
+
+            if (bin.lhwf1e1.getText().length() > 0) {
+                int a = Integer.parseInt(bin.lhwf1e1.getText().toString());
+                if (a > 60) {
+                    bin.lhwf1e1.requestFocus();
+                    bin.lhwf1e1.setError("Should be less then 60 and greater then 0 ");
+
+                    return;
+                }
+
+            }
+            int b = Integer.parseInt(bin.lhwf1e2.getText().toString());
+            if (b > 10) {
+                bin.lhwf1e2.requestFocus();
+                bin.lhwf1e2.setError("Should be less then 10");
+
+                // return;
+            }
+
+
+            insert_data();
+            int count = GeneratorClass.hh_section_count("TableF1SectionE", this);
+
+            Toast.makeText(this, "Data Inserted", Toast.LENGTH_SHORT).show();
+
+
+            Intent returnIntent = new Intent();
+            returnIntent.putExtra("count", count + "");
+            setResult(Activity.RESULT_OK, returnIntent);
+            finish();
         }
-        int b = Integer.parseInt(bin.lhwf1e2.getText().toString());
-        if (b > 10) {
-            bin.lhwf1e2.requestFocus();
-            bin.lhwf1e2.setError("Should be less then 10");
-
-            // return;
-        }
-
-
-        insert_data();
-        int count = GeneratorClass.hh_section_count("TableF1SectionE", this);
-
-        Toast.makeText(this, "Data Inserted", Toast.LENGTH_SHORT).show();
-
-
-        Intent returnIntent = new Intent();
-        returnIntent.putExtra("count", count + "");
-        setResult(Activity.RESULT_OK, returnIntent);
-        finish();
     }
 
     private boolean formValidation() {

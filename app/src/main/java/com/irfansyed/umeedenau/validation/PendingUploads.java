@@ -107,11 +107,6 @@ public class PendingUploads extends AppCompatActivity {
                 dialog.dismiss();
 
 
-
-
-
-
-
             }
         });
 
@@ -166,7 +161,6 @@ public class PendingUploads extends AppCompatActivity {
         mRecyclerView = findViewById(R.id.list_survey_completed);
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
-
 
         mAdapter = new PendingUploadsCustomAdapter(this, list);
         mRecyclerView.setAdapter(mAdapter);

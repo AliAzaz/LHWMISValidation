@@ -73,6 +73,13 @@ public class PhotoUploads extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_survey_completed);
 
+        populatePhotoList();
+
+
+
+    }
+
+    private void populatePhotoList() {
 
         List<String> list = get_list();
 
@@ -89,7 +96,6 @@ public class PhotoUploads extends AppCompatActivity {
 
         mAdapter = new PendingUploadsCustomAdapter(this, list);
         mRecyclerView.setAdapter(mAdapter);
-
 
     }
 
@@ -127,7 +133,6 @@ public class PhotoUploads extends AppCompatActivity {
 
                     SyncAllPhotos syncAllPhotos = new SyncAllPhotos(memberId, mContext);
                     syncAllPhotos.execute();
-
 
                 }
             });

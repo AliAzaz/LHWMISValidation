@@ -60,7 +60,7 @@ public class Form1SectionD extends AppCompatActivity implements View.OnClickList
             startActivityForResult(intent, 1); // Activity is started with requestCode 1 = Front
 
         }
-
+        if (view.getId() == R.id.btn_next) {
         if (!formValidation()) {
             return;
         }
@@ -99,7 +99,8 @@ public class Form1SectionD extends AppCompatActivity implements View.OnClickList
         Intent returnIntent = new Intent();
         returnIntent.putExtra("count", count + "");
         setResult(Activity.RESULT_OK, returnIntent);
-        finish();
+            finish();
+        }
     }
 
 

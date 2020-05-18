@@ -167,6 +167,7 @@ public class SyncAllPhotos extends AsyncTask<Void, Integer, String> {
             fileInputStream.close();
             outputStream.flush();
             outputStream.close();
+            Log.d(TAG, "uploadPhoto: " + response.toString());
 
             return response.toString();
         } else {
@@ -177,11 +178,11 @@ public class SyncAllPhotos extends AsyncTask<Void, Integer, String> {
     @Override
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
+        Log.d(TAG, "onPostExecute: " + result);
 
         StringBuilder sSyncedError = new StringBuilder();
         JSONArray json;
         try {
-            Log.d(TAG, "onPostExecute: " + result);
             // json = new JSONArray(result);
 
 
@@ -192,14 +193,14 @@ public class SyncAllPhotos extends AsyncTask<Void, Integer, String> {
                 //TODO:   db.updateUploadedPhoto(jsonObject.getString("id"));  // UPDATE SYNCED
 
                 pd.setMessage("Photo synced:" + fileName);
-                pd.setTitle("Done uploading Photos");
+                pd.setTitle("Done Uploading Photos");
                 pd.show();
                 moveFile(fileName);
 
             } else if (jsonObject.getString("status").equals("2") && jsonObject.getString("error").equals("0")) {
 
                 pd.setMessage("Duplicate Photo: " + fileName);
-                pd.setTitle("Done uploading Photos");
+                pd.setTitle("Done Uploading Photos");
                 pd.show();
                 moveFile(fileName);
 
@@ -215,6 +216,9 @@ public class SyncAllPhotos extends AsyncTask<Void, Integer, String> {
             e.printStackTrace();
             Toast.makeText(mContext, "Sync Result:  " + result, Toast.LENGTH_SHORT).show();
             //syncStatus.setText(syncStatus.getText() + "\r\n" + syncClass + " Sync Failed");
+            pd.setMessage("Error Photo: " + fileName + "\r\n========================\r\n" + result);
+            pd.setTitle("Error Uploading Photos");
+            pd.show();
         }
     }
 
@@ -252,6 +256,7 @@ public class SyncAllPhotos extends AsyncTask<Void, Integer, String> {
 
             // delete the original file
             new File(inputPath + File.separator + inputFile).delete();
+
             Toast.makeText(mContext, "Photo Saved in " + outputPath + File.separator + inputFile, Toast.LENGTH_SHORT).show();
 
         } catch (FileNotFoundException fnfe1) {
@@ -261,4 +266,6 @@ public class SyncAllPhotos extends AsyncTask<Void, Integer, String> {
         }
 
     }
+
+
 }
