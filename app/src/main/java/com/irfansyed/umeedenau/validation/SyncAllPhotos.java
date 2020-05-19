@@ -40,6 +40,7 @@ public class SyncAllPhotos extends AsyncTask<Void, Integer, String> {
     private File sdDir;
     private String appFolder;
     private ProgressDialog pd;
+    private PhotoSyncedListener delegate;
 
     public SyncAllPhotos(String fileName, Context c) {
         this.mContext = c;
@@ -48,6 +49,9 @@ public class SyncAllPhotos extends AsyncTask<Void, Integer, String> {
         sdDir = Environment
                 .getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
         appFolder = PROJECT_NAME;
+
+        delegate = (PhotoSyncedListener) mContext;
+
     }
 
     @Override
@@ -59,7 +63,6 @@ public class SyncAllPhotos extends AsyncTask<Void, Integer, String> {
         pd.show();
 
     }
-
 
     @Override
     protected String doInBackground(Void... params) {
@@ -197,6 +200,8 @@ public class SyncAllPhotos extends AsyncTask<Void, Integer, String> {
                 pd.show();
                 moveFile(fileName);
 
+                delegate.photoSynced(true);
+
             } else if (jsonObject.getString("status").equals("2") && jsonObject.getString("error").equals("0")) {
 
                 pd.setMessage("Duplicate Photo: " + fileName);
@@ -204,9 +209,12 @@ public class SyncAllPhotos extends AsyncTask<Void, Integer, String> {
                 pd.show();
                 moveFile(fileName);
 
+                delegate.photoSynced(false);
 
             } else {
                 sSyncedError.append("\nError: ").append(jsonObject.getString("message"));
+
+                delegate.photoSynced(false);
             }
 
 
@@ -267,5 +275,8 @@ public class SyncAllPhotos extends AsyncTask<Void, Integer, String> {
 
     }
 
+    public interface PhotoSyncedListener {
+        void photoSynced(boolean flag);
+    }
 
 }

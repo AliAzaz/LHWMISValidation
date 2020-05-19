@@ -22,10 +22,10 @@ import java.util.List;
 import static com.irfansyed.umeedenau.validation.Global.PROJECT_NAME;
 
 
-public class PhotoUploads extends AppCompatActivity {
+public class PhotoUploads extends AppCompatActivity implements SyncAllPhotos.PhotoSyncedListener {
 
     RecyclerView mRecyclerView;
-    RecyclerView.Adapter mAdapter;
+    PendingUploadsCustomAdapter mAdapter;
     RecyclerView.LayoutManager mLayoutManager;
 
     public List<String> get_list() {
@@ -76,13 +76,11 @@ public class PhotoUploads extends AppCompatActivity {
         populatePhotoList();
 
 
-
     }
 
     private void populatePhotoList() {
 
         List<String> list = get_list();
-
 
         if (list == null)
             return;
@@ -99,7 +97,14 @@ public class PhotoUploads extends AppCompatActivity {
 
     }
 
-    class PendingUploadsCustomAdapter extends RecyclerView.Adapter {
+    @Override
+    public void photoSynced(boolean flag) {
+        if (flag) {
+            mAdapter.setItemList(get_list());
+        }
+    }
+
+    public class PendingUploadsCustomAdapter extends RecyclerView.Adapter {
 
         Context mContext;
         List<String> mList;
@@ -136,6 +141,11 @@ public class PhotoUploads extends AppCompatActivity {
 
                 }
             });
+        }
+
+        public void setItemList(List<String> list) {
+            mList = list;
+            notifyDataSetChanged();
         }
 
 
