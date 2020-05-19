@@ -101,11 +101,8 @@ public class UploadF1F2SectionE extends AsyncTask {
                                         c.getString(c.getColumnIndex("lhwf1e6b"))+"-"+
                                         c.getString(c.getColumnIndex("lhwf1e7b"))
 
-
-
                         );
                         param.put("lhwf1ephoto", c.getString(c.getColumnIndex("lhwf1ephoto")));
-
 
                         param.put("lhwf1b1", c.getString(c.getColumnIndex("lhwf1b1")));
                         param.put("lhwf1b2", c.getString(c.getColumnIndex("lhwf1b2")));
@@ -115,7 +112,6 @@ public class UploadF1F2SectionE extends AsyncTask {
                         Fk_id = c.getString(0);
                     }
                     ccc++;
-
 
                 } while (c.moveToNext());
             }
@@ -130,7 +126,6 @@ public class UploadF1F2SectionE extends AsyncTask {
             param.put("lhwf1e6", "00");
             param.put("lhwf1e7", "00");
             param.put("lhwf1e8", "00");
-
             param.put("lhwf1b1", "00");
             param.put("lhwf1b2", "00");
             param.put("lhwf1b3", "00");

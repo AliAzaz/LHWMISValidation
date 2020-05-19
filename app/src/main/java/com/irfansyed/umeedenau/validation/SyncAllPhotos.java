@@ -108,7 +108,7 @@ public class SyncAllPhotos extends AsyncTask<Void, Integer, String> {
 
         URL url = null;
 
-        url = new URL("http://f38158/uen_lhw/uploads.php");
+        url = new URL("https://vcoe1.aku.edu/uen_lhw/uploads.php");
 
         connection = (HttpURLConnection) url.openConnection();
 
