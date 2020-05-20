@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.database.Cursor;
 import android.os.AsyncTask;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.irfansyed.umeedenau.validation.Global;
@@ -224,15 +225,15 @@ public class UploadF1F2SectionC extends AsyncTask {
             connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("POST");
             // connection.setRequestMethod("GET");
+
             connection.setConnectTimeout(1000);
 
             OutputStream os = connection.getOutputStream();
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(os, StandardCharsets.UTF_8));
 
-
             bw.write(PostRequestData.getData(param));
+            Log.d("F1F2SecC", "doInBackground: " + PostRequestData.getData(param));
             bw.flush();
-
 
             int responseCode = connection.getResponseCode();
             if (responseCode == HttpURLConnection.HTTP_OK) {
@@ -243,7 +244,7 @@ public class UploadF1F2SectionC extends AsyncTask {
                 }
                 return st;
             } else {
-                mUserMsg = "Server Couldn't process the request";
+                mUserMsg = "CODE: " + responseCode + "\r\nServer Couldn't process the request";
             }
         } catch (MalformedURLException e) {
             Toast.makeText(mContext, e.toString(), Toast.LENGTH_LONG).show();
@@ -266,10 +267,11 @@ public class UploadF1F2SectionC extends AsyncTask {
         try {
             //   dialog.dismiss();
 
-            if (mUserMsg != null)
+            if (mUserMsg != null) {
+                dialog.dismiss();
                 throw new IOException();
 
-
+            }
             //int houseId = Integer.parseInt(((String) o).replace("\"",""));
 
             //    String result = (((String) o).replace("\"", ""));
