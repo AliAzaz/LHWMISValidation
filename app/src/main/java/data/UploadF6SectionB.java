@@ -67,7 +67,7 @@ public class UploadF6SectionB extends AsyncTask {
         Cursor c = Lm.database.rawQuery(query, null);
 
 
-        if (c != null && c.getCount()!=0) {
+        if (c != null && c.getCount() != 0) {
             if (c.moveToFirst()) {
 
 
@@ -110,14 +110,13 @@ public class UploadF6SectionB extends AsyncTask {
                 } while (c.moveToNext());
             }
 
-        }
-        else {
-            param.put("lhwf6b0","00");
-            param.put("lhwf6b1","00");
-            param.put("lhwf6b2","00");
-            param.put("lhwf6b3","00");
-            param.put("lhwf6b4","00");
-            param.put("lhwf6b5","00");
+        } else {
+            param.put("lhwf6b0", "00");
+            param.put("lhwf6b1", "00");
+            param.put("lhwf6b2", "00");
+            param.put("lhwf6b3", "00");
+            param.put("lhwf6b4", "00");
+            param.put("lhwf6b5", "00");
 
 
             param.put("lhwf6b6_1", "00");
@@ -132,10 +131,9 @@ public class UploadF6SectionB extends AsyncTask {
             param.put("lhwf6b696x", "00");
 
 
-
             param.put("GPSLat", "00");
             param.put("GPSLong", "00");
-            param.put("InterviewTime","00");
+            param.put("InterviewTime", "00");
 
             param.put("LhwSectionPKId", Global.server_id);
 
@@ -143,12 +141,11 @@ public class UploadF6SectionB extends AsyncTask {
         }
 
 
-
-            for (Map.Entry<String, String> entry : param.entrySet()) {
-                if (entry.getValue() == null || entry.getValue().length()==0) {
-                    param.put(entry.getKey(), "00");
-                }
-                System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+        for (Map.Entry<String, String> entry : param.entrySet()) {
+            if (entry.getValue() == null || entry.getValue().length() == 0) {
+                param.put(entry.getKey(), "00");
+            }
+            System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
 
         }
 
@@ -229,11 +226,8 @@ public class UploadF6SectionB extends AsyncTask {
             //      Global.server_id=result;
 
 
-
-
             Global.loop_Increment++;
-            if (Global.loop_count != Global.loop_Increment && Global.loop_count!=0) {
-
+            if (Global.loop_count != Global.loop_Increment && Global.loop_count != 0) {
 
 
                 new UploadF6SectionB(mContext).execute();
@@ -247,27 +241,18 @@ public class UploadF6SectionB extends AsyncTask {
                 ///  Toast.makeText(mContext, "Interivew Has ben Uploaded", Toast.LENGTH_SHORT).show();
                 // new LocalDataManager(mContext).uploadInterview();
 
-                Global.server_id=result;
+                Global.server_id = result;
 
-                if(result.equals("OK"))
-                {
+                if (result.equals("OK")) {
                     update_LHWSection();
 
-                  //  Intent intt = new Intent(mContext, PendingUploads.class);
-                    ((Activity)mContext).finish();
+                    //  Intent intt = new Intent(mContext, PendingUploads.class);
+                    ((Activity) mContext).finish();
 
                 }
 
 
-
-
-
-
-
             }
-
-
-
 
 
         } catch (IOException e) {
@@ -300,9 +285,8 @@ public class UploadF6SectionB extends AsyncTask {
     }
 
 
-    void update_LHWSection()
-    {
-        String  query ="update TableLHWSection set  Status='1' where id="+Global.global_id;
+    void update_LHWSection() {
+        String query = "update TableLHWSection set  Status='1' where id=" + Global.global_id;
 
         LocalDataManager validationactivity = new LocalDataManager(mContext);
 
