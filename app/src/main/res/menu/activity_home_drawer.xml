@@ -4,13 +4,10 @@
     <group android:checkableBehavior="single">
 
 
-
-
     </group>
 
     <item android:title="Session On">
         <menu>
-
 
 
             <item
@@ -18,16 +15,20 @@
                 android:icon="@drawable/pregnancy"
                 android:title="Validate LHW " />
 
-
             <item
                 android:id="@+id/upload_date"
                 android:icon="@drawable/upload_interview"
                 android:title="Upload Data" />
+
             <item
                 android:id="@+id/upload_photo"
                 android:icon="@drawable/upload_interview"
                 android:title="Upload Photos" />
 
+            <item
+                android:id="@+id/DBManager"
+                android:icon="@drawable/confusing_shape"
+                android:title="DBManager" />
 
         </menu>
     </item>
@@ -35,9 +36,6 @@
 
     <item android:title="Application Update">
         <menu>
-
-
-
 
 
         </menu>

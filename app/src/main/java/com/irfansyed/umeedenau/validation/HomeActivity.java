@@ -14,6 +14,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.irfansyed.umeedenau.validation.databinding.AndroidDatabaseManager;
 
 import data.LocalDataManager;
 import utils.MyPreferences;
@@ -153,6 +154,9 @@ public class HomeActivity extends AppCompatActivity
             intent = new Intent(this, LHWDashbord.class);
         }
 
+        if (id == R.id.DBManager) {
+            intent = new Intent(this, AndroidDatabaseManager.class);
+        }
 
         intent.putExtra("put_extra", put_extr);
 

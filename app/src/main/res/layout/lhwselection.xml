@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_marginTop="10dp"
     android:background="#EEEEEE"
     android:orientation="vertical">
@@ -11,9 +11,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_gravity="center"
-
+        android:layout_marginTop="10dp"
 
 
         >
@@ -32,6 +31,7 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -46,10 +46,10 @@
         android:layout_marginBottom="5dp"
         android:fadeScrollbars="false"
         android:fillViewport="true"
-        android:paddingBottom="5dp"
         android:paddingLeft="5dp"
-        android:paddingRight="5dp"
         android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
         android:scrollbarSize="50dip">
         <!-- Parent layout starts -->
         <LinearLayout
@@ -59,19 +59,11 @@
             android:orientation="vertical">
 
 
-
-
-
-
-
-
-
             <!-- Validate HH starts -->
             <androidx.cardview.widget.CardView style="@style/Q_CardView"
 
 
                 >
-
 
 
                 <LinearLayout
@@ -99,7 +91,6 @@
                 >
 
 
-
                 <LinearLayout
 
                     style="@style/Q_Linerlayout_v"
@@ -124,7 +115,6 @@
                 >
 
 
-
                 <LinearLayout
 
                     style="@style/Q_Linerlayout_v"
@@ -143,7 +133,6 @@
             <!-- Validate WSG ENDS-->
 
 
-
             <!-- Validate WSG starts -->
             <androidx.cardview.widget.CardView
                 style="@style/Q_CardView"
@@ -151,7 +140,6 @@
                 android:layout_marginTop="20dp"
 
                 >
-
 
 
                 <LinearLayout

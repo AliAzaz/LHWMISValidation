@@ -9,9 +9,9 @@
     tools:showIn="@layout/app_bar_home">
 
 
-<include
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    layout="@layout/activity_splash_screen" />
+    <include
+        layout="@layout/activity_splash_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </RelativeLayout>
