@@ -42,6 +42,7 @@
             android:label="@string/title_home"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".Form1SectionC"
             android:label="@string/title_home"
@@ -154,6 +155,13 @@
             android:name=".pendinginterviews"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".AndroidDatabaseManager"
+            android:parentActivityName="."
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".SplashScreenActivity"
             android:theme="@style/AppThemeNACB">
