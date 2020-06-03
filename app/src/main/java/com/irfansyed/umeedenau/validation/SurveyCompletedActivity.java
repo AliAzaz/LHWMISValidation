@@ -37,10 +37,10 @@ public class SurveyCompletedActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_survey_completed);
 
-        List<String> list =get_list();
+        List<String> list = get_list();
 
 
-        if(list == null)
+        if (list == null)
             return;
 
         Collections.sort(list);
@@ -54,12 +54,11 @@ public class SurveyCompletedActivity extends AppCompatActivity {
         mRecyclerView.setAdapter(mAdapter);
     }
 
-    public   List<String> get_list()
-    {
+    public List<String> get_list() {
 
 
-        List<String> lst=new ArrayList<>();
-        String query2 = "select id,lhwf1a2,lhwf1a3,lhwf1a4 from  TableLHWSection  where status='0'" ;
+        List<String> lst = new ArrayList<>();
+        String query2 = "select id,lhwf1a2,lhwf1a3,lhwf1a4 from  TableLHWSection  where status='0'";
 
         LocalDataManager Lm = new LocalDataManager(this);
         Cursor c = database.rawQuery(query2, null);
@@ -70,10 +69,7 @@ public class SurveyCompletedActivity extends AppCompatActivity {
                 do {
 
 
-
-
-                    lst.add(c.getString(0)+"/"+c.getString(1)+"/"+c.getString(2)+"/"+c.getString(3));
-
+                    lst.add(c.getString(0) + "/" + c.getString(1) + "/" + c.getString(2) + "/" + c.getString(3));
 
 
                 } while (c.moveToNext());
@@ -86,15 +82,15 @@ public class SurveyCompletedActivity extends AppCompatActivity {
     }
 
 
-
 }
 
 
-class  SurveyCompletedCustomAdapter extends RecyclerView.Adapter{
+class SurveyCompletedCustomAdapter extends RecyclerView.Adapter {
 
     Context mContext;
     List<String> mList;
-    public SurveyCompletedCustomAdapter(Context context, List<String> list){
+
+    public SurveyCompletedCustomAdapter(Context context, List<String> list) {
         mContext = context;
         mList = list;
     }
@@ -113,12 +109,12 @@ class  SurveyCompletedCustomAdapter extends RecyclerView.Adapter{
         final ViewHolder vh = (ViewHolder) holder;
 
         //rejected items..
-        if(mList.get(position).contains("--00")) {
-          vh.itemView.setBackgroundColor(Color.parseColor("#FFB7BC"));
+        if (mList.get(position).contains("--00")) {
+            vh.itemView.setBackgroundColor(Color.parseColor("#FFB7BC"));
         }
 
         vh.textName.setText(mList.get(position).split("--")[0]);
-        vh.textId.setText(position+1 +"");
+        vh.textId.setText(position + 1 + "");
 
         vh.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -133,13 +129,12 @@ class  SurveyCompletedCustomAdapter extends RecyclerView.Adapter{
                         String memberId = vh.textName.getText().toString();
 
 
-                        String[] arrr=memberId.split("/");
+                        String[] arrr = memberId.split("/");
 
-                        Global.global_id=arrr[0];
+                        Global.global_id = arrr[0];
 
                         new Upload_request1(mContext).execute();
-                    //    new UploadSectionEAsync(mContext, "3").execute(); // irfan
-
+                        //    new UploadSectionEAsync(mContext, "3").execute(); // irfan
 
 
                     }
@@ -147,9 +142,9 @@ class  SurveyCompletedCustomAdapter extends RecyclerView.Adapter{
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 
-                       // Intent intent = null;
+                        // Intent intent = null;
 
-                     //   intent = new Intent(this, SurveyCompletedActivity.class);
+                        //   intent = new Intent(this, SurveyCompletedActivity.class);
                     }
                 }).show();
             }

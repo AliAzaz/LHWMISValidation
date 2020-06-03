@@ -8,29 +8,25 @@ import android.location.Location;
 
 public class GetGpsHideForm {
 
-public static LocationHelper.LocationResult locationResult;
-public static LocationHelper locationHelper;
-public static ProgressDialog progressBar;
-public static double latitude;
-public static double longitude;
-   public static String get_gps(Context mContext)
-    {
+    public static LocationHelper.LocationResult locationResult;
+    public static LocationHelper locationHelper;
+    public static ProgressDialog progressBar;
+    public static double latitude;
+    public static double longitude;
 
-
-
+    public static String get_gps(Context mContext) {
 
 
         // to get location updates, initialize LocationResult
-        locationResult = new LocationHelper.LocationResult(){
+        locationResult = new LocationHelper.LocationResult() {
             @Override
-            public void gotLocation(Location location){
+            public void gotLocation(Location location) {
 
                 //Got the location!
-                if(location!=null){
+                if (location != null) {
 
                     latitude = location.getLatitude();
                     longitude = location.getLongitude();
-
 
 
                     locationHelper.stopGettingLocationUpdates();
@@ -39,8 +35,7 @@ public static double longitude;
                     progressBar.dismiss();
 
 
-
-                }else{
+                } else {
                     //Toast.makeText(getApplicationContext.this,"Kindly Turn ON Device GPS",Toast.LENGTH_LONG).show();
                     progressBar.dismiss();
 
@@ -52,7 +47,6 @@ public static double longitude;
         };
 
         locationHelper = new LocationHelper();
-
 
 
         progressBar = new ProgressDialog(mContext);
@@ -76,13 +70,11 @@ public static double longitude;
         progressBar.show();
 
 
+        locationHelper.getLocation(mContext, locationResult);
 
-        locationHelper.getLocation(mContext,locationResult);
-
-        return  latitude+"/"+longitude;
+        return latitude + "/" + longitude;
 
     }
-
 
 
 }

@@ -25,7 +25,8 @@ public class HomeActivity extends AppCompatActivity
 
     TextView Profile_name;
 
-    private  double Appversion=1;
+    private double Appversion = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,25 +51,19 @@ public class HomeActivity extends AppCompatActivity
         txtSummry.setText("");
 
 
-
-
     }
 
 
     void select_tehsil() {
 
 
+        int O_HH_C = 0;
+        int O_VHC_C = 0;
+        int O_WSG_C = 0;
 
-        int O_HH_C=0;
-        int O_VHC_C=0;
-        int O_WSG_C=0;
-
-        int C_HH_C=0;
-        int C_VHC_C=0;
-        int C_WSG_C=0;
-
-
-
+        int C_HH_C = 0;
+        int C_VHC_C = 0;
+        int C_WSG_C = 0;
 
 
         String query = "select LHWOfficeHHCount,LHWCommunityHHCount,LHWOfficeVHCCount,LHWCommunityVHCCount,LHWOfficeWSGCount,LHWCommunityWSGCount from TableLHWSection ";
@@ -92,12 +87,11 @@ public class HomeActivity extends AppCompatActivity
                     String s_C_WSG_C;
 
 
-
-                    s_O_HH_C=c.getString(0);
+                    s_O_HH_C = c.getString(0);
                     //s_O_VHC_C=c.getString();
-                    s_O_HH_C=c.getString(0);
-                    s_O_HH_C=c.getString(0);
-                    s_O_HH_C=c.getString(0);
+                    s_O_HH_C = c.getString(0);
+                    s_O_HH_C = c.getString(0);
+                    s_O_HH_C = c.getString(0);
 
 
                 } while (c.moveToNext());
@@ -144,11 +138,11 @@ public class HomeActivity extends AppCompatActivity
         int id = item.getItemId();
         Intent intent = null;
 
-        int put_extr=0;
+        int put_extr = 0;
         final MyPreferences preferences = new MyPreferences(HomeActivity.this);
 
-         if (id == R.id.upload_date) {
-             intent = new Intent(this, PendingUploads.class);
+        if (id == R.id.upload_date) {
+            intent = new Intent(this, PendingUploads.class);
         }
 
         if (id == R.id.upload_photo) {
@@ -160,28 +154,7 @@ public class HomeActivity extends AppCompatActivity
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     intent.putExtra("put_extra",put_extr);
+        intent.putExtra("put_extra", put_extr);
 
         if (intent != null)
             startActivity(intent);
