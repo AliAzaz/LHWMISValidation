@@ -6,6 +6,7 @@ import com.irfansyed.umeedenau.validation.Global;
 public class TableF1SectionC {
     public static String TABLE_NAME = "TableF1SectionC";
 
+
     public static String getCreateQuery() {
         String query;
         query = "CREATE TABLE '" + TABLE_NAME + "' ('id' INTEGER PRIMARY KEY AUTOINCREMENT, 'FK_id' INTEGER,   " +
