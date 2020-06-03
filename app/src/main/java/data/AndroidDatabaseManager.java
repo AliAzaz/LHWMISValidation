@@ -52,6 +52,7 @@ public class AndroidDatabaseManager extends Activity implements OnItemClickListe
     Button previous;
     Button next;
     Spinner select_table;
+
     TextView tv;
     indexInfo info = new indexInfo();
 
