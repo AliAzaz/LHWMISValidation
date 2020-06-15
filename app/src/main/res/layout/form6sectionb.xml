@@ -260,6 +260,7 @@
                             android:text="@string/lhwf6b6" />
 
                         <LinearLayout
+                            android:id="@+id/lv_f6"
                             style="@style/vlinearlayout"
                             android:tag="0">
 

@@ -14,7 +14,6 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
-import com.irfansyed.umeedenau.validation.databinding.AndroidDatabaseManager;
 
 import data.LocalDataManager;
 import utils.MyPreferences;
@@ -155,13 +154,12 @@ public class HomeActivity extends AppCompatActivity
         }
 
         if (id == R.id.DBManager) {
-            intent = new Intent(this, AndroidDatabaseManager.class);
+            intent = new Intent(getApplicationContext(), AndroidDatabaseManager.class);
         }
 
         intent.putExtra("put_extra", put_extr);
 
-        if (intent != null)
-            startActivity(intent);
+        startActivity(intent);
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

@@ -1,4 +1,4 @@
-package com.irfansyed.umeedenau.validation.databinding;
+package com.irfansyed.umeedenau.validation;
 
 /**
  * Created by hassan.naqvi on 11/30/2016.
@@ -53,7 +53,6 @@ public class AndroidDatabaseManager extends Activity implements OnItemClickListe
     Button next;
     Spinner select_table;
     TextView tv;
-
     indexInfo info = new indexInfo();
 
     @Override
