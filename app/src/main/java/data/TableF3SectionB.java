@@ -22,6 +22,7 @@ public class TableF3SectionB {
                 Global.lhwf3b4b+"  Text, "+
                 Global.lhwf3b4c+"  Text, "+
                 Global.lhwf3b5+"  Text, "+
+                Global.lhwf3bphoto + "  Text, " +
                 Global.lhwf3b6+"  Text "+
 
 
