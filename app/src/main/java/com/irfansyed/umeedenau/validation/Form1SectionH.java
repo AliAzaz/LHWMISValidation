@@ -136,7 +136,9 @@ public class Form1SectionH extends AppCompatActivity implements View.OnClickList
         Has_Map.put("LhwSectionPKId", Global.LhwSection_id + "");
         Has_Map.put("Status", "0");
 
-        GeneratorClass.Insert_table(bin.SectionH, true);
+        //GeneratorClass.Insert_table(bin.SectionH, true);
+
+        GeneratorClass.getContainerJSON(bin.SectionH, true);
         GeneratorClass.inert_db("TableF1SectionH", this, Has_Map);
         GeneratorClass.LHWSectionUpdateCOunt("LHWOfficeHHCount", Global.LhwSection_id, this);
 

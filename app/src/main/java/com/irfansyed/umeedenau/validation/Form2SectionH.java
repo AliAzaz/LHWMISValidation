@@ -28,24 +28,25 @@ import utils.ValidatorClass;
 import static data.LocalDataManager.database;
 
 
-public  class Form2SectionH extends AppCompatActivity implements View.OnClickListener,RadioButton.OnCheckedChangeListener {
+public class Form2SectionH extends AppCompatActivity implements View.OnClickListener, RadioButton.OnCheckedChangeListener {
 
 
     //region Initialization
     Form2sectionhBinding bin;
 
     String FK_id;
-    String Lat,Long;
+    String Lat, Long;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bin= DataBindingUtil.setContentView(this, R.layout.form2sectionh);
+        bin = DataBindingUtil.setContentView(this, R.layout.form2sectionh);
 
 
-        Intent iin= getIntent();
+        Intent iin = getIntent();
         Bundle b = iin.getExtras();
         if (b != null) {
-            FK_id =(String) b.get("pk_id");
+            FK_id = (String) b.get("pk_id");
             this.ininfo();
 
         }
@@ -58,14 +59,15 @@ public  class Form2SectionH extends AppCompatActivity implements View.OnClickLis
         bin.btnNext.setOnClickListener(this);
 
 
-        String gps_=GetGpsHideForm.get_gps(this);
-        String[] gps=gps_.split("/");
-         Lat=gps[0];
-         Long=gps[1];
+        String gps_ = GetGpsHideForm.get_gps(this);
+        String[] gps = gps_.split("/");
+        Lat = gps[0];
+        Long = gps[1];
 
         bin.lhwf2h2.addTextChangedListener(new TextWatcher() {
 
-            public void afterTextChanged(Editable s) {}
+            public void afterTextChanged(Editable s) {
+            }
 
             public void beforeTextChanged(CharSequence s, int start,
                                           int count, int after) {
@@ -76,25 +78,25 @@ public  class Form2SectionH extends AppCompatActivity implements View.OnClickLis
 
                 if (bin.lhwf2h2.getText().toString().equals("999")) {
 
-                  //  bin.LvLhwf2h3.setVisibility(View.GONE);
-                  //  bin.LvLhwf2h4.setVisibility(View.GONE);
-                  //  bin.LvLhwf2h5.setVisibility(View.GONE);
-                  //  bin.LvLhwf2h6.setVisibility(View.GONE);
-                  //  bin.LvLhwf2h7.setVisibility(View.GONE);
-                  //  bin.LvLhwf2h8.setVisibility(View.GONE);
-                  //  bin.LvLhwf2h9.setVisibility(View.GONE);
-                  //  bin.LvLhwf2h10.setVisibility(View.GONE);
-                  //  bin.LvLhwf2h11.setVisibility(View.GONE);
+                    //  bin.LvLhwf2h3.setVisibility(View.GONE);
+                    //  bin.LvLhwf2h4.setVisibility(View.GONE);
+                    //  bin.LvLhwf2h5.setVisibility(View.GONE);
+                    //  bin.LvLhwf2h6.setVisibility(View.GONE);
+                    //  bin.LvLhwf2h7.setVisibility(View.GONE);
+                    //  bin.LvLhwf2h8.setVisibility(View.GONE);
+                    //  bin.LvLhwf2h9.setVisibility(View.GONE);
+                    //  bin.LvLhwf2h10.setVisibility(View.GONE);
+                    //  bin.LvLhwf2h11.setVisibility(View.GONE);
                 } else {
-                   // bin.LvLhwf2h3.setVisibility(View.VISIBLE);
-                   // bin.LvLhwf2h4.setVisibility(View.VISIBLE);
-                   // bin.LvLhwf2h5.setVisibility(View.VISIBLE);
-                   // bin.LvLhwf2h6.setVisibility(View.VISIBLE);
-                   // bin.LvLhwf2h7.setVisibility(View.VISIBLE);
-                   // bin.LvLhwf2h8.setVisibility(View.VISIBLE);
-                   // bin.LvLhwf2h9.setVisibility(View.VISIBLE);
-                   // bin.LvLhwf2h10.setVisibility(View.VISIBLE);
-                   // bin.LvLhwf2h11.setVisibility(View.VISIBLE);
+                    // bin.LvLhwf2h3.setVisibility(View.VISIBLE);
+                    // bin.LvLhwf2h4.setVisibility(View.VISIBLE);
+                    // bin.LvLhwf2h5.setVisibility(View.VISIBLE);
+                    // bin.LvLhwf2h6.setVisibility(View.VISIBLE);
+                    // bin.LvLhwf2h7.setVisibility(View.VISIBLE);
+                    // bin.LvLhwf2h8.setVisibility(View.VISIBLE);
+                    // bin.LvLhwf2h9.setVisibility(View.VISIBLE);
+                    // bin.LvLhwf2h10.setVisibility(View.VISIBLE);
+                    // bin.LvLhwf2h11.setVisibility(View.VISIBLE);
 
                 }
             }
@@ -104,23 +106,18 @@ public  class Form2SectionH extends AppCompatActivity implements View.OnClickLis
     }
 
 
-
-
-
     @Override
-    public void onClick(View view)
-    {   if (!formValidation() && !bin.lhwf2h2.getText().toString().equals("999")) {
-        return;
-    }
+    public void onClick(View view) {
+        if (!formValidation() && !bin.lhwf2h2.getText().toString().equals("999")) {
+            return;
+        }
 
 
-        if(bin.lhwf2h5.getText().length()>0)
-        {
-            int age=Integer.parseInt(bin.lhwf2h5.getText().toString());
+        if (bin.lhwf2h5.getText().length() > 0) {
+            int age = Integer.parseInt(bin.lhwf2h5.getText().toString());
 
-            if(age<15 || age>49)
-            {
-                Toast.makeText(this,"MARWA Age Must be Between 15 to 49",Toast.LENGTH_SHORT).show();
+            if (age < 15 || age > 49) {
+                Toast.makeText(this, "MARWA Age Must be Between 15 to 49", Toast.LENGTH_SHORT).show();
                 return;
             }
         }
@@ -128,7 +125,7 @@ public  class Form2SectionH extends AppCompatActivity implements View.OnClickLis
         insert_data();
 
 
-        Toast.makeText(this,"Data Inserted",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Data Inserted", Toast.LENGTH_SHORT).show();
         Intent intt = new Intent(getBaseContext(), PendingInterviewsHH.class);
         startActivity(intt);
 
@@ -139,28 +136,27 @@ public  class Form2SectionH extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        if(buttonView.getId()==R.id.lhwf2h6_1 || buttonView.getId()==R.id.lhwf2h6_2 )
-        {
+        if (buttonView.getId() == R.id.lhwf2h6_1 || buttonView.getId() == R.id.lhwf2h6_2) {
 
             ClearAllcontrol.ClearAll(bin.LvLhwf2h7);
 
         }
 
 
-        if(buttonView.getId()==R.id.rlhwf2h1_1 || buttonView.getId()==R.id.rlhwf2h1_2 ) {
+        if (buttonView.getId() == R.id.rlhwf2h1_1 || buttonView.getId() == R.id.rlhwf2h1_2) {
 
-            if(bin.rlhwf2h12.isChecked()) {
+            if (bin.rlhwf2h12.isChecked()) {
 
-               // bin.LvLhwf2h2.setVisibility(View.GONE);
-               // bin.LvLhwf2h3.setVisibility(View.GONE);
-               // bin.LvLhwf2h4.setVisibility(View.GONE);
-               // bin.LvLhwf2h5.setVisibility(View.GONE);
-               // bin.LvLhwf2h6.setVisibility(View.GONE);
-               // bin.LvLhwf2h7.setVisibility(View.GONE);
-               // bin.LvLhwf2h8.setVisibility(View.GONE);
-               // bin.LvLhwf2h9.setVisibility(View.GONE);
-               // bin.LvLhwf2h10.setVisibility(View.GONE);
-               // bin.LvLhwf2h11.setVisibility(View.GONE);
+                // bin.LvLhwf2h2.setVisibility(View.GONE);
+                // bin.LvLhwf2h3.setVisibility(View.GONE);
+                // bin.LvLhwf2h4.setVisibility(View.GONE);
+                // bin.LvLhwf2h5.setVisibility(View.GONE);
+                // bin.LvLhwf2h6.setVisibility(View.GONE);
+                // bin.LvLhwf2h7.setVisibility(View.GONE);
+                // bin.LvLhwf2h8.setVisibility(View.GONE);
+                // bin.LvLhwf2h9.setVisibility(View.GONE);
+                // bin.LvLhwf2h10.setVisibility(View.GONE);
+                // bin.LvLhwf2h11.setVisibility(View.GONE);
 
 
                 ClearAllcontrol.ClearAll(bin.LvLhwf2h2);
@@ -177,15 +173,15 @@ public  class Form2SectionH extends AppCompatActivity implements View.OnClickLis
 
                 ClearAllcontrol.ClearAll(bin.LvLhwf2h2a);
                 //  bin.Lvlhwf2h2a.setVisibility(View.VISIBLE);
-              //  bin.LvLhwf2h3.setVisibility(View.VISIBLE);
-              //  bin.LvLhwf2h4.setVisibility(View.VISIBLE);
-              //  bin.LvLhwf2h5.setVisibility(View.VISIBLE);
-              //  bin.LvLhwf2h6.setVisibility(View.VISIBLE);
-              //  bin.LvLhwf2h7.setVisibility(View.VISIBLE);
-              //  bin.LvLhwf2h8.setVisibility(View.VISIBLE);
-              //  bin.LvLhwf2h9.setVisibility(View.VISIBLE);
-              //  bin.LvLhwf2h10.setVisibility(View.VISIBLE);
-              //  bin.LvLhwf2h11.setVisibility(View.VISIBLE);
+                //  bin.LvLhwf2h3.setVisibility(View.VISIBLE);
+                //  bin.LvLhwf2h4.setVisibility(View.VISIBLE);
+                //  bin.LvLhwf2h5.setVisibility(View.VISIBLE);
+                //  bin.LvLhwf2h6.setVisibility(View.VISIBLE);
+                //  bin.LvLhwf2h7.setVisibility(View.VISIBLE);
+                //  bin.LvLhwf2h8.setVisibility(View.VISIBLE);
+                //  bin.LvLhwf2h9.setVisibility(View.VISIBLE);
+                //  bin.LvLhwf2h10.setVisibility(View.VISIBLE);
+                //  bin.LvLhwf2h11.setVisibility(View.VISIBLE);
             }
 
         }
@@ -197,37 +193,35 @@ public  class Form2SectionH extends AppCompatActivity implements View.OnClickLis
     }
 
 
-
-    void insert_data()
-    {
+    void insert_data() {
         HashMap<String, String> Has_Map = new HashMap<>();
         GeneratorClass.Has_Map.clear();
 
 
-        Has_Map.put("FK_id",FK_id+"");
-        Has_Map.put("LhwSectionPKId",Global.LhwSection_id+"");
+        Has_Map.put("FK_id", FK_id + "");
+        Has_Map.put("LhwSectionPKId", Global.LhwSection_id + "");
 
         String start_time = DateFormat.getDateTimeInstance().format(new Date());
 
-        Has_Map.put(Global.GPSLat,Lat);
-        Has_Map.put(Global.GPSLong,Long);
-        Has_Map.put(Global.InterviewTime,start_time);
+        Has_Map.put(Global.GPSLat, Lat);
+        Has_Map.put(Global.GPSLong, Long);
+        Has_Map.put(Global.InterviewTime, start_time);
 
 
-        GeneratorClass.Insert_table(bin.SectionH,true);
-        GeneratorClass.inert_db("TableF2SectionH",this,Has_Map);
-        GeneratorClass.HH_update_Form1("TableF1SectionH",FK_id,this);
-        GeneratorClass.LHWSectionUpdateCOunt("LHWCommunityHHCount",Global.LhwSection_id,this);
+        //GeneratorClass.Insert_table(bin.SectionH, true);
 
+        GeneratorClass.getContainerJSON(bin.SectionH, true);
+        GeneratorClass.inert_db("TableF2SectionH", this, Has_Map);
+        GeneratorClass.HH_update_Form1("TableF1SectionH", FK_id, this);
+        GeneratorClass.LHWSectionUpdateCOunt("LHWCommunityHHCount", Global.LhwSection_id, this);
 
 
     }
 
 
-    public    void ininfo()
-    {
+    public void ininfo() {
 
-        String query2 = "select lhwf1h3,lhwf1h4  from TableF1SectionH  where id="+FK_id;
+        String query2 = "select lhwf1h3,lhwf1h4  from TableF1SectionH  where id=" + FK_id;
 
         LocalDataManager Lm = new LocalDataManager(this);
         Cursor c = database.rawQuery(query2, null);
@@ -245,9 +239,6 @@ public  class Form2SectionH extends AppCompatActivity implements View.OnClickLis
             }
 
         }
-
-
-
 
 
     }

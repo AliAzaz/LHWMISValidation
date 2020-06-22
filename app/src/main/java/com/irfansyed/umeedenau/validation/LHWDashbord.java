@@ -35,8 +35,9 @@ public class LHWDashbord extends AppCompatActivity implements View.OnClickListen
 
     //region Initialization
     LhwdashbordBinding bin;
-    String IMEi="";
+    String IMEi = "";
     String gps_;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,18 +54,16 @@ public class LHWDashbord extends AppCompatActivity implements View.OnClickListen
         bin.lhwf1a3.setOnItemSelectedListener(this);
 
 
-         gps_=GetGpsHideForm.get_gps(this);
+        gps_ = GetGpsHideForm.get_gps(this);
 
-        TelephonyManager telephonyManager = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
+        TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
 
         try {
             IMEi = telephonyManager.getDeviceId();
-    }
-    catch (SecurityException e)
-    {
+        } catch (SecurityException e) {
 
-    }
-        Log.d("Ime",IMEi);
+        }
+        Log.d("Ime", IMEi);
 
 
     }
@@ -78,9 +77,9 @@ public class LHWDashbord extends AppCompatActivity implements View.OnClickListen
             boolSourceRegister = true;
         }
 
-        String LHid=bin.lhwf1a3.getSelectedItem().toString();
-        String[] a=LHid.split("/");
-        LHid=a[0];
+        String LHid = bin.lhwf1a3.getSelectedItem().toString();
+        String[] a = LHid.split("/");
+        LHid = a[0];
 
         if (logic_error() == true) {
 
@@ -130,7 +129,6 @@ public class LHWDashbord extends AppCompatActivity implements View.OnClickListen
         final AlertDialog dialog = builder.create();
 
 
-
         builder.setCancelable(false);
         dialog.show();
 
@@ -140,35 +138,28 @@ public class LHWDashbord extends AppCompatActivity implements View.OnClickListen
         final Button btnCance = dialogLayout.findViewById(R.id.btnCance);
 
 
-
-        if(boolSourceRegister==true)
-        {
-            btnHH.setText("Validate HH("+hh_count+")");
-            btnVHC.setText("Validate VHC("+vhc_count+")");
-            btnWSG.setText("Validate WSG("+wsg_count+")");
+        if (boolSourceRegister == true) {
+            btnHH.setText("Validate HH(" + hh_count + ")");
+            btnVHC.setText("Validate VHC(" + vhc_count + ")");
+            btnWSG.setText("Validate WSG(" + wsg_count + ")");
 
 
-            if(vhc_count>0)
-            {
+            if (vhc_count > 0) {
                 btnVHC.setVisibility(View.GONE);
 
             }
-            if(wsg_count>0)
-            {
+            if (wsg_count > 0) {
 
                 btnWSG.setVisibility(View.GONE);
 
             }
-            if(hh_count>9)
-            {
+            if (hh_count > 9) {
 
-               // btnHH.setVisibility(View.GONE);
+                // btnHH.setVisibility(View.GONE);
 
             }
 
-        }
-        else
-        {
+        } else {
             btnHH.setText("Validate HH");
             btnVHC.setText("Validate VHC");
             btnWSG.setText("Validate WSG");
@@ -347,7 +338,7 @@ public class LHWDashbord extends AppCompatActivity implements View.OnClickListen
             if (c.moveToFirst()) {
                 do {
 
-                    lst_tehsil.add(c.getString(0)+"/"+c.getString(1));
+                    lst_tehsil.add(c.getString(0) + "/" + c.getString(1));
 
                 } while (c.moveToNext());
             }
@@ -371,8 +362,8 @@ public class LHWDashbord extends AppCompatActivity implements View.OnClickListen
 
         String Tehisl = bin.lhwf1a3.getSelectedItem().toString();
 
-        String[] a=Tehisl.split("/");
-        Tehisl=a[0];
+        String[] a = Tehisl.split("/");
+        Tehisl = a[0];
 
 
         String query = "select distinct LHW_Name from TableLoginData where LHW_Ids='" + Tehisl + "'";
@@ -450,10 +441,6 @@ public class LHWDashbord extends AppCompatActivity implements View.OnClickListen
     void insert_db(String a1, String a2, String a3, String a4) {
 
 
-
-
-
-
         String query = "insert into  TableLHWSection (lhwf1a1,lhwf1a2,lhwf1a3,lhwf1a4,status,LHWOfficeHHCount,LHWCommunityHHCount,LHWOfficeVHCCount,LHWCommunityVHCCount,LHWOfficeWSGCount,LHWCommunityWSGCount) values('" +
 
                 a1 + "','" + a2 + "','" + a3 + "','" + a4 + "','0','0','0','0','0','0','0')";
@@ -465,27 +452,25 @@ public class LHWDashbord extends AppCompatActivity implements View.OnClickListen
         database.execSQL(query);
 
 
-
     }
 
 
     void insertMetaData() {
 
 
-       String start_time = DateFormat.getDateTimeInstance().format(new Date());
+        String start_time = DateFormat.getDateTimeInstance().format(new Date());
 
         String User = new MyPreferences(this).getUsername();
         String AppVersion = new MyPreferences(this).getAppVersion();
 
-        String[] gps=gps_.split("/");
-        String Lat=gps[0];
-        String Long=gps[1];
-
+        String[] gps = gps_.split("/");
+        String Lat = gps[0];
+        String Long = gps[1];
 
 
         String query = "insert into  TableMetadata (user,appversion,gpslat,gpslng,datetimeInterview,LHWSectionId) values('" +
 
-              User+"','"+AppVersion+"/"+IMEi+"','"+Lat+"','"+Long+"','"+start_time+"','"+LHWsection_Pk_Id+"')";
+                User + "','" + AppVersion + "/" + IMEi + "','" + Lat + "','" + Long + "','" + start_time + "','" + LHWsection_Pk_Id + "')";
 
         query = String.format(query);
 
@@ -494,11 +479,11 @@ public class LHWDashbord extends AppCompatActivity implements View.OnClickListen
         database.execSQL(query);
 
 
-
     }
 
 
-    int LHWsection_Pk_Id=0;
+    int LHWsection_Pk_Id = 0;
+
     String get_status_interview(String a1, String a2, String a3, String a4) {
 
         String status = "1";
@@ -520,7 +505,7 @@ public class LHWDashbord extends AppCompatActivity implements View.OnClickListen
                 do {
 
                     status = c.getString(0);
-                    LHWsection_Pk_Id= c.getInt(1);
+                    LHWsection_Pk_Id = c.getInt(1);
 
 
                 } while (c.moveToNext());
@@ -528,19 +513,20 @@ public class LHWDashbord extends AppCompatActivity implements View.OnClickListen
         }
 
 
-        Global.LhwSection_id=LHWsection_Pk_Id;
+        Global.LhwSection_id = LHWsection_Pk_Id;
 
 
         return status;
 
     }
 
-    int hh_count=0;
-    int vhc_count=0;
-    int wsg_count=0;
+    int hh_count = 0;
+    int vhc_count = 0;
+    int wsg_count = 0;
+
     void get_HH_counts() {
 
-        hh_count=0;
+        hh_count = 0;
 
         String query2 = "select id from  TableHHSection where FK_id='" + Global.LhwSection_id + "'";
 
@@ -564,7 +550,7 @@ public class LHWDashbord extends AppCompatActivity implements View.OnClickListen
 
     void get_vhc_counts() {
 
-        vhc_count=0;
+        vhc_count = 0;
 
         String query2 = "select id from  TableF3SectionB where FK_id='" + Global.LhwSection_id + "'";
 
@@ -585,9 +571,10 @@ public class LHWDashbord extends AppCompatActivity implements View.OnClickListen
         }
 
     }
+
     void get_wsg_counts() {
 
-        wsg_count=0;
+        wsg_count = 0;
 
         String query2 = "select id from  TableF5SectionB where FK_id='" + Global.LhwSection_id + "'";
 
@@ -608,7 +595,6 @@ public class LHWDashbord extends AppCompatActivity implements View.OnClickListen
         }
 
     }
-
 
 
 }

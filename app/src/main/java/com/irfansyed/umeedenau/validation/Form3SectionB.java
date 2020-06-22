@@ -18,7 +18,7 @@ import utils.GeneratorClass;
 import utils.ValidatorClass;
 
 
-public  class Form3SectionB extends AppCompatActivity implements View.OnClickListener,RadioButton.OnCheckedChangeListener {
+public class Form3SectionB extends AppCompatActivity implements View.OnClickListener, RadioButton.OnCheckedChangeListener {
 
 
     //region Initialization
@@ -28,7 +28,7 @@ public  class Form3SectionB extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bin= DataBindingUtil.setContentView(this, R.layout.form3sectionb);
+        bin = DataBindingUtil.setContentView(this, R.layout.form3sectionb);
 
 
         bin.btnNext.setOnClickListener(this);
@@ -46,46 +46,39 @@ public  class Form3SectionB extends AppCompatActivity implements View.OnClickLis
     }
 
 
-
-
     @Override
-    public void onClick(View view)
-    {
+    public void onClick(View view) {
 
         if (!formValidation()) {
             return;
         }
 
         insert_data();
-        Toast.makeText(this,"Data Inserted",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Data Inserted", Toast.LENGTH_SHORT).show();
 
         finish();
     }
 
 
-    private boolean formValidation()
-    {
+    private boolean formValidation() {
         return ValidatorClass.EmptyCheckingContainer(this, bin.SectionB);
     }
 
 
-
-    void insert_data()
-    {
+    void insert_data() {
         HashMap<String, String> Has_Map = new HashMap<>();
         GeneratorClass.Has_Map.clear();
 
 
-        Has_Map.put("FK_id",Global.LhwSection_id+"");
-        Has_Map.put("Status","0");
+        Has_Map.put("FK_id", Global.LhwSection_id + "");
+        Has_Map.put("Status", "0");
 
 
-        GeneratorClass.Insert_table(bin.SectionB,true);
-        GeneratorClass.inert_db("TableF3SectionB",this,Has_Map);
-        GeneratorClass.LHWSectionUpdateCOunt("LHWOfficeVHCCount",Global.LhwSection_id,this);
+        //GeneratorClass.Insert_table(bin.SectionB, true);
 
-
-
+        GeneratorClass.getContainerJSON(bin.SectionB, true);
+        GeneratorClass.inert_db("TableF3SectionB", this, Has_Map);
+        GeneratorClass.LHWSectionUpdateCOunt("LHWOfficeVHCCount", Global.LhwSection_id, this);
 
 
     }
@@ -95,11 +88,10 @@ public  class Form3SectionB extends AppCompatActivity implements View.OnClickLis
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
 
-        if(buttonView.getId()==R.id.lhwf3b1_1 || buttonView.getId()==R.id.lhwf3b1_2 )
-        {
+        if (buttonView.getId() == R.id.lhwf3b1_1 || buttonView.getId() == R.id.lhwf3b1_2) {
 
 
-            if(bin.lhwf3b12.isChecked()) {
+            if (bin.lhwf3b12.isChecked()) {
 
                 ClearAllcontrol.ClearAll(bin.LvLhwf3b2);
                 ClearAllcontrol.ClearAll(bin.LvLhwf3b3);
@@ -114,11 +106,10 @@ public  class Form3SectionB extends AppCompatActivity implements View.OnClickLis
         }
 
 
-        if(buttonView.getId()==R.id.lhwf3b2_1 || buttonView.getId()==R.id.lhwf3b2_2 )
-        {
+        if (buttonView.getId() == R.id.lhwf3b2_1 || buttonView.getId() == R.id.lhwf3b2_2) {
 
 
-            if(bin.lhwf3b22.isChecked()) {
+            if (bin.lhwf3b22.isChecked()) {
 
 
                 ClearAllcontrol.ClearAll(bin.LvLhwf3b3);
@@ -132,12 +123,10 @@ public  class Form3SectionB extends AppCompatActivity implements View.OnClickLis
 
         }
 
-        if(buttonView.getId()==R.id.lhwf3b5_1 || buttonView.getId()==R.id.lhwf3b5_2 )
-        {
+        if (buttonView.getId() == R.id.lhwf3b5_1 || buttonView.getId() == R.id.lhwf3b5_2) {
 
 
-            if(bin.lhwf3b22.isChecked()) {
-
+            if (bin.lhwf3b22.isChecked()) {
 
 
                 ClearAllcontrol.ClearAll(bin.LvLhwf3b6);
