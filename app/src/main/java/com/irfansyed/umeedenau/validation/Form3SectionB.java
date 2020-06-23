@@ -33,6 +33,7 @@ public  class Form3SectionB extends AppCompatActivity implements View.OnClickLis
         PhotoSerial = 0;
 
         bin.btnNext.setOnClickListener(this);
+        bin.btnSnap.setOnClickListener(this);
 
         bin.lhwf3b11.setOnCheckedChangeListener(this);
         bin.lhwf3b12.setOnCheckedChangeListener(this);

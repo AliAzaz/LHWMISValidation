@@ -31,7 +31,6 @@ public class TableF6SectionB {
                 Global.lhwf6b696x + "  Text ," +
                 Global.GPSLat+"  Text,"+
                 Global.GPSLong+"  Text,"+
-                Global.lhwf6bphoto + "  Text," +
                 Global.InterviewTime+"  Text"+
 
 

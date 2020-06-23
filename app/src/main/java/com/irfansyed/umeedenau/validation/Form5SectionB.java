@@ -1,5 +1,6 @@
 package com.irfansyed.umeedenau.validation;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CompoundButton;
@@ -23,15 +24,18 @@ public  class Form5SectionB extends AppCompatActivity implements View.OnClickLis
 
     //region Initialization
     Form5sectionbBinding bin;
+    private int PhotoSerial;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bin= DataBindingUtil.setContentView(this, R.layout.form5sectionb);
+        PhotoSerial = 0;
 
 
         bin.btnNext.setOnClickListener(this);
+        bin.btnSnap.setOnClickListener(this);
         bin.lhwf5b11.setOnCheckedChangeListener(this);
         bin.lhwf5b12.setOnCheckedChangeListener(this);
 
@@ -45,6 +49,21 @@ public  class Form5SectionB extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view)
     {
+        if (view.getId() == R.id.btn_snap) {
+            Intent intent = new Intent(this, TakePhoto.class);
+
+            //   intent.putExtra("picID", "901001" + "_" + "A-0001-001" + "_" + PhotoSerial + "_");
+            //   intent.putExtra("childName", "Hassan");
+
+// TODO: add identification information
+            intent.putExtra("picID", Global.LhwHH_id + "_" + Global.LhwSection_id + "_" + PhotoSerial);
+            intent.putExtra("childName", "WOMEN SUPPORT GROUP (WSG)");
+
+
+            intent.putExtra("picView", "Sect_6B".toUpperCase());
+            startActivityForResult(intent, 1); // Activity is started with requestCode 1 = Front
+
+        }
         if (!formValidation()) {
             return;
         }
@@ -104,6 +123,22 @@ public  class Form5SectionB extends AppCompatActivity implements View.OnClickLis
 
             }
 
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        // check if the request code is same as what is passed  here it is 2
+        // Toast.makeText(this, requestCode + "_" + resultCode, Toast.LENGTH_SHORT).show();
+        if (resultCode == 1) {
+            Toast.makeText(this, "Photo Taken", Toast.LENGTH_SHORT).show();
+            PhotoSerial++;
+
+            String fileName = data.getStringExtra("FileName");
+            bin.lhwf5bphoto.setText(bin.lhwf5bphoto.getText() + String.valueOf(PhotoSerial) + " - " + fileName + ";\r\n");
+        } else {
+            Toast.makeText(this, "Photo Cancelled", Toast.LENGTH_SHORT).show();
         }
     }
 }
