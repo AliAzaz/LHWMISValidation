@@ -144,6 +144,112 @@
                 <!-- lhwf1c3 ends-->
 
 
+                <!-- lhwf1c4 starts -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvlhwf1c4"
+                    style="@style/Q_CardView">
+
+                    <LinearLayout
+                        android:id="@+id/Lv_lhwf1c4"
+                        style="@style/Q_Linerlayout_v">
+
+                        <TextView
+                            style="@style/TextView"
+                            android:text="@string/lhwf1c4" />
+
+                        <EditText
+                            android:id="@+id/lhwf1c4"
+                            style="@style/EditText_Name"
+                            android:hint="@string/name"
+                            android:maxLength="50" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <!-- lhwf1c4 ends-->
+
+
+                <!-- lhwc11a  starts -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvlhwc11a"
+                    style="@style/Q_CardView">
+
+                    <LinearLayout
+                        android:id="@+id/Lv_lhwc11a"
+                        style="@style/Q_Linerlayout_v">
+
+                        <TextView
+                            style="@style/TextView"
+                            android:text="@string/lhwc11a" />
+
+                        <RadioGroup
+                            android:id="@+id/lhwc11a"
+                            style="@style/RadioGroup"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/lhwc11a_1"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rb_yes" />
+
+                            <RadioButton
+                                android:id="@+id/lhwc11a_2"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rb_no" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <!-- lhwc11a ends-->
+
+
+                <!-- lhwc11b  starts -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvlhwc11b"
+                    style="@style/Q_CardView"
+                    android:visibility='@{lhwc11a1.checked? View.GONE : View.VISIBLE}'>
+
+                    <LinearLayout
+                        android:id="@+id/Lv_lhwc11b"
+                        style="@style/Q_Linerlayout_v">
+
+                        <TextView
+                            style="@style/TextView"
+                            android:text="@string/lhwc11b" />
+
+                        <RadioGroup
+                            android:id="@+id/lhwc11b"
+                            style="@style/RadioGroup"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/lhwc11b_1"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/lhwc11b_1" />
+
+                            <RadioButton
+                                android:id="@+id/lhwc11b_2"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/lhwc11b_2" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <!-- lhwc11b ends-->
+
+
                 <!-- lhwf1c3a starts -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf1c3A"
@@ -190,31 +296,6 @@
 
                 </androidx.cardview.widget.CardView>
                 <!-- lhwf1c3a ends-->
-
-
-                <!-- lhwf1c4 starts -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cvlhwf1c4"
-                    style="@style/Q_CardView">
-
-                    <LinearLayout
-                        android:id="@+id/Lv_lhwf1c4"
-                        style="@style/Q_Linerlayout_v">
-
-                        <TextView
-                            style="@style/TextView"
-                            android:text="@string/lhwf1c4" />
-
-                        <EditText
-                            android:id="@+id/lhwf1c4"
-                            style="@style/EditText_Name"
-                            android:hint="@string/name"
-                            android:maxLength="50" />
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-                <!-- lhwf1c4 ends-->
 
 
                 <!-- lhwf1c4a starts -->
@@ -479,7 +560,6 @@
                                 style="@style/RadioButton"
                                 android:text="@string/lhwf1c9_2" />
 
-
                             <RadioButton
                                 android:id="@+id/lhwf1c9_3"
                                 style="@style/RadioButton"
@@ -541,9 +621,10 @@
 
                         <EditText
                             android:id="@+id/lhwf1cphoto"
-                            android:enabled="false"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+
                         <Button
                             android:id="@+id/btn_snap"
                             android:layout_width="wrap_content"

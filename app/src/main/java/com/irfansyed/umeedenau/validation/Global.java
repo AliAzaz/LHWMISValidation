@@ -472,6 +472,9 @@ public class Global {
     public static String lhwf1c7 = "lhwf1c7";
     public static String lhwf1c7A = "lhwf1c7A";
     public static String lhwf1c8 = "lhwf1c8";
+
+    public static String lhwc11a = "lhwc11a";
+    public static String lhwc11b = "lhwc11b";
     public static String lhwf1cphoto = "lhwf1cphoto";
 
     public static String lhwf1d1 = "lhwf1d1";
@@ -691,17 +694,3 @@ public class Global {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

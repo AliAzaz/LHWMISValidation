@@ -71,6 +71,13 @@
     <string name="lhwf1c3A"> Date of registration/LHW first visit  </string>
     <string name="lhwf1c4"> Husband’s name </string>
 
+    <string name="lhwc11a"> Did LHW visit women during pregnancy? </string>
+    <string name="lhwc11b"> If ‘no’ give reason </string>
+
+    <string name="lhwc11b_1"> PW was in another village/city </string>
+    <string name="lhwc11b_2"> Due to COVID-19 situation </string>
+
+
     <string name="lhwf1c4A"> Gestational age of pregnancy </string>
 
     <string name="lhwf1c5"> Total Number of ANC visit(s) recorded </string>

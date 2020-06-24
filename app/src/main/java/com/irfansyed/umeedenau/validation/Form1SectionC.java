@@ -43,6 +43,8 @@ public class Form1SectionC extends AppCompatActivity implements View.OnClickList
         bin.lhwf1c81.setOnCheckedChangeListener(this);
         bin.lhwf1c82.setOnCheckedChangeListener(this);
         bin.lhwf1c83.setOnCheckedChangeListener(this);
+        bin.lhwc11a1.setOnCheckedChangeListener(this);
+
 
         if (!GeneratorClass.LHWsectionStatus("TableF1SectionC")) {
             bin.lhwf1c1.setText("000");
@@ -158,6 +160,10 @@ public class Form1SectionC extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+        if (buttonView.getId() == R.id.lhwc11a_2) {
+            ClearAllcontrol.ClearAll(bin.LvLhwc11b);
+        }
 
         if (buttonView.getId() == R.id.lhwf1c6_1
                 || buttonView.getId() == R.id.lhwf1c6_2
