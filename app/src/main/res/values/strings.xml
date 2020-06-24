@@ -255,8 +255,7 @@
     <string name="lhwf2g5"> Age of child (in months) in HH who had Pneumonia </string>
     <string name="lhwf2g6"> LHW provided Amoxicillin DT/syrup </string>
     <string name="lhwf2g7"> LHW referred child to the HF </string>
-    <string name="lhwf2g8"> Is the child immunized?
-(immunization is complete as per his/her age)</string>
+    <string name="lhwf2g8"> Is the child immunized? (immunization is complete as per his/her age)</string>
     <string name="lhwf2g9"> Any under-five death due to pneumonia in last three months? </string>
     <string name="lhwf2g10"> LHW informed mother about danger signs of pneumonia </string>
     <string name="lhwf2header_h"> Section H: Married Women of Reproductive Age </string>

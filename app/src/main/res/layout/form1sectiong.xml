@@ -269,14 +269,14 @@
                             android:orientation="horizontal">
 
                             <RadioButton
-                                android:id="@+id/lhwf1g6_yes"
+                                android:id="@+id/lhwf1g6_1"
                                 style="@style/RadioButton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:text="@string/rb_yes" />
 
                             <RadioButton
-                                android:id="@+id/lhwf1g6_no"
+                                android:id="@+id/lhwf1g6_2"
                                 style="@style/RadioButton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
