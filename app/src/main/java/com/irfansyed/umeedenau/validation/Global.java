@@ -481,6 +481,8 @@ public class Global {
     public static String lhwf1d2 = "lhwf1d2";
     public static String lhwf1d3 = "lhwf1d3";
     public static String lhwf1d4 = "lhwf1d4";
+    public static String lhwf1d8a = "lhwf1d8a";
+    public static String lhwf1d8b = "lhwf1d8b";
     public static String lhwf1d4Aa = "lhwf1d4Aa";
     public static String lhwf1d4Ab = "lhwf1d4Ab";
     public static String lhwf1d5 = "lhwf1d5";
@@ -492,6 +494,8 @@ public class Global {
     public static String lhwf1e2 = "lhwf1e2";
     public static String lhwf1e3 = "lhwf1e3";
     public static String lhwf1e4 = "lhwf1e4";
+    public static String lhwf1e9a = "lhwf1e9a";
+    public static String lhwf1e9b = "lhwf1e9b";
     public static String lhwf1e4Aa = "lhwf1e4Aa";
     public static String lhwf1e4Ab = "lhwf1e4Ab";
     public static String lhwf1e5 = "lhwf1e5";
@@ -509,6 +513,8 @@ public class Global {
     public static String lhwf1f4 = "lhwf1f4";
     public static String lhwf1f4Aa = "lhwf1f4Aa";
     public static String lhwf1f4Ab = "lhwf1f4Ab";
+    public static String lhwf1f11a = "lhwf1f11a";
+    public static String lhwf1f11b = "lhwf1f11b";
     public static String lhwf1f5 = "lhwf1f5";
     public static String lhwf1f6 = "lhwf1f6 ";
     public static String lhwf1f7 = "lhwf1f7";
@@ -524,6 +530,8 @@ public class Global {
     public static String lhwf1g4Aa = "lhwf1g4Aa";
     public static String lhwf1g4Ab = "lhwf1g4Ab";
     public static String lhwf1g5 = "lhwf1g5";
+    public static String lhwf1g10a = "lhwf1g10a";
+    public static String lhwf1g10b = "lhwf1g10b";
     public static String lhwf1g6 = "lhwf1g6";
     public static String lhwf1g7 = "lhwf1g7";
     public static String lhwf1g8 = "lhwf1g8";
@@ -535,6 +543,8 @@ public class Global {
     public static String lhwf1h3 = "lhwf1h3";
     public static String lhwf1h4 = "lhwf1h4";
     public static String lhwf1h5 = "lhwf1h5";
+    public static String lhwf1h10a = "lhwf1h10a";
+    public static String lhwf1h10b = "lhwf1h10b";
     public static String lhwf1h6 = "lhwf1h6";
     public static String lhwf1h7 = "lhwf1h7";
     public static String lhwf1h8 = "lhwf1h8";

@@ -11,27 +11,24 @@ public class TableF1SectionE {
         query = "CREATE TABLE '" + TABLE_NAME + "' ('id' INTEGER PRIMARY KEY AUTOINCREMENT, 'FK_id' INTEGER,   " +
 
 
-                Global.LhwSectionPKId+"  Text, "+
-                "Status  Text, "+
-                Global.lhwf1e1+"  Text, "+
-                Global.lhwf1e2+"  Text, "+
-                Global.lhwf1e3+"  Text, "+
-                Global.lhwf1e4+"  Text, "+
-                Global.lhwf1e4Aa+"  Text, "+
-                Global.lhwf1e4Ab+"  Text, "+
-                Global.lhwf1e5+"  Text, "+
-                Global.lhwf1e5b+"  Text, "+
-                Global.lhwf1e6+"  Text, "+
-                Global.lhwf1e6b+"  Text, "+
-                Global.lhwf1e7+"  Text, "+
-                Global.lhwf1e7b+"  Text, "+
+                Global.LhwSectionPKId + "  Text, " +
+                "Status  Text, " +
+                Global.lhwf1e1 + "  Text, " +
+                Global.lhwf1e2 + "  Text, " +
+                Global.lhwf1e3 + "  Text, " +
+                Global.lhwf1e4 + "  Text, " +
+                Global.lhwf1e9a + "  Text, " +
+                Global.lhwf1e9b + "  Text, " +
+                Global.lhwf1e4Aa + "  Text, " +
+                Global.lhwf1e4Ab + "  Text, " +
+                Global.lhwf1e5 + "  Text, " +
+                Global.lhwf1e5b + "  Text, " +
+                Global.lhwf1e6 + "  Text, " +
+                Global.lhwf1e6b + "  Text, " +
+                Global.lhwf1e7 + "  Text, " +
+                Global.lhwf1e7b + "  Text, " +
                 Global.lhwf1e8 + "  Text, " +
                 Global.lhwf1ephoto + "  Text " +
-
-
-
-
-
 
 
                 ')';

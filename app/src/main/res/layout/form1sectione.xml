@@ -169,6 +169,86 @@
                 <!-- lhwf1e4 ends-->
 
 
+                <!-- lhwf1e9a  starts -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvlhwf1e9a"
+                    style="@style/Q_CardView">
+
+                    <LinearLayout
+                        android:id="@+id/Lv_lhwf1e9a"
+                        style="@style/Q_Linerlayout_v">
+
+                        <TextView
+                            style="@style/TextView"
+                            android:text="@string/lhwf1e9a" />
+
+                        <RadioGroup
+                            android:id="@+id/lhwf1e9a"
+                            style="@style/RadioGroup"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/lhwf1e9a_1"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rb_yes" />
+
+                            <RadioButton
+                                android:id="@+id/lhwf1e9a_2"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rb_no" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <!-- lhwf1e9a ends-->
+
+
+                <!-- lhwf1e9b  starts -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvlhwf1e9b"
+                    style="@style/Q_CardView">
+
+                    <LinearLayout
+                        android:id="@+id/Lv_lhwf1e9b"
+                        style="@style/Q_Linerlayout_v">
+
+                        <TextView
+                            style="@style/TextView"
+                            android:text="@string/lhwf1e9b" />
+
+                        <RadioGroup
+                            android:id="@+id/lhwf1e9b"
+                            style="@style/RadioGroup"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/lhwf1e9b_1"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/lhwf1e9b_1" />
+
+                            <RadioButton
+                                android:id="@+id/lhwf1e9b_2"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/lhwf1e9b_2" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <!-- lhwf1e9b ends-->
+
+
                 <!-- lhwf1e4A starts -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf1e4A"
@@ -269,8 +349,7 @@
                 <!-- lhwf1e5b starts -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf1e5b"
-                    style="@style/Q_CardView"
-                    android:visibility='@{lhwf1e51.checked? View.GONE : View.VISIBLE}'>
+                    style="@style/Q_CardView">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf1e5b"
@@ -363,8 +442,7 @@
                 <!-- lhwf1e6b starts -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf1e6b"
-                    style="@style/Q_CardView"
-                    android:visibility='@{lhwf1e62.checked? View.GONE : View.VISIBLE}'>
+                    style="@style/Q_CardView">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf1e6b"
@@ -526,10 +604,10 @@
 
                         <EditText
                             android:id="@+id/lhwf1ephoto"
-                            android:enabled="false"
-
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
 
                         <Button
                             android:id="@+id/btn_snap"

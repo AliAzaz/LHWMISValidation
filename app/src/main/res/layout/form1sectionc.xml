@@ -212,8 +212,7 @@
                 <!-- lhwc11b  starts -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwc11b"
-                    style="@style/Q_CardView"
-                    android:visibility='@{lhwc11a1.checked? View.GONE : View.VISIBLE}'>
+                    style="@style/Q_CardView">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwc11b"

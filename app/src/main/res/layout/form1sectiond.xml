@@ -170,6 +170,86 @@
                 <!-- lhwf1d4 ends-->
 
 
+                <!-- lhwf1d8a  starts -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvlhwf1d8a"
+                    style="@style/Q_CardView">
+
+                    <LinearLayout
+                        android:id="@+id/Lv_lhwf1d8a"
+                        style="@style/Q_Linerlayout_v">
+
+                        <TextView
+                            style="@style/TextView"
+                            android:text="@string/lhwf1d8a" />
+
+                        <RadioGroup
+                            android:id="@+id/lhwf1d8a"
+                            style="@style/RadioGroup"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/lhwf1d8a_1"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rb_yes" />
+
+                            <RadioButton
+                                android:id="@+id/lhwf1d8a_2"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rb_no" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <!-- lhwf1d8a ends-->
+
+
+                <!-- lhwf1d8b  starts -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvlhwf1d8b"
+                    style="@style/Q_CardView">
+
+                    <LinearLayout
+                        android:id="@+id/Lv_lhwf1d8b"
+                        style="@style/Q_Linerlayout_v">
+
+                        <TextView
+                            style="@style/TextView"
+                            android:text="@string/lhwf1d8b" />
+
+                        <RadioGroup
+                            android:id="@+id/lhwf1d8b"
+                            style="@style/RadioGroup"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/lhwf1d8b_1"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/lhwf1d8b_1" />
+
+                            <RadioButton
+                                android:id="@+id/lhwf1d8b_2"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/lhwf1d8b_2" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <!-- lhwf1d8b_2 ends-->
+
+
                 <!-- lhwf1d4A starts -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf1d4A"
@@ -348,10 +428,10 @@
 
                         <EditText
                             android:id="@+id/lhwf1dphoto"
-                            android:enabled="false"
-
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
 
                         <Button
                             android:id="@+id/btn_snap"

@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.irfansyed.umeedenau.validation.databinding.Form1sectiongBinding;
+import com.validatorcrawler.aliazaz.Clear;
 
 import java.util.HashMap;
 
@@ -99,6 +100,35 @@ public class Form1SectionG extends AppCompatActivity implements View.OnClickList
                 }
             }
         });
+
+
+        bin.lhwf1g10a.setOnCheckedChangeListener(((radioGroup, i) -> {
+
+            if (i == bin.lhwf1g10a2.getId()) {
+                bin.cvlhwf1g10b.setVisibility(View.VISIBLE);
+
+                bin.cvlhwf1g4A.setVisibility(View.GONE);
+                bin.cvlhwf1g6.setVisibility(View.GONE);
+                bin.cvlhwf1g7.setVisibility(View.GONE);
+                bin.cvlhwf1g8.setVisibility(View.GONE);
+
+                Clear.clearAllFields(bin.cvlhwf1g4A);
+                Clear.clearAllFields(bin.cvlhwf1g6);
+                Clear.clearAllFields(bin.cvlhwf1g7);
+                Clear.clearAllFields(bin.cvlhwf1g8);
+
+            } else {
+                Clear.clearAllFields(bin.cvlhwf1g10b);
+                bin.cvlhwf1g10b.setVisibility(View.GONE);
+
+                bin.cvlhwf1g4A.setVisibility(View.VISIBLE);
+                bin.cvlhwf1g6.setVisibility(View.VISIBLE);
+                bin.cvlhwf1g7.setVisibility(View.VISIBLE);
+                bin.cvlhwf1g8.setVisibility(View.VISIBLE);
+
+            }
+
+        }));
 
 
     }

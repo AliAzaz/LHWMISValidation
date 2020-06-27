@@ -4,12 +4,15 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.irfansyed.umeedenau.validation.databinding.Form1sectiondBinding;
+import com.validatorcrawler.aliazaz.Clear;
 
 import java.util.HashMap;
 
@@ -29,6 +32,8 @@ public class Form1SectionD extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         bin = DataBindingUtil.setContentView(this, R.layout.form1sectiond);
 
+        setupSkips();
+
         bin.btnNext.setOnClickListener(this);
         bin.btnSnap.setOnClickListener(this);
         PhotoSerial = 0;
@@ -41,6 +46,33 @@ public class Form1SectionD extends AppCompatActivity implements View.OnClickList
         }
 
 
+    }
+
+
+    private void setupSkips() {
+
+        bin.lhwf1d8a.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bin.lhwf1d8a1.getId()) {
+
+                bin.cvlhwf1d4A.setVisibility(View.VISIBLE);
+                bin.cvlhwf1d5.setVisibility(View.VISIBLE);
+                bin.cvlhwf1d6.setVisibility(View.VISIBLE);
+
+                Clear.clearAllFields(bin.cvlhwf1d8b);
+                bin.cvlhwf1d8b.setVisibility(View.GONE);
+            } else {
+
+                Clear.clearAllFields(bin.cvlhwf1d4A);
+                Clear.clearAllFields(bin.cvlhwf1d5);
+                Clear.clearAllFields(bin.cvlhwf1d6);
+
+                bin.cvlhwf1d4A.setVisibility(View.GONE);
+                bin.cvlhwf1d5.setVisibility(View.GONE);
+                bin.cvlhwf1d6.setVisibility(View.GONE);
+
+                bin.cvlhwf1d8b.setVisibility(View.VISIBLE);
+            }
+        }));
     }
 
 
@@ -62,44 +94,44 @@ public class Form1SectionD extends AppCompatActivity implements View.OnClickList
 
         }
         if (view.getId() == R.id.btn_next) {
-        if (!formValidation()) {
-            return;
-        }
+            if (!formValidation()) {
+                return;
+            }
 
 
-        if (!GeneratorClass.checktextbox(bin.lhwf1d1, bin.lhwf1d2)) {
-            return;
-        }
+            if (!GeneratorClass.checktextbox(bin.lhwf1d1, bin.lhwf1d2)) {
+                return;
+            }
 
 
-        if (bin.lhwf1d1.getText().length() > 0) {
+            if (bin.lhwf1d1.getText().length() > 0) {
 
-            int a = Integer.parseInt(bin.lhwf1d1.getText().toString());
-            if (a > 50) {
-                bin.lhwf1d1.requestFocus();
-                bin.lhwf1d1.setError("Should be less then 50 or greater then 0 ");
+                int a = Integer.parseInt(bin.lhwf1d1.getText().toString());
+                if (a > 50) {
+                    bin.lhwf1d1.requestFocus();
+                    bin.lhwf1d1.setError("Should be less then 50 or greater then 0 ");
+
+                    return;
+                }
+            }
+            int b = Integer.parseInt(bin.lhwf1d2.getText().toString());
+            if (b > 5) {
+                bin.lhwf1d2.requestFocus();
+                bin.lhwf1d2.setError("Should be less then 5");
 
                 return;
             }
-        }
-        int b = Integer.parseInt(bin.lhwf1d2.getText().toString());
-        if (b > 5) {
-            bin.lhwf1d2.requestFocus();
-            bin.lhwf1d2.setError("Should be less then 5");
-
-            return;
-        }
 
 
-        insert_data();
-        int count = GeneratorClass.hh_section_count("TableF1SectionD", this);
+            insert_data();
+            int count = GeneratorClass.hh_section_count("TableF1SectionD", this);
 
-        Toast.makeText(this, "Data Inserted", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Data Inserted", Toast.LENGTH_SHORT).show();
 
 
-        Intent returnIntent = new Intent();
-        returnIntent.putExtra("count", count + "");
-        setResult(Activity.RESULT_OK, returnIntent);
+            Intent returnIntent = new Intent();
+            returnIntent.putExtra("count", count + "");
+            setResult(Activity.RESULT_OK, returnIntent);
             finish();
         }
     }

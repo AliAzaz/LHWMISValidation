@@ -4,14 +4,17 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.irfansyed.umeedenau.validation.databinding.Form1sectioneBinding;
+import com.validatorcrawler.aliazaz.Clear;
 
 import java.util.HashMap;
 
@@ -20,7 +23,7 @@ import utils.GeneratorClass;
 import utils.ValidatorClass;
 
 
-public class Form1SectionE extends AppCompatActivity implements View.OnClickListener, RadioButton.OnCheckedChangeListener {
+public class Form1SectionE extends AppCompatActivity implements View.OnClickListener {
 
 
     //region Initialization
@@ -45,11 +48,63 @@ public class Form1SectionE extends AppCompatActivity implements View.OnClickList
             bin.lhwf1e1.setVisibility(View.GONE);
         }
 
-
-        bin.lhwf1e51.setOnCheckedChangeListener(this);
+        /*bin.lhwf1e51.setOnCheckedChangeListener(this);
         bin.lhwf1e52.setOnCheckedChangeListener(this);
         bin.lhwf1e61.setOnCheckedChangeListener(this);
-        bin.lhwf1e62.setOnCheckedChangeListener(this);
+        bin.lhwf1e62.setOnCheckedChangeListener(this);*/
+
+        bin.lhwf1e9a.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bin.lhwf1e9a2.getId()) {
+                bin.LvLhwf1e9b.setVisibility(View.VISIBLE);
+                bin.LvLhwf1e4A.setVisibility(View.GONE);
+                bin.LvLhwf1e5.setVisibility(View.GONE);
+                bin.LvLhwf1e5b.setVisibility(View.GONE);
+                bin.LvLhwf1e6.setVisibility(View.GONE);
+                bin.LvLhwf1e6b.setVisibility(View.GONE);
+                bin.LvLhwf1e7.setVisibility(View.GONE);
+                bin.LvLhwf1e7b.setVisibility(View.GONE);
+
+
+                Clear.clearAllFields(bin.LvLhwf1e4A);
+                Clear.clearAllFields(bin.LvLhwf1e5);
+                Clear.clearAllFields(bin.LvLhwf1e5b);
+                Clear.clearAllFields(bin.LvLhwf1e6);
+                Clear.clearAllFields(bin.LvLhwf1e6b);
+                Clear.clearAllFields(bin.LvLhwf1e7);
+                Clear.clearAllFields(bin.LvLhwf1e7b);
+            } else {
+                Clear.clearAllFields(bin.LvLhwf1e9b);
+
+                bin.LvLhwf1e9b.setVisibility(View.GONE);
+                bin.LvLhwf1e4A.setVisibility(View.VISIBLE);
+                bin.LvLhwf1e5.setVisibility(View.VISIBLE);
+                bin.LvLhwf1e5b.setVisibility(View.VISIBLE);
+                bin.LvLhwf1e6.setVisibility(View.VISIBLE);
+                bin.LvLhwf1e6b.setVisibility(View.VISIBLE);
+                bin.LvLhwf1e7.setVisibility(View.VISIBLE);
+                bin.LvLhwf1e7b.setVisibility(View.VISIBLE);
+            }
+        }));
+
+
+        bin.lhwf1e5.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bin.lhwf1e52.getId()) {
+                Clear.clearAllFields(bin.cvlhwf1e5b);
+                bin.cvlhwf1e5b.setVisibility(View.GONE);
+            } else {
+                bin.cvlhwf1e5b.setVisibility(View.VISIBLE);
+            }
+        }));
+
+
+        bin.lhwf1e6.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bin.lhwf1e62.getId()) {
+                Clear.clearAllFields(bin.cvlhwf1e6b);
+                bin.cvlhwf1e6b.setVisibility(View.GONE);
+            } else {
+                bin.cvlhwf1e6b.setVisibility(View.VISIBLE);
+            }
+        }));
 
 
     }
@@ -140,23 +195,18 @@ public class Form1SectionE extends AppCompatActivity implements View.OnClickList
 
     }
 
-    @Override
+    /*@Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-
         if (buttonView.getId() == R.id.lhwf1e5_1 || buttonView.getId() == R.id.lhwf1e5_2) {
-
             ClearAllcontrol.ClearAll(bin.LvLhwf1e5b);
-
         }
 
 
         if (buttonView.getId() == R.id.lhwf1e6_1 || buttonView.getId() == R.id.lhwf1e6_2) {
-
             ClearAllcontrol.ClearAll(bin.LvLhwf1e6b);
-
         }
-    }
+    }*/
 
 
   /* onActivityResult(resultCode) 0= Photo Cancel, 1=Photo Taken

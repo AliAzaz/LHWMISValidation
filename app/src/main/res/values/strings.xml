@@ -98,6 +98,15 @@
     <string name="lhwf1d3"> Name of mother  </string>
     <string name="lhwf1d4"> Husband’s name </string>
 
+
+    <string name="lhwf1d8a"> Did LHW visit mother after delivery? </string>
+
+    <string name="lhwf1d8b"> If ‘no’ give reason </string>
+    <string name="lhwf1d8b_1"> Women/mother was in another </string>
+    <string name="lhwf1d8b_2"> Village/city </string>
+    <string name="lhwf1d8b_3"> Due to COVID-19 situation </string>
+
+
     <string name="lhwf1d4A"> Date of LHW first PNC visit </string>
     <string name="lhwf1d4Aa"> Month </string>
     <string name="lhwf1d4Ab"> Year </string>
@@ -110,11 +119,18 @@
     <string name="lhwf1d6"> Outcome of delivery </string>
     <string name="lhwf1d6_1"> Still birth </string>
     <string name="lhwf1d6_2"> Live birth </string>
-    <string name="lhwf1header_e"> section E: New born care </string>
+    <string name="lhwf1header_e"> section E: New Born Care </string>
     <string name="lhwf1e1"> Total # of registered newborns </string>
     <string name="lhwf1e2"> # of newborn registered in HH </string>
     <string name="lhwf1e3"> Name of newborn (any one) </string>
     <string name="lhwf1e4"> Name of mother </string>
+
+    <string name="lhwf1e9a"> Did LHW visit newborn </string>
+    <string name="lhwf1e9b"> If ‘no’ give reason </string>
+    <string name="lhwf1e9b_1"> Newborn was in another village/city </string>
+    <string name="lhwf1e9b_2"> Due to COVID-19 situation </string>
+
+
     <string name="lhwf1e4A"> Date of LHW first visit to newborn </string>
     <string name="lhwf1e5"> Birth weight recorded </string>
     <string name="lhwf1e6"> Early initiation of breastfeeding recorded  </string>
@@ -130,6 +146,13 @@
     <string name="lhwf1f4A"> Date of LHW visit during diarrhea </string>
 
     <string name="lhwf1f5"> Age of child (in months) in HH who had diarrhea in last three months </string>
+    <string name="lhwf1f11a"> Did LHW visit child during diarrhea </string>
+    <string name="lhwf1f11b"> If ‘no’ give reason </string>
+    <string name="lhwf1f11b_1"> Child was in another village/city for treatment </string>
+    <string name="lhwf1f11b_2"> Child was hospitalized </string>
+    <string name="lhwf1f11b_3"> Due to COVID-19 situation </string>
+
+
     <string name="lhwf1f6"> LHW provided ORS/LoORS for diarrhea </string>
     <string name="lhwf1f7"> LHW provided Zinc DT/syrup for diarrhea </string>
     <string name="lhwf1f8"> LHW referred child to the HF </string>
@@ -142,7 +165,16 @@
     <string name="lhwf1g4"> Name of child in HH who had cough or difficult breathing in last three months </string>
     <string name="lhwf1g4A"> Date of LHW visit during pneumonia </string>
 
+
     <string name="lhwf1g5"> Age of child (in months) in HH who had cough or difficult breathing in last three months </string>
+
+    <string name="lhwf1g10a"> Did LHW visit child during Pneumonia </string>
+    <string name="lhwf1g10b"> If ‘no’ give reason </string>
+    <string name="lhwf1g10b_1"> Child was in another village/city for treatment </string>
+    <string name="lhwf1g10b_2"> Child was hospitalized </string>
+    <string name="lhwf1g10b_3"> Due to COVID-19 situation </string>
+
+
     <string name="lhwf1g6"> LHW provided Amoxicillin DT/syrup in case of pneumonia </string>
     <string name="lhwf1g7"> LHW referred child to the HF for pneumonia </string>
     <string name="lhwf1g8"> Maintained immunization record for child under five years of age </string>
@@ -152,6 +184,12 @@
     <string name="lhwf1h2"> # of MWRA in HH </string>
     <string name="lhwf1h3"> Name of MWRA in HH </string>
     <string name="lhwf1h4"> Husband’s name </string>
+
+    <string name="lhwf1h10a"> Did LHW visit MWRA? </string>
+    <string name="lhwf1h10b"> If ‘no’ give reason </string>
+    <string name="lhwf1h10b_1"> Routine visit wasn’t planned </string>
+    <string name="lhwf1h10b_2"> Due to COVID-19 situation </string>
+
     <string name="lhwf1h5"> Age (in years) of MWRA </string>
 
 
