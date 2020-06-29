@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.irfansyed.umeedenau.validation.databinding.Form3sectionbBinding;
+import com.validatorcrawler.aliazaz.Clear;
 
 import java.util.HashMap;
 
@@ -18,7 +19,7 @@ import utils.GeneratorClass;
 import utils.ValidatorClass;
 
 
-public class Form3SectionB extends AppCompatActivity implements View.OnClickListener, RadioButton.OnCheckedChangeListener {
+public class Form3SectionB extends AppCompatActivity implements View.OnClickListener {
 
 
     //region Initialization
@@ -30,18 +31,93 @@ public class Form3SectionB extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         bin = DataBindingUtil.setContentView(this, R.layout.form3sectionb);
 
+        setupSkips();
 
         bin.btnNext.setOnClickListener(this);
 
-        bin.lhwf3b11.setOnCheckedChangeListener(this);
-        bin.lhwf3b12.setOnCheckedChangeListener(this);
-
-        bin.lhwf3b21.setOnCheckedChangeListener(this);
-        bin.lhwf3b22.setOnCheckedChangeListener(this);
+    }
 
 
-        bin.lhwf3b51.setOnCheckedChangeListener(this);
-        bin.lhwf3b52.setOnCheckedChangeListener(this);
+    private void setupSkips() {
+
+        bin.lhwf3b1.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bin.lhwf3b12.getId()) {
+
+                bin.cvlhwf3b2.setVisibility(View.GONE);
+                bin.cvlhwf3b3.setVisibility(View.GONE);
+                bin.cvlhwf3b4a.setVisibility(View.GONE);
+                bin.cvlhwf3b4b.setVisibility(View.GONE);
+                bin.cvlhwf3b4c.setVisibility(View.GONE);
+
+                Clear.clearAllFields(bin.cvlhwf3b2);
+                Clear.clearAllFields(bin.cvlhwf3b3);
+                Clear.clearAllFields(bin.cvlhwf3b4a);
+                Clear.clearAllFields(bin.cvlhwf3b4b);
+                Clear.clearAllFields(bin.cvlhwf3b4c);
+
+            } else {
+
+                bin.cvlhwf3b2.setVisibility(View.VISIBLE);
+                bin.cvlhwf3b3.setVisibility(View.VISIBLE);
+                bin.cvlhwf3b4a.setVisibility(View.VISIBLE);
+                bin.cvlhwf3b4b.setVisibility(View.VISIBLE);
+                bin.cvlhwf3b4c.setVisibility(View.VISIBLE);
+
+            }
+        }));
+
+
+        bin.lhwf3b2.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bin.lhwf3b22.getId()) {
+
+                bin.cvlhwf3b3.setVisibility(View.GONE);
+                bin.cvlhwf3b4a.setVisibility(View.GONE);
+                bin.cvlhwf3b4b.setVisibility(View.GONE);
+                bin.cvlhwf3b4c.setVisibility(View.GONE);
+                bin.cvlhwf3b5.setVisibility(View.GONE);
+                bin.cvlhwf3b5b.setVisibility(View.GONE);
+
+                Clear.clearAllFields(bin.cvlhwf3b3);
+                Clear.clearAllFields(bin.cvlhwf3b4a);
+                Clear.clearAllFields(bin.cvlhwf3b4b);
+                Clear.clearAllFields(bin.cvlhwf3b4c);
+                Clear.clearAllFields(bin.cvlhwf3b5);
+                Clear.clearAllFields(bin.cvlhwf3b5b);
+
+            } else {
+
+
+                bin.cvlhwf3b3.setVisibility(View.VISIBLE);
+                bin.cvlhwf3b4a.setVisibility(View.VISIBLE);
+                bin.cvlhwf3b4b.setVisibility(View.VISIBLE);
+                bin.cvlhwf3b4c.setVisibility(View.VISIBLE);
+                bin.cvlhwf3b5.setVisibility(View.VISIBLE);
+                bin.cvlhwf3b5b.setVisibility(View.VISIBLE);
+
+
+            }
+        }));
+
+
+        bin.lhwf3b5.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bin.lhwf3b52.getId()) {
+                bin.cvlhwf3b5b.setVisibility(View.VISIBLE);
+            } else {
+                bin.cvlhwf3b5b.setVisibility(View.GONE);
+                Clear.clearAllFields(bin.cvlhwf3b5b);
+            }
+        }));
+
+
+        bin.lhwf3b5b.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bin.lhwf3b5b96.getId()) {
+                bin.lhwf3b5b96x.setVisibility(View.VISIBLE);
+            } else {
+                bin.lhwf3b5b96x.setVisibility(View.GONE);
+                Clear.clearAllFields(bin.lhwf3b5b96x);
+            }
+        }));
+
 
     }
 
@@ -84,7 +160,7 @@ public class Form3SectionB extends AppCompatActivity implements View.OnClickList
     }
 
 
-    @Override
+    /*@Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
 
@@ -128,7 +204,6 @@ public class Form3SectionB extends AppCompatActivity implements View.OnClickList
 
             if (bin.lhwf3b22.isChecked()) {
 
-
                 ClearAllcontrol.ClearAll(bin.LvLhwf3b6);
 
             }
@@ -136,5 +211,7 @@ public class Form3SectionB extends AppCompatActivity implements View.OnClickList
         }
 
 
-    }
+    }*/
+
+
 }

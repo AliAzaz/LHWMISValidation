@@ -202,7 +202,13 @@
     <string name="lhwf3b4a"> Member1 name </string>
     <string name="lhwf3b4b"> Member2 name </string>
     <string name="lhwf3b4c"> Member3 name </string>
+
     <string name="lhwf3b5"> Meeting conducted last month? </string>
+    <string name="lhwf3b5b"> If ‘No’, give reason for not holding the meeting </string>
+    <string name="lhwf3b5b_1"> Unavailability of LHW </string>
+    <string name="lhwf3b5b_2"> Covid-19 situation </string>
+    <string name="lhwf3b5b_3"> Other </string>
+
     <string name="lhwf3b6"> Record kept for last meeting in recording form? </string>
 
 
@@ -217,6 +223,12 @@
     <string name="lhwf5b5a"> Member1 name </string>
     <string name="lhwf5b5b"> Member2 name </string>
     <string name="lhwf5b5c"> Member3 name </string>
+
+    <string name="lhwf5b5a1"> # of meetings held in previous month mentioned in meeting report/form </string>
+    <string name="lhwf5b5b1"> If ‘0’ give reason for not holding the meeting </string>
+    <string name="lhwf5b5b1_1"> Unavailability of LHW </string>
+    <string name="lhwf5b5b1_2"> Covid-19 situation </string>
+    <string name="lhwf5b5b1_3"> Other </string>
 
     <string name="lhwf5b6"> # of participants attended the session mentioned in meeting report/form </string>
     <string name="lhwf5b7"> Topics covered in session </string>
