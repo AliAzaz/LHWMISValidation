@@ -2,8 +2,6 @@ package com.irfansyed.umeedenau.validation;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.CompoundButton;
-import android.widget.RadioButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,7 +12,6 @@ import com.validatorcrawler.aliazaz.Clear;
 
 import java.util.HashMap;
 
-import utils.ClearAllcontrol;
 import utils.GeneratorClass;
 import utils.ValidatorClass;
 
@@ -93,7 +90,6 @@ public class Form3SectionB extends AppCompatActivity implements View.OnClickList
                 bin.cvlhwf3b4c.setVisibility(View.VISIBLE);
                 bin.cvlhwf3b5.setVisibility(View.VISIBLE);
                 bin.cvlhwf3b5b.setVisibility(View.VISIBLE);
-
 
             }
         }));

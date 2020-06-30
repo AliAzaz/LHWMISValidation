@@ -319,15 +319,15 @@
                                 style="@style/RadioButton"
                                 android:text="@string/other" />
 
-                            <EditText
-                                android:id="@+id/lhwf2h7_5"
-                                style="@style/EditText_Name"
-                                android:hint="@string/specify"
-                                android:maxLength="50"
-                                android:text='@{lhwf2h74.checked ? lhwf2h75.getText().toString() : ""}'
-                                android:visibility='@{lhwf2h74.checked ? View.VISIBLE : View.GONE}' />
-
                         </RadioGroup>
+
+                        <EditText
+                            android:id="@+id/lhwf2h796x"
+                            style="@style/EditText_Name"
+                            android:hint="@string/specify"
+                            android:maxLength="50"
+                            android:text='@{lhwf2h74.checked ? lhwf2h796x.getText().toString() : ""}'
+                            android:visibility='@{lhwf2h74.checked ? View.VISIBLE : View.GONE}' />
 
                     </LinearLayout>
 

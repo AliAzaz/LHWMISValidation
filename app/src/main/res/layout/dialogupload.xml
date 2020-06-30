@@ -9,23 +9,24 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        >
+        android:layout_marginTop="10dp">
+
         <ImageView
             android:layout_width="64dp"
             android:layout_height="64dp"
-            android:src="@drawable/uncolor"
-            />
+            android:src="@drawable/uncolor" />
+
         <TextView
             style="@style/TextView"
-            android:text="Do you want to Upload this Data? Please Varify before Upload."
-            android:layout_marginTop="20dp"
             android:layout_marginLeft="7dp"
+            android:layout_marginTop="20dp"
+            android:text="Do you want to Upload this Data? Please Varify before Upload."
             android:textColor="#008E45"
 
             />
 
     </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -40,10 +41,10 @@
         android:layout_marginBottom="5dp"
         android:fadeScrollbars="false"
         android:fillViewport="true"
-        android:paddingBottom="5dp"
         android:paddingLeft="5dp"
-        android:paddingRight="5dp"
         android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
         android:scrollbarSize="50dip">
         <!-- Parent layout starts -->
         <LinearLayout
@@ -53,25 +54,14 @@
             android:orientation="vertical">
 
 
-
-
-
-
-
-
-
-
             <!-- lhwf1b1 starts -->
-            <androidx.cardview.widget.CardView
-                style="@style/Q_CardView"
+            <androidx.cardview.widget.CardView style="@style/Q_CardView"
 
 
                 >
 
 
-
-                <LinearLayout
-                    style="@style/Q_Linerlayout_v"
+                <LinearLayout style="@style/Q_Linerlayout_v"
 
                     >
 
@@ -83,11 +73,10 @@
                         />
 
                     <EditText
-                        style="@style/EditText_varchar"
                         android:id="@+id/LHWname"
-                       android:textStyle="italic"
+                        style="@style/EditText_varchar"
                         android:enabled="false"
-                        />
+                        android:textStyle="italic" />
 
 
                     <TextView
@@ -98,12 +87,10 @@
                         />
 
                     <EditText
-                        style="@style/EditText_varchar"
                         android:id="@+id/LHWID"
-                        android:textStyle="italic"
+                        style="@style/EditText_varchar"
                         android:enabled="false"
-                        />
-
+                        android:textStyle="italic" />
 
 
                     <TextView
@@ -114,11 +101,10 @@
                         />
 
                     <EditText
-                        style="@style/EditText_varchar"
                         android:id="@+id/HFName"
-                        android:textStyle="italic"
+                        style="@style/EditText_varchar"
                         android:enabled="false"
-                        />
+                        android:textStyle="italic" />
 
 
                     <TextView
@@ -130,7 +116,6 @@
                         />
 
 
-
                     <TextView
 
                         style="@style/TextView"
@@ -139,11 +124,10 @@
                         />
 
                     <EditText
-                        style="@style/EditText_varchar"
                         android:id="@+id/RHHcount"
-                        android:textStyle="italic"
+                        style="@style/EditText_varchar"
                         android:enabled="false"
-                        />
+                        android:textStyle="italic" />
 
 
                     <TextView
@@ -154,13 +138,10 @@
                         />
 
                     <EditText
-                        style="@style/EditText_varchar"
                         android:id="@+id/RHCcount"
-                        android:textStyle="italic"
+                        style="@style/EditText_varchar"
                         android:enabled="false"
-                        />
-
-
+                        android:textStyle="italic" />
 
 
                     <TextView
@@ -171,11 +152,10 @@
                         />
 
                     <EditText
-                        style="@style/EditText_varchar"
                         android:id="@+id/RWSGcount"
-                        android:textStyle="italic"
+                        style="@style/EditText_varchar"
                         android:enabled="false"
-                        />
+                        android:textStyle="italic" />
 
                     <TextView
 
@@ -186,8 +166,6 @@
                         />
 
 
-
-
                     <TextView
 
                         style="@style/TextView"
@@ -196,11 +174,10 @@
                         />
 
                     <EditText
-                        style="@style/EditText_varchar"
                         android:id="@+id/CHHcount"
-                        android:textStyle="italic"
+                        style="@style/EditText_varchar"
                         android:enabled="false"
-                        />
+                        android:textStyle="italic" />
 
                     <TextView
 
@@ -210,11 +187,11 @@
                         />
 
                     <EditText
-                        style="@style/EditText_varchar"
                         android:id="@+id/CHCcount"
-                        android:textStyle="italic"
+                        style="@style/EditText_varchar"
                         android:enabled="false"
-                        />
+                        android:textStyle="italic" />
+
                     <TextView
 
                         style="@style/TextView"
@@ -223,11 +200,10 @@
                         />
 
                     <EditText
-                        style="@style/EditText_varchar"
                         android:id="@+id/CWSGcount"
-                        android:textStyle="italic"
+                        style="@style/EditText_varchar"
                         android:enabled="false"
-                        />
+                        android:textStyle="italic" />
 
 
                 </LinearLayout>
@@ -235,13 +211,6 @@
 
             </androidx.cardview.widget.CardView>
             <!-- lhwf1b1 ends-->
-
-
-
-
-
-
-
 
 
             <!-- Button -->
@@ -252,18 +221,17 @@
                 >
 
 
-
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent">
 
 
-                <Button
-                    android:id="@+id/btn_cancel"
-                    style="@style/Button_collder"
-                    android:layout_margin="10dp"
-                    android:layout_weight="50"
-                    android:text="Cancel " />
+                    <Button
+                        android:id="@+id/btn_cancel"
+                        style="@style/Button_collder"
+                        android:layout_margin="10dp"
+                        android:layout_weight="50"
+                        android:text="Cancel " />
 
                     <Button
                         android:id="@+id/btn_ok"

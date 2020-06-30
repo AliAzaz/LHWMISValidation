@@ -69,12 +69,10 @@ public class Form2SectionH extends AppCompatActivity implements View.OnClickList
             public void afterTextChanged(Editable s) {
             }
 
-            public void beforeTextChanged(CharSequence s, int start,
-                                          int count, int after) {
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
 
-            public void onTextChanged(CharSequence s, int start,
-                                      int before, int count) {
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
 
                 if (bin.lhwf2h2.getText().toString().equals("999")) {
 

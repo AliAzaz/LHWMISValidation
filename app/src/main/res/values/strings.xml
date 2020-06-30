@@ -195,7 +195,7 @@
 
     <!-- Form 3-->
 
-    <string name="lhwf3header_b"> Section B: Village Health Committee (VHC) </string>
+    <string name="lhwf3header_b"> Section B: Village Health Committee (VHC) (SR) </string>
     <string name="lhwf3b1"> Did LHW form VHC? </string>
     <string name="lhwf3b2"> Availability of VHC meeting recording form? </string>
     <string name="lhwf3b3"> Total # of members mentioned in meeting recording form </string>
@@ -331,7 +331,7 @@
     <!-- Form 4-->
 
 
-    <string name="lhwf4header_b"> Section B: Village Health Committee (VHC) </string>
+    <string name="lhwf4header_b"> Section B: Village Health Committee (VHC) (VAL) </string>
     <string name="lhwf4b0"> VHC Member Name </string>
     <string name="lhwf4b1"> Are you aware of VHC? </string>
     <string name="lhwf4b2"> Are you member of VHC? </string>

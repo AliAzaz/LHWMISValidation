@@ -644,6 +644,7 @@ public class Global {
     public static String lhwf2h5 = "lhwf2h5";
     public static String lhwf2h6 = "lhwf2h6";
     public static String lhwf2h7 = "lhwf2h7";
+    public static String lhwf2h796x = "lhwf2h796x";
     public static String lhwf2h8 = "lhwf2h8";
     public static String lhwf2h9 = "lhwf2h9";
     public static String lhwf2h10 = "lhwf2h10";

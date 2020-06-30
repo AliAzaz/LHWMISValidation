@@ -322,14 +322,14 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/other" />
 
-                            <EditText
-                                android:id="@+id/lhwf5b5b196x"
-                                style="@style/EditText_Name"
-                                android:hint="@string/specify"
-                                android:maxLength="50"
-                                android:visibility="gone" />
-
                         </RadioGroup>
+
+                        <EditText
+                            android:id="@+id/lhwf5b5b196x"
+                            style="@style/EditText_Name"
+                            android:hint="@string/specify"
+                            android:maxLength="50"
+                            android:visibility="gone" />
 
                     </LinearLayout>
 
@@ -433,7 +433,8 @@
                                 style="@style/EditText_Name"
                                 android:hint="@string/specify"
                                 android:maxLength="50"
-                                android:tag="lhwf5b796" />
+                                android:tag="lhwf5b796"
+                                android:visibility="gone" />
 
                         </LinearLayout>
 

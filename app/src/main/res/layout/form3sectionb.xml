@@ -308,15 +308,14 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/other" />
 
-
-                            <EditText
-                                android:id="@+id/lhwf3b5b96x"
-                                style="@style/EditText_Name"
-                                android:hint="@string/specify"
-                                android:maxLength="50"
-                                android:visibility="gone" />
-
                         </RadioGroup>
+
+                        <EditText
+                            android:id="@+id/lhwf3b5b96x"
+                            style="@style/EditText_Name"
+                            android:hint="@string/specify"
+                            android:maxLength="50"
+                            android:visibility="gone" />
 
                     </LinearLayout>
 

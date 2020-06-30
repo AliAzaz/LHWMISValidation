@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.irfansyed.umeedenau.validation.databinding.Form2sectioncBinding;
+import com.validatorcrawler.aliazaz.Clear;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -28,7 +29,7 @@ import utils.ValidatorClass;
 import static data.LocalDataManager.database;
 
 
-public class Form2SectionC extends AppCompatActivity implements View.OnClickListener, RadioButton.OnCheckedChangeListener {
+public class Form2SectionC extends AppCompatActivity implements View.OnClickListener {
 
 
     //region Initialization
@@ -42,24 +43,23 @@ public class Form2SectionC extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         bin = DataBindingUtil.setContentView(this, R.layout.form2sectionc);
 
+        setupSkips();
+
 
         Intent iin = getIntent();
         Bundle b = iin.getExtras();
         if (b != null) {
             FK_id = (String) b.get("pk_id");
-
-
             this.ininfo();
-
         }
 
 
-        bin.lhwf2c61.setOnCheckedChangeListener(this);
+        /*bin.lhwf2c61.setOnCheckedChangeListener(this);
         bin.lhwf2c62.setOnCheckedChangeListener(this);
         bin.lhwf2c63.setOnCheckedChangeListener(this);
 
         bin.rlhwf2c11.setOnCheckedChangeListener(this);
-        bin.rlhwf2c12.setOnCheckedChangeListener(this);
+        bin.rlhwf2c12.setOnCheckedChangeListener(this);*/
 
 
         bin.btnNext.setOnClickListener(this);
@@ -75,12 +75,10 @@ public class Form2SectionC extends AppCompatActivity implements View.OnClickList
             public void afterTextChanged(Editable s) {
             }
 
-            public void beforeTextChanged(CharSequence s, int start,
-                                          int count, int after) {
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
 
-            public void onTextChanged(CharSequence s, int start,
-                                      int before, int count) {
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
 
                 if (bin.lhwf2c2.getText().toString().equals("999")) {
 
@@ -111,6 +109,13 @@ public class Form2SectionC extends AppCompatActivity implements View.OnClickList
 
 
     }
+
+
+    private void setupSkips() {
+
+
+    }
+
 
     @Override
     public void onClick(View view) {
@@ -196,7 +201,7 @@ public class Form2SectionC extends AppCompatActivity implements View.OnClickList
     }
 
 
-    @Override
+    /*@Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
         if (buttonView.getId() == R.id.lhwf2c6_1 || buttonView.getId() == R.id.lhwf2c6_2 || buttonView.getId() == R.id.lhwf2c6_3) {
@@ -290,5 +295,7 @@ public class Form2SectionC extends AppCompatActivity implements View.OnClickList
                 //  bin.LvLhwf2c11.setVisibility(View.VISIBLE);
             }
         }
-    }
+    }*/
+
+
 }

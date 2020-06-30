@@ -117,6 +117,19 @@ public class Form5SectionB extends AppCompatActivity implements View.OnClickList
 
         }));
 
+
+        bin.lhwf5b796.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b == true) {
+                    bin.lhwf5b796x.setVisibility(View.VISIBLE);
+                } else {
+                    bin.lhwf5b796x.setVisibility(View.GONE);
+                    Clear.clearAllFields(bin.lhwf5b796x);
+                }
+            }
+        });
+
     }
 
 
