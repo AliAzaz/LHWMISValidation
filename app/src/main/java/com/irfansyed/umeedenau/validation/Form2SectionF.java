@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.irfansyed.umeedenau.validation.databinding.Form2sectionfBinding;
+import com.validatorcrawler.aliazaz.Clear;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -28,7 +29,7 @@ import utils.ValidatorClass;
 import static data.LocalDataManager.database;
 
 
-public class Form2SectionF extends AppCompatActivity implements View.OnClickListener, RadioButton.OnCheckedChangeListener {
+public class Form2SectionF extends AppCompatActivity implements View.OnClickListener {
 
 
     //region Initialization
@@ -43,11 +44,13 @@ public class Form2SectionF extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         bin = DataBindingUtil.setContentView(this, R.layout.form2sectionf);
 
+        setupSkips();
+
+
         Intent iin = getIntent();
         Bundle b = iin.getExtras();
         if (b != null) {
             FK_id = (String) b.get("pk_id");
-
             this.ininfo();
         }
 
@@ -64,52 +67,98 @@ public class Form2SectionF extends AppCompatActivity implements View.OnClickList
         lhwf2f1_2 = findViewById(R.id.rlhwf2f1_2);
 
 
-        lhwf2f1_1.setOnCheckedChangeListener(this);
+        /*lhwf2f1_1.setOnCheckedChangeListener(this);
         lhwf2f1_2.setOnCheckedChangeListener(this);
         bin.lhwf2f5a1.setOnCheckedChangeListener(this);
-        bin.lhwf2f5a2.setOnCheckedChangeListener(this);
+        bin.lhwf2f5a2.setOnCheckedChangeListener(this);*/
+
+    }
+
+
+    private void setupSkips() {
+
+        bin.lhwf2f1.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (i == bin.rlhwf2f11.getId()) {
+                bin.cvlhwf2f3.setVisibility(View.VISIBLE);
+                bin.cvlhwf2f3a.setVisibility(View.GONE);
+                Clear.clearAllFields(bin.cvlhwf2f3a);
+            } else {
+                bin.cvlhwf2f3.setVisibility(View.GONE);
+                bin.cvlhwf2f3a.setVisibility(View.VISIBLE);
+                Clear.clearAllFields(bin.cvlhwf2f3);
+            }
+        });
+
 
         bin.lhwf2f3.addTextChangedListener(new TextWatcher() {
-
             public void afterTextChanged(Editable s) {
             }
 
-            public void beforeTextChanged(CharSequence s, int start,
-                                          int count, int after) {
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
 
-            public void onTextChanged(CharSequence s, int start,
-                                      int before, int count) {
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                if (bin.lhwf2f3.getText().toString().equals("999")) {
+                if (!bin.lhwf2f3.getText().toString().equals("")) {
 
-                    //  bin.LvLhwf2f4.setVisibility(View.GONE);
-                    //  bin.LvLhwf2f5.setVisibility(View.GONE);
-                    //  bin.LvLhwf2f6.setVisibility(View.GONE);
-                    //  bin.LvLhwf2f7.setVisibility(View.GONE);
-                    //  bin.LvLhwf2f8.setVisibility(View.GONE);
-                    //  bin.LvLhwf2f9.setVisibility(View.GONE);
-                    //  bin.LvLhwf2f10.setVisibility(View.GONE);
-                    //  bin.LvLhwf2f11.setVisibility(View.GONE);
-                    //  bin.LvLhwf2f12.setVisibility(View.GONE);
-                    //  bin.LvLhwf2f13.setVisibility(View.GONE);
-
-                } else {
-
-                    //   bin.LvLhwf2f4.setVisibility(View.VISIBLE);
-                    //   bin.LvLhwf2f5.setVisibility(View.VISIBLE);
-                    //   bin.LvLhwf2f6.setVisibility(View.VISIBLE);
-                    //   bin.LvLhwf2f7.setVisibility(View.VISIBLE);
-                    //   bin.LvLhwf2f8.setVisibility(View.VISIBLE);
-                    //   bin.LvLhwf2f9.setVisibility(View.VISIBLE);
-                    //   bin.LvLhwf2f10.setVisibility(View.VISIBLE);
-                    //   bin.LvLhwf2f11.setVisibility(View.VISIBLE);
-                    //   bin.LvLhwf2f12.setVisibility(View.VISIBLE);
-                    //   bin.LvLhwf2f13.setVisibility(View.VISIBLE);
-
+                    if (Integer.valueOf(bin.lhwf2f3.getText().toString()) > 0) {
+                        bin.cvlhwf2f3a.setVisibility(View.VISIBLE);
+                    }
                 }
             }
         });
+
+
+        bin.lhwf2f5a.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (i == bin.lhwf2f5a1.getId()) {
+                bin.cvlhwf2f6.setVisibility(View.VISIBLE);
+                bin.cvlhwf2f7.setVisibility(View.VISIBLE);
+                bin.cvlhwf2f8.setVisibility(View.VISIBLE);
+                bin.cvlhwf2f8a.setVisibility(View.VISIBLE);
+                bin.cvlhwf2f9.setVisibility(View.VISIBLE);
+                bin.cvlhwf2f10.setVisibility(View.VISIBLE);
+                bin.cvlhwf2f11.setVisibility(View.VISIBLE);
+                bin.cvlhwf2f12.setVisibility(View.VISIBLE);
+                bin.cvlhwf2f13.setVisibility(View.VISIBLE);
+
+            } else {
+                bin.cvlhwf2f6.setVisibility(View.GONE);
+                bin.cvlhwf2f7.setVisibility(View.GONE);
+                bin.cvlhwf2f8.setVisibility(View.GONE);
+                bin.cvlhwf2f8a.setVisibility(View.GONE);
+                bin.cvlhwf2f9.setVisibility(View.GONE);
+                bin.cvlhwf2f10.setVisibility(View.GONE);
+                bin.cvlhwf2f11.setVisibility(View.GONE);
+                bin.cvlhwf2f12.setVisibility(View.GONE);
+                bin.cvlhwf2f13.setVisibility(View.GONE);
+
+                Clear.clearAllFields(bin.cvlhwf2f6);
+                Clear.clearAllFields(bin.cvlhwf2f7);
+                Clear.clearAllFields(bin.cvlhwf2f8);
+                Clear.clearAllFields(bin.cvlhwf2f8a);
+                Clear.clearAllFields(bin.cvlhwf2f9);
+                Clear.clearAllFields(bin.cvlhwf2f10);
+                Clear.clearAllFields(bin.cvlhwf2f11);
+                Clear.clearAllFields(bin.cvlhwf2f12);
+                Clear.clearAllFields(bin.cvlhwf2f13);
+
+            }
+        });
+
+
+        bin.lhwf2f8a.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (i == bin.lhwf2f8a3.getId()) {
+                bin.cvlhwf2f9.setVisibility(View.VISIBLE);
+                bin.cvlhwf2f10.setVisibility(View.VISIBLE);
+            } else {
+                bin.cvlhwf2f9.setVisibility(View.GONE);
+                bin.cvlhwf2f10.setVisibility(View.GONE);
+
+                Clear.clearAllFields(bin.cvlhwf2f9);
+                Clear.clearAllFields(bin.cvlhwf2f10);
+            }
+        });
+
 
     }
 
@@ -117,7 +166,9 @@ public class Form2SectionF extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View view) {
 
-        if (!formValidation() && !bin.lhwf2f3.getText().toString().equals("999")) {
+        //irfan code     if (!formValidation() && !bin.lhwf2f3.getText().toString().equals("999")) {
+
+        if (!formValidation()) {
             return;
         }
 
@@ -196,7 +247,7 @@ public class Form2SectionF extends AppCompatActivity implements View.OnClickList
         }
     }
 
-    @Override
+    /*@Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         if (buttonView.getId() == R.id.rlhwf2f1_1 || buttonView.getId() == R.id.rlhwf2f1_2) {
 
@@ -282,5 +333,6 @@ public class Form2SectionF extends AppCompatActivity implements View.OnClickList
 
             }
         }
-    }
+    }*/
+
 }

@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
-import android.widget.CompoundButton;
-import android.widget.RadioButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,7 +19,6 @@ import java.util.Date;
 import java.util.HashMap;
 
 import data.LocalDataManager;
-import utils.ClearAllcontrol;
 import utils.GeneratorClass;
 import utils.GetGpsHideForm;
 import utils.ValidatorClass;
@@ -54,6 +51,7 @@ public class Form2SectionC extends AppCompatActivity implements View.OnClickList
         }
 
 
+
         /*bin.lhwf2c61.setOnCheckedChangeListener(this);
         bin.lhwf2c62.setOnCheckedChangeListener(this);
         bin.lhwf2c63.setOnCheckedChangeListener(this);
@@ -69,8 +67,171 @@ public class Form2SectionC extends AppCompatActivity implements View.OnClickList
         Lat = gps[0];
         Long = gps[1];
 
+    }
 
-        bin.lhwf2c2.addTextChangedListener(new TextWatcher() {
+
+    private void setupSkips() {
+
+        bin.lhwf2c1.setOnCheckedChangeListener((radioGroup, i) -> {
+
+            if (i == bin.rlhwf2c12.getId()) {
+
+                bin.cvlhwf2c2.setVisibility(View.GONE);
+                bin.cvlhwf2c2a.setVisibility(View.GONE);
+                bin.cvlhwf2c3.setVisibility(View.GONE);
+                bin.cvlhwf2c4.setVisibility(View.GONE);
+                bin.cvlhwf2c4b.setVisibility(View.GONE);
+                bin.cvlhwf2c4a.setVisibility(View.GONE);
+                bin.cvlhwf2c5.setVisibility(View.GONE);
+                bin.cvlhwf2c6.setVisibility(View.GONE);
+                bin.cvlhwf2c6a.setVisibility(View.GONE);
+                bin.cvlhwf2c7.setVisibility(View.GONE);
+                bin.cvlhwf2c8.setVisibility(View.GONE);
+                bin.cvlhwf2c8a.setVisibility(View.GONE);
+                bin.cvlhwf2c9.setVisibility(View.GONE);
+                bin.cvlhwf2c10.setVisibility(View.GONE);
+                bin.cvlhwf2c11.setVisibility(View.GONE);
+                bin.cvheadingqi.setVisibility(View.GONE);
+
+                bin.cvlhwf2c2b.setVisibility(View.VISIBLE);
+
+
+                Clear.clearAllFields(bin.cvlhwf2c2);
+                Clear.clearAllFields(bin.cvlhwf2c2a);
+                Clear.clearAllFields(bin.cvlhwf2c4a);
+                Clear.clearAllFields(bin.cvlhwf2c4b);
+                Clear.clearAllFields(bin.cvlhwf2c5);
+                Clear.clearAllFields(bin.cvlhwf2c6);
+                Clear.clearAllFields(bin.cvlhwf2c6a);
+                Clear.clearAllFields(bin.cvlhwf2c7);
+                Clear.clearAllFields(bin.cvlhwf2c8);
+                Clear.clearAllFields(bin.cvlhwf2c8a);
+                Clear.clearAllFields(bin.cvlhwf2c9);
+                Clear.clearAllFields(bin.cvlhwf2c10);
+                Clear.clearAllFields(bin.cvlhwf2c11);
+
+            } else {
+
+                bin.cvlhwf2c2b.setVisibility(View.GONE);
+
+                bin.cvlhwf2c2.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c2a.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c3.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c4.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c4a.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c5.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c6.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c6a.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c7.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c8.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c8a.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c9.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c10.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c11.setVisibility(View.VISIBLE);
+                bin.cvheadingqi.setVisibility(View.VISIBLE);
+
+                Clear.clearAllFields(bin.cvlhwf2c2b);
+
+            }
+        });
+
+
+        bin.lhwf2c2a.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (i == bin.rlhwf2c2a1.getId()) {
+                bin.cvlhwf2c2b.setVisibility(View.GONE);
+                Clear.clearAllFields(bin.cvlhwf2c2b);
+
+                bin.cvlhwf2c3.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c4.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c4b.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c4a.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c5.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c6.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c6a.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c7.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c8.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c8a.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c9.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c10.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c11.setVisibility(View.VISIBLE);
+                bin.cvheadingqi.setVisibility(View.VISIBLE);
+
+
+            } else {
+                bin.cvlhwf2c2b.setVisibility(View.VISIBLE);
+
+                bin.cvlhwf2c3.setVisibility(View.GONE);
+                bin.cvlhwf2c4.setVisibility(View.GONE);
+                bin.cvlhwf2c4b.setVisibility(View.GONE);
+                bin.cvlhwf2c4a.setVisibility(View.GONE);
+                bin.cvlhwf2c5.setVisibility(View.GONE);
+                bin.cvlhwf2c6.setVisibility(View.GONE);
+                bin.cvlhwf2c6a.setVisibility(View.GONE);
+                bin.cvlhwf2c7.setVisibility(View.GONE);
+                bin.cvlhwf2c8.setVisibility(View.GONE);
+                bin.cvlhwf2c8a.setVisibility(View.GONE);
+                bin.cvlhwf2c9.setVisibility(View.GONE);
+                bin.cvlhwf2c10.setVisibility(View.GONE);
+                bin.cvlhwf2c11.setVisibility(View.GONE);
+                bin.cvheadingqi.setVisibility(View.GONE);
+
+
+                Clear.clearAllFields(bin.cvlhwf2c4b);
+                Clear.clearAllFields(bin.cvlhwf2c4a);
+                Clear.clearAllFields(bin.cvlhwf2c5);
+                Clear.clearAllFields(bin.cvlhwf2c5);
+                Clear.clearAllFields(bin.cvlhwf2c6);
+                Clear.clearAllFields(bin.cvlhwf2c6a);
+                Clear.clearAllFields(bin.cvlhwf2c7);
+                Clear.clearAllFields(bin.cvlhwf2c8);
+                Clear.clearAllFields(bin.cvlhwf2c8a);
+                Clear.clearAllFields(bin.cvlhwf2c9);
+                Clear.clearAllFields(bin.cvlhwf2c10);
+                Clear.clearAllFields(bin.cvlhwf2c11);
+            }
+        });
+
+
+        bin.lhwf2c4a.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (i == bin.lhwf2c4a1.getId()) {
+                bin.cvlhwf2c5.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c6.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c6a.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c7.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c8.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c8a.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c9.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c10.setVisibility(View.VISIBLE);
+                bin.cvlhwf2c11.setVisibility(View.VISIBLE);
+                bin.cvheadingqi.setVisibility(View.VISIBLE);
+
+            } else {
+
+                bin.cvlhwf2c5.setVisibility(View.GONE);
+                bin.cvlhwf2c6.setVisibility(View.GONE);
+                bin.cvlhwf2c6a.setVisibility(View.GONE);
+                bin.cvlhwf2c7.setVisibility(View.GONE);
+                bin.cvlhwf2c8.setVisibility(View.GONE);
+                bin.cvlhwf2c8a.setVisibility(View.GONE);
+                bin.cvlhwf2c9.setVisibility(View.GONE);
+                bin.cvlhwf2c10.setVisibility(View.GONE);
+                bin.cvlhwf2c11.setVisibility(View.GONE);
+                bin.cvheadingqi.setVisibility(View.GONE);
+
+                Clear.clearAllFields(bin.cvlhwf2c5);
+                Clear.clearAllFields(bin.cvlhwf2c6);
+                Clear.clearAllFields(bin.cvlhwf2c6a);
+                Clear.clearAllFields(bin.cvlhwf2c7);
+                Clear.clearAllFields(bin.cvlhwf2c8);
+                Clear.clearAllFields(bin.cvlhwf2c8a);
+                Clear.clearAllFields(bin.cvlhwf2c9);
+                Clear.clearAllFields(bin.cvlhwf2c10);
+                Clear.clearAllFields(bin.cvlhwf2c11);
+            }
+        });
+
+
+        bin.lhwf2c5.addTextChangedListener(new TextWatcher() {
 
             public void afterTextChanged(Editable s) {
             }
@@ -80,46 +241,48 @@ public class Form2SectionC extends AppCompatActivity implements View.OnClickList
 
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                if (bin.lhwf2c2.getText().toString().equals("999")) {
+                if (!bin.lhwf2c5.getText().toString().equals("")) {
 
-                    //   bin.LvLhwf2c3.setVisibility(View.GONE);
-                    //   bin.LvLhwf2c4.setVisibility(View.GONE);
-                    //   bin.LvLhwf2c5.setVisibility(View.GONE);
-                    //   bin.LvLhwf2c6.setVisibility(View.GONE);
-                    //   bin.LvLhwf2c7.setVisibility(View.GONE);
-                    //   bin.LvLhwf2c8.setVisibility(View.GONE);
-                    //   bin.LvLhwf2c9.setVisibility(View.GONE);
-                    //   bin.LvLhwf2c10.setVisibility(View.GONE);
-                    //   bin.LvLhwf2c11.setVisibility(View.GONE);
+                    if (Integer.valueOf(bin.lhwf2c5.getText().toString()) < 4) {
+                        bin.cvlhwf2c9.setVisibility(View.GONE);
+                        bin.cvlhwf2c10.setVisibility(View.GONE);
+                        bin.cvlhwf2c11.setVisibility(View.GONE);
 
+                        bin.cvheadingqi.setVisibility(View.GONE);
 
-                } else {
-                    //  bin.LvLhwf2c3.setVisibility(View.VISIBLE);
-                    //  bin.LvLhwf2c4.setVisibility(View.VISIBLE);
-                    //  bin.LvLhwf2c5.setVisibility(View.VISIBLE);
-                    //  bin.LvLhwf2c6.setVisibility(View.VISIBLE);
-                    //  bin.LvLhwf2c7.setVisibility(View.VISIBLE);
-                    //  bin.LvLhwf2c8.setVisibility(View.VISIBLE);
-                    //  bin.LvLhwf2c9.setVisibility(View.VISIBLE);
-                    //  bin.LvLhwf2c10.setVisibility(View.VISIBLE);
-                    //  bin.LvLhwf2c11.setVisibility(View.VISIBLE);
+                        Clear.clearAllFields(bin.cvlhwf2c9);
+                        Clear.clearAllFields(bin.cvlhwf2c10);
+                        Clear.clearAllFields(bin.cvlhwf2c11);
+                    } else {
+                        bin.cvlhwf2c9.setVisibility(View.VISIBLE);
+                        bin.cvlhwf2c10.setVisibility(View.VISIBLE);
+                        bin.cvlhwf2c11.setVisibility(View.VISIBLE);
+
+                        bin.cvheadingqi.setVisibility(View.VISIBLE);
+                    }
+
                 }
             }
         });
 
 
-    }
-
-
-    private void setupSkips() {
-
+        bin.lhwf2c6.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bin.lhwf2c61.getId()) {
+                bin.cvlhwf2c6a.setVisibility(View.GONE);
+                Clear.clearAllFields(bin.cvlhwf2c6a);
+            } else {
+                bin.cvlhwf2c6a.setVisibility(View.VISIBLE);
+            }
+        }));
 
     }
 
 
     @Override
     public void onClick(View view) {
-        if (!formValidation() && !bin.lhwf2c2.getText().toString().equals("999")) {
+        //irfan's code   if (!formValidation() && !bin.lhwf2c2.getText().toString().equals("999")) {
+
+        if (!formValidation()) {
             return;
         }
 

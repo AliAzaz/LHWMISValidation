@@ -239,7 +239,6 @@ public class PendingInterviewsHH extends AppCompatActivity {
             if (c.moveToFirst()) {
                 do {
 
-
                     pkid = c.getString(0);
                     RespondentName = c.getString(6);
                     RespndehusbandName = c.getString(9);

@@ -1,9 +1,10 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".LHWDashbord">
 
     <data>
+
         <import type="android.view.View" />
 
         <variable
@@ -18,10 +19,10 @@
         android:layout_marginBottom="5dp"
         android:fadeScrollbars="false"
         android:fillViewport="true"
-        android:paddingBottom="5dp"
         android:paddingLeft="5dp"
-        android:paddingRight="5dp"
         android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
         android:scrollbarSize="50dip">
 
         <!-- Parent layout starts -->
@@ -41,9 +42,9 @@
 
                 <TextView
                     style="@style/TextView"
-                    android:text="@string/lhwf2header_g"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="7dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/lhwf2header_g"
                     android:textColor="#008E45" />
 
             </LinearLayout>
@@ -57,568 +58,556 @@
                 android:background="@color/hitnscolor" />
 
 
-        <LinearLayout
-            android:id="@+id/SectionG"
-            style="@style/Q_Linerlayout_v">
-
-
-            <!-- lhwf2g1 starts -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvlhwf2g1"
-                style="@style/Q_CardView">
-
-                <LinearLayout
-                    android:id="@+id/Lv_lhwf2g1"
-                    style="@style/Q_Linerlayout_v">
-
-                    <TextView
-                        style="@style/TextView"
-                        android:text="@string/lhwf2g1" />
-
-                    <RadioGroup
-                        android:id="@+id/lhwf2g1"
-                        style="@style/RadioGroup"
-                        android:orientation="horizontal">
-
-                        <RadioButton
-                            android:id="@+id/rlhwf2g1_1"
-                            style="@style/RadioButton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/rb_yes"/>
-
-                        <RadioButton
-                            android:id="@+id/rlhwf2g1_2"
-                            style="@style/RadioButton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/rb_no"/>
-
-                    </RadioGroup>
-
-                </LinearLayout>
+            <LinearLayout
+                android:id="@+id/SectionG"
+                style="@style/Q_Linerlayout_v">
+
+
+                <!-- lhwf2g1 starts -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvlhwf2g1"
+                    style="@style/Q_CardView">
+
+                    <LinearLayout
+                        android:id="@+id/Lv_lhwf2g1"
+                        style="@style/Q_Linerlayout_v">
 
-            </androidx.cardview.widget.CardView>
-            <!-- lhwf2g1 ends-->
+                        <TextView
+                            style="@style/TextView"
+                            android:text="@string/lhwf2g1" />
+
+                        <RadioGroup
+                            android:id="@+id/lhwf2g1"
+                            style="@style/RadioGroup"
+                            android:orientation="horizontal">
 
+                            <RadioButton
+                                android:id="@+id/rlhwf2g1_1"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rb_yes" />
+
+                            <RadioButton
+                                android:id="@+id/rlhwf2g1_2"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rb_no" />
 
-            <!-- lhwf2g3 starts -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvlhwf2g3"
-                style="@style/Q_CardView"
-                android:visibility='@{rlhwf2g12.checked? View.GONE : View.VISIBLE}'>
-
-                <LinearLayout
-                    android:id="@+id/Lv_lhwf2g3"
-                    style="@style/Q_Linerlayout_v">
-
-                    <TextView
-                        style="@style/TextView"
-                        android:text="@string/lhwf2g3" />
-
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/lhwf2g3"
-                        style="@style/EditText_number"
-                        android:hint="@string/num"
-                        android:maxLength="2"
-                        app:maxValue="20"
-                        app:minValue="1"
-                        app:type="range" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-            <!-- lhwf2g3 ends-->
+                        </RadioGroup>
 
-
-            <!-- lhwf2g3a starts -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvlhwf2g3a"
-                style="@style/Q_CardView"
-                android:visibility='@{rlhwf2g11.checked? View.GONE : View.VISIBLE}'>
-
-                <LinearLayout
-                    android:id="@+id/Lv_lhwf2g3a"
-                    style="@style/Q_Linerlayout_v">
-
-                    <TextView
-                        style="@style/TextView"
-                        android:text="@string/lhwf2g3a" />
-
-                    <RadioGroup
-                        android:id="@+id/lhwf2g3a"
-                        style="@style/RadioGroup"
-                        android:orientation="horizontal">
-
-                        <RadioButton
-                            android:id="@+id/rlhwf2g3a_1"
-                            style="@style/RadioButton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/rlhwf2g3a_1" />
-
-                        <RadioButton
-                            android:id="@+id/rlhwf2g3a_2"
-                            style="@style/RadioButton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/rlhwf2g3a_2" />
-
-                    </RadioGroup>
+                    </LinearLayout>
 
-                </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!-- lhwf2g1 ends-->
 
-            </androidx.cardview.widget.CardView>
-            <!-- lhwf2g3a ends-->
 
+                <!-- lhwf2g3 starts -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvlhwf2g3"
+                    style="@style/Q_CardView">
 
-            <!-- lhwf2g4 starts -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvlhwf2g4"
-                style="@style/Q_CardView"
-                android:visibility='@{rlhwf2g12.checked? View.GONE : View.VISIBLE}'>
+                    <LinearLayout
+                        android:id="@+id/Lv_lhwf2g3"
+                        style="@style/Q_Linerlayout_v">
 
-                <LinearLayout
-                    android:id="@+id/Lv_lhwf2g4"
-                    style="@style/Q_Linerlayout_v">
+                        <TextView
+                            style="@style/TextView"
+                            android:text="@string/lhwf2g3" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/lhwf2g3"
+                            style="@style/EditText_number"
+                            android:hint="@string/num"
+                            android:maxLength="2"
+                            app:maxValue="20"
+                            app:minValue="1"
+                            app:type="range" />
 
-                    <TextView
-                        style="@style/TextView"
-                        android:text="@string/lhwf2g4" />
+                    </LinearLayout>
 
-                    <EditText
-                        android:id="@+id/lhwf2g4"
-                        style="@style/EditText_Name"
-                        android:maxLength="50"
-                        android:hint="@string/name" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-            <!-- lhwf2g4 ends-->
-
-
-            <!-- lhwf2g5 starts -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvlhwf2g5"
-                style="@style/Q_CardView"
-                android:visibility='@{rlhwf2g12.checked? View.GONE : View.VISIBLE}'>
-
-                <LinearLayout
-                    android:id="@+id/Lv_lhwf2g5"
-                    style="@style/Q_Linerlayout_v">
-
-                    <TextView
-                        style="@style/TextView"
-                        android:text="@string/lhwf2g5" />
+                </androidx.cardview.widget.CardView>
+                <!-- lhwf2g3 ends-->
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/lhwf2g5"
-                        style="@style/EditText_number"
-                        android:hint="@string/months"
-                        android:maxLength="2"
-                        app:maxValue="59"
-                        app:minValue="0"
-                        app:type="range" />
 
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-            <!-- lhwf2g5 ends-->
+                <!-- lhwf2g3a starts -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvlhwf2g3a"
+                    style="@style/Q_CardView">
 
-
-            <!-- lhwf2g5a starts -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvlhwf2g5a"
-                style="@style/Q_CardView"
-                android:visibility='@{rlhwf2g12.checked? View.GONE : View.VISIBLE}'>
-
-                <LinearLayout
-                    android:id="@+id/Lv_lhwf2g5a"
-                    style="@style/Q_Linerlayout_v">
-
-                    <TextView
-                        style="@style/TextView"
-                        android:text="@string/lhwf2g5a" />
-
-                    <RadioGroup
-                        android:id="@+id/lhwf2g5a"
-                        style="@style/RadioGroup"
-                        android:orientation="horizontal">
-
-                        <RadioButton
-                            android:id="@+id/lhwf2g5a_1"
-                            style="@style/RadioButton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/rb_yes"/>
+                    <LinearLayout
+                        android:id="@+id/Lv_lhwf2g3a"
+                        style="@style/Q_Linerlayout_v">
 
-                        <RadioButton
-                            android:id="@+id/lhwf2g5a_2"
-                            style="@style/RadioButton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/rb_no"/>
-
-                    </RadioGroup>
+                        <TextView
+                            style="@style/TextView"
+                            android:text="@string/lhwf2g3a" />
 
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-            <!-- lhwf2g5a ends-->
-
-
-            <!-- lhwf2g6 starts -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvlhwf2g6"
-                style="@style/Q_CardView"
-                android:visibility='@{rlhwf2g12.checked || lhwf2g5a2.checked? View.GONE : View.VISIBLE}'>
+                        <RadioGroup
+                            android:id="@+id/lhwf2g3a"
+                            style="@style/RadioGroup"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rlhwf2g3a_1"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rlhwf2g3a_1" />
+
+                            <RadioButton
+                                android:id="@+id/rlhwf2g3a_2"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rlhwf2g3a_2" />
 
-                <LinearLayout
-                    android:id="@+id/Lv_lhwf2g6"
-                    style="@style/Q_Linerlayout_v">
-
-                    <TextView
-                        style="@style/TextView"
-                        android:text="@string/lhwf2g6" />
-
-                    <RadioGroup
-                        android:id="@+id/lhwf2g6"
-                        style="@style/RadioGroup"
-                        android:orientation="horizontal">
-
-                        <RadioButton
-                            android:id="@+id/lhwf2g6_1"
-                            style="@style/RadioButton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/rb_yes"/>
+                        </RadioGroup>
 
-                        <RadioButton
-                            android:id="@+id/lhwf2g6_2"
-                            style="@style/RadioButton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/rb_no"/>
+                    </LinearLayout>
 
-                    </RadioGroup>
+                </androidx.cardview.widget.CardView>
+                <!-- lhwf2g3a ends-->
 
-                </LinearLayout>
 
-            </androidx.cardview.widget.CardView>
-            <!-- lhwf2g6 ends-->
+                <!-- lhwf2g4 starts -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvlhwf2g4"
+                    style="@style/Q_CardView">
 
+                    <LinearLayout
+                        android:id="@+id/Lv_lhwf2g4"
+                        style="@style/Q_Linerlayout_v">
 
-            <!-- lhwf2g7 starts -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvlhwf2g7"
-                style="@style/Q_CardView"
-                android:visibility='@{rlhwf2g12.checked || lhwf2g5a2.checked? View.GONE : View.VISIBLE}'>
-
-                <LinearLayout
-                    android:id="@+id/Lv_lhwf2g7"
-                    style="@style/Q_Linerlayout_v">
-
-                    <TextView
-                        style="@style/TextView"
-                        android:text="@string/lhwf2g7" />
-
-                    <RadioGroup
-                        android:id="@+id/lhwf2g7"
-                        style="@style/RadioGroup"
-                        android:orientation="horizontal">
-
-                        <RadioButton
-                            android:id="@+id/lhwf2g7_1"
-                            style="@style/RadioButton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/rb_yes"/>
+                        <TextView
+                            style="@style/TextView"
+                            android:text="@string/lhwf2g4" />
 
-                        <RadioButton
-                            android:id="@+id/lhwf2g7_2"
-                            style="@style/RadioButton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/rb_no"/>
+                        <EditText
+                            android:id="@+id/lhwf2g4"
+                            style="@style/EditText_Name"
+                            android:hint="@string/name"
+                            android:maxLength="50" />
 
-                    </RadioGroup>
+                    </LinearLayout>
 
-                </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!-- lhwf2g4 ends-->
 
-            </androidx.cardview.widget.CardView>
-            <!-- lhwf2g7 ends-->
+
+                <!-- lhwf2g5 starts -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvlhwf2g5"
+                    style="@style/Q_CardView">
 
+                    <LinearLayout
+                        android:id="@+id/Lv_lhwf2g5"
+                        style="@style/Q_Linerlayout_v">
 
-            <!-- lhwf2g7a starts -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvlhwf2g7a"
-                style="@style/Q_CardView"
-                android:visibility='@{rlhwf2g12.checked || lhwf2g5a2.checked? View.GONE : View.VISIBLE}'>
-
-                <LinearLayout
-                    android:id="@+id/Lv_lhwf2g7a"
-                    style="@style/Q_Linerlayout_v">
-
-                    <TextView
-                        style="@style/TextView"
-                        android:text="@string/lhwf2g7a" />
-
-                    <RadioGroup
-                        android:id="@+id/lhwf2g7a"
-                        style="@style/RadioGroup">
-
-                        <RadioButton
-                            android:id="@+id/lhwf2g7a_1"
-                            style="@style/RadioButton"
-                            android:text="@string/lhwf2g7a_1" />
+                        <TextView
+                            style="@style/TextView"
+                            android:text="@string/lhwf2g5" />
 
-                        <RadioButton
-                            android:id="@+id/lhwf2g7a_2"
-                            style="@style/RadioButton"
-                            android:text="@string/lhwf2g7a_2" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/lhwf2g5"
+                            style="@style/EditText_number"
+                            android:hint="@string/months"
+                            android:maxLength="2"
+                            app:maxValue="59"
+                            app:minValue="0"
+                            app:type="range" />
 
-                        <RadioButton
-                            android:id="@+id/lhwf2g7a_3"
-                            style="@style/RadioButton"
-                            android:text="@string/lhwf2g7a_3" />
+                    </LinearLayout>
 
-                    </RadioGroup>
+                </androidx.cardview.widget.CardView>
+                <!-- lhwf2g5 ends-->
 
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-            <!-- lhwf2g7a ends-->
 
+                <!-- lhwf2g5a starts -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvlhwf2g5a"
+                    style="@style/Q_CardView">
 
-            <!-- lhwf2g8 starts -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvlhwf2g8"
-                style="@style/Q_CardView"
-                android:visibility='@{rlhwf2g12.checked || lhwf2g7a2.checked || lhwf2g7a1.checked || lhwf2g5a2.checked? View.GONE : View.VISIBLE}'>
+                    <LinearLayout
+                        android:id="@+id/Lv_lhwf2g5a"
+                        style="@style/Q_Linerlayout_v">
 
-                <LinearLayout
-                    android:id="@+id/Lv_lhwf2g8"
-                    style="@style/Q_Linerlayout_v">
+                        <TextView
+                            style="@style/TextView"
+                            android:text="@string/lhwf2g5a" />
 
-                    <TextView
-                        style="@style/TextView"
-                        android:text="@string/lhwf2g8" />
+                        <RadioGroup
+                            android:id="@+id/lhwf2g5a"
+                            style="@style/RadioGroup"
+                            android:orientation="horizontal">
 
-                    <RadioGroup
-                        android:id="@+id/lhwf2g8"
-                        style="@style/RadioGroup"
-                        android:orientation="horizontal">
+                            <RadioButton
+                                android:id="@+id/lhwf2g5a_1"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rb_yes" />
 
-                        <RadioButton
-                            android:id="@+id/lhwf2g8_1"
-                            style="@style/RadioButton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/rb_yes"/>
+                            <RadioButton
+                                android:id="@+id/lhwf2g5a_2"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rb_no" />
 
-                        <RadioButton
-                            android:id="@+id/lhwf2g8_2"
-                            style="@style/RadioButton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/rb_no"/>
-
-                    </RadioGroup>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-            <!-- lhwf2g8 ends-->
+                        </RadioGroup>
 
+                    </LinearLayout>
 
-            <!-- lhwf2g9 starts -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvlhwf2g9"
-                style="@style/Q_CardView"
-                android:visibility='@{rlhwf2g12.checked || lhwf2g5a2.checked? View.GONE : View.VISIBLE}'>
+                </androidx.cardview.widget.CardView>
+                <!-- lhwf2g5a ends-->
 
-                <LinearLayout
-                    android:id="@+id/Lv_lhwf2g9"
-                    style="@style/Q_Linerlayout_v">
 
-                    <TextView
-                        style="@style/TextView"
-                        android:text="@string/lhwf2g9" />
+                <!-- lhwf2g6 starts -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvlhwf2g6"
+                    style="@style/Q_CardView">
 
-                    <RadioGroup
-                        android:id="@+id/lhwf2g9"
-                        style="@style/RadioGroup"
-                        android:orientation="horizontal">
+                    <LinearLayout
+                        android:id="@+id/Lv_lhwf2g6"
+                        style="@style/Q_Linerlayout_v">
 
-                        <RadioButton
-                            android:id="@+id/lhwf2g9_1"
-                            style="@style/RadioButton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/rb_yes"/>
+                        <TextView
+                            style="@style/TextView"
+                            android:text="@string/lhwf2g6" />
 
-                        <RadioButton
-                            android:id="@+id/lhwf2g9_2"
-                            style="@style/RadioButton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/rb_no"/>
-
-                    </RadioGroup>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-            <!-- lhwf2g9 ends-->
-
-
-            <!-- Quality Indicators starts -->
-            <androidx.cardview.widget.CardView
-                style="@style/Q_CardView"
-                android:visibility='@{rlhwf2g12.checked || lhwf2g5a2.checked?  View.GONE : View.VISIBLE}'>
+                        <RadioGroup
+                            android:id="@+id/lhwf2g6"
+                            style="@style/RadioGroup"
+                            android:orientation="horizontal">
 
-                <LinearLayout
-                    style="@style/Q_Linerlayout_v"
-                    android:background="@color/colorPrimary">
+                            <RadioButton
+                                android:id="@+id/lhwf2g6_1"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rb_yes" />
 
-                    <TextView
-                        style="@style/TextView"
-                        android:text="Quality Indicators"
-                        android:textColor="@color/white" />
-
-                </LinearLayout>
+                            <RadioButton
+                                android:id="@+id/lhwf2g6_2"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rb_no" />
 
-            </androidx.cardview.widget.CardView>
-            <!-- Quality Indicators ends-->
+                        </RadioGroup>
 
+                    </LinearLayout>
 
-            <!-- lhwf2g10 starts -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvlhwf2g10"
-                style="@style/Q_CardView"
-                android:visibility='@{rlhwf2g12.checked || lhwf2g5a2.checked? View.GONE : View.VISIBLE}'>
-
-                <LinearLayout
-                    android:id="@+id/Lv_lhwf2g10"
-                    style="@style/Q_Linerlayout_v">
-
-                    <TextView
-                        style="@style/TextView"
-                        android:text="@string/lhwf2g10" />
-
-                    <RadioGroup
-                        android:id="@+id/lhwf2g10"
-                        style="@style/RadioGroup"
-                        android:orientation="horizontal">
-
-                        <RadioButton
-                            android:id="@+id/lhwf2g10_1"
-                            style="@style/RadioButton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/rb_yes"/>
+                </androidx.cardview.widget.CardView>
+                <!-- lhwf2g6 ends-->
 
-                        <RadioButton
-                            android:id="@+id/lhwf2g10_2"
-                            style="@style/RadioButton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/rb_no"/>
 
-                    </RadioGroup>
+                <!-- lhwf2g7 starts -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvlhwf2g7"
+                    style="@style/Q_CardView">
 
-                </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/Lv_lhwf2g7"
+                        style="@style/Q_Linerlayout_v">
 
-            </androidx.cardview.widget.CardView>
-            <!-- lhwf2g10 ends-->
+                        <TextView
+                            style="@style/TextView"
+                            android:text="@string/lhwf2g7" />
 
+                        <RadioGroup
+                            android:id="@+id/lhwf2g7"
+                            style="@style/RadioGroup"
+                            android:orientation="horizontal">
 
-            <!-- lhwf2g11 starts -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvlhwf2g11"
-                style="@style/Q_CardView"
-                android:visibility='@{rlhwf2g12.checked || lhwf2g5a2.checked? View.GONE : View.VISIBLE}'>
+                            <RadioButton
+                                android:id="@+id/lhwf2g7_1"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rb_yes" />
 
-                <LinearLayout
-                    android:id="@+id/Lv_lhwf2g11"
-                    style="@style/Q_Linerlayout_v"
-                    android:visibility="gone"
-                    tools:visibility="visible">
+                            <RadioButton
+                                android:id="@+id/lhwf2g7_2"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rb_no" />
 
-                    <TextView
-                        style="@style/TextView"
-                        android:text="@string/lhwf2g11" />
+                        </RadioGroup>
 
-                    <RadioGroup
-                        android:id="@+id/lhwf2g11"
-                        style="@style/RadioGroup"
-                        android:orientation="horizontal">
+                    </LinearLayout>
 
-                        <RadioButton
-                            android:id="@+id/lhwf2g11_1"
-                            style="@style/RadioButton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/rb_yes"/>
+                </androidx.cardview.widget.CardView>
+                <!-- lhwf2g7 ends-->
 
-                        <RadioButton
-                            android:id="@+id/lhwf2g11_2"
-                            style="@style/RadioButton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/rb_no"/>
 
-                    </RadioGroup>
+                <!-- lhwf2g7a starts -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvlhwf2g7a"
+                    style="@style/Q_CardView">
 
-                </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/Lv_lhwf2g7a"
+                        style="@style/Q_Linerlayout_v">
 
-            </androidx.cardview.widget.CardView>
-            <!-- lhwf2g11 ends-->
+                        <TextView
+                            style="@style/TextView"
+                            android:text="@string/lhwf2g7a" />
 
+                        <RadioGroup
+                            android:id="@+id/lhwf2g7a"
+                            style="@style/RadioGroup">
 
-            <!-- lhwf2g11a starts -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvlhwf2g11a"
-                style="@style/Q_CardView"
-                android:visibility='@{rlhwf2g12.checked || lhwf2g5a2.checked? View.GONE : View.VISIBLE}'>
+                            <RadioButton
+                                android:id="@+id/lhwf2g7a_1"
+                                style="@style/RadioButton"
+                                android:text="@string/lhwf2g7a_1" />
 
-                <LinearLayout
-                    android:id="@+id/Lv_lhwf2g11a"
-                    style="@style/Q_Linerlayout_v">
+                            <RadioButton
+                                android:id="@+id/lhwf2g7a_2"
+                                style="@style/RadioButton"
+                                android:text="@string/lhwf2g7a_2" />
 
-                    <TextView
-                        style="@style/TextView"
-                        android:text="@string/lhwf2g11a" />
+                            <RadioButton
+                                android:id="@+id/lhwf2g7a_3"
+                                style="@style/RadioButton"
+                                android:text="@string/lhwf2g7a_3" />
 
-                    <RadioGroup
-                        android:id="@+id/lhwf2g11a"
-                        style="@style/RadioGroup"
-                        android:orientation="horizontal">
+                        </RadioGroup>
 
-                        <RadioButton
-                            android:id="@+id/lhwf2g11a_1"
-                            style="@style/RadioButton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/rb_yes"/>
+                    </LinearLayout>
 
-                        <RadioButton
-                            android:id="@+id/lhwf2g11a_2"
-                            style="@style/RadioButton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/rb_no"/>
+                </androidx.cardview.widget.CardView>
+                <!-- lhwf2g7a ends-->
 
-                    </RadioGroup>
 
-                </LinearLayout>
+                <!-- lhwf2g8 starts -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvlhwf2g8"
+                    style="@style/Q_CardView">
 
-            </androidx.cardview.widget.CardView>
-            <!-- lhwf2g11a ends-->
+                    <LinearLayout
+                        android:id="@+id/Lv_lhwf2g8"
+                        style="@style/Q_Linerlayout_v">
 
+                        <TextView
+                            style="@style/TextView"
+                            android:text="@string/lhwf2g8" />
 
-        </LinearLayout>
+                        <RadioGroup
+                            android:id="@+id/lhwf2g8"
+                            style="@style/RadioGroup"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/lhwf2g8_1"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rb_yes" />
+
+                            <RadioButton
+                                android:id="@+id/lhwf2g8_2"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rb_no" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <!-- lhwf2g8 ends-->
+
+
+                <!-- lhwf2g9 starts -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvlhwf2g9"
+                    style="@style/Q_CardView">
+
+                    <LinearLayout
+                        android:id="@+id/Lv_lhwf2g9"
+                        style="@style/Q_Linerlayout_v">
+
+                        <TextView
+                            style="@style/TextView"
+                            android:text="@string/lhwf2g9" />
+
+                        <RadioGroup
+                            android:id="@+id/lhwf2g9"
+                            style="@style/RadioGroup"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/lhwf2g9_1"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rb_yes" />
+
+                            <RadioButton
+                                android:id="@+id/lhwf2g9_2"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rb_no" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <!-- lhwf2g9 ends-->
+
+
+                <!-- Quality Indicators starts -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvheadingqi"
+                    style="@style/Q_CardView">
+
+                    <LinearLayout
+                        style="@style/Q_Linerlayout_v"
+                        android:background="@color/colorPrimary">
+
+                        <TextView
+                            style="@style/TextView"
+                            android:text="Quality Indicators"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <!-- Quality Indicators ends-->
+
+
+                <!-- lhwf2g10 starts -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvlhwf2g10"
+                    style="@style/Q_CardView">
+
+                    <LinearLayout
+                        android:id="@+id/Lv_lhwf2g10"
+                        style="@style/Q_Linerlayout_v">
+
+                        <TextView
+                            style="@style/TextView"
+                            android:text="@string/lhwf2g10" />
+
+                        <RadioGroup
+                            android:id="@+id/lhwf2g10"
+                            style="@style/RadioGroup"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/lhwf2g10_1"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rb_yes" />
+
+                            <RadioButton
+                                android:id="@+id/lhwf2g10_2"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rb_no" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <!-- lhwf2g10 ends-->
+
+
+                <!-- lhwf2g11 starts -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvlhwf2g11"
+                    style="@style/Q_CardView"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/Lv_lhwf2g11"
+                        style="@style/Q_Linerlayout_v"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <TextView
+                            style="@style/TextView"
+                            android:text="@string/lhwf2g11" />
+
+                        <RadioGroup
+                            android:id="@+id/lhwf2g11"
+                            style="@style/RadioGroup"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/lhwf2g11_1"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rb_yes" />
+
+                            <RadioButton
+                                android:id="@+id/lhwf2g11_2"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rb_no" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <!-- lhwf2g11 ends-->
+
+
+                <!-- lhwf2g11a starts -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvlhwf2g11a"
+                    style="@style/Q_CardView">
+
+                    <LinearLayout
+                        android:id="@+id/Lv_lhwf2g11a"
+                        style="@style/Q_Linerlayout_v">
+
+                        <TextView
+                            style="@style/TextView"
+                            android:text="@string/lhwf2g11a" />
+
+                        <RadioGroup
+                            android:id="@+id/lhwf2g11a"
+                            style="@style/RadioGroup"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/lhwf2g11a_1"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rb_yes" />
+
+                            <RadioButton
+                                android:id="@+id/lhwf2g11a_2"
+                                style="@style/RadioButton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/rb_no" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <!-- lhwf2g11a ends-->
+
+
+            </LinearLayout>
 
             <!-- Button -->
             <androidx.cardview.widget.CardView
