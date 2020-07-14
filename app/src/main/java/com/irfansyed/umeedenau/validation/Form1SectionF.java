@@ -32,11 +32,13 @@ public class Form1SectionF extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bin = DataBindingUtil.setContentView(this, R.layout.form1sectionf);
+
+        setupSkips();
+
         bin.btnNext.setOnClickListener(this);
         bin.btnSnap.setOnClickListener(this);
 
         PhotoSerial = 0;
-
 
         if (GeneratorClass.LHWsectionStatus("TableF1SectionF") == false) {
 
@@ -46,9 +48,11 @@ public class Form1SectionF extends AppCompatActivity implements View.OnClickList
             bin.lhwf1f2.setText("000");
             bin.lhwf1f2.setVisibility(View.GONE);
         }
+    }
 
 
-        bin.lhwf1f1.addTextChangedListener(new TextWatcher() {
+    private void setupSkips() {
+        /*bin.lhwf1f1.addTextChangedListener(new TextWatcher() {
 
             @Override
             public void afterTextChanged(Editable s) {
@@ -70,7 +74,7 @@ public class Form1SectionF extends AppCompatActivity implements View.OnClickList
                     //  bin.lhwf1f2.setText("");
                 }
             }
-        });
+        });*/
 
 
         bin.lhwf1f2.addTextChangedListener(new TextWatcher() {
@@ -89,19 +93,20 @@ public class Form1SectionF extends AppCompatActivity implements View.OnClickList
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                if (s.length() != 0) {
+                /*if (s.length() != 0) {
                     bin.lhwf1f1.setVisibility(View.GONE);
                     //  bin.lhwf1f1.setText("00");
                 } else {
                     bin.lhwf1f1.setVisibility(View.VISIBLE);
                     // bin.lhwf1f1.setText("");
-                }
+                }*/
+
             }
         });
 
 
         bin.lhwf1f11a.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bin.lhwf1f11a2.getId()) {
+            if (bin.lhwf1f11a2.isChecked()) {
                 bin.cvlhwf1f11b.setVisibility(View.VISIBLE);
 
                 bin.cvlhwf1f4A.setVisibility(View.GONE);
@@ -129,7 +134,6 @@ public class Form1SectionF extends AppCompatActivity implements View.OnClickList
             }
 
         }));
-
     }
 
 

@@ -43,7 +43,6 @@ public class Form2SectionH extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         bin = DataBindingUtil.setContentView(this, R.layout.form2sectionh);
 
-
         setupSkips();
 
 
@@ -72,7 +71,7 @@ public class Form2SectionH extends AppCompatActivity implements View.OnClickList
     private void setupSkips() {
 
         bin.lhwf2h1.setOnCheckedChangeListener((radioGroup, i) -> {
-            if (i == bin.rlhwf2h12.getId()) {
+            if (bin.rlhwf2h12.isChecked() == true) {
                 bin.cvlhwf2h2a.setVisibility(View.VISIBLE);
 
                 Clear.clearAllFields(bin.cvlhwf2h2);
@@ -117,7 +116,7 @@ public class Form2SectionH extends AppCompatActivity implements View.OnClickList
 
 
         bin.lhwf2h7.setOnCheckedChangeListener((radioGroup, i) -> {
-            if (i == bin.lhwf2h74.getId()) {
+            if (bin.lhwf2h74.isChecked() && bin.rlhwf2h11.isChecked() == true) {
                 bin.lhwf2h796x.setVisibility(View.VISIBLE);
             } else {
                 bin.lhwf2h796x.setVisibility(View.GONE);
@@ -127,7 +126,7 @@ public class Form2SectionH extends AppCompatActivity implements View.OnClickList
 
 
         bin.lhwf2h6.setOnCheckedChangeListener((radioGroup, i) -> {
-            if (i == bin.lhwf2h61.getId()) {
+            if (bin.lhwf2h61.isChecked() == true && bin.rlhwf2h11.isChecked() == true) {
                 bin.cvlhwf2h7.setVisibility(View.VISIBLE);
             } else {
                 bin.cvlhwf2h7.setVisibility(View.GONE);

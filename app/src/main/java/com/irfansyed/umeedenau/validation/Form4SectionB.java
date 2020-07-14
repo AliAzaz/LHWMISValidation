@@ -54,8 +54,6 @@ public class Form4SectionB extends AppCompatActivity implements View.OnClickList
         String[] gps = gps_.split("/");
         Lat = gps[0];
         Long = gps[1];
-
-
     }
 
 

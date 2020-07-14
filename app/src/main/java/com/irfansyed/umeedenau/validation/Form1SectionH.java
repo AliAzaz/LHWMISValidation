@@ -31,6 +31,8 @@ public class Form1SectionH extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         bin = DataBindingUtil.setContentView(this, R.layout.form1sectionh);
 
+        setupSkips();
+
         bin.btnNext.setOnClickListener(this);
         bin.btnSnap.setOnClickListener(this);
 
@@ -44,9 +46,13 @@ public class Form1SectionH extends AppCompatActivity implements View.OnClickList
         }
 
 
+    }
+
+
+    private void setupSkips() {
         bin.lhwf1h10a.setOnCheckedChangeListener(((radioGroup, i) -> {
 
-            if (i == bin.lhwf1h10a2.getId()) {
+            if (bin.lhwf1h10a2.isChecked()) {
                 Clear.clearAllFields(bin.cvlhwf1h5);
                 Clear.clearAllFields(bin.cvlhwf1h6);
                 Clear.clearAllFields(bin.cvlhwf1h7);
@@ -62,8 +68,6 @@ public class Form1SectionH extends AppCompatActivity implements View.OnClickList
 
             } else {
                 Clear.clearAllFields(bin.cvlhwf1h10b);
-
-
                 bin.cvlhwf1h10b.setVisibility(View.GONE);
 
                 bin.cvlhwf1h5.setVisibility(View.VISIBLE);
@@ -74,10 +78,7 @@ public class Form1SectionH extends AppCompatActivity implements View.OnClickList
             }
 
         }));
-
-
     }
-
 
     @Override
     public void onClick(View view) {

@@ -125,8 +125,7 @@
                 <!-- lhwf6b2 starts -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf6b2"
-                    style="@style/Q_CardView"
-                    android:visibility='@{lhwf6b12.checked? View.GONE : View.VISIBLE}'>
+                    style="@style/Q_CardView">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf6b2"
@@ -161,8 +160,7 @@
                 <!-- lhwf6b3 starts -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf6b3"
-                    style="@style/Q_CardView"
-                    android:visibility='@{lhwf6b12.checked || lhwf6b22.checked ? View.GONE : View.VISIBLE}'>
+                    style="@style/Q_CardView">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf6b3"
@@ -190,8 +188,7 @@
                 <!-- lhwf6b4 starts -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf6b4"
-                    style="@style/Q_CardView"
-                    android:visibility='@{lhwf6b12.checked || lhwf6b22.checked ? View.GONE : View.VISIBLE}'>
+                    style="@style/Q_CardView">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf6b4"
@@ -219,8 +216,7 @@
                 <!-- lhwf6b5 starts -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf6b5"
-                    style="@style/Q_CardView"
-                    android:visibility='@{lhwf6b12.checked || lhwf6b22.checked ? View.GONE : View.VISIBLE}'>
+                    style="@style/Q_CardView">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf6b5"
@@ -248,8 +244,7 @@
                 <!-- lhwf6b6 starts -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf6b6"
-                    style="@style/Q_CardView"
-                    android:visibility='@{lhwf6b12.checked || lhwf6b22.checked ? View.GONE : View.VISIBLE}'>
+                    style="@style/Q_CardView">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf6b6"
@@ -314,9 +309,7 @@
                                 style="@style/EditText_Name"
                                 android:hint="@string/specify"
                                 android:maxLength="50"
-                                android:tag="lhwf6b696"
-                                android:text='@{lhwf6b696.checked? lhwf6b696x.getText().toString() : ""}'
-                                android:visibility='@{lhwf6b696.checked ? View.VISIBLE : View.GONE}' />
+                                android:tag="lhwf6b696" />
 
                         </LinearLayout>
 
@@ -324,7 +317,6 @@
 
                 </androidx.cardview.widget.CardView>
                 <!-- lhwf6b6 ends-->
-
 
             </LinearLayout>
 

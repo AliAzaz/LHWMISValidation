@@ -45,7 +45,7 @@ public class Form5SectionB extends AppCompatActivity implements View.OnClickList
 
         bin.lhwf5b1.setOnCheckedChangeListener(((radioGroup, i) -> {
 
-            if (i == bin.lhwf5b12.getId()) {
+            if (bin.lhwf5b12.isChecked()) {
 
                 bin.cvlhwf5b2.setVisibility(View.GONE);
                 bin.cvlhwf5b3.setVisibility(View.GONE);
@@ -69,7 +69,7 @@ public class Form5SectionB extends AppCompatActivity implements View.OnClickList
                 Clear.clearAllFields(bin.cvlhwf5b6);
                 Clear.clearAllFields(bin.cvlhwf5b7);
 
-            } else {
+            } else if (bin.lhwf5b11.isChecked()) {
 
                 bin.cvlhwf5b2.setVisibility(View.VISIBLE);
                 bin.cvlhwf5b3.setVisibility(View.VISIBLE);
@@ -99,16 +99,33 @@ public class Form5SectionB extends AppCompatActivity implements View.OnClickList
 
                 if (bin.lhwf5b5a1.getText().toString().equals("0")) {
                     bin.cvlhwf5b5b1.setVisibility(View.VISIBLE);
+
+                    Clear.clearAllFields(bin.cvlhwf5b6);
+                    Clear.clearAllFields(bin.cvlhwf5b7);
+
+                    bin.cvlhwf5b6.setVisibility(View.GONE);
+                    bin.cvlhwf5b7.setVisibility(View.GONE);
+
                 } else {
                     bin.cvlhwf5b5b1.setVisibility(View.GONE);
                     Clear.clearAllFields(bin.cvlhwf5b5b1);
+
+
+                    if (bin.lhwf5b11.isChecked()) {
+                        bin.cvlhwf5b6.setVisibility(View.VISIBLE);
+                        bin.cvlhwf5b7.setVisibility(View.VISIBLE);
+                    } else {
+                        bin.cvlhwf5b6.setVisibility(View.GONE);
+                        bin.cvlhwf5b7.setVisibility(View.GONE);
+                    }
+
                 }
             }
         });
 
 
         bin.lhwf5b5b1.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bin.lhwf5b5b196.getId()) {
+            if (bin.lhwf5b5b196.isChecked()) {
                 bin.lhwf5b5b196x.setVisibility(View.VISIBLE);
             } else {
                 bin.lhwf5b5b196x.setVisibility(View.GONE);

@@ -251,7 +251,7 @@
                             android:id="@+id/lhwf5b5c"
                             style="@style/EditText_varchar"
                             android:hint="@string/name"
-                            android:maxLength="10" />
+                            android:maxLength="50" />
 
                     </LinearLayout>
 

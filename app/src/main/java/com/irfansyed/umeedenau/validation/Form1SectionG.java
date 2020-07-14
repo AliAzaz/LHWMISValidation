@@ -33,6 +33,7 @@ public class Form1SectionG extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         bin = DataBindingUtil.setContentView(this, R.layout.form1sectiong);
 
+        setupSkips();
 
         bin.btnNext.setOnClickListener(this);
         bin.btnSnap.setOnClickListener(this);
@@ -50,6 +51,10 @@ public class Form1SectionG extends AppCompatActivity implements View.OnClickList
         }
 
 
+    }
+
+
+    private void setupSkips() {
         bin.lhwf1g1.addTextChangedListener(new TextWatcher() {
 
             @Override
@@ -65,13 +70,13 @@ public class Form1SectionG extends AppCompatActivity implements View.OnClickList
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                if (s.length() != 0) {
+                /*if (s.length() != 0) {
                     bin.lhwf1g2.setVisibility(View.GONE);
                     //   bin.lhwf1g2.setText("00");
                 } else {
                     bin.lhwf1g2.setVisibility(View.VISIBLE);
                     //  bin.lhwf1g2.setText("");
-                }
+                }*/
             }
         });
 
@@ -91,20 +96,20 @@ public class Form1SectionG extends AppCompatActivity implements View.OnClickList
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                if (s.length() != 0) {
+                /*if (s.length() != 0) {
                     bin.lhwf1g1.setVisibility(View.GONE);
                     //  bin.lhwf1g1.setText("00");
                 } else {
                     bin.lhwf1g1.setVisibility(View.VISIBLE);
                     // bin.lhwf1g1.setText("");
-                }
+                }*/
             }
         });
 
 
         bin.lhwf1g10a.setOnCheckedChangeListener(((radioGroup, i) -> {
 
-            if (i == bin.lhwf1g10a2.getId()) {
+            if (bin.lhwf1g10a2.isChecked()) {
                 bin.cvlhwf1g10b.setVisibility(View.VISIBLE);
 
                 bin.cvlhwf1g4A.setVisibility(View.GONE);
@@ -129,8 +134,6 @@ public class Form1SectionG extends AppCompatActivity implements View.OnClickList
             }
 
         }));
-
-
     }
 
 

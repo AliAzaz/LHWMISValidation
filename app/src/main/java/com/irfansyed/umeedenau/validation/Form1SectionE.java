@@ -37,6 +37,8 @@ public class Form1SectionE extends AppCompatActivity implements View.OnClickList
         bin = DataBindingUtil.setContentView(this, R.layout.form1sectione);
 
 
+        setupSkips();
+
         bin.btnNext.setOnClickListener(this);
         bin.btnSnap.setOnClickListener(this);
         PhotoSerial = 0;
@@ -53,9 +55,15 @@ public class Form1SectionE extends AppCompatActivity implements View.OnClickList
         bin.lhwf1e61.setOnCheckedChangeListener(this);
         bin.lhwf1e62.setOnCheckedChangeListener(this);*/
 
+
+    }
+
+
+    private void setupSkips() {
         bin.lhwf1e9a.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bin.lhwf1e9a2.getId()) {
+            if (bin.lhwf1e9a2.isChecked()) {
                 bin.LvLhwf1e9b.setVisibility(View.VISIBLE);
+
                 bin.LvLhwf1e4A.setVisibility(View.GONE);
                 bin.LvLhwf1e5.setVisibility(View.GONE);
                 bin.LvLhwf1e5b.setVisibility(View.GONE);
@@ -74,8 +82,8 @@ public class Form1SectionE extends AppCompatActivity implements View.OnClickList
                 Clear.clearAllFields(bin.LvLhwf1e7b);
             } else {
                 Clear.clearAllFields(bin.LvLhwf1e9b);
-
                 bin.LvLhwf1e9b.setVisibility(View.GONE);
+
                 bin.LvLhwf1e4A.setVisibility(View.VISIBLE);
                 bin.LvLhwf1e5.setVisibility(View.VISIBLE);
                 bin.LvLhwf1e5b.setVisibility(View.VISIBLE);
@@ -88,25 +96,23 @@ public class Form1SectionE extends AppCompatActivity implements View.OnClickList
 
 
         bin.lhwf1e5.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bin.lhwf1e52.getId()) {
+            if (bin.lhwf1e52.isChecked()) {
+                bin.cvlhwf1e5b.setVisibility(View.VISIBLE);
+            } else {
                 Clear.clearAllFields(bin.cvlhwf1e5b);
                 bin.cvlhwf1e5b.setVisibility(View.GONE);
-            } else {
-                bin.cvlhwf1e5b.setVisibility(View.VISIBLE);
             }
         }));
 
 
         bin.lhwf1e6.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bin.lhwf1e62.getId()) {
+            if (bin.lhwf1e62.isChecked()) {
                 Clear.clearAllFields(bin.cvlhwf1e6b);
                 bin.cvlhwf1e6b.setVisibility(View.GONE);
             } else {
                 bin.cvlhwf1e6b.setVisibility(View.VISIBLE);
             }
         }));
-
-
     }
 
 

@@ -68,7 +68,8 @@
                 <!-- lhwf1g1 starts -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf1g1"
-                    style="@style/Q_CardView">
+                    style="@style/Q_CardView"
+                    android:visibility="gone">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf1g1"

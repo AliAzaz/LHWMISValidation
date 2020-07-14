@@ -3,11 +3,7 @@ package com.irfansyed.umeedenau.validation;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
-import android.widget.CompoundButton;
-import android.widget.RadioButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,6 +37,7 @@ public class Form2SectionE extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bin = DataBindingUtil.setContentView(this, R.layout.form2sectione);
+        bin.setCallback(this);
 
         setupSkips();
 
@@ -73,28 +70,13 @@ public class Form2SectionE extends AppCompatActivity implements View.OnClickList
         Lat = gps[0];
         Long = gps[1];
 
-
-        bin.lhwf2e2.addTextChangedListener(new TextWatcher() {
-
-            public void afterTextChanged(Editable s) {
-            }
-
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-            }
-
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-
-            }
-        });
-
     }
 
 
     private void setupSkips() {
 
         bin.lhwf2e1.setOnCheckedChangeListener((radioGroup, i) -> {
-            if (i == bin.rlhwf2e12.getId()) {
+            if (bin.rlhwf2e12.isChecked() == true) {
                 bin.cvlhwf2e1a.setVisibility(View.VISIBLE);
 
                 bin.cvlhwf2e2.setVisibility(View.GONE);
@@ -108,10 +90,10 @@ public class Form2SectionE extends AppCompatActivity implements View.OnClickList
                 bin.cvlhwf2e7.setVisibility(View.GONE);
                 bin.cvlhwf2e7a.setVisibility(View.GONE);
                 bin.cvlhwf2e8.setVisibility(View.GONE);
-                bin.cvlhwf2e9.setVisibility(View.GONE);
                 bin.cvlhwf2e10.setVisibility(View.GONE);
                 bin.cvlhwf2e11.setVisibility(View.GONE);
                 bin.cvlhwf2e12.setVisibility(View.GONE);
+                bin.cvlhwf2e12a.setVisibility(View.GONE);
                 bin.cvlhwf2e13.setVisibility(View.GONE);
                 bin.cvheadingqi.setVisibility(View.GONE);
 
@@ -125,14 +107,14 @@ public class Form2SectionE extends AppCompatActivity implements View.OnClickList
                 Clear.clearAllFields(bin.cvlhwf2e7);
                 Clear.clearAllFields(bin.cvlhwf2e7a);
                 Clear.clearAllFields(bin.cvlhwf2e8);
-                Clear.clearAllFields(bin.cvlhwf2e9);
                 Clear.clearAllFields(bin.cvlhwf2e10);
                 Clear.clearAllFields(bin.cvlhwf2e11);
                 Clear.clearAllFields(bin.cvlhwf2e12);
+                Clear.clearAllFields(bin.cvlhwf2e12a);
                 Clear.clearAllFields(bin.cvlhwf2e13);
 
 
-            } else {
+            } else if (bin.rlhwf2e11.isChecked() == true) {
                 bin.cvlhwf2e1a.setVisibility(View.GONE);
                 Clear.clearAllFields(bin.cvlhwf2e1a);
 
@@ -147,10 +129,10 @@ public class Form2SectionE extends AppCompatActivity implements View.OnClickList
                 bin.cvlhwf2e7.setVisibility(View.VISIBLE);
                 bin.cvlhwf2e7a.setVisibility(View.VISIBLE);
                 bin.cvlhwf2e8.setVisibility(View.VISIBLE);
-                bin.cvlhwf2e9.setVisibility(View.VISIBLE);
                 bin.cvlhwf2e10.setVisibility(View.VISIBLE);
                 bin.cvlhwf2e11.setVisibility(View.VISIBLE);
                 bin.cvlhwf2e12.setVisibility(View.VISIBLE);
+                bin.cvlhwf2e12a.setVisibility(View.VISIBLE);
                 bin.cvlhwf2e13.setVisibility(View.VISIBLE);
                 bin.cvheadingqi.setVisibility(View.VISIBLE);
 
@@ -159,7 +141,7 @@ public class Form2SectionE extends AppCompatActivity implements View.OnClickList
 
 
         bin.lhwf2e9.setOnCheckedChangeListener((radioGroup, i) -> {
-            if (i == bin.lhwf2e91.getId()) {
+            if (bin.lhwf2e91.isChecked() == true && bin.rlhwf2e11.isChecked() == true) {
 
                 bin.cvlhwf2e5.setVisibility(View.VISIBLE);
                 bin.cvlhwf2e5a.setVisibility(View.VISIBLE);
@@ -168,19 +150,16 @@ public class Form2SectionE extends AppCompatActivity implements View.OnClickList
                 bin.cvlhwf2e7.setVisibility(View.VISIBLE);
                 bin.cvlhwf2e7a.setVisibility(View.VISIBLE);
                 bin.cvlhwf2e8.setVisibility(View.VISIBLE);
-                bin.cvlhwf2e9.setVisibility(View.VISIBLE);
                 bin.cvlhwf2e10.setVisibility(View.VISIBLE);
                 bin.cvlhwf2e11.setVisibility(View.VISIBLE);
                 bin.cvlhwf2e12.setVisibility(View.VISIBLE);
+                bin.cvlhwf2e12a.setVisibility(View.VISIBLE);
                 bin.cvlhwf2e13.setVisibility(View.VISIBLE);
                 bin.cvheadingqi.setVisibility(View.VISIBLE);
 
-            } else {
+            } else if (bin.lhwf2e92.isChecked() == true) {
 
-                if (i == bin.rlhwf2e12.getId()) {
-                    bin.cvlhwf2e8.setVisibility(View.VISIBLE);
-                }
-
+                bin.cvlhwf2e8.setVisibility(View.VISIBLE);
 
                 bin.cvlhwf2e5.setVisibility(View.GONE);
                 bin.cvlhwf2e5a.setVisibility(View.GONE);
@@ -188,10 +167,11 @@ public class Form2SectionE extends AppCompatActivity implements View.OnClickList
                 bin.cvlhwf2e6a.setVisibility(View.GONE);
                 bin.cvlhwf2e7.setVisibility(View.GONE);
                 bin.cvlhwf2e7a.setVisibility(View.GONE);
-                bin.cvlhwf2e9.setVisibility(View.GONE);
+                bin.cvlhwf2e8.setVisibility(View.VISIBLE);
                 bin.cvlhwf2e10.setVisibility(View.GONE);
                 bin.cvlhwf2e11.setVisibility(View.GONE);
                 bin.cvlhwf2e12.setVisibility(View.GONE);
+                bin.cvlhwf2e12a.setVisibility(View.GONE);
                 bin.cvlhwf2e13.setVisibility(View.GONE);
                 bin.cvheadingqi.setVisibility(View.GONE);
 
@@ -202,10 +182,11 @@ public class Form2SectionE extends AppCompatActivity implements View.OnClickList
                 Clear.clearAllFields(bin.cvlhwf2e6a);
                 Clear.clearAllFields(bin.cvlhwf2e7);
                 Clear.clearAllFields(bin.cvlhwf2e7a);
-                Clear.clearAllFields(bin.cvlhwf2e9);
+                //Clear.clearAllFields(bin.cvlhwf2e8);
                 Clear.clearAllFields(bin.cvlhwf2e10);
                 Clear.clearAllFields(bin.cvlhwf2e11);
                 Clear.clearAllFields(bin.cvlhwf2e12);
+                Clear.clearAllFields(bin.cvlhwf2e12a);
                 Clear.clearAllFields(bin.cvlhwf2e13);
 
             }
@@ -213,7 +194,7 @@ public class Form2SectionE extends AppCompatActivity implements View.OnClickList
 
 
         bin.lhwf2e5.setOnCheckedChangeListener((radioGroup, i) -> {
-            if (i == bin.lhwf2e51.getId()) {
+            if (bin.lhwf2e51.isChecked() == true && bin.rlhwf2e11.isChecked() == true) {
                 bin.cvlhwf2e5a.setVisibility(View.VISIBLE);
             } else {
                 bin.cvlhwf2e5a.setVisibility(View.GONE);
@@ -223,10 +204,10 @@ public class Form2SectionE extends AppCompatActivity implements View.OnClickList
 
 
         bin.lhwf2e6a.setOnCheckedChangeListener((radioGroup, i) -> {
-            if (i == bin.lhwf2e6a3.getId()) {
+            if (bin.lhwf2e6a3.isChecked() == true && bin.rlhwf2e11.isChecked() == true) {
                 bin.cvlhwf2e7.setVisibility(View.VISIBLE);
                 bin.cvlhwf2e7a.setVisibility(View.VISIBLE);
-            } else {
+            } else if (bin.lhwf2e6a1.isChecked() || bin.lhwf2e6a2.isChecked()) {
                 bin.cvlhwf2e7.setVisibility(View.GONE);
                 bin.cvlhwf2e7a.setVisibility(View.GONE);
 
@@ -236,12 +217,12 @@ public class Form2SectionE extends AppCompatActivity implements View.OnClickList
         });
 
 
-        bin.lhwf2e11.setOnCheckedChangeListener((radioGroup, i) -> {
-            if (i == bin.lhwf2e111.getId()) {
-                bin.cvlhwf2e7.setVisibility(View.VISIBLE);
-            } else {
-                bin.cvlhwf2e7.setVisibility(View.GONE);
-                Clear.clearAllFields(bin.cvlhwf2e7);
+        bin.lhwf2e12a.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (bin.lhwf2e12a1.isChecked() == true && bin.rlhwf2e11.isChecked() == true) {
+                bin.cvlhwf2e12.setVisibility(View.VISIBLE);
+            } else if (i == bin.lhwf2e12a2.getId()) {
+                bin.cvlhwf2e12.setVisibility(View.GONE);
+                Clear.clearAllFields(bin.cvlhwf2e12);
             }
         });
 
@@ -254,17 +235,6 @@ public class Form2SectionE extends AppCompatActivity implements View.OnClickList
 
         if (!formValidation()) {
             return;
-        }
-
-
-        if (bin.lhwf2e2.getText().toString().length() > 0) {
-            // int a=Integer.parseInt(bin.lhwf2e2.getText().toString());
-            // if(a>10)
-            // {
-            //     bin.lhwf2e2.setError("should be less then 10");
-            //     bin.lhwf2e2.requestFocus();
-            //     return;
-            // }
         }
 
         insert_data();

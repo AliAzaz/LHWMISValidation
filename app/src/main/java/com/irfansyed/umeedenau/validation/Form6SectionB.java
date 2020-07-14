@@ -1,18 +1,25 @@
 package com.irfansyed.umeedenau.validation;
 
+import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.CompoundButton;
-import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.irfansyed.umeedenau.validation.databinding.Form6sectionbBinding;
+import com.shashank.sony.fancytoastlib.FancyToast;
+import com.validatorcrawler.aliazaz.Clear;
 
+import java.lang.reflect.Field;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -25,29 +32,33 @@ import utils.GetGpsHideForm;
 import utils.ValidatorClass;
 
 import static data.LocalDataManager.database;
+import static utils.ValidatorClass.EmptySpinner;
 
 
-public class Form6SectionB extends AppCompatActivity implements View.OnClickListener, RadioButton.OnCheckedChangeListener {
+public class Form6SectionB extends AppCompatActivity implements View.OnClickListener {
 
 
     //region Initialization
     Form6sectionbBinding bin;
     String Lat, Long;
+    private int PhotoSerial;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bin = DataBindingUtil.setContentView(this, R.layout.form6sectionb);
 
-
         select_Member();
 
-        bin.lhwf6b11.setOnCheckedChangeListener(this);
+        setupSkips();
+
+        PhotoSerial = 0;
+
+        /*bin.lhwf6b11.setOnCheckedChangeListener(this);
         bin.lhwf6b12.setOnCheckedChangeListener(this);
-
-
         bin.lhwf6b21.setOnCheckedChangeListener(this);
-        bin.lhwf6b22.setOnCheckedChangeListener(this);
+        bin.lhwf6b22.setOnCheckedChangeListener(this);*/
 
         bin.btnNext.setOnClickListener(this);
 
@@ -55,7 +66,85 @@ public class Form6SectionB extends AppCompatActivity implements View.OnClickList
         String[] gps = gps_.split("/");
         Lat = gps[0];
         Long = gps[1];
+    }
 
+    private void setupSkips() {
+
+        bin.lhwf6b1.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (bin.lhwf6b12.isChecked()) {
+
+                bin.cvlhwf6b2.setVisibility(View.GONE);
+                bin.cvlhwf6b3.setVisibility(View.GONE);
+                bin.cvlhwf6b4.setVisibility(View.GONE);
+                bin.cvlhwf6b5.setVisibility(View.GONE);
+                bin.cvlhwf6b6.setVisibility(View.GONE);
+
+                Clear.clearAllFields(bin.cvlhwf6b2);
+                Clear.clearAllFields(bin.cvlhwf6b3);
+                Clear.clearAllFields(bin.cvlhwf6b4);
+                Clear.clearAllFields(bin.cvlhwf6b5);
+                Clear.clearAllFields(bin.cvlhwf6b6);
+
+            } else if (bin.lhwf6b11.isChecked()) {
+
+                bin.cvlhwf6b2.setVisibility(View.VISIBLE);
+                bin.cvlhwf6b3.setVisibility(View.VISIBLE);
+                bin.cvlhwf6b4.setVisibility(View.VISIBLE);
+                bin.cvlhwf6b5.setVisibility(View.VISIBLE);
+                bin.cvlhwf6b6.setVisibility(View.VISIBLE);
+            }
+        }));
+
+
+        bin.lhwf6b2.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (bin.lhwf6b22.isChecked()) {
+
+                bin.cvlhwf6b3.setVisibility(View.GONE);
+                bin.cvlhwf6b4.setVisibility(View.GONE);
+                bin.cvlhwf6b5.setVisibility(View.GONE);
+                bin.cvlhwf6b6.setVisibility(View.GONE);
+
+                Clear.clearAllFields(bin.cvlhwf6b3);
+                Clear.clearAllFields(bin.cvlhwf6b4);
+                Clear.clearAllFields(bin.cvlhwf6b5);
+                Clear.clearAllFields(bin.cvlhwf6b6);
+
+            } else if (bin.lhwf6b21.isChecked()) {
+
+                bin.cvlhwf6b3.setVisibility(View.VISIBLE);
+                bin.cvlhwf6b4.setVisibility(View.VISIBLE);
+                bin.cvlhwf6b5.setVisibility(View.VISIBLE);
+                bin.cvlhwf6b6.setVisibility(View.VISIBLE);
+            }
+        }));
+
+
+        bin.lhwf6b4.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                if (!bin.lhwf6b4.getText().toString().equals("") && bin.lhwf6b4.getText().toString() != null) {
+
+                    if (Integer.valueOf(bin.lhwf6b4.getText().toString()) >= 0 && Integer.valueOf(bin.lhwf6b4.getText().toString()) <= 4) {
+                        bin.cvlhwf6b6.setVisibility(View.GONE);
+                        Clear.clearAllFields(bin.cvlhwf6b6);
+                    } else {
+                        bin.cvlhwf6b6.setVisibility(View.VISIBLE);
+                    }
+                }
+            }
+        });
 
     }
 
@@ -63,7 +152,6 @@ public class Form6SectionB extends AppCompatActivity implements View.OnClickList
     String Fk_id = "";
 
     void select_Member() {
-
 
         bin.lhwf6b0.setAdapter(null);
 
@@ -114,8 +202,6 @@ public class Form6SectionB extends AppCompatActivity implements View.OnClickList
 
 
         bin.lhwf6b0.setSelection(0);
-
-
     }
 
     boolean check_member(String meberName) {
@@ -146,6 +232,7 @@ public class Form6SectionB extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View view) {
+
         if (!formValidation()) {
             return;
         }
@@ -154,10 +241,17 @@ public class Form6SectionB extends AppCompatActivity implements View.OnClickList
         Toast.makeText(this, "Data Inserted", Toast.LENGTH_SHORT).show();
 
         finish();
+
     }
 
 
     private boolean formValidation() {
+
+        if (bin.lhwf6b0.getSelectedItem().equals("Select member")) {
+            Toast.makeText(this, "Please select member", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
         return ValidatorClass.EmptyCheckingContainer(this, bin.SectionB);
     }
 
@@ -179,44 +273,6 @@ public class Form6SectionB extends AppCompatActivity implements View.OnClickList
         GeneratorClass.getContainerJSON(bin.SectionB, true);
         GeneratorClass.inert_db("TableF6SectionB", this, Has_Map);
         GeneratorClass.LHWSectionUpdateCOunt("LHWCommunityWSGCount", Global.LhwSection_id, this);
-
-    }
-
-    @Override
-    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-        if (buttonView.getId() == R.id.lhwf6b1_1 || buttonView.getId() == R.id.lhwf6b1_2) {
-
-
-            if (bin.lhwf6b12.isChecked()) {
-
-                ClearAllcontrol.ClearAll(bin.LvLhwf6b2);
-                ClearAllcontrol.ClearAll(bin.LvLhwf6b3);
-                ClearAllcontrol.ClearAll(bin.LvLhwf6b4);
-                ClearAllcontrol.ClearAll(bin.LvLhwf6b5);
-                ClearAllcontrol.ClearAll(bin.LvLhwf6b6);
-
-
-            }
-
-        }
-
-        if (buttonView.getId() == R.id.lhwf6b2_1 || buttonView.getId() == R.id.lhwf6b2_2) {
-
-
-            if (bin.lhwf6b22.isChecked()) {
-
-
-                ClearAllcontrol.ClearAll(bin.LvLhwf6b3);
-                ClearAllcontrol.ClearAll(bin.LvLhwf6b4);
-                ClearAllcontrol.ClearAll(bin.LvLhwf6b5);
-                ClearAllcontrol.ClearAll(bin.LvLhwf6b6);
-
-
-            }
-
-        }
-
 
     }
 }

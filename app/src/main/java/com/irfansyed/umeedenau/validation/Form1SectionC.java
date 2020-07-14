@@ -59,35 +59,54 @@ public class Form1SectionC extends AppCompatActivity implements View.OnClickList
     private void setupSkips() {
 
         bin.lhwf1c6.setOnCheckedChangeListener(((radioGroup, i) -> {
-            Clear.clearAllFields(bin.LvLhwf1c7);
-            Clear.clearAllFields(bin.LvLhwf1c7A);
+            if (bin.lhwf1c61.isChecked()) {
+                bin.cvlhwf1c7A.setVisibility(View.VISIBLE);
+
+                bin.cvlhwf1c7.setVisibility(View.GONE);
+                Clear.clearAllFields(bin.cvlhwf1c7);
+            } else {
+                bin.cvlhwf1c7A.setVisibility(View.GONE);
+                Clear.clearAllFields(bin.cvlhwf1c7A);
+
+                bin.cvlhwf1c7.setVisibility(View.VISIBLE);
+            }
         }));
 
         bin.lhwf1c8.setOnCheckedChangeListener(((radioGroup, i) -> {
-            Clear.clearAllFields(bin.LvLhwf1c9);
+            if (bin.lhwf1c81.isChecked()) {
+                Clear.clearAllFields(bin.LvLhwf1c9);
+                bin.LvLhwf1c9.setVisibility(View.GONE);
+            } else {
+                bin.LvLhwf1c9.setVisibility(View.VISIBLE);
+            }
         }));
 
         bin.lhwc11a.setOnCheckedChangeListener(((radioGroup, i) -> {
-            Clear.clearAllFields(bin.cvlhwc11b);
-            Clear.clearAllFields(bin.cvlhwf1c3A);
-            Clear.clearAllFields(bin.cvlhwf1c4a);
-            Clear.clearAllFields(bin.cvlhwf1c5);
-            Clear.clearAllFields(bin.cvlhwf1c6);
-            Clear.clearAllFields(bin.cvlhwf1c7);
-            Clear.clearAllFields(bin.cvlhwf1c7A);
-            Clear.clearAllFields(bin.cvlhwf1c8);
-            Clear.clearAllFields(bin.cvlhwf1c9);
-            bin.cvlhwc11b.setVisibility(View.GONE);
-            bin.cvlhwf1c3A.setVisibility(View.GONE);
-            bin.cvlhwf1c4a.setVisibility(View.GONE);
-            bin.cvlhwf1c5.setVisibility(View.GONE);
-            bin.cvlhwf1c6.setVisibility(View.GONE);
-            bin.cvlhwf1c7.setVisibility(View.GONE);
-            bin.cvlhwf1c7A.setVisibility(View.GONE);
-            bin.cvlhwf1c8.setVisibility(View.GONE);
-            bin.cvlhwf1c9.setVisibility(View.GONE);
+            if (bin.lhwc11a2.isChecked()) {
+                Clear.clearAllFields(bin.cvlhwf1c3A);
+                Clear.clearAllFields(bin.cvlhwf1c4a);
+                Clear.clearAllFields(bin.cvlhwf1c5);
+                Clear.clearAllFields(bin.cvlhwf1c6);
+                Clear.clearAllFields(bin.cvlhwf1c7);
+                Clear.clearAllFields(bin.cvlhwf1c7A);
+                Clear.clearAllFields(bin.cvlhwf1c8);
+                Clear.clearAllFields(bin.cvlhwf1c9);
 
-            if (i == bin.lhwc11a1.getId()) {
+                bin.cvlhwc11b.setVisibility(View.VISIBLE);
+                bin.cvlhwf1c3A.setVisibility(View.GONE);
+                bin.cvlhwf1c4a.setVisibility(View.GONE);
+                bin.cvlhwf1c5.setVisibility(View.GONE);
+                bin.cvlhwf1c6.setVisibility(View.GONE);
+                bin.cvlhwf1c7.setVisibility(View.GONE);
+                bin.cvlhwf1c7A.setVisibility(View.GONE);
+                bin.cvlhwf1c8.setVisibility(View.GONE);
+                bin.cvlhwf1c9.setVisibility(View.GONE);
+
+            } else {
+                bin.cvlhwc11b.setVisibility(View.GONE);
+                Clear.clearAllFields(bin.cvlhwc11b);
+
+
                 bin.cvlhwf1c3A.setVisibility(View.VISIBLE);
                 bin.cvlhwf1c4a.setVisibility(View.VISIBLE);
                 bin.cvlhwf1c5.setVisibility(View.VISIBLE);
@@ -96,8 +115,6 @@ public class Form1SectionC extends AppCompatActivity implements View.OnClickList
                 bin.cvlhwf1c7A.setVisibility(View.VISIBLE);
                 bin.cvlhwf1c8.setVisibility(View.VISIBLE);
                 bin.cvlhwf1c9.setVisibility(View.VISIBLE);
-            } else if (i == bin.lhwc11a2.getId()) {
-                bin.cvlhwc11b.setVisibility(View.VISIBLE);
             }
         }));
 
