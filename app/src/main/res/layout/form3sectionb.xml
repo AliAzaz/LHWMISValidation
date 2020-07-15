@@ -366,7 +366,7 @@
                         style="@style/Q_Linerlayout_v">
 
                         <EditText
-                            android:id="@+id/lhwf3photo"
+                            android:id="@+id/lhwf3bphoto"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:enabled="false" />

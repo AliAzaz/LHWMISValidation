@@ -660,7 +660,7 @@ public class Global {
     public static String lhwf3b5b = "lhwf3b5b";
     public static String lhwf3b5b96x = "lhwf3b5b96x";
     public static String lhwf3b6 = "lhwf3b6";
-    public static String lhwf3photo = "lhwf3photo";
+    public static String lhwf3bphoto = "lhwf3bphoto";
 
     public static String lhwf4b0 = "lhwf4b0";
     public static String lhwf4b1 = "lhwf4b1";
@@ -689,8 +689,10 @@ public class Global {
     public static String lhwf5b7_6 = "lhwf5b7_6";
     public static String lhwf5b7_7 = "lhwf5b7_7";
     public static String lhwf5b7_8 = "lhwf5b7_8";
+    public static String lhwf5bphoto = "lhwf5bphoto";
     public static String lhwf5b796 = "lhwf5b796";
     public static String lhwf5b796x = "lhwf5b796x";
+
 
     public static String lhwf6b0 = "lhwf6b0";
     public static String lhwf6b1 = "lhwf6b1";
@@ -708,5 +710,7 @@ public class Global {
     public static String lhwf6b6_8 = "lhwf6b6_8";
     public static String lhwf6b696 = "lhwf6b696";
     public static String lhwf6b696x = "lhwf6b696x";
+    public static String lhwf6bphoto = "lhwf6bphoto";
+
 
 }

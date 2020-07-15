@@ -17,6 +17,7 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -63,7 +64,7 @@ public class UploadF3SectionB extends AsyncTask {
 
 
         LocalDataManager Lm = new LocalDataManager(mContext);
-        Cursor c = Lm.database.rawQuery(query, null);
+        Cursor c = LocalDataManager.database.rawQuery(query, null);
 
 
         if (c != null && c.getCount()!=0) {
@@ -89,7 +90,7 @@ public class UploadF3SectionB extends AsyncTask {
 
                         param.put("LhwSectionPKId", Global.server_id);
 
-
+                        param.put(Global.lhwf3bphoto, c.getString(c.getColumnIndex(Global.lhwf3bphoto)));
                     }
                     ccc++;
 
@@ -146,7 +147,7 @@ public class UploadF3SectionB extends AsyncTask {
             connection.setConnectTimeout(1000);
 
             OutputStream os = connection.getOutputStream();
-            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
+            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(os, StandardCharsets.UTF_8));
 
 
             bw.write(PostRequestData.getData(param));
