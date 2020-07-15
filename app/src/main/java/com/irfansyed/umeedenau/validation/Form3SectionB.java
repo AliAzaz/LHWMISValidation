@@ -35,6 +35,8 @@ public class Form3SectionB extends AppCompatActivity implements View.OnClickList
         PhotoSerial = 0;
 
         bin.btnNext.setOnClickListener(this);
+        bin.btnSnap.setOnClickListener(this);
+
     }
 
 
@@ -119,6 +121,7 @@ public class Form3SectionB extends AppCompatActivity implements View.OnClickList
                 Clear.clearAllFields(bin.lhwf3b5b96x);
             }
         }));
+
 
 
     }
@@ -245,7 +248,7 @@ public class Form3SectionB extends AppCompatActivity implements View.OnClickList
             String fileName = data.getStringExtra("FileName");
             PhotoSerial++;
 
-            bin.lhwf3photo.setText(bin.lhwf3photo.getText() + String.valueOf(PhotoSerial) + " - " + fileName + ";\r\n");
+            bin.lhwf3bphoto.setText(bin.lhwf3bphoto.getText() + String.valueOf(PhotoSerial) + " - " + fileName + ";\r\n");
         } else {
             Toast.makeText(this, "Photo Cancelled", Toast.LENGTH_SHORT).show();
         }
