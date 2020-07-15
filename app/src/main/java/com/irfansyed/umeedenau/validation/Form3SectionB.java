@@ -1,5 +1,6 @@
 package com.irfansyed.umeedenau.validation;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CompoundButton;
@@ -23,15 +24,16 @@ public  class Form3SectionB extends AppCompatActivity implements View.OnClickLis
 
     //region Initialization
     Form3sectionbBinding bin;
-
+    private int PhotoSerial;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bin= DataBindingUtil.setContentView(this, R.layout.form3sectionb);
-
+        bin = DataBindingUtil.setContentView(this, R.layout.form3sectionb);
+        PhotoSerial = 0;
 
         bin.btnNext.setOnClickListener(this);
+        bin.btnSnap.setOnClickListener(this);
 
         bin.lhwf3b11.setOnCheckedChangeListener(this);
         bin.lhwf3b12.setOnCheckedChangeListener(this);
@@ -49,9 +51,22 @@ public  class Form3SectionB extends AppCompatActivity implements View.OnClickLis
 
 
     @Override
-    public void onClick(View view)
-    {
+    public void onClick(View view) {
+        if (view.getId() == R.id.btn_snap) {
+            Intent intent = new Intent(this, TakePhoto.class);
 
+            //   intent.putExtra("picID", "901001" + "_" + "A-0001-001" + "_" + PhotoSerial + "_");
+            //   intent.putExtra("childName", "Hassan");
+
+// TODO: add identification information
+            intent.putExtra("picID", Global.LhwHH_id + "_" + Global.LhwSection_id + "_" + PhotoSerial);
+            intent.putExtra("childName", "Village Health Committee ");
+
+
+            intent.putExtra("picView", "Sect_3B".toUpperCase());
+            startActivityForResult(intent, 1); // Activity is started with requestCode 1 = Front
+
+        }
         if (!formValidation()) {
             return;
         }
@@ -95,8 +110,7 @@ public  class Form3SectionB extends AppCompatActivity implements View.OnClickLis
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
 
-        if(buttonView.getId()==R.id.lhwf3b1_1 || buttonView.getId()==R.id.lhwf3b1_2 )
-        {
+        if(buttonView.getId()==R.id.lhwf3b1_1 || buttonView.getId()==R.id.lhwf3b1_2 ) {
 
 
             if(bin.lhwf3b12.isChecked()) {
@@ -114,8 +128,7 @@ public  class Form3SectionB extends AppCompatActivity implements View.OnClickLis
         }
 
 
-        if(buttonView.getId()==R.id.lhwf3b2_1 || buttonView.getId()==R.id.lhwf3b2_2 )
-        {
+        if(buttonView.getId()==R.id.lhwf3b2_1 || buttonView.getId()==R.id.lhwf3b2_2 ) {
 
 
             if(bin.lhwf3b22.isChecked()) {
@@ -132,12 +145,10 @@ public  class Form3SectionB extends AppCompatActivity implements View.OnClickLis
 
         }
 
-        if(buttonView.getId()==R.id.lhwf3b5_1 || buttonView.getId()==R.id.lhwf3b5_2 )
-        {
+        if(buttonView.getId()==R.id.lhwf3b5_1 || buttonView.getId()==R.id.lhwf3b5_2 ) {
 
 
             if(bin.lhwf3b22.isChecked()) {
-
 
 
                 ClearAllcontrol.ClearAll(bin.LvLhwf3b6);
@@ -147,5 +158,21 @@ public  class Form3SectionB extends AppCompatActivity implements View.OnClickLis
         }
 
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        // check if the request code is same as what is passed  here it is 2
+        // Toast.makeText(this, requestCode + "_" + resultCode, Toast.LENGTH_SHORT).show();
+        if (resultCode == 1) {
+            Toast.makeText(this, "Photo Taken", Toast.LENGTH_SHORT).show();
+            PhotoSerial++;
+
+            String fileName = data.getStringExtra("FileName");
+            bin.lhwf3bphoto.setText(bin.lhwf3bphoto.getText() + String.valueOf(PhotoSerial) + " - " + fileName + ";\r\n");
+        } else {
+            Toast.makeText(this, "Photo Cancelled", Toast.LENGTH_SHORT).show();
+        }
     }
 }

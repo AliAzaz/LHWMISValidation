@@ -20,23 +20,18 @@ public class TableF5SectionB {
                 Global.lhwf5b5a+"  Text, "+
                 Global.lhwf5b5b+"  Text, "+
                 Global.lhwf5b5c+"  Text, "+
-                Global.lhwf5b6+"  Text, "+
-                Global.lhwf5b7_1+"  Text, "+
-                Global.lhwf5b7_2+"  Text, "+
-                Global.lhwf5b7_3+"  Text, "+
-                Global.lhwf5b7_4+"  Text, "+
-                Global.lhwf5b7_5+"  Text, "+
-                Global.lhwf5b7_6+"  Text, "+
-                Global.lhwf5b7_7+"  Text, "+
+                Global.lhwf5b6 + "  Text, " +
+                Global.lhwf5b7_1 + "  Text, " +
+                Global.lhwf5b7_2 + "  Text, " +
+                Global.lhwf5b7_3 + "  Text, " +
+                Global.lhwf5b7_4 + "  Text, " +
+                Global.lhwf5b7_5 + "  Text, " +
+                Global.lhwf5b7_6 + "  Text, " +
+                Global.lhwf5b7_7 + "  Text, " +
                 Global.lhwf5b7_8 + "  Text, " +
                 Global.lhwf5b796 + "  Text, " +
+                Global.lhwf5bphoto + "  Text, " +
                 Global.lhwf5b796x + "  Text " +
-
-
-
-
-
-
 
 
                 ')';

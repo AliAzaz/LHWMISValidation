@@ -374,6 +374,27 @@
                 </androidx.cardview.widget.CardView>
                 <!-- lhwf5b7 ends-->
 
+                <androidx.cardview.widget.CardView style="@style/Q_CardView">
+
+                    <LinearLayout style="@style/Q_Linerlayout_v">
+
+                        <EditText
+                            android:id="@+id/lhwf5bphoto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+
+                        <Button
+                            android:id="@+id/btn_snap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Snap Shot" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
             </LinearLayout>
 
 
