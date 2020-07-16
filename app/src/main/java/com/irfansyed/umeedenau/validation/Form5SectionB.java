@@ -1,5 +1,6 @@
 package com.irfansyed.umeedenau.validation;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -28,6 +29,7 @@ public class Form5SectionB extends AppCompatActivity implements View.OnClickList
 
     //region Initialization
     Form5sectionbBinding bin;
+    private int PhotoSerial;
 
 
     @Override
@@ -37,7 +39,10 @@ public class Form5SectionB extends AppCompatActivity implements View.OnClickList
 
         setupSkips();
 
+        PhotoSerial = 0;
+
         bin.btnNext.setOnClickListener(this);
+        bin.btnSnap.setOnClickListener(this);
     }
 
 
@@ -152,18 +157,50 @@ public class Form5SectionB extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View view) {
-        if (!formValidation()) {
-            return;
+
+        if (view.getId() == R.id.btn_snap) {
+
+            Intent intent = new Intent(this, TakePhoto.class);
+
+            //   intent.putExtra("picID", "901001" + "_" + "A-0001-001" + "_" + PhotoSerial + "_");
+            //   intent.putExtra("childName", "Hassan");
+// TODO: add identification information
+            intent.putExtra("picID", Global.LhwSection_id + "_" + PhotoSerial);
+            intent.putExtra("childName", "WSG SR");
+            intent.putExtra("picView", "Sect_WSG_SR".toUpperCase());
+            startActivityForResult(intent, 1); // Activity is started with requestCode 1 = Front
+
         }
 
-        insert_data();
-        Toast.makeText(this, "Data Inserted", Toast.LENGTH_SHORT).show();
 
-        finish();
+        if (view.getId() == R.id.btnNext) {
+
+            if (!formValidation()) {
+                return;
+            }
+
+            insert_data();
+            Toast.makeText(this, "Data Inserted", Toast.LENGTH_SHORT).show();
+
+            finish();
+        }
     }
 
     private boolean formValidation() {
-        return ValidatorClass.EmptyCheckingContainer(this, bin.SectionB);
+
+        if (!ValidatorClass.EmptyCheckingContainer(this, bin.SectionB)) {
+            return false;
+        }
+
+
+        if (!bin.lhwf5bphoto.getText().toString().equals("")) {
+
+        } else {
+            Toast.makeText(this, "Please take photo", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        return true;
     }
 
 
@@ -203,5 +240,24 @@ public class Form5SectionB extends AppCompatActivity implements View.OnClickList
             }
         }
     }*/
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        super.onActivityResult(requestCode, resultCode, data);
+        // check if the request code is same as what is passed  here it is 2
+        // Toast.makeText(this, requestCode + "_" + resultCode, Toast.LENGTH_SHORT).show();
+        if (resultCode == 1) {
+            Toast.makeText(this, "Photo Taken", Toast.LENGTH_SHORT).show();
+
+            String fileName = data.getStringExtra("FileName");
+            PhotoSerial++;
+
+            bin.lhwf5bphoto.setText(bin.lhwf5bphoto.getText() + String.valueOf(PhotoSerial) + " - " + fileName + ";\r\n");
+        } else {
+            Toast.makeText(this, "Photo Cancelled", Toast.LENGTH_SHORT).show();
+        }
+    }
 
 }

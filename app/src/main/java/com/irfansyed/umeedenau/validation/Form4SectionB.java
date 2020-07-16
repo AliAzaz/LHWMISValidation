@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.irfansyed.umeedenau.validation.databinding.Form4sectionbBinding;
+import com.validatorcrawler.aliazaz.Clear;
 
 import java.text.DateFormat;
 import java.util.ArrayList;
@@ -27,7 +28,7 @@ import utils.ValidatorClass;
 import static data.LocalDataManager.database;
 
 
-public class Form4SectionB extends AppCompatActivity implements View.OnClickListener, RadioButton.OnCheckedChangeListener {
+public class Form4SectionB extends AppCompatActivity implements View.OnClickListener {
 
 
     //region Initialization
@@ -39,14 +40,16 @@ public class Form4SectionB extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         bin = DataBindingUtil.setContentView(this, R.layout.form4sectionb);
 
+        setupSkips();
 
         select_Member();
 
-        bin.lhwf4b11.setOnCheckedChangeListener(this);
+        /*bin.lhwf4b11.setOnCheckedChangeListener(this);
         bin.lhwf4b12.setOnCheckedChangeListener(this);
 
         bin.lhwf4b22.setOnCheckedChangeListener(this);
         bin.lhwf4b22.setOnCheckedChangeListener(this);
+        */
 
         bin.btnNext.setOnClickListener(this);
 
@@ -54,6 +57,55 @@ public class Form4SectionB extends AppCompatActivity implements View.OnClickList
         String[] gps = gps_.split("/");
         Lat = gps[0];
         Long = gps[1];
+    }
+
+
+    private void setupSkips() {
+
+        bin.lhwf4b1.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (bin.lhwf4b12.isChecked()) {
+
+                bin.cvlhwf4b2.setVisibility(View.GONE);
+                bin.cvlhwf4b3.setVisibility(View.GONE);
+                bin.cvlhwf4b5.setVisibility(View.GONE);
+                bin.cvlhwf4b6.setVisibility(View.GONE);
+
+                Clear.clearAllFields(bin.cvlhwf4b2);
+                Clear.clearAllFields(bin.cvlhwf4b3);
+                Clear.clearAllFields(bin.cvlhwf4b5);
+                Clear.clearAllFields(bin.cvlhwf4b6);
+
+            } else if (bin.lhwf4b11.isChecked()) {
+
+                bin.cvlhwf4b2.setVisibility(View.VISIBLE);
+                bin.cvlhwf4b3.setVisibility(View.VISIBLE);
+                bin.cvlhwf4b5.setVisibility(View.VISIBLE);
+                bin.cvlhwf4b6.setVisibility(View.VISIBLE);
+            }
+
+        }));
+
+
+        bin.lhwf4b2.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (bin.lhwf4b22.isChecked()) {
+
+                bin.cvlhwf4b3.setVisibility(View.GONE);
+                bin.cvlhwf4b5.setVisibility(View.GONE);
+                bin.cvlhwf4b6.setVisibility(View.GONE);
+
+                Clear.clearAllFields(bin.cvlhwf4b3);
+                Clear.clearAllFields(bin.cvlhwf4b5);
+                Clear.clearAllFields(bin.cvlhwf4b6);
+
+            } else if (bin.lhwf4b21.isChecked()) {
+
+                bin.cvlhwf4b3.setVisibility(View.VISIBLE);
+                bin.cvlhwf4b5.setVisibility(View.VISIBLE);
+                bin.cvlhwf4b6.setVisibility(View.VISIBLE);
+            }
+
+        }));
+
     }
 
 
@@ -156,6 +208,12 @@ public class Form4SectionB extends AppCompatActivity implements View.OnClickList
 
 
     private boolean formValidation() {
+
+        if (bin.lhwf4b0.getSelectedItem() == "Select member") {
+            Toast.makeText(this, "Please select member", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
         return ValidatorClass.EmptyCheckingContainer(this, bin.SectionB);
     }
 
@@ -184,7 +242,7 @@ public class Form4SectionB extends AppCompatActivity implements View.OnClickList
     }
 
 
-    @Override
+    /*@Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
         if (buttonView.getId() == R.id.lhwf4b1_1 || buttonView.getId() == R.id.lhwf4b1_2) {
@@ -216,5 +274,6 @@ public class Form4SectionB extends AppCompatActivity implements View.OnClickList
             }
 
         }
-    }
+    }*/
+
 }

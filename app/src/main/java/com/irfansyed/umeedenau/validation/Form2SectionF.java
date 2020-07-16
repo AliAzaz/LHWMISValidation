@@ -138,7 +138,7 @@ public class Form2SectionF extends AppCompatActivity implements View.OnClickList
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
                 if (!bin.lhwf2f3.getText().toString().equals("")) {
-                    if (Integer.valueOf(bin.lhwf2f3.getText().toString()) == 0 && bin.rlhwf2f12.isChecked()) {
+                    if (Integer.valueOf(bin.lhwf2f3.getText().toString()) == 0) {
 
                         bin.cvlhwf2f3a.setVisibility(View.VISIBLE);
 
@@ -196,7 +196,6 @@ public class Form2SectionF extends AppCompatActivity implements View.OnClickList
                 bin.cvlhwf2f8.setVisibility(View.VISIBLE);
                 bin.cvlhwf2f8a.setVisibility(View.VISIBLE);
                 bin.cvlhwf2f9.setVisibility(View.VISIBLE);
-                bin.cvlhwf2f10.setVisibility(View.VISIBLE);
                 bin.cvlhwf2f11.setVisibility(View.VISIBLE);
                 bin.cvlhwf2f12.setVisibility(View.VISIBLE);
                 bin.cvlhwf2f13.setVisibility(View.VISIBLE);
@@ -209,7 +208,6 @@ public class Form2SectionF extends AppCompatActivity implements View.OnClickList
                 bin.cvlhwf2f8.setVisibility(View.GONE);
                 bin.cvlhwf2f8a.setVisibility(View.GONE);
                 bin.cvlhwf2f9.setVisibility(View.GONE);
-                bin.cvlhwf2f10.setVisibility(View.GONE);
                 bin.cvlhwf2f11.setVisibility(View.GONE);
                 bin.cvlhwf2f12.setVisibility(View.GONE);
                 bin.cvlhwf2f13.setVisibility(View.GONE);
@@ -220,7 +218,6 @@ public class Form2SectionF extends AppCompatActivity implements View.OnClickList
                 Clear.clearAllFields(bin.cvlhwf2f8);
                 Clear.clearAllFields(bin.cvlhwf2f8a);
                 Clear.clearAllFields(bin.cvlhwf2f9);
-                Clear.clearAllFields(bin.cvlhwf2f10);
                 Clear.clearAllFields(bin.cvlhwf2f11);
                 Clear.clearAllFields(bin.cvlhwf2f12);
                 Clear.clearAllFields(bin.cvlhwf2f13);

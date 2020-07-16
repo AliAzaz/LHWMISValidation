@@ -17,7 +17,6 @@ import java.util.Date;
 import java.util.HashMap;
 
 import data.LocalDataManager;
-import utils.ClearAllcontrol;
 import utils.GeneratorClass;
 import utils.GetGpsHideForm;
 import utils.ValidatorClass;
@@ -90,7 +89,6 @@ public class Form2SectionE extends AppCompatActivity implements View.OnClickList
                 bin.cvlhwf2e7.setVisibility(View.GONE);
                 bin.cvlhwf2e7a.setVisibility(View.GONE);
                 bin.cvlhwf2e8.setVisibility(View.GONE);
-                bin.cvlhwf2e10.setVisibility(View.GONE);
                 bin.cvlhwf2e11.setVisibility(View.GONE);
                 bin.cvlhwf2e12.setVisibility(View.GONE);
                 bin.cvlhwf2e12a.setVisibility(View.GONE);
@@ -107,7 +105,6 @@ public class Form2SectionE extends AppCompatActivity implements View.OnClickList
                 Clear.clearAllFields(bin.cvlhwf2e7);
                 Clear.clearAllFields(bin.cvlhwf2e7a);
                 Clear.clearAllFields(bin.cvlhwf2e8);
-                Clear.clearAllFields(bin.cvlhwf2e10);
                 Clear.clearAllFields(bin.cvlhwf2e11);
                 Clear.clearAllFields(bin.cvlhwf2e12);
                 Clear.clearAllFields(bin.cvlhwf2e12a);
@@ -129,7 +126,6 @@ public class Form2SectionE extends AppCompatActivity implements View.OnClickList
                 bin.cvlhwf2e7.setVisibility(View.VISIBLE);
                 bin.cvlhwf2e7a.setVisibility(View.VISIBLE);
                 bin.cvlhwf2e8.setVisibility(View.VISIBLE);
-                bin.cvlhwf2e10.setVisibility(View.VISIBLE);
                 bin.cvlhwf2e11.setVisibility(View.VISIBLE);
                 bin.cvlhwf2e12.setVisibility(View.VISIBLE);
                 bin.cvlhwf2e12a.setVisibility(View.VISIBLE);
@@ -150,7 +146,6 @@ public class Form2SectionE extends AppCompatActivity implements View.OnClickList
                 bin.cvlhwf2e7.setVisibility(View.VISIBLE);
                 bin.cvlhwf2e7a.setVisibility(View.VISIBLE);
                 bin.cvlhwf2e8.setVisibility(View.VISIBLE);
-                bin.cvlhwf2e10.setVisibility(View.VISIBLE);
                 bin.cvlhwf2e11.setVisibility(View.VISIBLE);
                 bin.cvlhwf2e12.setVisibility(View.VISIBLE);
                 bin.cvlhwf2e12a.setVisibility(View.VISIBLE);
@@ -168,7 +163,6 @@ public class Form2SectionE extends AppCompatActivity implements View.OnClickList
                 bin.cvlhwf2e7.setVisibility(View.GONE);
                 bin.cvlhwf2e7a.setVisibility(View.GONE);
                 bin.cvlhwf2e8.setVisibility(View.VISIBLE);
-                bin.cvlhwf2e10.setVisibility(View.GONE);
                 bin.cvlhwf2e11.setVisibility(View.GONE);
                 bin.cvlhwf2e12.setVisibility(View.GONE);
                 bin.cvlhwf2e12a.setVisibility(View.GONE);
@@ -183,7 +177,6 @@ public class Form2SectionE extends AppCompatActivity implements View.OnClickList
                 Clear.clearAllFields(bin.cvlhwf2e7);
                 Clear.clearAllFields(bin.cvlhwf2e7a);
                 //Clear.clearAllFields(bin.cvlhwf2e8);
-                Clear.clearAllFields(bin.cvlhwf2e10);
                 Clear.clearAllFields(bin.cvlhwf2e11);
                 Clear.clearAllFields(bin.cvlhwf2e12);
                 Clear.clearAllFields(bin.cvlhwf2e12a);

@@ -1,38 +1,30 @@
 package com.irfansyed.umeedenau.validation;
 
-import android.content.Context;
-import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.irfansyed.umeedenau.validation.databinding.Form6sectionbBinding;
-import com.shashank.sony.fancytoastlib.FancyToast;
 import com.validatorcrawler.aliazaz.Clear;
 
-import java.lang.reflect.Field;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 
 import data.LocalDataManager;
-import utils.ClearAllcontrol;
 import utils.GeneratorClass;
 import utils.GetGpsHideForm;
 import utils.ValidatorClass;
 
 import static data.LocalDataManager.database;
-import static utils.ValidatorClass.EmptySpinner;
 
 
 public class Form6SectionB extends AppCompatActivity implements View.OnClickListener {
@@ -61,6 +53,7 @@ public class Form6SectionB extends AppCompatActivity implements View.OnClickList
         bin.lhwf6b22.setOnCheckedChangeListener(this);*/
 
         bin.btnNext.setOnClickListener(this);
+
 
         String gps_ = GetGpsHideForm.get_gps(this);
         String[] gps = gps_.split("/");
@@ -123,12 +116,10 @@ public class Form6SectionB extends AppCompatActivity implements View.OnClickList
 
             @Override
             public void afterTextChanged(Editable s) {
-
             }
 
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
             }
 
             @Override
@@ -137,14 +128,28 @@ public class Form6SectionB extends AppCompatActivity implements View.OnClickList
                 if (!bin.lhwf6b4.getText().toString().equals("") && bin.lhwf6b4.getText().toString() != null) {
 
                     if (Integer.valueOf(bin.lhwf6b4.getText().toString()) >= 0 && Integer.valueOf(bin.lhwf6b4.getText().toString()) <= 4) {
+                        bin.cvlhwf6b5.setVisibility(View.GONE);
                         bin.cvlhwf6b6.setVisibility(View.GONE);
+
+                        Clear.clearAllFields(bin.cvlhwf6b5);
                         Clear.clearAllFields(bin.cvlhwf6b6);
                     } else {
+                        bin.cvlhwf6b5.setVisibility(View.VISIBLE);
                         bin.cvlhwf6b6.setVisibility(View.VISIBLE);
                     }
                 }
             }
         });
+
+
+        bin.lhwf6b696.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (bin.lhwf6b696.isChecked()) {
+                bin.lhwf6b696x.setVisibility(View.VISIBLE);
+            } else {
+                Clear.clearAllFields(bin.cvlhwf6b3);
+                bin.cvlhwf6b3.setVisibility(View.GONE);
+            }
+        }));
 
     }
 

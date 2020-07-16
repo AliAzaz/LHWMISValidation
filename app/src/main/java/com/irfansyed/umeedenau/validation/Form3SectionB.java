@@ -51,6 +51,8 @@ public class Form3SectionB extends AppCompatActivity implements View.OnClickList
                 bin.cvlhwf3b4b.setVisibility(View.GONE);
                 bin.cvlhwf3b4c.setVisibility(View.GONE);
 
+                bin.cvlhwf3b6.setVisibility(View.VISIBLE);
+
                 Clear.clearAllFields(bin.cvlhwf3b2);
                 Clear.clearAllFields(bin.cvlhwf3b3);
                 Clear.clearAllFields(bin.cvlhwf3b4a);
@@ -61,14 +63,13 @@ public class Form3SectionB extends AppCompatActivity implements View.OnClickList
 
             } else if (bin.lhwf3b11.isChecked()) {
 
-                Clear.clearAllFields(bin.cvlhwf3b5b);
-                bin.cvlhwf3b5b.setVisibility(View.GONE);
-
                 bin.cvlhwf3b2.setVisibility(View.VISIBLE);
                 bin.cvlhwf3b3.setVisibility(View.VISIBLE);
                 bin.cvlhwf3b4a.setVisibility(View.VISIBLE);
                 bin.cvlhwf3b4b.setVisibility(View.VISIBLE);
                 bin.cvlhwf3b4c.setVisibility(View.VISIBLE);
+
+                bin.cvlhwf3b6.setVisibility(View.VISIBLE);
 
             }
         }));
@@ -83,6 +84,8 @@ public class Form3SectionB extends AppCompatActivity implements View.OnClickList
                 bin.cvlhwf3b4c.setVisibility(View.VISIBLE);
                 bin.cvlhwf3b5.setVisibility(View.VISIBLE);
                 bin.cvlhwf3b5b.setVisibility(View.VISIBLE);
+
+                bin.cvlhwf3b6.setVisibility(View.GONE);
 
             } else if (bin.lhwf3b22.isChecked()) {
 
@@ -99,6 +102,8 @@ public class Form3SectionB extends AppCompatActivity implements View.OnClickList
                 Clear.clearAllFields(bin.cvlhwf3b4c);
                 Clear.clearAllFields(bin.cvlhwf3b5);
                 Clear.clearAllFields(bin.cvlhwf3b5b);
+
+                bin.cvlhwf3b6.setVisibility(View.VISIBLE);
             }
         }));
 
@@ -106,9 +111,15 @@ public class Form3SectionB extends AppCompatActivity implements View.OnClickList
         bin.lhwf3b5.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (bin.lhwf3b52.isChecked()) {
                 bin.cvlhwf3b5b.setVisibility(View.VISIBLE);
+
+                Clear.clearAllFields(bin.cvlhwf3b6);
+                bin.cvlhwf3b6.setVisibility(View.GONE);
+
             } else if (bin.lhwf3b51.isChecked()) {
                 bin.cvlhwf3b5b.setVisibility(View.GONE);
                 Clear.clearAllFields(bin.cvlhwf3b5b);
+
+                bin.cvlhwf3b6.setVisibility(View.VISIBLE);
             }
         }));
 
@@ -121,7 +132,6 @@ public class Form3SectionB extends AppCompatActivity implements View.OnClickList
                 Clear.clearAllFields(bin.lhwf3b5b96x);
             }
         }));
-
 
 
     }
@@ -144,7 +154,8 @@ public class Form3SectionB extends AppCompatActivity implements View.OnClickList
 
         }
 
-        if (view.getId() == R.id.btn_next) {
+
+        if (view.getId() == R.id.btnNext) {
 
             if (!formValidation()) {
                 return;
@@ -159,7 +170,19 @@ public class Form3SectionB extends AppCompatActivity implements View.OnClickList
 
 
     private boolean formValidation() {
-        return ValidatorClass.EmptyCheckingContainer(this, bin.SectionB);
+
+        if (!ValidatorClass.EmptyCheckingContainer(this, bin.SectionB)) {
+            return false;
+        }
+
+        if (!bin.lhwf3bphoto.getText().toString().equals("")) {
+
+        } else {
+            Toast.makeText(this, "Please take photo", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        return true;
     }
 
 
