@@ -59,8 +59,11 @@ public class Form1SectionG extends AppCompatActivity implements View.OnClickList
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (bin.lhwf1g1.getText().toString().isEmpty()) return;
-                bin.lhwf1g3.setMaxvalue(Integer.valueOf(bin.lhwf1g1.getText().toString()) > 20 ? 20 : Integer.valueOf(bin.lhwf1g1.getText().toString()));
+                if (bin.lhwf1g3.getText().toString().isEmpty()) {
+
+                } else {
+                    bin.lhwf1g3.setMaxvalue(Integer.valueOf(bin.lhwf1g3.getText().toString()) > 20 ? 20 : Integer.valueOf(bin.lhwf1g3.getText().toString()));
+                }
             }
 
             @Override

@@ -102,9 +102,8 @@
     <string name="lhwf1d8a"> Did LHW visit mother after delivery? </string>
 
     <string name="lhwf1d8b"> If ‘no’ give reason </string>
-    <string name="lhwf1d8b_1"> Women/mother was in another </string>
-    <string name="lhwf1d8b_2"> Village/city </string>
-    <string name="lhwf1d8b_3"> Due to COVID-19 situation </string>
+    <string name="lhwf1d8b_1"> Women/mother was in another Village/city</string>
+    <string name="lhwf1d8b_2"> Due to COVID-19 situation </string>
 
 
     <string name="lhwf1d4A"> Date of LHW first PNC visit </string>

@@ -77,12 +77,15 @@ public class Form1SectionF extends AppCompatActivity implements View.OnClickList
         });*/
 
 
-        bin.lhwf1f2.addTextChangedListener(new TextWatcher() {
+        bin.lhwf1f3.addTextChangedListener(new TextWatcher() {
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (bin.lhwf1f2.getText().toString().isEmpty()) return;
-                bin.lhwf1f3.setMaxvalue(Integer.valueOf(bin.lhwf1f2.getText().toString()) > 20 ? 20 : Integer.valueOf(bin.lhwf1f2.getText().toString()));
+                if (bin.lhwf1f3.getText().toString().isEmpty()) {
+
+                } else {
+                    bin.lhwf1f3.setMaxvalue(Integer.valueOf(bin.lhwf1f3.getText().toString()) > 20 ? 20 : Integer.valueOf(bin.lhwf1f3.getText().toString()));
+                }
             }
 
             @Override

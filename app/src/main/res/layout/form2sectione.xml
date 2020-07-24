@@ -247,7 +247,9 @@
                             <RadioButton
                                 android:id="@+id/lhwf2e9_3"
                                 style="@style/RadioButton"
-                                android:text="@string/lhwf2e9_3" />
+                                android:text="@string/lhwf2e9_3"
+                                android:visibility="gone"
+                                tools:visibility="visible" />
 
                         </RadioGroup>
 

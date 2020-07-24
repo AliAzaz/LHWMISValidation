@@ -127,7 +127,7 @@ public class Form6SectionB extends AppCompatActivity implements View.OnClickList
 
                 if (!bin.lhwf6b4.getText().toString().equals("") && bin.lhwf6b4.getText().toString() != null) {
 
-                    if (Integer.valueOf(bin.lhwf6b4.getText().toString()) >= 0 && Integer.valueOf(bin.lhwf6b4.getText().toString()) <= 4) {
+                    if (Integer.valueOf(bin.lhwf6b4.getText().toString()) == 0) {
                         bin.cvlhwf6b5.setVisibility(View.GONE);
                         bin.cvlhwf6b6.setVisibility(View.GONE);
 
