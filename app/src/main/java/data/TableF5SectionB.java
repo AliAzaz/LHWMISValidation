@@ -9,8 +9,6 @@ public class TableF5SectionB {
     public static String getCreateQuery() {
         String query;
         query = "CREATE TABLE '" + TABLE_NAME + "' ('id' INTEGER PRIMARY KEY AUTOINCREMENT, 'FK_id' INTEGER,   " +
-
-
                 " Status  Text, " +
                 Global.lhwf5b1 + "  Text, " +
                 Global.lhwf5b2 + "  Text, " +
@@ -35,9 +33,7 @@ public class TableF5SectionB {
                 Global.lhwf5bphoto + "  Text, " +
                 Global.lhwf5b796x + "  Text " +
 
-
                 ')';
-
 
         return query;
     }

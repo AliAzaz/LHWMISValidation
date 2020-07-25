@@ -70,7 +70,6 @@ public class UploadF1F2SectionH extends AsyncTask {
         if (c != null && c.getCount() != 0) {
             if (c.moveToFirst()) {
 
-
                 Global.loop_count = c.getCount();
                 do {
 
@@ -84,21 +83,17 @@ public class UploadF1F2SectionH extends AsyncTask {
                                 c.getString(c.getColumnIndex("lhwf1h6")) + "-" +
                                 c.getString(c.getColumnIndex("lhwf1h7")) + "-" +
                                 c.getString(c.getColumnIndex("lhwf1h8")) + "-" +
-                                c.getString(c.getColumnIndex("lhwf1h9"))
-                        );
+                                c.getString(c.getColumnIndex("lhwf1h9")));
 
 
                         param.put("lhwf1h10a", c.getString(c.getColumnIndex("lhwf1h10a")));
                         param.put("lhwf1h10b", c.getString(c.getColumnIndex("lhwf1h10b")));
 
-
                         param.put("lhwf1hphoto", c.getString(c.getColumnIndex("lhwf1hphoto")));
-
 
                         param.put("lhwf1b1", c.getString(c.getColumnIndex("lhwf1b1")));
                         param.put("lhwf1b2", c.getString(c.getColumnIndex("lhwf1b2")));
                         param.put("lhwf1b3", c.getString(c.getColumnIndex("lhwf1b3")));
-
 
                         Fk_id = c.getString(0);
                     }
@@ -135,20 +130,20 @@ public class UploadF1F2SectionH extends AsyncTask {
         if (c2 != null && c2.getCount() != 0) {
             if (c2.moveToFirst()) {
 
-
                 param.put("lhwf2h2", c2.getString(c2.getColumnIndex("lhwf2h2")));
+                param.put("lhwf2h2a", c2.getString(c2.getColumnIndex("lhwf2h2a")));
+
                 param.put("lhwf2h3", c2.getString(c2.getColumnIndex("lhwf2h3")));
                 param.put("lhwf2h4", c2.getString(c2.getColumnIndex("lhwf2h4")));
                 param.put("lhwf2h5", c2.getString(c2.getColumnIndex("lhwf2h5")));
                 param.put("lhwf2h6", c2.getString(c2.getColumnIndex("lhwf2h6")));
                 param.put("lhwf2h7", c2.getString(c2.getColumnIndex("lhwf2h7")));
+                param.put("lhwf2h796x", c2.getString(c2.getColumnIndex("lhwf2h796x")));
+
                 param.put("lhwf2h8", c2.getString(c2.getColumnIndex("lhwf2h8")));
                 param.put("lhwf2h9", c2.getString(c2.getColumnIndex("lhwf2h9")));
                 param.put("lhwf2h10", c2.getString(c2.getColumnIndex("lhwf2h10")));
-                param.put("lhwf2h11",
-                        c2.getString(c2.getColumnIndex("lhwf2h11")) + "-" +
-                                c2.getString(c2.getColumnIndex("lhwf2h1"))
-                );
+                param.put("lhwf2h11", c2.getString(c2.getColumnIndex("lhwf2h11")) + "-" + c2.getString(c2.getColumnIndex("lhwf2h1")));
 
 
                 param.put("GPSLat", c2.getString(c2.getColumnIndex("GPSLat")));
@@ -156,7 +151,6 @@ public class UploadF1F2SectionH extends AsyncTask {
                 param.put("InterviewTime", c2.getString(c2.getColumnIndex("InterviewTime")));
 
                 param.put("LhwSectionPKId", Global.server_id);
-
 
             }
 
@@ -173,14 +167,11 @@ public class UploadF1F2SectionH extends AsyncTask {
             param.put("lhwf2h10", "00");
             param.put("lhwf2h11", "00");
 
-
             param.put("GPSLat", "00");
             param.put("GPSLong", "00");
             param.put("InterviewTime", "00");
 
-
             param.put("LhwSectionPKId", Global.server_id);
-
 
         }
 

@@ -65,10 +65,7 @@ public class Upload_request1 extends AsyncTask {
         //region Query
 
         String query = "select Q11, Q12,Q1_1, Q1, Q2, Q3, Q4, datee, timee, userid, type_interview, Interview_status " +
-
-
                 " from tabl1 where id = '%s' order by id  desc LIMIT 1";
-
 
         query = String.format(query, Global.global_id);
 
@@ -79,20 +76,20 @@ public class Upload_request1 extends AsyncTask {
         if (c != null) {
             if (c.moveToFirst()) {
 
-                param.put("Q11", c.getString(	c.getColumnIndex("Q11")));
-                param.put("Q12", c.getString(	c.getColumnIndex("Q12")));
-                param.put("Q1_1", c.getString(	c.getColumnIndex("Q1_1")));
-                param.put("Q1", c.getString(	c.getColumnIndex("Q1")));
-                param.put("Q2", c.getString(	c.getColumnIndex("Q2")));
-                param.put("Q3", c.getString(	c.getColumnIndex("Q3")));
-                param.put("Q4", c.getString(	c.getColumnIndex("Q4")));
-                param.put("datee", c.getString(	c.getColumnIndex("datee")));
-                param.put("timee", c.getString(	c.getColumnIndex("timee")));
-                param.put("userid", c.getString(	c.getColumnIndex("userid")));
-                param.put("type_interview", c.getString(	c.getColumnIndex("type_interview")));
-                param.put("Interview_status", c.getString(	c.getColumnIndex("Interview_status")));
+                param.put("Q11", c.getString(c.getColumnIndex("Q11")));
+                param.put("Q12", c.getString(c.getColumnIndex("Q12")));
+                param.put("Q1_1", c.getString(c.getColumnIndex("Q1_1")));
+                param.put("Q1", c.getString(c.getColumnIndex("Q1")));
+                param.put("Q2", c.getString(c.getColumnIndex("Q2")));
+                param.put("Q3", c.getString(c.getColumnIndex("Q3")));
+                param.put("Q4", c.getString(c.getColumnIndex("Q4")));
+                param.put("datee", c.getString(c.getColumnIndex("datee")));
+                param.put("timee", c.getString(c.getColumnIndex("timee")));
+                param.put("userid", c.getString(c.getColumnIndex("userid")));
+                param.put("type_interview", c.getString(c.getColumnIndex("type_interview")));
+                param.put("Interview_status", c.getString(c.getColumnIndex("Interview_status")));
 
-                Global.type_interview=c.getString( c.getColumnIndex("type_interview"));
+                Global.type_interview = c.getString(c.getColumnIndex("type_interview"));
 
             }
 
@@ -166,24 +163,22 @@ public class Upload_request1 extends AsyncTask {
             String result = (((String) o).replace("\"", ""));
 
 
-          ///  Toast.makeText(mContext, "Interivew Has ben Uploaded", Toast.LENGTH_SHORT).show();
+            ///  Toast.makeText(mContext, "Interivew Has ben Uploaded", Toast.LENGTH_SHORT).show();
             // new LocalDataManager(mContext).uploadInterview();
 
-            Global.server_id=result;
+            Global.server_id = result;
 
-            if(Global.type_interview.equals("Validation")) {
+            if (Global.type_interview.equals("Validation")) {
 
                 new Upload_request2(mContext).execute();
-            }
-            else
-            {
+            } else {
                 new Upload_request3(mContext).execute();
-        }
+            }
 
-        // thread.start();
+            // thread.start();
 
 
-    } catch (IOException e) {
+        } catch (IOException e) {
             //if connection was available via connecting but
             //we can't get data from server..
             if (mUserMsg == null)

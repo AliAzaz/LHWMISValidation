@@ -22,9 +22,7 @@ public class TableF3SectionB {
                 Global.lhwf3b5b96x + "  Text, " +
                 Global.lhwf3b6 + "  Text, " +
                 Global.lhwf3bphoto + "  Text " +
-
                 ')';
-
 
         return query;
     }

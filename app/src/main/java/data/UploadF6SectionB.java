@@ -53,16 +53,12 @@ public class UploadF6SectionB extends AsyncTask {
         dialog.setCancelable(false);
         dialog.show();
 
-
         int ccc = 0;
 
-
         String Fk_id = "";
-
         //region Query
 
         String query = "select * from TableF6SectionB f6 join TableF5SectionB F5 on f6.FK_id=f5.id where F5.Fk_id='" + Global.global_id + "'";
-
 
         LocalDataManager Lm = new LocalDataManager(mContext);
         Cursor c = LocalDataManager.database.rawQuery(query, null);
@@ -71,10 +67,8 @@ public class UploadF6SectionB extends AsyncTask {
         if (c != null && c.getCount() != 0) {
             if (c.moveToFirst()) {
 
-
                 Global.loop_count = c.getCount();
                 do {
-
 
                     if (ccc == Global.loop_Increment) {
 
@@ -102,12 +96,10 @@ public class UploadF6SectionB extends AsyncTask {
                         param.put("InterviewTime", c.getString(c.getColumnIndex("InterviewTime")));
 
                         param.put("LhwSectionPKId", Global.server_id);
-                        param.put("lhwf6bphoto", c.getString(c.getColumnIndex("lhwf6bphoto")));
-
 
                     }
-                    ccc++;
 
+                    ccc++;
 
                 } while (c.moveToNext());
             }

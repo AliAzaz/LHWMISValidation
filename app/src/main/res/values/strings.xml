@@ -213,7 +213,7 @@
 
     <!-- Form 5 -->
 
-    <string name="lhwf5header_b"> Section B: Women Support Group(WSG) (VAL) </string>
+    <string name="lhwf5header_b"> Section B: Women Support Group(WSG) (SR) </string>
     <string name="lhwf5b1"> Did LHW form WSG? </string>
     <string name="lhwf5b2"> Total # of WSG formed by LHW </string>
     <string name="lhwf5b3"> # of meetings held in previous month mentioned in meeting report/form </string>
@@ -343,7 +343,7 @@
     <!-- Form 6 -->
 
 
-    <string name="lhwf6header_b"> Section B: Village Health Committee (VHC) (VAL) </string>
+    <string name="lhwf6header_b"> Section B: Village Health Committee (WSG) (VAL) </string>
     <string name="lhwf6b0"> WSG Member Name </string>
     <string name="lhwf6b1"> Are you aware of WSG </string>
     <string name="lhwf6b2"> Are you member of WSG </string>

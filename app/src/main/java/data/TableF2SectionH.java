@@ -10,7 +10,6 @@ public class TableF2SectionH {
         String query;
         query = "CREATE TABLE '" + TABLE_NAME + "' ('id' INTEGER PRIMARY KEY AUTOINCREMENT, 'FK_id' INTEGER,   " +
 
-
                 Global.LhwSectionPKId + "  Text, " +
                 Global.lhwf2h1 + "  Text, " +
                 Global.lhwf2h2 + "  Text, " +
@@ -29,9 +28,7 @@ public class TableF2SectionH {
                 Global.GPSLong + "  Text," +
                 Global.InterviewTime + "  Text" +
 
-
                 ')';
-
 
         return query;
     }

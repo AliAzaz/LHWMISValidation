@@ -36,11 +36,9 @@ public class UploadF4SectionB extends AsyncTask {
 
     public UploadF4SectionB(Context context) {
 
-
         mContext = context;
         dialog = new ProgressDialog(context);
         param = new HashMap<>();
-
     }
 
 
@@ -51,9 +49,7 @@ public class UploadF4SectionB extends AsyncTask {
         dialog.setCancelable(false);
         dialog.show();
 
-
         int ccc = 0;
-
 
         String Fk_id = "";
 
@@ -61,18 +57,15 @@ public class UploadF4SectionB extends AsyncTask {
 
         String query = "select * from TableF4SectionB f4 join TableF3SectionB F3 on f4.FK_id=f3.id where F3.Fk_id='" + Global.global_id + "'";
 
-
         LocalDataManager Lm = new LocalDataManager(mContext);
         Cursor c = Lm.database.rawQuery(query, null);
 
 
-        if (c != null && c.getCount()!=0) {
+        if (c != null && c.getCount() != 0) {
             if (c.moveToFirst()) {
-
 
                 Global.loop_count = c.getCount();
                 do {
-
 
                     if (ccc == Global.loop_Increment) {
 
@@ -84,23 +77,20 @@ public class UploadF4SectionB extends AsyncTask {
                         param.put("lhwf4b4", "NA");
                         param.put("lhwf4b6", c.getString(c.getColumnIndex("lhwf4b6")));
 
-
                         param.put("GPSLat", c.getString(c.getColumnIndex("GPSLat")));
                         param.put("GPSLong", c.getString(c.getColumnIndex("GPSLong")));
                         param.put("InterviewTime", c.getString(c.getColumnIndex("InterviewTime")));
 
                         param.put("LhwSectionPKId", Global.server_id);
 
-
                     }
-                    ccc++;
 
+                    ccc++;
 
                 } while (c.moveToNext());
             }
 
-        }
-        else {
+        } else {
             param.put("lhwf4b0", "00");
             param.put("lhwf4b1", "00");
             param.put("lhwf4b2", "00");
@@ -112,7 +102,7 @@ public class UploadF4SectionB extends AsyncTask {
 
             param.put("GPSLat", "00");
             param.put("GPSLong", "00");
-            param.put("InterviewTime","00");
+            param.put("InterviewTime", "00");
 
             param.put("LhwSectionPKId", Global.server_id);
 
@@ -120,12 +110,11 @@ public class UploadF4SectionB extends AsyncTask {
         }
 
 
-
-            for (Map.Entry<String, String> entry : param.entrySet()) {
-                if (entry.getValue() == null || entry.getValue().length()==0) {
-                    param.put(entry.getKey(), "00");
-                }
-                System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+        for (Map.Entry<String, String> entry : param.entrySet()) {
+            if (entry.getValue() == null || entry.getValue().length() == 0) {
+                param.put(entry.getKey(), "00");
+            }
+            System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
 
         }
 
@@ -189,7 +178,7 @@ public class UploadF4SectionB extends AsyncTask {
 
 
         try {
-         //   dialog.dismiss();
+            //   dialog.dismiss();
 
             if (mUserMsg != null)
                 throw new IOException();
@@ -206,27 +195,20 @@ public class UploadF4SectionB extends AsyncTask {
             //      Global.server_id=result;
 
 
-
-
             Global.loop_Increment++;
-            if (Global.loop_count != Global.loop_Increment && Global.loop_count!=0) {
-
+            if (Global.loop_count != Global.loop_Increment && Global.loop_count != 0) {
 
 
                 new UploadF4SectionB(mContext).execute();
 
             } else {
-                Global.loop_Increment=0;
-                Global.loop_count=0;
+                Global.loop_Increment = 0;
+                Global.loop_count = 0;
 
 
                 new UploadF5SectionB(mContext).execute();
 
-
             }
-
-
-
 
 
         } catch (IOException e) {

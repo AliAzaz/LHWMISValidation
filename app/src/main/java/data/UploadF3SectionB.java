@@ -52,9 +52,7 @@ public class UploadF3SectionB extends AsyncTask {
         dialog.setCancelable(false);
         dialog.show();
 
-
         int ccc = 0;
-
 
         String Fk_id = "";
 
@@ -62,14 +60,12 @@ public class UploadF3SectionB extends AsyncTask {
 
         String query = "select * from TableF3SectionB where Fk_id='" + Global.global_id + "'";
 
-
         LocalDataManager Lm = new LocalDataManager(mContext);
         Cursor c = LocalDataManager.database.rawQuery(query, null);
 
 
         if (c != null && c.getCount() != 0) {
             if (c.moveToFirst()) {
-
 
                 Global.loop_count = c.getCount();
                 do {
@@ -85,6 +81,9 @@ public class UploadF3SectionB extends AsyncTask {
                         param.put("lhwf3b4c", c.getString(c.getColumnIndex("lhwf3b4c")));
 
                         param.put("lhwf3b5", c.getString(c.getColumnIndex("lhwf3b5")));
+                        param.put("lhwf3b5b", c.getString(c.getColumnIndex("lhwf3b5b")));
+                        param.put("lhwf3b5b96x", c.getString(c.getColumnIndex("lhwf3b5b96x")));
+
                         param.put("lhwf3b6", c.getString(c.getColumnIndex("lhwf3b6")));
 
                         param.put("LhwSectionPKId", Global.server_id);
