@@ -67,13 +67,12 @@ public class UploadF3SectionB extends AsyncTask {
         Cursor c = LocalDataManager.database.rawQuery(query, null);
 
 
-        if (c != null && c.getCount()!=0) {
+        if (c != null && c.getCount() != 0) {
             if (c.moveToFirst()) {
 
 
                 Global.loop_count = c.getCount();
                 do {
-
 
                     if (ccc == Global.loop_Increment) {
 
@@ -92,21 +91,20 @@ public class UploadF3SectionB extends AsyncTask {
 
                         param.put(Global.lhwf3bphoto, c.getString(c.getColumnIndex(Global.lhwf3bphoto)));
                     }
-                    ccc++;
 
+                    ccc++;
 
                 } while (c.moveToNext());
             }
 
-        }
-        else {
+        } else {
             param.put("lhwf3b1", "00");
             param.put("lhwf3b2", "00");
             param.put("lhwf3b3", "00");
 
-            param.put("lhwf3b4a","00");
-            param.put("lhwf3b4b","00");
-            param.put("lhwf3b4c","00");
+            param.put("lhwf3b4a", "00");
+            param.put("lhwf3b4b", "00");
+            param.put("lhwf3b4c", "00");
 
             param.put("lhwf3b5", "00");
             param.put("lhwf3b6", "00");
@@ -115,12 +113,11 @@ public class UploadF3SectionB extends AsyncTask {
         }
 
 
-
-            for (Map.Entry<String, String> entry : param.entrySet()) {
-                if (entry.getValue() == null || entry.getValue().length()==0) {
-                    param.put(entry.getKey(), "00");
-                }
-                System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+        for (Map.Entry<String, String> entry : param.entrySet()) {
+            if (entry.getValue() == null || entry.getValue().length() == 0) {
+                param.put(entry.getKey(), "00");
+            }
+            System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
 
         }
 
@@ -184,7 +181,7 @@ public class UploadF3SectionB extends AsyncTask {
 
 
         try {
-         //   dialog.dismiss();
+            //   dialog.dismiss();
 
             if (mUserMsg != null)
                 throw new IOException();
@@ -201,22 +198,10 @@ public class UploadF3SectionB extends AsyncTask {
             //      Global.server_id=result;
 
 
+            Global.loop_Increment = 0;
+            Global.loop_count = 0;
 
-
-            Global.loop_Increment=0;
-            Global.loop_count=0;
-
-                new UploadF4SectionB(mContext).execute();
-
-
-
-
-
-
-
-
-
-
+            new UploadF4SectionB(mContext).execute();
 
 
         } catch (IOException e) {

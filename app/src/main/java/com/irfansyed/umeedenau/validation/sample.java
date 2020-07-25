@@ -9,7 +9,7 @@ import androidx.databinding.DataBindingUtil;
 import com.irfansyed.umeedenau.validation.databinding.LhwdashbordBinding;
 
 
-public  class sample extends AppCompatActivity implements View.OnClickListener {
+public class sample extends AppCompatActivity implements View.OnClickListener {
 
 
     //region Initialization
@@ -19,27 +19,15 @@ public  class sample extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bin= DataBindingUtil.setContentView(this, R.layout.lhwdashbord);
-
-
-
-
+        bin = DataBindingUtil.setContentView(this, R.layout.lhwdashbord);
 
     }
-
-
-
-
 
 
     @Override
-    public void onClick(View view)
-    {
+    public void onClick(View view) {
 
     }
-
-
-
 
 
 }

@@ -28,7 +28,6 @@ public class TableF1SectionH {
 
                 ')';
 
-
         return query;
     }
 }

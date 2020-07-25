@@ -10,37 +10,14 @@ public class TableMetadata {
         String query;
         query = "CREATE TABLE '" + TABLE_NAME + "' ('id' INTEGER PRIMARY KEY AUTOINCREMENT,  " +
 
-
-
-
-
-
-                Global.user+"  Text, "+
-
-
-                Global.appversion+"  Text, "+
-                Global.gpslat+"  Text, "+
-                Global.gpslng+"  Text, "+
-                "LHWSectionId  Text, "+
-
-
-                "datetimeInterview  Text "+
-
-
-
-
-
-
-
-
-
-
-
-
-
+                Global.user + "  Text, " +
+                Global.appversion + "  Text, " +
+                Global.gpslat + "  Text, " +
+                Global.gpslng + "  Text, " +
+                "LHWSectionId  Text, " +
+                "datetimeInterview  Text " +
 
                 ')';
-
 
         return query;
     }

@@ -28,7 +28,6 @@ public class TableF1SectionG {
                 Global.lhwf1gphoto + "  Text, " +
                 Global.lhwf1g9 + "  Text" +
 
-
                 ')';
 
 

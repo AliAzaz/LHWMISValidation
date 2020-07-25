@@ -33,9 +33,7 @@ public class TableF2SectionC {
                 Global.GPSLong + "  Text," +
                 Global.InterviewTime + "  Text" +
 
-
                 ')';
-
 
         return query;
     }
