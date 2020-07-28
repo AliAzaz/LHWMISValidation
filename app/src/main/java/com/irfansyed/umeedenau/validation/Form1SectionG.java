@@ -55,7 +55,8 @@ public class Form1SectionG extends AppCompatActivity implements View.OnClickList
 
 
     private void setupSkips() {
-        bin.lhwf1g1.addTextChangedListener(new TextWatcher() {
+
+        /*bin.lhwf1g1.addTextChangedListener(new TextWatcher() {
 
             @Override
             public void afterTextChanged(Editable s) {
@@ -73,23 +74,27 @@ public class Form1SectionG extends AppCompatActivity implements View.OnClickList
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                /*if (s.length() != 0) {
+                *//*if (s.length() != 0) {
                     bin.lhwf1g2.setVisibility(View.GONE);
                     //   bin.lhwf1g2.setText("00");
                 } else {
                     bin.lhwf1g2.setVisibility(View.VISIBLE);
                     //  bin.lhwf1g2.setText("");
-                }*/
+                }*//*
             }
-        });
+        });*/
 
 
-        bin.lhwf1g2.addTextChangedListener(new TextWatcher() {
+        bin.lhwf1g3.addTextChangedListener(new TextWatcher() {
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (bin.lhwf1g2.getText().toString().isEmpty()) return;
-                bin.lhwf1g3.setMaxvalue(Integer.valueOf(bin.lhwf1g2.getText().toString()) > 20 ? 20 : Integer.valueOf(bin.lhwf1g2.getText().toString()));
+                if (bin.lhwf1g3.getText().toString().isEmpty()) {
+
+                } else {
+                    //bin.lhwf1g3.setMaxvalue(Integer.valueOf(bin.lhwf1g2.getText().toString()) > 20 ? 20 : Integer.valueOf(bin.lhwf1g2.getText().toString()));
+                    bin.lhwf1g3.setMaxvalue(Integer.valueOf(bin.lhwf1g3.getText().toString()) > 20 ? 20 : Integer.valueOf(bin.lhwf1g3.getText().toString()));
+                }
             }
 
             @Override
@@ -99,7 +104,7 @@ public class Form1SectionG extends AppCompatActivity implements View.OnClickList
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                /*if (s.length() != 0) {
+                /* irfan code    if (s.length() != 0) {
                     bin.lhwf1g1.setVisibility(View.GONE);
                     //  bin.lhwf1g1.setText("00");
                 } else {
