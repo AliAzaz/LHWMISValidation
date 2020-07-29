@@ -52,16 +52,11 @@ public class UploadF1F2SectionH extends AsyncTask {
         dialog.setCancelable(false);
         dialog.show();
 
-
         int ccc = 0;
 
-
         String Fk_id = "";
-
         //region Query
-
         String query = "select * from TableF1sectionH as F1 join TableHHSection as H on F1.Fk_id=H.id  where F1.LhwSectionPKId='" + Global.global_id + "'";
-
 
         LocalDataManager Lm = new LocalDataManager(mContext);
         Cursor c = LocalDataManager.database.rawQuery(query, null);
@@ -72,7 +67,6 @@ public class UploadF1F2SectionH extends AsyncTask {
 
                 Global.loop_count = c.getCount();
                 do {
-
                     if (ccc == Global.loop_Increment) {
 
                         param.put("lhwf1h1", c.getString(c.getColumnIndex("lhwf1h1")));
@@ -85,7 +79,6 @@ public class UploadF1F2SectionH extends AsyncTask {
                                 c.getString(c.getColumnIndex("lhwf1h8")) + "-" +
                                 c.getString(c.getColumnIndex("lhwf1h9")));
 
-
                         param.put("lhwf1h10a", c.getString(c.getColumnIndex("lhwf1h10a")));
                         param.put("lhwf1h10b", c.getString(c.getColumnIndex("lhwf1h10b")));
 
@@ -97,7 +90,6 @@ public class UploadF1F2SectionH extends AsyncTask {
 
                         Fk_id = c.getString(0);
                     }
-
                     ccc++;
 
                 } while (c.moveToNext());
@@ -109,22 +101,21 @@ public class UploadF1F2SectionH extends AsyncTask {
             param.put("lhwf1h3", "00");
             param.put("lhwf1h4", "00");
             param.put("lhwf1h5", "00");
-
+            param.put("lhwf1h10a", "00");
+            param.put("lhwf1h10b", "00");
+            param.put("lhwf1hphoto", "00");
 
             param.put("lhwf1b1", "00");
             param.put("lhwf1b2", "00");
             param.put("lhwf1b3", "00");
-
 
         }
 
 
         String query2 = "select * from TableF2sectionH where LhwSectionPKId='" + Global.global_id + "' and Fk_id='" + Fk_id + "'";
 
-
         LocalDataManager Lm2 = new LocalDataManager(mContext);
         Cursor c2 = LocalDataManager.database.rawQuery(query2, null);
-
 
         int a = c2.getCount();
         if (c2 != null && c2.getCount() != 0) {
@@ -157,11 +148,13 @@ public class UploadF1F2SectionH extends AsyncTask {
         } else {
 
             param.put("lhwf2h2", "00");
+            param.put("lhwf2h2a", "00");
             param.put("lhwf2h3", "00");
             param.put("lhwf2h4", "00");
             param.put("lhwf2h5", "00");
             param.put("lhwf2h6", "00");
             param.put("lhwf2h7", "00");
+            param.put("lhwf2h796x", "00");
             param.put("lhwf2h8", "00");
             param.put("lhwf2h9", "00");
             param.put("lhwf2h10", "00");

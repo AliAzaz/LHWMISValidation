@@ -106,6 +106,8 @@ public class UploadF3SectionB extends AsyncTask {
             param.put("lhwf3b4c", "00");
 
             param.put("lhwf3b5", "00");
+            param.put("lhwf3b5b", "00");
+            param.put("lhwf3b5b96x", "00");
             param.put("lhwf3b6", "00");
 
             param.put("LhwSectionPKId", Global.server_id);

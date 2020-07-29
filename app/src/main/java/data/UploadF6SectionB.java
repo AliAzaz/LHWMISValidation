@@ -37,12 +37,9 @@ public class UploadF6SectionB extends AsyncTask {
     String mUserMsg;
 
     public UploadF6SectionB(Context context) {
-
-
         mContext = context;
         dialog = new ProgressDialog(context);
         param = new HashMap<>();
-
     }
 
 

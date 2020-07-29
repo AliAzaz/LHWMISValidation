@@ -116,10 +116,13 @@ public class UploadF1F2SectionC extends AsyncTask {
             param.put("lhwf1c6", "00");
             param.put("lhwf1c7", "00");
             param.put("lhwf1c8", "00");
+            param.put("lhwf1c3Ab", "00");
+            param.put("lhwc11a", "00");
+            param.put("lhwc11b", "00");
+            param.put("lhwf1cphoto", "00");
             param.put("lhwf1b1", "00");
             param.put("lhwf1b2", "00");
             param.put("lhwf1b3", "00");
-
 
         }
 

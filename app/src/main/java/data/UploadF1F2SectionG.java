@@ -52,14 +52,11 @@ public class UploadF1F2SectionG extends AsyncTask {
         dialog.setCancelable(false);
         dialog.show();
 
-
         int ccc = 0;
-
 
         String Fk_id = "";
 
         //region Query
-
         String query = "select * from TableF1sectionG as F1 join TableHHSection as H on F1.Fk_id=H.id  where F1.LhwSectionPKId='" + Global.global_id + "'";
 
         LocalDataManager Lm = new LocalDataManager(mContext);
@@ -70,7 +67,6 @@ public class UploadF1F2SectionG extends AsyncTask {
 
                 Global.loop_count = c.getCount();
                 do {
-
                     if (ccc == Global.loop_Increment) {
 
                         param.put("lhwf1g1", c.getString(c.getColumnIndex("lhwf1g1")));
@@ -98,7 +94,6 @@ public class UploadF1F2SectionG extends AsyncTask {
                     }
                     ccc++;
 
-
                 } while (c.moveToNext());
             }
 
@@ -112,22 +107,20 @@ public class UploadF1F2SectionG extends AsyncTask {
             param.put("lhwf1g7", "00");
             param.put("lhwf1g8", "00");
             param.put("lhwf1g9", "00");
-
+            param.put("lhwf1g10a", "00");
+            param.put("lhwf1g10b", "00");
+            param.put("lhwf1gphoto", "00");
 
             param.put("lhwf1b1", "00");
             param.put("lhwf1b2", "00");
             param.put("lhwf1b3", "00");
 
-
         }
-
 
         String query2 = "select * from TableF2sectionG where LhwSectionPKId='" + Global.global_id + "' and Fk_id='" + Fk_id + "'";
 
-
         LocalDataManager Lm2 = new LocalDataManager(mContext);
         Cursor c2 = LocalDataManager.database.rawQuery(query2, null);
-
 
         int a = c2.getCount();
         if (c2 != null && c2.getCount() != 0) {
@@ -143,9 +136,7 @@ public class UploadF1F2SectionG extends AsyncTask {
                 param.put("lhwf2g9", c2.getString(c2.getColumnIndex("lhwf2g9")));
                 param.put("lhwf2g10", c2.getString(c2.getColumnIndex("lhwf2g10")) + "-" + c2.getString(c2.getColumnIndex("lhwf2g1")) + "-" +
                         c2.getString(c2.getColumnIndex("lhwf2g5a")) + "-" +
-                        c2.getString(c2.getColumnIndex("lhwf2g11")) + "-" + c2.getString(c2.getColumnIndex("lhwf2g11a"))
-                );
-
+                        c2.getString(c2.getColumnIndex("lhwf2g11")) + "-" + c2.getString(c2.getColumnIndex("lhwf2g11a")));
 
                 param.put("GPSLat", c2.getString(c2.getColumnIndex("GPSLat")));
                 param.put("GPSLong", c2.getString(c2.getColumnIndex("GPSLong")));
@@ -156,16 +147,15 @@ public class UploadF1F2SectionG extends AsyncTask {
 
         } else {
 
-
             param.put("lhwf2g3", "00");
             param.put("lhwf2g4", "00");
+            param.put("lhwf2g4A", "00");
             param.put("lhwf2g5", "00");
             param.put("lhwf2g6", "00");
             param.put("lhwf2g7", "00");
             param.put("lhwf2g8", "00");
             param.put("lhwf2g9", "00");
             param.put("lhwf2g10", "00");
-
 
             param.put("GPSLat", "00");
             param.put("GPSLong", "00");

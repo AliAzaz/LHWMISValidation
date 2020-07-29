@@ -99,7 +99,6 @@ public class UploadF4SectionB extends AsyncTask {
             param.put("lhwf4b4", "NA");
             param.put("lhwf4b6", "00");
 
-
             param.put("GPSLat", "00");
             param.put("GPSLong", "00");
             param.put("InterviewTime", "00");

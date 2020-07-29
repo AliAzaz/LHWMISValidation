@@ -114,6 +114,10 @@ public class UploadF5SectionB extends AsyncTask {
             param.put("lhwf5b5a", "00");
             param.put("lhwf5b5b", "00");
             param.put("lhwf5b5c", "00");
+            param.put("lhwf5b5a1", "00");
+            param.put("lhwf5b5b1", "00");
+            param.put("lhwf5b5b196x", "00");
+
             param.put("lhwf5b6", "00");
 
 
@@ -127,6 +131,7 @@ public class UploadF5SectionB extends AsyncTask {
             param.put("lhwf5b7_8", "00");
             param.put("lhwf5b796", "00");
             param.put("lhwf5b796x", "00");
+            param.put("lhwf5bphoto", "00");
 
             param.put("LhwSectionPKId", Global.server_id);
         }
