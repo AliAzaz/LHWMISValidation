@@ -26,13 +26,13 @@ public class SplashScreenActivity extends AppCompatActivity {
         // preferences.setReqLogin("http://10.199.5.216:61259///Testing/check_user_id");
 
         //preferences.setReqLogin("https://vcoe1.aku.edu/LHWMIS/Testing/check_user_id");
-        preferences.setReqLogin("http://F38158/LHWMIS/Testing/check_user_id");
-        preferences.setReq1("http://F38158/LHWMIS/Testing/InsertLHWSection");
+        preferences.setReqLogin("https://vcoe1.aku.edu/LHWMIS/Testing/check_user_id");
+        preferences.setReq1("https://vcoe1.aku.edu/LHWMIS/Testing/InsertLHWSection");
 
-        preferences.setReq2("http://F38158/LHWMIS/Testing/InsertF1F2SectionC");
+        preferences.setReq2("https://vcoe1.aku.edu/LHWMIS/Testing/InsertF1F2SectionC");
         //preferences.setReq2("http://F38158/LHWMIS/Testing/InsertF1F2SectionC");
 
-        preferences.setReq3("http://F38158/LHWMIS/Testing/");
+        preferences.setReq3("https://vcoe1.aku.edu/LHWMIS/Testing/");
 
 
         // preferences.setReq1("http://10.199.5.216:61259///Testing/InsertLHWSection");
