@@ -177,7 +177,6 @@ public class UploadF1F2SectionH extends AsyncTask {
 
         }
 
-
         super.onPreExecute();
     }
 
@@ -322,5 +321,3 @@ public class UploadF1F2SectionH extends AsyncTask {
         }
     };
 }
-
-
