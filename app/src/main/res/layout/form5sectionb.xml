@@ -131,7 +131,8 @@
                 <!-- lhwf5b3 starts -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvlhwf5b3"
-                    style="@style/Q_CardView">
+                    style="@style/Q_CardView"
+                    android:visibility="gone">
 
                     <LinearLayout
                         android:id="@+id/Lv_lhwf5b3"
@@ -251,90 +252,12 @@
                             android:id="@+id/lhwf5b5c"
                             style="@style/EditText_varchar"
                             android:hint="@string/name"
-                            android:maxLength="50" />
+                            android:maxLength="10" />
 
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
                 <!-- lhwf5b5c ends-->
-
-                <!-- lhwf5b5a1 starts -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cvlhwf5b5a1"
-                    style="@style/Q_CardView">
-
-                    <LinearLayout
-                        android:id="@+id/Lv_lhwf5b5a1"
-                        style="@style/Q_Linerlayout_v">
-
-                        <TextView
-                            style="@style/TextView"
-                            android:text="@string/lhwf5b5a1" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/lhwf5b5a1"
-                            style="@style/EditText_number"
-                            android:hint="@string/num"
-                            android:maxLength="1"
-                            app:maxValue="4"
-                            app:minValue="0"
-                            app:type="range" />
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-                <!-- lhwf5b5a1 ends-->
-
-
-                <!-- lhwf5b5b1 starts -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cvlhwf5b5b1"
-                    style="@style/Q_CardView">
-
-                    <LinearLayout
-                        android:id="@+id/Lv_lhwf5b5b1"
-                        style="@style/Q_Linerlayout_v">
-
-                        <TextView
-                            style="@style/TextView"
-                            android:text="@string/lhwf5b5b1" />
-
-                        <RadioGroup
-                            android:id="@+id/lhwf5b5b1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                            <RadioButton
-                                android:id="@+id/lhwf5b5b1_1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/lhwf5b5b1_1" />
-
-                            <RadioButton
-                                android:id="@+id/lhwf5b5b1_2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/lhwf5b5b1_2" />
-
-                            <RadioButton
-                                android:id="@+id/lhwf5b5b1_96"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/other" />
-
-                        </RadioGroup>
-
-                        <EditText
-                            android:id="@+id/lhwf5b5b196x"
-                            style="@style/EditText_Name"
-                            android:hint="@string/specify"
-                            android:maxLength="50"
-                            android:visibility="gone" />
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-                <!-- lhwf5b5b1 ends-->
 
 
                 <!-- lhwf5b6 starts -->
@@ -433,8 +356,7 @@
                                 style="@style/EditText_Name"
                                 android:hint="@string/specify"
                                 android:maxLength="50"
-                                android:tag="lhwf5b796"
-                                android:visibility="gone" />
+                                android:tag="lhwf5b796" />
 
                         </LinearLayout>
 
