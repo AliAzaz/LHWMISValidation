@@ -59,6 +59,7 @@ public class Form5SectionB extends AppCompatActivity implements View.OnClickList
                 Clear.clearAllFields(bin.cvlhwf5b5b1);
                 Clear.clearAllFields(bin.cvlhwf5b6);
                 Clear.clearAllFields(bin.cvlhwf5b7);
+                Clear.clearAllFields(bin.cvlhwf5bphoto);
 
                 bin.cvlhwf5b2.setVisibility(View.GONE);
                 //bin.cvlhwf5b3.setVisibility(View.GONE);
