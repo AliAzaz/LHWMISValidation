@@ -2,19 +2,21 @@ package com.irfansyed.umeedenau.validation;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.CompoundButton;
-import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.irfansyed.umeedenau.validation.databinding.Form5sectionbBinding;
+import com.validatorcrawler.aliazaz.Clear;
 
 import java.util.HashMap;
 
-import utils.ClearAllcontrol;
 import utils.GeneratorClass;
 import utils.ValidatorClass;
 
@@ -32,12 +34,120 @@ public class Form5SectionB extends AppCompatActivity implements View.OnClickList
         bin = DataBindingUtil.setContentView(this, R.layout.form5sectionb);
         PhotoSerial = 0;
 
+        setupSkips();
 
         bin.btnNext.setOnClickListener(this);
 
         /*bin.lhwf5b11.setOnCheckedChangeListener(this);
         bin.lhwf5b12.setOnCheckedChangeListener(this);*/
+    }
 
+
+    private void setupSkips() {
+
+        bin.lhwf5b1.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (bin.lhwf5b12.isChecked()) {
+
+                Clear.clearAllFields(bin.cvlhwf5b2);
+                //Clear.clearAllFields(bin.cvlhwf5b3);
+                Clear.clearAllFields(bin.cvlhwf5b4);
+                Clear.clearAllFields(bin.cvlhwf5b5a);
+                Clear.clearAllFields(bin.cvlhwf5b5b);
+                Clear.clearAllFields(bin.cvlhwf5b5c);
+                Clear.clearAllFields(bin.cvlhwf5b5a1);
+                Clear.clearAllFields(bin.cvlhwf5b5b1);
+                Clear.clearAllFields(bin.cvlhwf5b6);
+                Clear.clearAllFields(bin.cvlhwf5b7);
+
+                bin.cvlhwf5b2.setVisibility(View.GONE);
+                //bin.cvlhwf5b3.setVisibility(View.GONE);
+                bin.cvlhwf5b4.setVisibility(View.GONE);
+                bin.cvlhwf5b5a.setVisibility(View.GONE);
+                bin.cvlhwf5b5b.setVisibility(View.GONE);
+                bin.cvlhwf5b5c.setVisibility(View.GONE);
+                bin.cvlhwf5b5a1.setVisibility(View.GONE);
+                bin.cvlhwf5b5b1.setVisibility(View.GONE);
+                bin.cvlhwf5b6.setVisibility(View.GONE);
+                bin.cvlhwf5b7.setVisibility(View.GONE);
+                bin.cvlhwf5bphoto.setVisibility(View.GONE);
+
+            } else {
+
+                bin.cvlhwf5b2.setVisibility(View.VISIBLE);
+                //bin.cvlhwf5b3.setVisibility(View.VISIBLE);
+                bin.cvlhwf5b4.setVisibility(View.VISIBLE);
+                bin.cvlhwf5b5a.setVisibility(View.VISIBLE);
+                bin.cvlhwf5b5b.setVisibility(View.VISIBLE);
+                bin.cvlhwf5b5c.setVisibility(View.VISIBLE);
+                bin.cvlhwf5b5a1.setVisibility(View.VISIBLE);
+                bin.cvlhwf5b5b1.setVisibility(View.VISIBLE);
+                bin.cvlhwf5b6.setVisibility(View.VISIBLE);
+                bin.cvlhwf5b7.setVisibility(View.VISIBLE);
+                bin.cvlhwf5bphoto.setVisibility(View.VISIBLE);
+
+            }
+        }));
+
+        bin.lhwf5b796.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (bin.lhwf5b796.isChecked()) {
+                    bin.lhwf5b796x.setVisibility(View.VISIBLE);
+                } else {
+                    Clear.clearAllFields(bin.lhwf5b796x);
+                    bin.lhwf5b796x.setVisibility(View.GONE);
+                }
+            }
+        });
+
+        bin.lhwf5b5b1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (bin.lhwf5b5b196.isChecked()) {
+                    bin.lhwf5b5b196x.setVisibility(View.VISIBLE);
+                } else {
+                    Clear.clearAllFields(bin.lhwf5b5b196x);
+                    bin.lhwf5b5b196x.setVisibility(View.GONE);
+                }
+            }
+        });
+
+
+        bin.lhwf5b5a1.addTextChangedListener(new TextWatcher() {
+
+            public void afterTextChanged(Editable s) {
+            }
+
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                if (bin.lhwf5b5a1.getText().toString().equals("0")) {
+                    bin.cvlhwf5b5b1.setVisibility(View.VISIBLE);
+
+                    Clear.clearAllFields(bin.cvlhwf5b6);
+                    Clear.clearAllFields(bin.cvlhwf5b7);
+
+                    bin.cvlhwf5b6.setVisibility(View.GONE);
+                    bin.cvlhwf5b7.setVisibility(View.GONE);
+
+                } else {
+                    bin.cvlhwf5b5b1.setVisibility(View.GONE);
+                    Clear.clearAllFields(bin.cvlhwf5b5b1);
+
+
+                    if (bin.lhwf5b11.isChecked()) {
+                        bin.cvlhwf5b6.setVisibility(View.VISIBLE);
+                        bin.cvlhwf5b7.setVisibility(View.VISIBLE);
+                    } else {
+                        bin.cvlhwf5b6.setVisibility(View.GONE);
+                        bin.cvlhwf5b7.setVisibility(View.GONE);
+                    }
+
+                }
+            }
+        });
 
 
     }
@@ -91,7 +201,6 @@ public class Form5SectionB extends AppCompatActivity implements View.OnClickList
         Log.d("insert_data: ", json.toString());*/
 
     }
-
 
 
     @Override
