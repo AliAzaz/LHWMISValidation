@@ -37,6 +37,7 @@ public class Form5SectionB extends AppCompatActivity implements View.OnClickList
         setupSkips();
 
         bin.btnNext.setOnClickListener(this);
+        bin.btnSnap.setOnClickListener(this);
 
         /*bin.lhwf5b11.setOnCheckedChangeListener(this);
         bin.lhwf5b12.setOnCheckedChangeListener(this);*/
@@ -170,6 +171,8 @@ public class Form5SectionB extends AppCompatActivity implements View.OnClickList
             startActivityForResult(intent, 1); // Activity is started with requestCode 1 = Front
 
         }
+
+
         if (!formValidation()) {
             return;
         }
